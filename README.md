@@ -9,52 +9,47 @@ Comprehensive analysis of Divvy bike-sharing unit economics and market dynamics
 ## Project Organization
 
 ```
-├── LICENSE            <- Open-source license if one is chosen
-├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
+divvy-bikes-analysis/
+├── data/                    # Данные проекта
+│   ├── raw/                # Исходные данные (2013-2025)
+│   ├── interim/            # Промежуточные данные
+│   ├── processed/          # Обработанные данные
+│   └── external/           # Внешние источники данных
 │
-├── docs               <- A default mkdocs project; see www.mkdocs.org for details
+├── src/                    # Исходный код проекта
+│   ├── data/              # Обработка данных
+│   │   ├── load_data.py       # Загрузка данных из файлов
+│   │   ├── clean_data.py      # Очистка и валидация
+│   │   └── merge_data.py      # Объединение датасетов
+│   │
+│   ├── features/          # Feature engineering
+│   │   ├── temporal_features.py   # Временные признаки (час, день, сезон)
+│   │   └── spatial_features.py    # Пространственные признаки (расстояния, маршруты)
+│   │
+│   ├── models/            # Модели и аналитика
+│   │   ├── unit_economics.py      # Модель юнит-экономики
+│   │   └── sensitivity.py         # Анализ чувствительности
+│   │
+│   └── visualization/     # Визуализации
+│       ├── time_series.py         # Графики временных рядов
+│       └── economic_metrics.py    # Экономические показатели
 │
-├── models             <- Trained and serialized models, model predictions, or model summaries
+├── divvy_analysis/         # Существующий пакет (legacy)
+│   ├── config.py          # Конфигурация
+│   ├── dataset.py         # Работа с данными
+│   ├── features.py        # Создание признаков
+│   ├── plots.py           # Визуализация
+│   └── modeling/          # Модели
 │
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         divvy_analysis and configuration for tools like black
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-├── setup.cfg          <- Configuration file for flake8
-│
-└── divvy_analysis   <- Source code for use in this project.
-    │
-    ├── __init__.py             <- Makes divvy_analysis a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations
+├── notebooks/              # Jupyter notebooks для исследований
+├── models/                 # Сохраненные модели
+├── reports/                # Отчеты и результаты
+│   └── figures/           # Графики для отчетов
+├── tests/                  # Тесты
+├── docs/                   # Документация
+└── references/             # Справочные материалы
+```
+─ plots.py                <- Code to create visualizations
 ```
 
 --------
