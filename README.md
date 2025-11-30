@@ -49,8 +49,6 @@ divvy-bikes-analysis/
 ├── docs/                   # Документация
 └── references/             # Справочные материалы
 ```
-─ plots.py                <- Code to create visualizations
-```
 
 --------
 
