@@ -1,0 +1,18 @@
+{
+  "demand_forecast": {
+    "ensemble_mae": 7.434421488717381,
+    "ensemble_rmse": 18.073266631134306,
+    "ensemble_mape": 1.9367131731075622,
+    "ensemble_r2": 0.9992455847576984
+  },
+  "data_statistics": {
+    "total_records": 29770159,
+    "hourly_intervals": 46960,
+    "classification_samples": 498427
+  },
+  "user_classification": {
+    "best_model": "LightGBM",
+    "roc_auc": 0.7104741832376558,
+    "accuracy": 0.6497803101739462
+  }
+}
