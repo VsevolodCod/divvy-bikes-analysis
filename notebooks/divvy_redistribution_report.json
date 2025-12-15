@@ -1,0 +1,80 @@
+{
+  "summary": {
+    "total_stations_analyzed": 20,
+    "excess_stations": 20,
+    "deficit_stations": 0,
+    "balanced_stations": 0,
+    "avg_imbalance": -66.0197710155466,
+    "max_deficit": 0,
+    "max_excess": 79.98680373610182
+  },
+  "top_deficit_stations": [],
+  "top_excess_stations": [
+    {
+      "station": "Michigan Ave & Oak St",
+      "lat": 41.90096897409428,
+      "lng": -87.62377163225338,
+      "total_rides": 208496,
+      "avg_predicted": 4.763323479723417,
+      "peak_predicted": 5.757270808044258,
+      "peak_hour_predicted": 7,
+      "member_ratio": 0.35682698948660885,
+      "recommendation": "🔵 Забрать велосипеды",
+      "historical_hourly": 23.80091324200913,
+      "imbalance_percent": -79.98680373610182
+    },
+    {
+      "station": "Wells St & Concord Ln",
+      "lat": 41.9121063882796,
+      "lng": -87.63470435506527,
+      "total_rides": 185938,
+      "avg_predicted": 4.893169229457831,
+      "peak_predicted": 6.514982462874242,
+      "peak_hour_predicted": 7,
+      "member_ratio": 0.6030612354655853,
+      "recommendation": "🔵 Забрать велосипеды",
+      "historical_hourly": 21.22579908675799,
+      "imbalance_percent": -76.94706705996055
+    },
+    {
+      "station": "DuSable Lake Shore Dr & North Blvd",
+      "lat": 41.91171573087375,
+      "lng": -87.6268173102343,
+      "total_rides": 166753,
+      "avg_predicted": 4.504476188084144,
+      "peak_predicted": 4.795609647998268,
+      "peak_hour_predicted": 8,
+      "member_ratio": 0.4136237429011772,
+      "recommendation": "🔵 Забрать велосипеды",
+      "historical_hourly": 19.035730593607305,
+      "imbalance_percent": -76.33673072891216
+    },
+    {
+      "station": "Clark St & Elm St",
+      "lat": 41.902944515730404,
+      "lng": -87.63139938253035,
+      "total_rides": 198536,
+      "avg_predicted": 5.450560756964329,
+      "peak_predicted": 7.255002133466104,
+      "peak_hour_predicted": 6,
+      "member_ratio": 0.6567574646411733,
+      "recommendation": "🔵 Забрать велосипеды",
+      "historical_hourly": 22.663926940639268,
+      "imbalance_percent": -75.95050155588532
+    },
+    {
+      "station": "Wabash Ave & Grand Ave",
+      "lat": 41.89145131510931,
+      "lng": -87.62676267706229,
+      "total_rides": 149579,
+      "avg_predicted": 4.141627164081058,
+      "peak_predicted": 5.00678389421081,
+      "peak_hour_predicted": 7,
+      "member_ratio": 0.5680677100395108,
+      "recommendation": "🔵 Забрать велосипеды",
+      "historical_hourly": 17.075228310502283,
+      "imbalance_percent": -75.74482115982185
+    }
+  ],
+  "timestamp": "2025-12-15T13:29:38.834212"
+}

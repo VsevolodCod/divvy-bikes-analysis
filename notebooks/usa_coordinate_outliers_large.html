@@ -1,0 +1,2152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_13379b4aea1f4de43a8fab4845e11c78 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+     top: 10px; left: 50px; width: 400px; 
+     z-index: 1000; background-color: white; 
+     padding: 10px; border-radius: 5px; 
+     border: 2px solid red; font-weight: bold;">
+    <center>ВЫБРОСЫ КООРДИНАТ В ДАННЫХ ВЕЛОПРОКАТА ЧИКАГО (2020-2025)</center>
+    <div style="font-size: 12px; margin-top: 5px;">
+    Всего выбросов: 86 точек (0.00027% от всех данных)<br>
+    Красные точки - аномальные координаты поездок
+    </div>
+</div>
+    
+            <div class="folium-map" id="map_13379b4aea1f4de43a8fab4845e11c78" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_13379b4aea1f4de43a8fab4845e11c78 = L.map(
+                "map_13379b4aea1f4de43a8fab4845e11c78",
+                {
+                    center: [39.8283, -98.5795],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_86a21ab1805c189687ad5f695f674acf = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_86a21ab1805c189687ad5f695f674acf.addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+            var circle_marker_667c56cff1b29e48bca1cc82f988d79c = L.circleMarker(
+                [45.635034323, -73.79647696],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_0ff5be4732bbb6d983ac5f14f0335bc8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78f912b9ea2bf009526dc9ebf7fdb85c = $(`<div id="html_78f912b9ea2bf009526dc9ebf7fdb85c" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>СТАРТ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 3327172413547F64<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 45.6350, -73.7965<br>                 <b>Год:</b> 2022<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2022-01-14 11:13:15<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_0ff5be4732bbb6d983ac5f14f0335bc8.setContent(html_78f912b9ea2bf009526dc9ebf7fdb85c);
+            
+        
+
+        circle_marker_667c56cff1b29e48bca1cc82f988d79c.bindPopup(popup_0ff5be4732bbb6d983ac5f14f0335bc8)
+        ;
+
+        
+    
+    
+            var circle_marker_86c9e69fa542f8c9e0b41c8e4face490 = L.circleMarker(
+                [42.0, -88.07],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_6569af4d6b5e2306b1a90d35e6a4548a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0709d51f7f9e85d6c1f567cb147a240f = $(`<div id="html_0709d51f7f9e85d6c1f567cb147a240f" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 28200FEEB3BB697B<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.0000, -88.0700<br>                 <b>Год:</b> 2021<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2021-03-23 11:21:08<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_6569af4d6b5e2306b1a90d35e6a4548a.setContent(html_0709d51f7f9e85d6c1f567cb147a240f);
+            
+        
+
+        circle_marker_86c9e69fa542f8c9e0b41c8e4face490.bindPopup(popup_6569af4d6b5e2306b1a90d35e6a4548a)
+        ;
+
+        
+    
+    
+            var circle_marker_84f21d345dc046d996dd29e99497ddfa = L.circleMarker(
+                [41.39, -88.97],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_ef30ecf79a5d4e5ae4ceaafd041a7ae7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2b733f9c9711ceb164c8fe987972a69 = $(`<div id="html_b2b733f9c9711ceb164c8fe987972a69" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 9F438AD0AB380E3F<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.3900, -88.9700<br>                 <b>Год:</b> 2021<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2021-11-09 07:42:56<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_ef30ecf79a5d4e5ae4ceaafd041a7ae7.setContent(html_b2b733f9c9711ceb164c8fe987972a69);
+            
+        
+
+        circle_marker_84f21d345dc046d996dd29e99497ddfa.bindPopup(popup_ef30ecf79a5d4e5ae4ceaafd041a7ae7)
+        ;
+
+        
+    
+    
+            var circle_marker_126da44e248b91238b4cdb7cc125ecbd = L.circleMarker(
+                [41.48, -87.65],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_9010af2ccd5d7a0d053756887ea2b045 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_710a35a54d721681220d751c38ad0315 = $(`<div id="html_710a35a54d721681220d751c38ad0315" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 3562D6656F11B167<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.4800, -87.6500<br>                 <b>Год:</b> 2021<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2021-12-25 14:28:56<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_9010af2ccd5d7a0d053756887ea2b045.setContent(html_710a35a54d721681220d751c38ad0315);
+            
+        
+
+        circle_marker_126da44e248b91238b4cdb7cc125ecbd.bindPopup(popup_9010af2ccd5d7a0d053756887ea2b045)
+        ;
+
+        
+    
+    
+            var circle_marker_eef8570d3e0395bbd3bbf4c7a62623ac = L.circleMarker(
+                [41.87, -88.14],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_7a17f7c035f13e5455c3d9f4fca57100 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ae6340de995651a3d18bd0e332993fd = $(`<div id="html_4ae6340de995651a3d18bd0e332993fd" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 353B37694B30396F<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.8700, -88.1400<br>                 <b>Год:</b> 2022<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2022-05-19 13:03:55<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_7a17f7c035f13e5455c3d9f4fca57100.setContent(html_4ae6340de995651a3d18bd0e332993fd);
+            
+        
+
+        circle_marker_eef8570d3e0395bbd3bbf4c7a62623ac.bindPopup(popup_7a17f7c035f13e5455c3d9f4fca57100)
+        ;
+
+        
+    
+    
+            var circle_marker_116a4fed7c3124e53974f48da391d7f2 = L.circleMarker(
+                [41.9, -88.05],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_e66c80084f7dbd9e6e5ccfbd2eaf0159 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62e521adb89148bd1531116541c0e3da = $(`<div id="html_62e521adb89148bd1531116541c0e3da" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 34D0B5B9020EBFD2<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.9000, -88.0500<br>                 <b>Год:</b> 2022<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2022-08-06 05:38:36<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_e66c80084f7dbd9e6e5ccfbd2eaf0159.setContent(html_62e521adb89148bd1531116541c0e3da);
+            
+        
+
+        circle_marker_116a4fed7c3124e53974f48da391d7f2.bindPopup(popup_e66c80084f7dbd9e6e5ccfbd2eaf0159)
+        ;
+
+        
+    
+    
+            var circle_marker_5abc75a09690b4fb958602c1e0fef0a3 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_2e4bdc2a7ba6442741acf3a9b182fee0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_35df820ecdc71b49c7fbe42351870bfe = $(`<div id="html_35df820ecdc71b49c7fbe42351870bfe" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 0A6988FE859F4D54<br>                 <b>Тип велосипеда:</b> classic_bike<br>                 <b>Координаты:</b> 0.0000, 0.0000<br>                 <b>Год:</b> 2022<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2022-11-09 11:06:21<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_2e4bdc2a7ba6442741acf3a9b182fee0.setContent(html_35df820ecdc71b49c7fbe42351870bfe);
+            
+        
+
+        circle_marker_5abc75a09690b4fb958602c1e0fef0a3.bindPopup(popup_2e4bdc2a7ba6442741acf3a9b182fee0)
+        ;
+
+        
+    
+    
+            var circle_marker_c802a398d6bf218bc2447192d2d8efdb = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_69b019a8019f42f360736c8213d585e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c302f977ff538634144469a8eb6af00 = $(`<div id="html_8c302f977ff538634144469a8eb6af00" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> BB8AA29838266294<br>                 <b>Тип велосипеда:</b> classic_bike<br>                 <b>Координаты:</b> 0.0000, 0.0000<br>                 <b>Год:</b> 2022<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2022-11-09 11:37:30<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_69b019a8019f42f360736c8213d585e4.setContent(html_8c302f977ff538634144469a8eb6af00);
+            
+        
+
+        circle_marker_c802a398d6bf218bc2447192d2d8efdb.bindPopup(popup_69b019a8019f42f360736c8213d585e4)
+        ;
+
+        
+    
+    
+            var circle_marker_ebeb9df2ec2964298146b3c7887a8a68 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_97fffe67973d67f5f792771e66461294 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_109a1886af53e08030602b99eacd752e = $(`<div id="html_109a1886af53e08030602b99eacd752e" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> E9495F1DC3475D41<br>                 <b>Тип велосипеда:</b> classic_bike<br>                 <b>Координаты:</b> 0.0000, 0.0000<br>                 <b>Год:</b> 2022<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2022-11-09 12:26:18<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_97fffe67973d67f5f792771e66461294.setContent(html_109a1886af53e08030602b99eacd752e);
+            
+        
+
+        circle_marker_ebeb9df2ec2964298146b3c7887a8a68.bindPopup(popup_97fffe67973d67f5f792771e66461294)
+        ;
+
+        
+    
+    
+            var circle_marker_bb94fd40edc77c46750382b23caf5826 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_fb7feedbb627ea55af9be4c05d67a486 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec90a82a7a06465836450a5f467fba9c = $(`<div id="html_ec90a82a7a06465836450a5f467fba9c" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 7F49424E860E7094<br>                 <b>Тип велосипеда:</b> classic_bike<br>                 <b>Координаты:</b> 0.0000, 0.0000<br>                 <b>Год:</b> 2022<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2022-11-09 13:28:28<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_fb7feedbb627ea55af9be4c05d67a486.setContent(html_ec90a82a7a06465836450a5f467fba9c);
+            
+        
+
+        circle_marker_bb94fd40edc77c46750382b23caf5826.bindPopup(popup_fb7feedbb627ea55af9be4c05d67a486)
+        ;
+
+        
+    
+    
+            var circle_marker_86bee21d4960e04dd775b242556396eb = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_8a3074d136928b0cf41fff6bed4c9104 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bfaf2a281762d9206d7cdeeada1589e0 = $(`<div id="html_bfaf2a281762d9206d7cdeeada1589e0" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 3B47B333C0D186F0<br>                 <b>Тип велосипеда:</b> classic_bike<br>                 <b>Координаты:</b> 0.0000, 0.0000<br>                 <b>Год:</b> 2022<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2022-11-09 13:44:38<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_8a3074d136928b0cf41fff6bed4c9104.setContent(html_bfaf2a281762d9206d7cdeeada1589e0);
+            
+        
+
+        circle_marker_86bee21d4960e04dd775b242556396eb.bindPopup(popup_8a3074d136928b0cf41fff6bed4c9104)
+        ;
+
+        
+    
+    
+            var circle_marker_c1cd4d85644b563f37967dd0548eead7 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_3511099cc7b72f108f2aab4cff91e135 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34a3dca3264029f3e1bd790af69a24d3 = $(`<div id="html_34a3dca3264029f3e1bd790af69a24d3" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 75DE33501313D0CE<br>                 <b>Тип велосипеда:</b> classic_bike<br>                 <b>Координаты:</b> 0.0000, 0.0000<br>                 <b>Год:</b> 2022<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2022-11-09 15:52:23<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_3511099cc7b72f108f2aab4cff91e135.setContent(html_34a3dca3264029f3e1bd790af69a24d3);
+            
+        
+
+        circle_marker_c1cd4d85644b563f37967dd0548eead7.bindPopup(popup_3511099cc7b72f108f2aab4cff91e135)
+        ;
+
+        
+    
+    
+            var circle_marker_f70797274eee5d109e9f4835402df2e9 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_92f51fb253ae230f253d83848c0ebef1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9e63300f4a3ec0a282eefc1c603d25e = $(`<div id="html_f9e63300f4a3ec0a282eefc1c603d25e" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 6AFE1471227BD76F<br>                 <b>Тип велосипеда:</b> classic_bike<br>                 <b>Координаты:</b> 0.0000, 0.0000<br>                 <b>Год:</b> 2022<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2022-11-09 16:26:17<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_92f51fb253ae230f253d83848c0ebef1.setContent(html_f9e63300f4a3ec0a282eefc1c603d25e);
+            
+        
+
+        circle_marker_f70797274eee5d109e9f4835402df2e9.bindPopup(popup_92f51fb253ae230f253d83848c0ebef1)
+        ;
+
+        
+    
+    
+            var circle_marker_879db29a0039fee32cdf981a93f3b5a3 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_8fc2e739eca1aed4a34712e56b4ad8fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7a0f191e3fca15ab54c5be7dbcc48d6 = $(`<div id="html_d7a0f191e3fca15ab54c5be7dbcc48d6" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 42AF82C53D831251<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 0.0000, 0.0000<br>                 <b>Год:</b> 2022<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2022-11-09 16:38:06<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_8fc2e739eca1aed4a34712e56b4ad8fd.setContent(html_d7a0f191e3fca15ab54c5be7dbcc48d6);
+            
+        
+
+        circle_marker_879db29a0039fee32cdf981a93f3b5a3.bindPopup(popup_8fc2e739eca1aed4a34712e56b4ad8fd)
+        ;
+
+        
+    
+    
+            var circle_marker_3436281443803ae59188572408d5453e = L.circleMarker(
+                [41.66, -88.11],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_a73e952885a6164ffe9828f497808b90 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e85da3cbc0e5551f62174ad4a3d587c = $(`<div id="html_1e85da3cbc0e5551f62174ad4a3d587c" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> BF9ED170B88EA6B7<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.6600, -88.1100<br>                 <b>Год:</b> 2023<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2023-04-13 19:39:45<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_a73e952885a6164ffe9828f497808b90.setContent(html_1e85da3cbc0e5551f62174ad4a3d587c);
+            
+        
+
+        circle_marker_3436281443803ae59188572408d5453e.bindPopup(popup_a73e952885a6164ffe9828f497808b90)
+        ;
+
+        
+    
+    
+            var circle_marker_c068ca0295bb232a48080fc4a5a90da2 = L.circleMarker(
+                [42.07, -88.16],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_d1a0920d58118880d97ed54753d3a6af = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08f25feaa5b8c879b32860c1d27abc99 = $(`<div id="html_08f25feaa5b8c879b32860c1d27abc99" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 500867C891161912<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.0700, -88.1600<br>                 <b>Год:</b> 2023<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2023-06-15 03:12:36<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_d1a0920d58118880d97ed54753d3a6af.setContent(html_08f25feaa5b8c879b32860c1d27abc99);
+            
+        
+
+        circle_marker_c068ca0295bb232a48080fc4a5a90da2.bindPopup(popup_d1a0920d58118880d97ed54753d3a6af)
+        ;
+
+        
+    
+    
+            var circle_marker_ef65e3ec7f96fe6245183c9c050a2bf2 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_7b67e2b9fe9d12156b3d5296ecebaff5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ffea5754863de24380f985926b7ed1a4 = $(`<div id="html_ffea5754863de24380f985926b7ed1a4" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> ADFF57D27B5BF9D2<br>                 <b>Тип велосипеда:</b> classic_bike<br>                 <b>Координаты:</b> 0.0000, 0.0000<br>                 <b>Год:</b> 2023<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2023-06-15 09:42:57<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_7b67e2b9fe9d12156b3d5296ecebaff5.setContent(html_ffea5754863de24380f985926b7ed1a4);
+            
+        
+
+        circle_marker_ef65e3ec7f96fe6245183c9c050a2bf2.bindPopup(popup_7b67e2b9fe9d12156b3d5296ecebaff5)
+        ;
+
+        
+    
+    
+            var circle_marker_7b7f7fd2d927e5b8e395fb1d1daf81d8 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_7244b0b7ab006fd051bddad3fa0336c4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_056fbf329fad8051e5590a05ac920f8d = $(`<div id="html_056fbf329fad8051e5590a05ac920f8d" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 873D50153BBC0686<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 0.0000, 0.0000<br>                 <b>Год:</b> 2023<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2023-06-15 12:38:41<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_7244b0b7ab006fd051bddad3fa0336c4.setContent(html_056fbf329fad8051e5590a05ac920f8d);
+            
+        
+
+        circle_marker_7b7f7fd2d927e5b8e395fb1d1daf81d8.bindPopup(popup_7244b0b7ab006fd051bddad3fa0336c4)
+        ;
+
+        
+    
+    
+            var circle_marker_8c983d5b4770557927733fb268f91862 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_c155effca49a442f5d775d6fd13fc1a7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46243d9be707527b216e624bcdf8485b = $(`<div id="html_46243d9be707527b216e624bcdf8485b" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 43107577DF9B498D<br>                 <b>Тип велосипеда:</b> classic_bike<br>                 <b>Координаты:</b> 0.0000, 0.0000<br>                 <b>Год:</b> 2023<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2023-08-21 22:05:55<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_c155effca49a442f5d775d6fd13fc1a7.setContent(html_46243d9be707527b216e624bcdf8485b);
+            
+        
+
+        circle_marker_8c983d5b4770557927733fb268f91862.bindPopup(popup_c155effca49a442f5d775d6fd13fc1a7)
+        ;
+
+        
+    
+    
+            var circle_marker_e794f5b8c5e2857bb5d7c358d16f21b6 = L.circleMarker(
+                [41.89, -88.12],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_e27396164f68a8d7c2fd55d3bfe9082b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3eae4fa8beb66fe9a778415b4a941026 = $(`<div id="html_3eae4fa8beb66fe9a778415b4a941026" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 98B0C461A930569B<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.8900, -88.1200<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-06-06 08:28:49.101000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_e27396164f68a8d7c2fd55d3bfe9082b.setContent(html_3eae4fa8beb66fe9a778415b4a941026);
+            
+        
+
+        circle_marker_e794f5b8c5e2857bb5d7c358d16f21b6.bindPopup(popup_e27396164f68a8d7c2fd55d3bfe9082b)
+        ;
+
+        
+    
+    
+            var circle_marker_1cc2797c9eebac61c56b66b552cbe17b = L.circleMarker(
+                [41.48, -87.67],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_e2d589e883cbcb11fb36d42b58d6cde8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e4257ac5a9bba241a446ce023c64c4e = $(`<div id="html_8e4257ac5a9bba241a446ce023c64c4e" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> C3BC639876FF5A63<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.4800, -87.6700<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-07-12 16:04:05.795000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_e2d589e883cbcb11fb36d42b58d6cde8.setContent(html_8e4257ac5a9bba241a446ce023c64c4e);
+            
+        
+
+        circle_marker_1cc2797c9eebac61c56b66b552cbe17b.bindPopup(popup_e2d589e883cbcb11fb36d42b58d6cde8)
+        ;
+
+        
+    
+    
+            var circle_marker_3e4943b2d91bed88c59e0e3d0a97dc92 = L.circleMarker(
+                [87.96, -144.05],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_f2e4f9085c69e575678416badf35c4e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27684f0a26593fa1dfe93fcf8a1362b1 = $(`<div id="html_27684f0a26593fa1dfe93fcf8a1362b1" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> BFB4AA1136202211<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 87.9600, -144.0500<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-07-27 18:23:12.359000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_f2e4f9085c69e575678416badf35c4e4.setContent(html_27684f0a26593fa1dfe93fcf8a1362b1);
+            
+        
+
+        circle_marker_3e4943b2d91bed88c59e0e3d0a97dc92.bindPopup(popup_f2e4f9085c69e575678416badf35c4e4)
+        ;
+
+        
+    
+    
+            var circle_marker_1ecc381a3d197fe3f67884d94938a275 = L.circleMarker(
+                [38.94, -89.03],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_cabff69ebfc18873dcae3c937bdbf543 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9b728d5ba799344a17ac124a709b096 = $(`<div id="html_a9b728d5ba799344a17ac124a709b096" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 008E882D718EDB54<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 38.9400, -89.0300<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-05 21:04:52.820000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_cabff69ebfc18873dcae3c937bdbf543.setContent(html_a9b728d5ba799344a17ac124a709b096);
+            
+        
+
+        circle_marker_1ecc381a3d197fe3f67884d94938a275.bindPopup(popup_cabff69ebfc18873dcae3c937bdbf543)
+        ;
+
+        
+    
+    
+            var circle_marker_8aeb66121b293aa780805bfe6a75af97 = L.circleMarker(
+                [42.53, -87.8],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_4990b6f7ba3c4d734d2d8e8c2e692bfa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0057366b876e58b2caa77754fa5c8263 = $(`<div id="html_0057366b876e58b2caa77754fa5c8263" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 9A77507269162955<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.5300, -87.8000<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-07 15:19:53.645000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_4990b6f7ba3c4d734d2d8e8c2e692bfa.setContent(html_0057366b876e58b2caa77754fa5c8263);
+            
+        
+
+        circle_marker_8aeb66121b293aa780805bfe6a75af97.bindPopup(popup_4990b6f7ba3c4d734d2d8e8c2e692bfa)
+        ;
+
+        
+    
+    
+            var circle_marker_d832b515749e355b43e47da63d222772 = L.circleMarker(
+                [42.9, -87.29],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_76daa3d9d01226ce247bb6d3ea92c591 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91513f843b595c28e86a1149c962c5bc = $(`<div id="html_91513f843b595c28e86a1149c962c5bc" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 90D3D2DAB5B708A2<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.9000, -87.2900<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-09 09:04:35.257000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_76daa3d9d01226ce247bb6d3ea92c591.setContent(html_91513f843b595c28e86a1149c962c5bc);
+            
+        
+
+        circle_marker_d832b515749e355b43e47da63d222772.bindPopup(popup_76daa3d9d01226ce247bb6d3ea92c591)
+        ;
+
+        
+    
+    
+            var circle_marker_f92eeb6525b2038c966ba6ed763b26c5 = L.circleMarker(
+                [41.89, -88.05],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_0b48c6f334d305bae2447039ed20efa5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b0fc1e51ac2a5bd2f33e0a0f4617e1f = $(`<div id="html_3b0fc1e51ac2a5bd2f33e0a0f4617e1f" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 1B4CC526A87F2CE6<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.8900, -88.0500<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-08-09 21:32:29.121000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_0b48c6f334d305bae2447039ed20efa5.setContent(html_3b0fc1e51ac2a5bd2f33e0a0f4617e1f);
+            
+        
+
+        circle_marker_f92eeb6525b2038c966ba6ed763b26c5.bindPopup(popup_0b48c6f334d305bae2447039ed20efa5)
+        ;
+
+        
+    
+    
+            var circle_marker_7ff23f230c743a7035cba20eb96f61ab = L.circleMarker(
+                [42.14, -85.52],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_88ca58185e23496103abd848add755ef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5957d513a0f8a47e3beabac38c781da = $(`<div id="html_d5957d513a0f8a47e3beabac38c781da" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> E6191A6DBACEACBA<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.1400, -85.5200<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-10 00:10:45.167000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_88ca58185e23496103abd848add755ef.setContent(html_d5957d513a0f8a47e3beabac38c781da);
+            
+        
+
+        circle_marker_7ff23f230c743a7035cba20eb96f61ab.bindPopup(popup_88ca58185e23496103abd848add755ef)
+        ;
+
+        
+    
+    
+            var circle_marker_b86aa2812fbcabd9db5f9d5f047c4542 = L.circleMarker(
+                [36.0, -85.52],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_358c553db70cc73a48ec9aeef4c21d9c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b053143b18665e2bb64fe0ccc8be9fb = $(`<div id="html_0b053143b18665e2bb64fe0ccc8be9fb" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 37B6F0FE3764406C<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 36.0000, -85.5200<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-08-10 07:48:22.734000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_358c553db70cc73a48ec9aeef4c21d9c.setContent(html_0b053143b18665e2bb64fe0ccc8be9fb);
+            
+        
+
+        circle_marker_b86aa2812fbcabd9db5f9d5f047c4542.bindPopup(popup_358c553db70cc73a48ec9aeef4c21d9c)
+        ;
+
+        
+    
+    
+            var circle_marker_e4a5dd9446457c7fbf42410e900116be = L.circleMarker(
+                [41.6, -88.14],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_5b61ac5f3ffc82452f876c2ba2ad7b34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f65a9ba6ae55aca935cdb3d10169244 = $(`<div id="html_8f65a9ba6ae55aca935cdb3d10169244" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 4FCBAEDBEB9B3075<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.6000, -88.1400<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-08-12 10:55:52.928000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_5b61ac5f3ffc82452f876c2ba2ad7b34.setContent(html_8f65a9ba6ae55aca935cdb3d10169244);
+            
+        
+
+        circle_marker_e4a5dd9446457c7fbf42410e900116be.bindPopup(popup_5b61ac5f3ffc82452f876c2ba2ad7b34)
+        ;
+
+        
+    
+    
+            var circle_marker_7542846ec70b51f3e405dadce57bf0ae = L.circleMarker(
+                [42.13, -85.52],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_6e8099314e5500839cca3d60d3a96ce5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25c0f98b2a991cd2d6c9264605dae001 = $(`<div id="html_25c0f98b2a991cd2d6c9264605dae001" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> F58F74574F6CFB40<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.1300, -85.5200<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-08-12 15:20:08.700000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_6e8099314e5500839cca3d60d3a96ce5.setContent(html_25c0f98b2a991cd2d6c9264605dae001);
+            
+        
+
+        circle_marker_7542846ec70b51f3e405dadce57bf0ae.bindPopup(popup_6e8099314e5500839cca3d60d3a96ce5)
+        ;
+
+        
+    
+    
+            var circle_marker_a235dcc1b308f5169b3298dac67b7f79 = L.circleMarker(
+                [41.19, -87.65],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_1abe9a8b95df01cb91f50b772c67225d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e6f389c660fefdaf04d3fa202e8a6fc4 = $(`<div id="html_e6f389c660fefdaf04d3fa202e8a6fc4" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 57BB31147F27DBE6<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.1900, -87.6500<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-12 19:34:29.796000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_1abe9a8b95df01cb91f50b772c67225d.setContent(html_e6f389c660fefdaf04d3fa202e8a6fc4);
+            
+        
+
+        circle_marker_a235dcc1b308f5169b3298dac67b7f79.bindPopup(popup_1abe9a8b95df01cb91f50b772c67225d)
+        ;
+
+        
+    
+    
+            var circle_marker_7c6fee942abbee86f2973c182697a8a6 = L.circleMarker(
+                [41.88, -88.35],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_06c2378ba000940ab6355e0d472076a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88dad1bcfb86fd9d3f4c8e6534311102 = $(`<div id="html_88dad1bcfb86fd9d3f4c8e6534311102" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 16B9A60B510E0984<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.8800, -88.3500<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-12 19:49:34.321000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_06c2378ba000940ab6355e0d472076a2.setContent(html_88dad1bcfb86fd9d3f4c8e6534311102);
+            
+        
+
+        circle_marker_7c6fee942abbee86f2973c182697a8a6.bindPopup(popup_06c2378ba000940ab6355e0d472076a2)
+        ;
+
+        
+    
+    
+            var circle_marker_3127b9a84061746d6c9b3f7e38bd0d6c = L.circleMarker(
+                [16.06, -84.82],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_9e2ec9930ebd64e76b7dd23b99bac85f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4cb80d4d1c1ffdd02ac0b4887bed6645 = $(`<div id="html_4cb80d4d1c1ffdd02ac0b4887bed6645" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> B9D700B54FEC231D<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 16.0600, -84.8200<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-08-13 14:07:09.816000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_9e2ec9930ebd64e76b7dd23b99bac85f.setContent(html_4cb80d4d1c1ffdd02ac0b4887bed6645);
+            
+        
+
+        circle_marker_3127b9a84061746d6c9b3f7e38bd0d6c.bindPopup(popup_9e2ec9930ebd64e76b7dd23b99bac85f)
+        ;
+
+        
+    
+    
+            var circle_marker_31c714bdb07c391cde76547279f3bb69 = L.circleMarker(
+                [31.74, -81.51],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_08b03e01d65f2361c2184848f1a7f099 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1621f95d6c9f1a84996657d45e6b578a = $(`<div id="html_1621f95d6c9f1a84996657d45e6b578a" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 6443AF0A50B2CE2B<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 31.7400, -81.5100<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-14 19:47:47.053000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_08b03e01d65f2361c2184848f1a7f099.setContent(html_1621f95d6c9f1a84996657d45e6b578a);
+            
+        
+
+        circle_marker_31c714bdb07c391cde76547279f3bb69.bindPopup(popup_08b03e01d65f2361c2184848f1a7f099)
+        ;
+
+        
+    
+    
+            var circle_marker_7f9e6b04a78a17f5398ecbd6968f72a1 = L.circleMarker(
+                [42.76, -97.47],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_5736e4e127a024e9b19ff2c053c62427 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6528b258e3f649e883782998146470ce = $(`<div id="html_6528b258e3f649e883782998146470ce" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> CE839B24D653FFC6<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.7600, -97.4700<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-08-17 06:02:45.648000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_5736e4e127a024e9b19ff2c053c62427.setContent(html_6528b258e3f649e883782998146470ce);
+            
+        
+
+        circle_marker_7f9e6b04a78a17f5398ecbd6968f72a1.bindPopup(popup_5736e4e127a024e9b19ff2c053c62427)
+        ;
+
+        
+    
+    
+            var circle_marker_be712451c4478c91298a554f44e9ddba = L.circleMarker(
+                [41.78, -89.27],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_607b4115d79735d48b28ee43932e5ce5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6d51e1ecfd5ab85285cbc0a6c099063c = $(`<div id="html_6d51e1ecfd5ab85285cbc0a6c099063c" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 7ED3F1A4F220ABAE<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.7800, -89.2700<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-17 08:24:29.357000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_607b4115d79735d48b28ee43932e5ce5.setContent(html_6d51e1ecfd5ab85285cbc0a6c099063c);
+            
+        
+
+        circle_marker_be712451c4478c91298a554f44e9ddba.bindPopup(popup_607b4115d79735d48b28ee43932e5ce5)
+        ;
+
+        
+    
+    
+            var circle_marker_d66f99364965d9f8c9146c75d9c3ae6e = L.circleMarker(
+                [36.56, -91.42],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_d486348b29ea97b2a83c0899bd460f06 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae9ee5ce01d9cf002387f54fa6324e7f = $(`<div id="html_ae9ee5ce01d9cf002387f54fa6324e7f" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 11CDEC2D64D92CCD<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 36.5600, -91.4200<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-18 11:16:22.419000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_d486348b29ea97b2a83c0899bd460f06.setContent(html_ae9ee5ce01d9cf002387f54fa6324e7f);
+            
+        
+
+        circle_marker_d66f99364965d9f8c9146c75d9c3ae6e.bindPopup(popup_d486348b29ea97b2a83c0899bd460f06)
+        ;
+
+        
+    
+    
+            var circle_marker_f6481d791b4869d5a36b69a8a92eb146 = L.circleMarker(
+                [42.11, -81.69],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_0b40174fbdb7cb562e50f19a36b5ec47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b47b075bbc0c5f66a9a1523aa5ba696 = $(`<div id="html_5b47b075bbc0c5f66a9a1523aa5ba696" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 0133FCBD402C8A0C<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.1100, -81.6900<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-18 14:29:18.037000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_0b40174fbdb7cb562e50f19a36b5ec47.setContent(html_5b47b075bbc0c5f66a9a1523aa5ba696);
+            
+        
+
+        circle_marker_f6481d791b4869d5a36b69a8a92eb146.bindPopup(popup_0b40174fbdb7cb562e50f19a36b5ec47)
+        ;
+
+        
+    
+    
+            var circle_marker_f6d78975e65d629983ec3960d5f22f99 = L.circleMarker(
+                [42.76, -97.46],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_6cbf3ba0eebbda84c77e990539a1efed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5bba62e8a96de8ca9ab136ebaceedb5 = $(`<div id="html_b5bba62e8a96de8ca9ab136ebaceedb5" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> E583A8FA09606F72<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.7600, -97.4600<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-08-18 15:55:19.799000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_6cbf3ba0eebbda84c77e990539a1efed.setContent(html_b5bba62e8a96de8ca9ab136ebaceedb5);
+            
+        
+
+        circle_marker_f6d78975e65d629983ec3960d5f22f99.bindPopup(popup_6cbf3ba0eebbda84c77e990539a1efed)
+        ;
+
+        
+    
+    
+            var circle_marker_d6e35322dfa593217a4c7e7049cd9983 = L.circleMarker(
+                [40.85, -89.39],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_eeee6827f271e2440e86f7baea22c67c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44b285185656d47822b9d6c71bb235f3 = $(`<div id="html_44b285185656d47822b9d6c71bb235f3" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 5CE4E4C654C9E8E0<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 40.8500, -89.3900<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-18 19:23:57.213000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_eeee6827f271e2440e86f7baea22c67c.setContent(html_44b285185656d47822b9d6c71bb235f3);
+            
+        
+
+        circle_marker_d6e35322dfa593217a4c7e7049cd9983.bindPopup(popup_eeee6827f271e2440e86f7baea22c67c)
+        ;
+
+        
+    
+    
+            var circle_marker_17d35f813750d42024708b6f7be7d5eb = L.circleMarker(
+                [30.02, -85.47],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_66f0c15aa3d913d7d1cc985f01203e97 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e900e8946c49ac96e5d58af56194c066 = $(`<div id="html_e900e8946c49ac96e5d58af56194c066" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 992C14C6CE573FD5<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 30.0200, -85.4700<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-19 15:57:04.508000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_66f0c15aa3d913d7d1cc985f01203e97.setContent(html_e900e8946c49ac96e5d58af56194c066);
+            
+        
+
+        circle_marker_17d35f813750d42024708b6f7be7d5eb.bindPopup(popup_66f0c15aa3d913d7d1cc985f01203e97)
+        ;
+
+        
+    
+    
+            var circle_marker_c08647aef9054df3119748ceffe85e4d = L.circleMarker(
+                [43.31, -86.54],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_596f0f6391a0c20f0eb5e95f0934a47b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9e561152f51ed871fefa261f0dfcbd92 = $(`<div id="html_9e561152f51ed871fefa261f0dfcbd92" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 3522F54E76DA57A6<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 43.3100, -86.5400<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-08-19 20:13:11.970000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_596f0f6391a0c20f0eb5e95f0934a47b.setContent(html_9e561152f51ed871fefa261f0dfcbd92);
+            
+        
+
+        circle_marker_c08647aef9054df3119748ceffe85e4d.bindPopup(popup_596f0f6391a0c20f0eb5e95f0934a47b)
+        ;
+
+        
+    
+    
+            var circle_marker_b66789256c0eddb8b3c6e48be761a8f7 = L.circleMarker(
+                [46.16, -86.6],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_152364649382e68249181db5a36f1a57 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a6107fdc54696603b0611820cbac1b50 = $(`<div id="html_a6107fdc54696603b0611820cbac1b50" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> B6C7F17118123505<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 46.1600, -86.6000<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-08-19 19:43:17.301000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_152364649382e68249181db5a36f1a57.setContent(html_a6107fdc54696603b0611820cbac1b50);
+            
+        
+
+        circle_marker_b66789256c0eddb8b3c6e48be761a8f7.bindPopup(popup_152364649382e68249181db5a36f1a57)
+        ;
+
+        
+    
+    
+            var circle_marker_318a9bf0be3ed3ba849d4228935f4b34 = L.circleMarker(
+                [41.59, -88.45],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_65e50cb3e21f04ae211d0d5e3d5744b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c438b64da5d18ca5582004451adc8bb3 = $(`<div id="html_c438b64da5d18ca5582004451adc8bb3" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 768C2673498C416A<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.5900, -88.4500<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-20 16:20:00.942000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_65e50cb3e21f04ae211d0d5e3d5744b9.setContent(html_c438b64da5d18ca5582004451adc8bb3);
+            
+        
+
+        circle_marker_318a9bf0be3ed3ba849d4228935f4b34.bindPopup(popup_65e50cb3e21f04ae211d0d5e3d5744b9)
+        ;
+
+        
+    
+    
+            var circle_marker_b55de4a1f587d8bd3e644fa4dbe103b6 = L.circleMarker(
+                [39.86, -90.66],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_6b4a48666783b481a8681ff1abf3ae3a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b481282a3327c4134ee7699e49aa179f = $(`<div id="html_b481282a3327c4134ee7699e49aa179f" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 85437CD6FF21E97B<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 39.8600, -90.6600<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-08-21 18:50:54.231000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_6b4a48666783b481a8681ff1abf3ae3a.setContent(html_b481282a3327c4134ee7699e49aa179f);
+            
+        
+
+        circle_marker_b55de4a1f587d8bd3e644fa4dbe103b6.bindPopup(popup_6b4a48666783b481a8681ff1abf3ae3a)
+        ;
+
+        
+    
+    
+            var circle_marker_292f7b5dcaf9e95dd69cc0dc86eac7ef = L.circleMarker(
+                [42.84, -90.88],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_3363985a9bb6b6920c0d394cc7fb9f8c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25d2c81294f88be45533d03cea8eb595 = $(`<div id="html_25d2c81294f88be45533d03cea8eb595" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> FF025E6C4E70DC6B<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.8400, -90.8800<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-22 09:42:32.346000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_3363985a9bb6b6920c0d394cc7fb9f8c.setContent(html_25d2c81294f88be45533d03cea8eb595);
+            
+        
+
+        circle_marker_292f7b5dcaf9e95dd69cc0dc86eac7ef.bindPopup(popup_3363985a9bb6b6920c0d394cc7fb9f8c)
+        ;
+
+        
+    
+    
+            var circle_marker_519906e32a07fa018994a55584669265 = L.circleMarker(
+                [42.51, -87.5],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_12dad631ad627bac8724826ff2bcd369 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b7e826f963f86a84b290fb3e6a48e49 = $(`<div id="html_2b7e826f963f86a84b290fb3e6a48e49" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> B1C5E03980AE655C<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.5100, -87.5000<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-08-22 19:16:28.627000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_12dad631ad627bac8724826ff2bcd369.setContent(html_2b7e826f963f86a84b290fb3e6a48e49);
+            
+        
+
+        circle_marker_519906e32a07fa018994a55584669265.bindPopup(popup_12dad631ad627bac8724826ff2bcd369)
+        ;
+
+        
+    
+    
+            var circle_marker_3e94f9f221a47ad6239f9eb99036054e = L.circleMarker(
+                [44.01, -83.01],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_b0688df860d2ffc38ce4fece3d12cfca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3873bca917e3215e005cebe0fc64f434 = $(`<div id="html_3873bca917e3215e005cebe0fc64f434" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> E3E458F9FDF1C9EA<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 44.0100, -83.0100<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-23 07:43:18.491000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_b0688df860d2ffc38ce4fece3d12cfca.setContent(html_3873bca917e3215e005cebe0fc64f434);
+            
+        
+
+        circle_marker_3e94f9f221a47ad6239f9eb99036054e.bindPopup(popup_b0688df860d2ffc38ce4fece3d12cfca)
+        ;
+
+        
+    
+    
+            var circle_marker_d19a89a77285badab2144bd03c7b2612 = L.circleMarker(
+                [21.79, -92.62],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_42ff9f6fd0060059afcf9843308be4ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08e125a07009607879cbfd7bfbd083e2 = $(`<div id="html_08e125a07009607879cbfd7bfbd083e2" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> A35B93238902E7C3<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 21.7900, -92.6200<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-23 19:04:50.732000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_42ff9f6fd0060059afcf9843308be4ba.setContent(html_08e125a07009607879cbfd7bfbd083e2);
+            
+        
+
+        circle_marker_d19a89a77285badab2144bd03c7b2612.bindPopup(popup_42ff9f6fd0060059afcf9843308be4ba)
+        ;
+
+        
+    
+    
+            var circle_marker_4247f9bf8e147d592ce4210225d44b73 = L.circleMarker(
+                [28.94, -79.02],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_4ea42d78d2a9aa396de3c718a11649de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a7c732cdfb91088ebb34803cfec6c6f = $(`<div id="html_9a7c732cdfb91088ebb34803cfec6c6f" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> D82766169ED55B87<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 28.9400, -79.0200<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-08-25 10:54:31.733000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_4ea42d78d2a9aa396de3c718a11649de.setContent(html_9a7c732cdfb91088ebb34803cfec6c6f);
+            
+        
+
+        circle_marker_4247f9bf8e147d592ce4210225d44b73.bindPopup(popup_4ea42d78d2a9aa396de3c718a11649de)
+        ;
+
+        
+    
+    
+            var circle_marker_a92f61ab92253abaa69131f3588e9406 = L.circleMarker(
+                [35.92, -82.94],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_393e6fbc09d7b997074840630dd4823c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d52e6fdd58b1422daa3241a5d151c5c8 = $(`<div id="html_d52e6fdd58b1422daa3241a5d151c5c8" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> CDB1A7C5C2E003B0<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 35.9200, -82.9400<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-08-25 11:05:26.662000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_393e6fbc09d7b997074840630dd4823c.setContent(html_d52e6fdd58b1422daa3241a5d151c5c8);
+            
+        
+
+        circle_marker_a92f61ab92253abaa69131f3588e9406.bindPopup(popup_393e6fbc09d7b997074840630dd4823c)
+        ;
+
+        
+    
+    
+            var circle_marker_fd13566cebb44d63b72727614e16222b = L.circleMarker(
+                [41.42, -88.46],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_8fa8e0e42f18f5cfdc0ea95a8c6e3602 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2bee723ca95c614829210e887ca19305 = $(`<div id="html_2bee723ca95c614829210e887ca19305" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 5BB54E54A9C6AD74<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.4200, -88.4600<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-27 12:45:08.208000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_8fa8e0e42f18f5cfdc0ea95a8c6e3602.setContent(html_2bee723ca95c614829210e887ca19305);
+            
+        
+
+        circle_marker_fd13566cebb44d63b72727614e16222b.bindPopup(popup_8fa8e0e42f18f5cfdc0ea95a8c6e3602)
+        ;
+
+        
+    
+    
+            var circle_marker_f19b0eb5bf219ac703981745e3228e50 = L.circleMarker(
+                [41.94, -88.59],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_3081f4696c4230ef2ac0416df586cbb6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_711cf1d027623ddb7c898f96cb5b0cfb = $(`<div id="html_711cf1d027623ddb7c898f96cb5b0cfb" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 8E8EACE3F20941DB<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.9400, -88.5900<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-29 17:53:33.819000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_3081f4696c4230ef2ac0416df586cbb6.setContent(html_711cf1d027623ddb7c898f96cb5b0cfb);
+            
+        
+
+        circle_marker_f19b0eb5bf219ac703981745e3228e50.bindPopup(popup_3081f4696c4230ef2ac0416df586cbb6)
+        ;
+
+        
+    
+    
+            var circle_marker_d5caf10a7e23202cf98aaac1744e66c0 = L.circleMarker(
+                [42.14, -86.86],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_1009cf64f89dd56e1be5511a28dc6eae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce97550a733cfcb70a0ed2d41ef1b841 = $(`<div id="html_ce97550a733cfcb70a0ed2d41ef1b841" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> C96255A132A47893<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.1400, -86.8600<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-08-30 09:51:38.437000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_1009cf64f89dd56e1be5511a28dc6eae.setContent(html_ce97550a733cfcb70a0ed2d41ef1b841);
+            
+        
+
+        circle_marker_d5caf10a7e23202cf98aaac1744e66c0.bindPopup(popup_1009cf64f89dd56e1be5511a28dc6eae)
+        ;
+
+        
+    
+    
+            var circle_marker_16923d66a6c8864a3372490bccce89c9 = L.circleMarker(
+                [41.71, -86.52],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_2ceaadae9eee1e81fc0c05a50a9b1ed4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3336d17e35e635d152c9aa808a44cc52 = $(`<div id="html_3336d17e35e635d152c9aa808a44cc52" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> E088ECFF0352636A<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.7100, -86.5200<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-30 11:41:59.226000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_2ceaadae9eee1e81fc0c05a50a9b1ed4.setContent(html_3336d17e35e635d152c9aa808a44cc52);
+            
+        
+
+        circle_marker_16923d66a6c8864a3372490bccce89c9.bindPopup(popup_2ceaadae9eee1e81fc0c05a50a9b1ed4)
+        ;
+
+        
+    
+    
+            var circle_marker_d95a2bf7cfb2c27b24badf39f034cf9c = L.circleMarker(
+                [41.75, -86.19],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_e7015602e31b2a557caff63ca904b52f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fe24e1a10b977b7c067116fe238ab174 = $(`<div id="html_fe24e1a10b977b7c067116fe238ab174" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 8D3862465D1FAE44<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.7500, -86.1900<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-08-30 12:52:26.419000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_e7015602e31b2a557caff63ca904b52f.setContent(html_fe24e1a10b977b7c067116fe238ab174);
+            
+        
+
+        circle_marker_d95a2bf7cfb2c27b24badf39f034cf9c.bindPopup(popup_e7015602e31b2a557caff63ca904b52f)
+        ;
+
+        
+    
+    
+            var circle_marker_97cad4b4b21aefa8ff4923ece828a1e0 = L.circleMarker(
+                [40.36, -87.12],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_aa36c0773356d541eca0a20bb296ee9f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b76e67eb581e5e601982372b84694614 = $(`<div id="html_b76e67eb581e5e601982372b84694614" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> ABBDF543C7B7308D<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 40.3600, -87.1200<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-09-01 17:55:32.407000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_aa36c0773356d541eca0a20bb296ee9f.setContent(html_b76e67eb581e5e601982372b84694614);
+            
+        
+
+        circle_marker_97cad4b4b21aefa8ff4923ece828a1e0.bindPopup(popup_aa36c0773356d541eca0a20bb296ee9f)
+        ;
+
+        
+    
+    
+            var circle_marker_268f40c3ea98eeb75994dd4b4ae179a5 = L.circleMarker(
+                [41.9, -89.79],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_aae8c9ef541704acdf435eb059ecebca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c07bcd50ca9d3fd58efc5605bc28ff7b = $(`<div id="html_c07bcd50ca9d3fd58efc5605bc28ff7b" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 500B633A329A5B85<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.9000, -89.7900<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-09-03 19:08:23.818000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_aae8c9ef541704acdf435eb059ecebca.setContent(html_c07bcd50ca9d3fd58efc5605bc28ff7b);
+            
+        
+
+        circle_marker_268f40c3ea98eeb75994dd4b4ae179a5.bindPopup(popup_aae8c9ef541704acdf435eb059ecebca)
+        ;
+
+        
+    
+    
+            var circle_marker_463815b78f512fd0efc6cd4a3e9470c9 = L.circleMarker(
+                [72.88, 1.72],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_45bc69d61a6b9fc4027af1b72b2bee41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ecca97583d9c6d4e1bbb4d1e0a451626 = $(`<div id="html_ecca97583d9c6d4e1bbb4d1e0a451626" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 62DE8EEB7371193B<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 72.8800, 1.7200<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-09-04 19:02:39.439000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_45bc69d61a6b9fc4027af1b72b2bee41.setContent(html_ecca97583d9c6d4e1bbb4d1e0a451626);
+            
+        
+
+        circle_marker_463815b78f512fd0efc6cd4a3e9470c9.bindPopup(popup_45bc69d61a6b9fc4027af1b72b2bee41)
+        ;
+
+        
+    
+    
+            var circle_marker_9027a4833d084353bb53ba2c3d9c1d2f = L.circleMarker(
+                [41.23, -88.28],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_6ac781da389133078ed204279a2ab225 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4b080550703bd3fa23a1fae4f8e909c0 = $(`<div id="html_4b080550703bd3fa23a1fae4f8e909c0" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> F6F94A61A9D76DB6<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.2300, -88.2800<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-09-05 08:41:07.619000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_6ac781da389133078ed204279a2ab225.setContent(html_4b080550703bd3fa23a1fae4f8e909c0);
+            
+        
+
+        circle_marker_9027a4833d084353bb53ba2c3d9c1d2f.bindPopup(popup_6ac781da389133078ed204279a2ab225)
+        ;
+
+        
+    
+    
+            var circle_marker_d6f820d06909c8e7f6fb0b2429447378 = L.circleMarker(
+                [41.73, -88.03],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_a41e067d8f2f3f96e49f4f17ed61e9a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a4f10f595bbc2b210dd3c5723079da1 = $(`<div id="html_2a4f10f595bbc2b210dd3c5723079da1" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 51C4E90356E68754<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.7300, -88.0300<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-09-05 09:35:54.120000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_a41e067d8f2f3f96e49f4f17ed61e9a2.setContent(html_2a4f10f595bbc2b210dd3c5723079da1);
+            
+        
+
+        circle_marker_d6f820d06909c8e7f6fb0b2429447378.bindPopup(popup_a41e067d8f2f3f96e49f4f17ed61e9a2)
+        ;
+
+        
+    
+    
+            var circle_marker_801c99b110d2c665ade50c74d51b91e5 = L.circleMarker(
+                [42.14, -88.94],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_136f3e7c0a7629e4b17de012a269763c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a2e6d805d235eadd4df2a2612422741 = $(`<div id="html_0a2e6d805d235eadd4df2a2612422741" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 9EA068FD1D621303<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.1400, -88.9400<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-09-06 13:06:08.139000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_136f3e7c0a7629e4b17de012a269763c.setContent(html_0a2e6d805d235eadd4df2a2612422741);
+            
+        
+
+        circle_marker_801c99b110d2c665ade50c74d51b91e5.bindPopup(popup_136f3e7c0a7629e4b17de012a269763c)
+        ;
+
+        
+    
+    
+            var circle_marker_324fc13d9037306bf509d293e2adba8b = L.circleMarker(
+                [42.64, -86.38],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_0db146df42a227ddc264a4b3ff7f850e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85d11005ad0007f7e4844eae6e04ccb2 = $(`<div id="html_85d11005ad0007f7e4844eae6e04ccb2" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> F1B71E6586A8C096<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.6400, -86.3800<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-09-06 18:18:44.079000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_0db146df42a227ddc264a4b3ff7f850e.setContent(html_85d11005ad0007f7e4844eae6e04ccb2);
+            
+        
+
+        circle_marker_324fc13d9037306bf509d293e2adba8b.bindPopup(popup_0db146df42a227ddc264a4b3ff7f850e)
+        ;
+
+        
+    
+    
+            var circle_marker_3f44c112e0f18020dafbf0ff3f723a9b = L.circleMarker(
+                [42.73, -85.89],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_a38d534c14ee1e9f8246ea1e9a8c494c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_489bea592305c695be9299075f46e2be = $(`<div id="html_489bea592305c695be9299075f46e2be" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 5543B576F10B7772<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.7300, -85.8900<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-09-16 12:58:32.401000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_a38d534c14ee1e9f8246ea1e9a8c494c.setContent(html_489bea592305c695be9299075f46e2be);
+            
+        
+
+        circle_marker_3f44c112e0f18020dafbf0ff3f723a9b.bindPopup(popup_a38d534c14ee1e9f8246ea1e9a8c494c)
+        ;
+
+        
+    
+    
+            var circle_marker_f4666b0c212c85e73a23e8bb0b0dc163 = L.circleMarker(
+                [32.53, -129.71],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_403a0f33c544dba8d3d7a1dd50ceeb9c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b7cb0357ae7490b5f61593d270c5c425 = $(`<div id="html_b7cb0357ae7490b5f61593d270c5c425" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> AC3B1B61AD56FB4D<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 32.5300, -129.7100<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-09-17 14:10:34.910000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_403a0f33c544dba8d3d7a1dd50ceeb9c.setContent(html_b7cb0357ae7490b5f61593d270c5c425);
+            
+        
+
+        circle_marker_f4666b0c212c85e73a23e8bb0b0dc163.bindPopup(popup_403a0f33c544dba8d3d7a1dd50ceeb9c)
+        ;
+
+        
+    
+    
+            var circle_marker_de27d017d13d32637f1dfeab900e5895 = L.circleMarker(
+                [41.76, -88.41],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_a6ca57dfa3674f485ab141a7fe1da995 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2de12a73b117272f956cb69550e2918e = $(`<div id="html_2de12a73b117272f956cb69550e2918e" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 38D63606626FD4B6<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.7600, -88.4100<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-09-20 15:18:05.504000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_a6ca57dfa3674f485ab141a7fe1da995.setContent(html_2de12a73b117272f956cb69550e2918e);
+            
+        
+
+        circle_marker_de27d017d13d32637f1dfeab900e5895.bindPopup(popup_a6ca57dfa3674f485ab141a7fe1da995)
+        ;
+
+        
+    
+    
+            var circle_marker_5a478215d45a50a925acfb63cc958dc9 = L.circleMarker(
+                [41.48, -87.54],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_41dbaa3e6e18dfebb2c145602bb35f4f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57b446440fee7adfa80ee41421df4f0a = $(`<div id="html_57b446440fee7adfa80ee41421df4f0a" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 5637C7FB74BDAF60<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.4800, -87.5400<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-09-21 10:46:59.190000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_41dbaa3e6e18dfebb2c145602bb35f4f.setContent(html_57b446440fee7adfa80ee41421df4f0a);
+            
+        
+
+        circle_marker_5a478215d45a50a925acfb63cc958dc9.bindPopup(popup_41dbaa3e6e18dfebb2c145602bb35f4f)
+        ;
+
+        
+    
+    
+            var circle_marker_fb28d16aa6df0ba0afb2a9792dcdef71 = L.circleMarker(
+                [42.06, -88.09],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_fcd9c0c0d63de896a87f1dff423eb2c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_84df7a39e8cf7ba88d9ba581c41e8176 = $(`<div id="html_84df7a39e8cf7ba88d9ba581c41e8176" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 9C16A4533441D275<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.0600, -88.0900<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-09-23 16:47:59.029000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_fcd9c0c0d63de896a87f1dff423eb2c2.setContent(html_84df7a39e8cf7ba88d9ba581c41e8176);
+            
+        
+
+        circle_marker_fb28d16aa6df0ba0afb2a9792dcdef71.bindPopup(popup_fcd9c0c0d63de896a87f1dff423eb2c2)
+        ;
+
+        
+    
+    
+            var circle_marker_cdbf1d45c195212635622e6dbf292b84 = L.circleMarker(
+                [42.12, -88.08],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_22ecab07809a9ab350401a4257951f93 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b8fff8971f61e298b069c7c90725844 = $(`<div id="html_5b8fff8971f61e298b069c7c90725844" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> D9BA90FDB6BB31A3<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.1200, -88.0800<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-10-04 11:00:41.680000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_22ecab07809a9ab350401a4257951f93.setContent(html_5b8fff8971f61e298b069c7c90725844);
+            
+        
+
+        circle_marker_cdbf1d45c195212635622e6dbf292b84.bindPopup(popup_22ecab07809a9ab350401a4257951f93)
+        ;
+
+        
+    
+    
+            var circle_marker_d7138878e75520adb90d8527d54a8f22 = L.circleMarker(
+                [40.86, -89.25],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_954accfb7e8f0b519157a70f3db5583f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21305dcdd7518a2a0808614d2dc59c8e = $(`<div id="html_21305dcdd7518a2a0808614d2dc59c8e" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 9040F803D09540D6<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 40.8600, -89.2500<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-10-04 12:13:50.538000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_954accfb7e8f0b519157a70f3db5583f.setContent(html_21305dcdd7518a2a0808614d2dc59c8e);
+            
+        
+
+        circle_marker_d7138878e75520adb90d8527d54a8f22.bindPopup(popup_954accfb7e8f0b519157a70f3db5583f)
+        ;
+
+        
+    
+    
+            var circle_marker_20c9ec7643546bd06a87ebd86f65b61c = L.circleMarker(
+                [41.62, -86.56],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_914766c7251ac70e4010d19d5fc514ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_891b37914113d0608553a4aaf88e3a0b = $(`<div id="html_891b37914113d0608553a4aaf88e3a0b" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 38BB9A01AF03A69F<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.6200, -86.5600<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-10-05 15:44:49.224000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_914766c7251ac70e4010d19d5fc514ab.setContent(html_891b37914113d0608553a4aaf88e3a0b);
+            
+        
+
+        circle_marker_20c9ec7643546bd06a87ebd86f65b61c.bindPopup(popup_914766c7251ac70e4010d19d5fc514ab)
+        ;
+
+        
+    
+    
+            var circle_marker_86563930106d6c9bb792ed9238005e70 = L.circleMarker(
+                [35.5, -89.36],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_11f68a6c2754eccbfafba09787b388b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c673e2a19e04596c4fdab1de074c4dca = $(`<div id="html_c673e2a19e04596c4fdab1de074c4dca" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> D259E9F6CAD8512D<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 35.5000, -89.3600<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-10-06 15:21:08.101000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_11f68a6c2754eccbfafba09787b388b3.setContent(html_c673e2a19e04596c4fdab1de074c4dca);
+            
+        
+
+        circle_marker_86563930106d6c9bb792ed9238005e70.bindPopup(popup_11f68a6c2754eccbfafba09787b388b3)
+        ;
+
+        
+    
+    
+            var circle_marker_cdbef41dfd9861cd55d72fa43dd131a2 = L.circleMarker(
+                [43.93, -86.05],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_e7e4b90b47ff52da8cbd8957fb84b667 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2488078450c3881b192a6f80d56722ff = $(`<div id="html_2488078450c3881b192a6f80d56722ff" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 0766830F88211260<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 43.9300, -86.0500<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-10-10 23:08:35.109000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_e7e4b90b47ff52da8cbd8957fb84b667.setContent(html_2488078450c3881b192a6f80d56722ff);
+            
+        
+
+        circle_marker_cdbef41dfd9861cd55d72fa43dd131a2.bindPopup(popup_e7e4b90b47ff52da8cbd8957fb84b667)
+        ;
+
+        
+    
+    
+            var circle_marker_38a62a5864279c2c475eb7df73b28ac9 = L.circleMarker(
+                [41.67, -88.11],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_6a72d4683261f915bf317f3e24464812 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e548ba55dcf9b1f2e82b8047b617145 = $(`<div id="html_7e548ba55dcf9b1f2e82b8047b617145" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> EB89C9D7FCFC200F<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.6700, -88.1100<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-10-14 13:29:49.011000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_6a72d4683261f915bf317f3e24464812.setContent(html_7e548ba55dcf9b1f2e82b8047b617145);
+            
+        
+
+        circle_marker_38a62a5864279c2c475eb7df73b28ac9.bindPopup(popup_6a72d4683261f915bf317f3e24464812)
+        ;
+
+        
+    
+    
+            var circle_marker_60cbcdb3ed2622a99de3957368a47204 = L.circleMarker(
+                [41.94, -88.07],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_012fb71c79553c948d20cda3d962c834 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd2a521b59b0d2c3fdbb5c2e67193657 = $(`<div id="html_dd2a521b59b0d2c3fdbb5c2e67193657" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> AA405FB95C15F76A<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.9400, -88.0700<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-10-15 08:48:20.483000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_012fb71c79553c948d20cda3d962c834.setContent(html_dd2a521b59b0d2c3fdbb5c2e67193657);
+            
+        
+
+        circle_marker_60cbcdb3ed2622a99de3957368a47204.bindPopup(popup_012fb71c79553c948d20cda3d962c834)
+        ;
+
+        
+    
+    
+            var circle_marker_1662e5eb8bef59de1ae13f2f2b098463 = L.circleMarker(
+                [42.86, -89.12],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_98e5b1cbeffdf205774a248d9e7a8a6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ab70b094713c21f5d36e6874077a30d = $(`<div id="html_4ab70b094713c21f5d36e6874077a30d" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 1AA4437887C67BD3<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.8600, -89.1200<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-10-15 09:36:56.452000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_98e5b1cbeffdf205774a248d9e7a8a6d.setContent(html_4ab70b094713c21f5d36e6874077a30d);
+            
+        
+
+        circle_marker_1662e5eb8bef59de1ae13f2f2b098463.bindPopup(popup_98e5b1cbeffdf205774a248d9e7a8a6d)
+        ;
+
+        
+    
+    
+            var circle_marker_1f3d20ef119e92684f4e0b4c9aa3bed8 = L.circleMarker(
+                [41.46, -87.2],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_ae86d26ac98272299a99b0e4c8e69851 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1505e3d23a8306621f67c880dfe2739 = $(`<div id="html_a1505e3d23a8306621f67c880dfe2739" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 99F7FB07A1A816C9<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.4600, -87.2000<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-10-19 10:45:49.470000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_ae86d26ac98272299a99b0e4c8e69851.setContent(html_a1505e3d23a8306621f67c880dfe2739);
+            
+        
+
+        circle_marker_1f3d20ef119e92684f4e0b4c9aa3bed8.bindPopup(popup_ae86d26ac98272299a99b0e4c8e69851)
+        ;
+
+        
+    
+    
+            var circle_marker_93d633dd32404573f3ae05292763af3b = L.circleMarker(
+                [41.55, -86.92],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_7d352582737f30eb762d85add04546dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a523283b8210be716b3bd09a88a2a0d = $(`<div id="html_8a523283b8210be716b3bd09a88a2a0d" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 558A08C1DC8E2B8E<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.5500, -86.9200<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-10-19 16:24:17.311000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_7d352582737f30eb762d85add04546dd.setContent(html_8a523283b8210be716b3bd09a88a2a0d);
+            
+        
+
+        circle_marker_93d633dd32404573f3ae05292763af3b.bindPopup(popup_7d352582737f30eb762d85add04546dd)
+        ;
+
+        
+    
+    
+            var circle_marker_52f26541e0bc3a1badb72f8d49d8dc8e = L.circleMarker(
+                [42.36, -88.56],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_5ebed2adb539ab361ca619f2e4a8c79d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5e3f15a9a747b7ab3260e4adb272df4 = $(`<div id="html_e5e3f15a9a747b7ab3260e4adb272df4" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> EBB7597AAD81EB01<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.3600, -88.5600<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-10-21 09:11:45.845000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_5ebed2adb539ab361ca619f2e4a8c79d.setContent(html_e5e3f15a9a747b7ab3260e4adb272df4);
+            
+        
+
+        circle_marker_52f26541e0bc3a1badb72f8d49d8dc8e.bindPopup(popup_5ebed2adb539ab361ca619f2e4a8c79d)
+        ;
+
+        
+    
+    
+            var circle_marker_8ae1676217a060d93c80439541c1a5b2 = L.circleMarker(
+                [83.14, 152.53],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_53248b4bff8e588c65ec9504d0cf8998 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_553b4180a1f202015e96d8cc95fa11ea = $(`<div id="html_553b4180a1f202015e96d8cc95fa11ea" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> F800C79DFF7E9180<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 83.1400, 152.5300<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-10-23 09:52:54.363000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_53248b4bff8e588c65ec9504d0cf8998.setContent(html_553b4180a1f202015e96d8cc95fa11ea);
+            
+        
+
+        circle_marker_8ae1676217a060d93c80439541c1a5b2.bindPopup(popup_53248b4bff8e588c65ec9504d0cf8998)
+        ;
+
+        
+    
+    
+            var circle_marker_a106dd2b6913d253f6bd18dc5f0cdc78 = L.circleMarker(
+                [42.62, -94.27],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_7928eec5660dab34acb8a9c467bc9b3e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_413d514073d8ec9c59f81f871a0e5f22 = $(`<div id="html_413d514073d8ec9c59f81f871a0e5f22" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> C2B4540C064E36FF<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 42.6200, -94.2700<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2024-10-30 08:59:41.197000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_7928eec5660dab34acb8a9c467bc9b3e.setContent(html_413d514073d8ec9c59f81f871a0e5f22);
+            
+        
+
+        circle_marker_a106dd2b6913d253f6bd18dc5f0cdc78.bindPopup(popup_7928eec5660dab34acb8a9c467bc9b3e)
+        ;
+
+        
+    
+    
+            var circle_marker_b48b1fc4ef3e95b92e3f0a0719618195 = L.circleMarker(
+                [40.19, -88.04],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_43c3fba327617971d97de0cb1dcffff2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c577912ed541c8c550a9beb027f2aa9 = $(`<div id="html_3c577912ed541c8c550a9beb027f2aa9" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> CC7F19CB0C9F214C<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 40.1900, -88.0400<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-10-30 12:54:29.598000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_43c3fba327617971d97de0cb1dcffff2.setContent(html_3c577912ed541c8c550a9beb027f2aa9);
+            
+        
+
+        circle_marker_b48b1fc4ef3e95b92e3f0a0719618195.bindPopup(popup_43c3fba327617971d97de0cb1dcffff2)
+        ;
+
+        
+    
+    
+            var circle_marker_e354656fb9122073a96e313fce6d2cca = L.circleMarker(
+                [41.8, -88.07],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_8840f04b34dc589d2d4282f050f2a291 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4de917d89f7102d568a1773c0752e12 = $(`<div id="html_b4de917d89f7102d568a1773c0752e12" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> EA8AB4F1832E543B<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.8000, -88.0700<br>                 <b>Год:</b> 2024<br>                 <b>Тип пользователя:</b> member<br>                 <b>Время:</b> 2024-12-20 15:04:37.115000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_8840f04b34dc589d2d4282f050f2a291.setContent(html_b4de917d89f7102d568a1773c0752e12);
+            
+        
+
+        circle_marker_e354656fb9122073a96e313fce6d2cca.bindPopup(popup_8840f04b34dc589d2d4282f050f2a291)
+        ;
+
+        
+    
+    
+            var circle_marker_93371a5c9f829712988df6dfa31dc76c = L.circleMarker(
+                [41.96, -88.06],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_6b16f449053c25c61c61c4a80dffc6e2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a82f65deaf0b1ad586f23d93f3fcdc3 = $(`<div id="html_8a82f65deaf0b1ad586f23d93f3fcdc3" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 34054093073E8C42<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.9600, -88.0600<br>                 <b>Год:</b> 2025<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2025-06-22 07:10:15.207000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_6b16f449053c25c61c61c4a80dffc6e2.setContent(html_8a82f65deaf0b1ad586f23d93f3fcdc3);
+            
+        
+
+        circle_marker_93371a5c9f829712988df6dfa31dc76c.bindPopup(popup_6b16f449053c25c61c61c4a80dffc6e2)
+        ;
+
+        
+    
+    
+            var circle_marker_b74adf9cbbab5df07b7c4c5098b01721 = L.circleMarker(
+                [41.49, -87.42],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_483e355d4d347db46dcfba3a83359a43 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_70d2c55948a31457fb86eda3f9194ba5 = $(`<div id="html_70d2c55948a31457fb86eda3f9194ba5" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 106A6FF23D910734<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.4900, -87.4200<br>                 <b>Год:</b> 2025<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2025-06-25 15:50:24.384000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_483e355d4d347db46dcfba3a83359a43.setContent(html_70d2c55948a31457fb86eda3f9194ba5);
+            
+        
+
+        circle_marker_b74adf9cbbab5df07b7c4c5098b01721.bindPopup(popup_483e355d4d347db46dcfba3a83359a43)
+        ;
+
+        
+    
+    
+            var circle_marker_99835581b9ecc87ac366c4a1521eeaaf = L.circleMarker(
+                [41.67, -88.04],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_689897653b38aa82848395ebcc2a396d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8cb786c61471c7a0251926bd14ca5f0e = $(`<div id="html_8cb786c61471c7a0251926bd14ca5f0e" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ - ВЫБРОС КООРДИНАТ</b><br>                 <hr style='margin: 5px 0;'>                 <b>ID:</b> 06EC59D815999140<br>                 <b>Тип велосипеда:</b> electric_bike<br>                 <b>Координаты:</b> 41.6700, -88.0400<br>                 <b>Год:</b> 2025<br>                 <b>Тип пользователя:</b> casual<br>                 <b>Время:</b> 2025-10-22 19:22:04.935000<br>                 <hr style='margin: 5px 0;'>                 <span style='color: red; font-weight: bold;'>                 ⚠️ АНОМАЛЬНАЯ КООРДИНАТА<br>                 За пределами Чикаго                 </span>             </div>         </div>`)[0];
+                popup_689897653b38aa82848395ebcc2a396d.setContent(html_8cb786c61471c7a0251926bd14ca5f0e);
+            
+        
+
+        circle_marker_99835581b9ecc87ac366c4a1521eeaaf.bindPopup(popup_689897653b38aa82848395ebcc2a396d)
+        ;
+
+        
+    
+    
+            var rectangle_a7ecd588ecdc876e9e127997edb3ee51 = L.rectangle(
+                [[41.5, -88.0], [42.5, -87.0]],
+                {"bubblingMouseEvents": true, "color": "#3186cc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+        var popup_dfc28437546bac463bcb439b8ada3615 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f88d9d3ee4f3ffb5d355632b9716ba5a = $(`<div id="html_f88d9d3ee4f3ffb5d355632b9716ba5a" style="width: 100.0%; height: 100.0%;"><b>НОРМАЛЬНЫЕ ГРАНИЦЫ ЧИКАГО</b><br>41.5°-42.5° с.ш., -88.0°--87.0° в.д.</div>`)[0];
+                popup_dfc28437546bac463bcb439b8ada3615.setContent(html_f88d9d3ee4f3ffb5d355632b9716ba5a);
+            
+        
+
+        rectangle_a7ecd588ecdc876e9e127997edb3ee51.bindPopup(popup_dfc28437546bac463bcb439b8ada3615)
+        ;
+
+        
+    
+    
+            var marker_34251c506de4a6ba745187ab5f2a23e5 = L.marker(
+                [41.8781, -87.6298],
+                {
+}
+            ).addTo(map_13379b4aea1f4de43a8fab4845e11c78);
+        
+    
+            var icon_62f5d48685d54fc0abca4edee14cdad2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_41902a49efac45815b4a584023a4fde5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d40ede9e04cd1ab6fa02817cf79518b = $(`<div id="html_1d40ede9e04cd1ab6fa02817cf79518b" style="width: 100.0%; height: 100.0%;"><b>ЦЕНТР ЧИКАГО</b><br>Нормальная зона велопроката</div>`)[0];
+                popup_41902a49efac45815b4a584023a4fde5.setContent(html_1d40ede9e04cd1ab6fa02817cf79518b);
+            
+        
+
+        marker_34251c506de4a6ba745187ab5f2a23e5.bindPopup(popup_41902a49efac45815b4a584023a4fde5)
+        ;
+
+        
+    
+    
+                marker_34251c506de4a6ba745187ab5f2a23e5.setIcon(icon_62f5d48685d54fc0abca4edee14cdad2);
+            
+</script>
+</html>

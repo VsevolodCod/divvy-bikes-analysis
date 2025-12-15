@@ -1,0 +1,2105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4063890151bb60aee639dbf0089e67be {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+     top: 10px; left: 50px; width: 500px; 
+     z-index: 1000; background-color: white; 
+     padding: 10px; border-radius: 5px; 
+     border: 2px solid blue; font-weight: bold;">
+    <center>ВЫБРОСЫ КООРДИНАТ ПО ГОДАМ (2020-2025)</center>
+    <div style="font-size: 12px; margin-top: 5px;">
+    Цвет точек показывает год поездки<br>
+    Всего 86 аномальных координат
+    </div>
+</div>
+    
+<div style="position: fixed; 
+     bottom: 50px; right: 50px; width: 150px; 
+     z-index: 1000; background-color: white; 
+     padding: 10px; border-radius: 5px; 
+     border: 1px solid grey; font-size: 12px;">
+    <b>Легенда по годам:</b><br>
+    <div style="color: #FF0000;">● 2020</div>
+    <div style="color: #FF4500;">● 2021</div>
+    <div style="color: #FF8C00;">● 2022</div>
+    <div style="color: #FFD700;">● 2023</div>
+    <div style="color: #ADFF2F;">● 2024</div>
+    <div style="color: #00FF00;">● 2025</div>
+</div>
+    
+            <div class="folium-map" id="map_4063890151bb60aee639dbf0089e67be" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4063890151bb60aee639dbf0089e67be = L.map(
+                "map_4063890151bb60aee639dbf0089e67be",
+                {
+                    center: [39.8283, -98.5795],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a8bf917ae2925a755cf9ec9b9bda3430 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a8bf917ae2925a755cf9ec9b9bda3430.addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+            var circle_marker_70c33568664e4eaf721460bda46779c1 = L.circleMarker(
+                [45.635034323, -73.79647696],
+                {"bubblingMouseEvents": true, "color": "#FF8C00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF8C00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_d14d92a2b5d4cc849d9eeaa1599c4dde = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1668cc50c1349e58b61bb52ff8c82b86 = $(`<div id="html_1668cc50c1349e58b61bb52ff8c82b86" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2022 ГОДА</b><br>                 <hr>                 Координаты: 45.6350, -73.7965<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: старт<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_d14d92a2b5d4cc849d9eeaa1599c4dde.setContent(html_1668cc50c1349e58b61bb52ff8c82b86);
+            
+        
+
+        circle_marker_70c33568664e4eaf721460bda46779c1.bindPopup(popup_d14d92a2b5d4cc849d9eeaa1599c4dde)
+        ;
+
+        
+    
+    
+            var circle_marker_06b0f9e12973483de80ca2ba9ab006d8 = L.circleMarker(
+                [42.0, -88.07],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_a8ea4f35e57f031725cfd072e1636d6b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_98f0a33248fde016b02d8fe829eec2a3 = $(`<div id="html_98f0a33248fde016b02d8fe829eec2a3" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2021 ГОДА</b><br>                 <hr>                 Координаты: 42.0000, -88.0700<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_a8ea4f35e57f031725cfd072e1636d6b.setContent(html_98f0a33248fde016b02d8fe829eec2a3);
+            
+        
+
+        circle_marker_06b0f9e12973483de80ca2ba9ab006d8.bindPopup(popup_a8ea4f35e57f031725cfd072e1636d6b)
+        ;
+
+        
+    
+    
+            var circle_marker_455bc2caf2435629c296a49288d69160 = L.circleMarker(
+                [41.39, -88.97],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_8dfa1e1294697f2ba8d2b18db65702b6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0c5b0ea87f0f8e162136a08d1721d23 = $(`<div id="html_c0c5b0ea87f0f8e162136a08d1721d23" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2021 ГОДА</b><br>                 <hr>                 Координаты: 41.3900, -88.9700<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_8dfa1e1294697f2ba8d2b18db65702b6.setContent(html_c0c5b0ea87f0f8e162136a08d1721d23);
+            
+        
+
+        circle_marker_455bc2caf2435629c296a49288d69160.bindPopup(popup_8dfa1e1294697f2ba8d2b18db65702b6)
+        ;
+
+        
+    
+    
+            var circle_marker_53bf847741851eef32b46f4bc47eba5d = L.circleMarker(
+                [41.48, -87.65],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_f9962621911457f92ae7ab1b5620ef23 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76ee3a4194ce627c17c3d06ac07ccfae = $(`<div id="html_76ee3a4194ce627c17c3d06ac07ccfae" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2021 ГОДА</b><br>                 <hr>                 Координаты: 41.4800, -87.6500<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_f9962621911457f92ae7ab1b5620ef23.setContent(html_76ee3a4194ce627c17c3d06ac07ccfae);
+            
+        
+
+        circle_marker_53bf847741851eef32b46f4bc47eba5d.bindPopup(popup_f9962621911457f92ae7ab1b5620ef23)
+        ;
+
+        
+    
+    
+            var circle_marker_994eb0185d6cc8c3aec7347187434683 = L.circleMarker(
+                [41.87, -88.14],
+                {"bubblingMouseEvents": true, "color": "#FF8C00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF8C00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_8d57531e7f2482cc2fb216a5e0100cef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08b5fdca5f9611a20b5767dd191d1a4f = $(`<div id="html_08b5fdca5f9611a20b5767dd191d1a4f" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2022 ГОДА</b><br>                 <hr>                 Координаты: 41.8700, -88.1400<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_8d57531e7f2482cc2fb216a5e0100cef.setContent(html_08b5fdca5f9611a20b5767dd191d1a4f);
+            
+        
+
+        circle_marker_994eb0185d6cc8c3aec7347187434683.bindPopup(popup_8d57531e7f2482cc2fb216a5e0100cef)
+        ;
+
+        
+    
+    
+            var circle_marker_932afc49a6ea721f80eb2ed26d001355 = L.circleMarker(
+                [41.9, -88.05],
+                {"bubblingMouseEvents": true, "color": "#FF8C00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF8C00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_71ce2900bbfdfe90b8138c1f8105707b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f8617704975a65599b77fbe31f2a76a7 = $(`<div id="html_f8617704975a65599b77fbe31f2a76a7" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2022 ГОДА</b><br>                 <hr>                 Координаты: 41.9000, -88.0500<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_71ce2900bbfdfe90b8138c1f8105707b.setContent(html_f8617704975a65599b77fbe31f2a76a7);
+            
+        
+
+        circle_marker_932afc49a6ea721f80eb2ed26d001355.bindPopup(popup_71ce2900bbfdfe90b8138c1f8105707b)
+        ;
+
+        
+    
+    
+            var circle_marker_ed98ed3483680b323fd34590d993aa13 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF8C00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF8C00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_b9862b7a91141f24d52fdcc78991d51f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_93a427cb4ba70bf025f53b3ef448e6ec = $(`<div id="html_93a427cb4ba70bf025f53b3ef448e6ec" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2022 ГОДА</b><br>                 <hr>                 Координаты: 0.0000, 0.0000<br>                 Тип велосипеда: classic_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_b9862b7a91141f24d52fdcc78991d51f.setContent(html_93a427cb4ba70bf025f53b3ef448e6ec);
+            
+        
+
+        circle_marker_ed98ed3483680b323fd34590d993aa13.bindPopup(popup_b9862b7a91141f24d52fdcc78991d51f)
+        ;
+
+        
+    
+    
+            var circle_marker_035f3553ded9b6b902f2b907b8e84517 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF8C00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF8C00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_9879782a2b054e9215ca0675a25025be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c106b4b1a71e7ffc9071ace5390d785d = $(`<div id="html_c106b4b1a71e7ffc9071ace5390d785d" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2022 ГОДА</b><br>                 <hr>                 Координаты: 0.0000, 0.0000<br>                 Тип велосипеда: classic_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_9879782a2b054e9215ca0675a25025be.setContent(html_c106b4b1a71e7ffc9071ace5390d785d);
+            
+        
+
+        circle_marker_035f3553ded9b6b902f2b907b8e84517.bindPopup(popup_9879782a2b054e9215ca0675a25025be)
+        ;
+
+        
+    
+    
+            var circle_marker_00492a40293eaf15e4761f2c71ba1f23 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF8C00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF8C00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_23b5fdb32afaf460e487d93d1a19154c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_49529b56ec3a32005642f3823ddb2d34 = $(`<div id="html_49529b56ec3a32005642f3823ddb2d34" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2022 ГОДА</b><br>                 <hr>                 Координаты: 0.0000, 0.0000<br>                 Тип велосипеда: classic_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_23b5fdb32afaf460e487d93d1a19154c.setContent(html_49529b56ec3a32005642f3823ddb2d34);
+            
+        
+
+        circle_marker_00492a40293eaf15e4761f2c71ba1f23.bindPopup(popup_23b5fdb32afaf460e487d93d1a19154c)
+        ;
+
+        
+    
+    
+            var circle_marker_6e8c96007fb5dcd835f3fa3d649dbbc1 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF8C00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF8C00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_4cb14f7478569a0eb9365b4672abb995 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fad0697d7f28a991c7ccf23a32f1fc7c = $(`<div id="html_fad0697d7f28a991c7ccf23a32f1fc7c" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2022 ГОДА</b><br>                 <hr>                 Координаты: 0.0000, 0.0000<br>                 Тип велосипеда: classic_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_4cb14f7478569a0eb9365b4672abb995.setContent(html_fad0697d7f28a991c7ccf23a32f1fc7c);
+            
+        
+
+        circle_marker_6e8c96007fb5dcd835f3fa3d649dbbc1.bindPopup(popup_4cb14f7478569a0eb9365b4672abb995)
+        ;
+
+        
+    
+    
+            var circle_marker_3e4599ea234067487f0113aa2c29abcf = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF8C00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF8C00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_57200b029ebd1ee9454fc61bcd293f2a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d24ce2d7bf862642ebedf96ac81ee57d = $(`<div id="html_d24ce2d7bf862642ebedf96ac81ee57d" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2022 ГОДА</b><br>                 <hr>                 Координаты: 0.0000, 0.0000<br>                 Тип велосипеда: classic_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_57200b029ebd1ee9454fc61bcd293f2a.setContent(html_d24ce2d7bf862642ebedf96ac81ee57d);
+            
+        
+
+        circle_marker_3e4599ea234067487f0113aa2c29abcf.bindPopup(popup_57200b029ebd1ee9454fc61bcd293f2a)
+        ;
+
+        
+    
+    
+            var circle_marker_e1c69605fdd6dc9f0e01bac503ba85e8 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF8C00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF8C00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_24f0ddb77ecee81616a7075cefb42668 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c1673b5e6c8820e1d6f800ad52559d60 = $(`<div id="html_c1673b5e6c8820e1d6f800ad52559d60" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2022 ГОДА</b><br>                 <hr>                 Координаты: 0.0000, 0.0000<br>                 Тип велосипеда: classic_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_24f0ddb77ecee81616a7075cefb42668.setContent(html_c1673b5e6c8820e1d6f800ad52559d60);
+            
+        
+
+        circle_marker_e1c69605fdd6dc9f0e01bac503ba85e8.bindPopup(popup_24f0ddb77ecee81616a7075cefb42668)
+        ;
+
+        
+    
+    
+            var circle_marker_edc615c7cdd776edd86a007561d01381 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF8C00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF8C00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_a5900a96fa39e5a952160d9bddb93d35 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e0f68d5c174a658891ca543ab5df9c4e = $(`<div id="html_e0f68d5c174a658891ca543ab5df9c4e" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2022 ГОДА</b><br>                 <hr>                 Координаты: 0.0000, 0.0000<br>                 Тип велосипеда: classic_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_a5900a96fa39e5a952160d9bddb93d35.setContent(html_e0f68d5c174a658891ca543ab5df9c4e);
+            
+        
+
+        circle_marker_edc615c7cdd776edd86a007561d01381.bindPopup(popup_a5900a96fa39e5a952160d9bddb93d35)
+        ;
+
+        
+    
+    
+            var circle_marker_0a6195d54ddae1a03dc3da65ffe51c57 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF8C00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF8C00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_5244eb521dca8462f0586212e0fcd916 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ddf9e25d4208d08ff0cf9bed6f1d3c76 = $(`<div id="html_ddf9e25d4208d08ff0cf9bed6f1d3c76" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2022 ГОДА</b><br>                 <hr>                 Координаты: 0.0000, 0.0000<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_5244eb521dca8462f0586212e0fcd916.setContent(html_ddf9e25d4208d08ff0cf9bed6f1d3c76);
+            
+        
+
+        circle_marker_0a6195d54ddae1a03dc3da65ffe51c57.bindPopup(popup_5244eb521dca8462f0586212e0fcd916)
+        ;
+
+        
+    
+    
+            var circle_marker_f2c32fbfd8c859399c0e40689999023b = L.circleMarker(
+                [41.66, -88.11],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_9c6afa00025eb99414ad2cdbd4319774 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b09c7fd376ef894b768b7401bf8a4e4e = $(`<div id="html_b09c7fd376ef894b768b7401bf8a4e4e" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2023 ГОДА</b><br>                 <hr>                 Координаты: 41.6600, -88.1100<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_9c6afa00025eb99414ad2cdbd4319774.setContent(html_b09c7fd376ef894b768b7401bf8a4e4e);
+            
+        
+
+        circle_marker_f2c32fbfd8c859399c0e40689999023b.bindPopup(popup_9c6afa00025eb99414ad2cdbd4319774)
+        ;
+
+        
+    
+    
+            var circle_marker_da41c3d609bdb99ca23d3f0b967ce01b = L.circleMarker(
+                [42.07, -88.16],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_cf7dd30f3f684e0187e813579c064f3e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bc1462c768b7876162a195dc8641c12f = $(`<div id="html_bc1462c768b7876162a195dc8641c12f" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2023 ГОДА</b><br>                 <hr>                 Координаты: 42.0700, -88.1600<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_cf7dd30f3f684e0187e813579c064f3e.setContent(html_bc1462c768b7876162a195dc8641c12f);
+            
+        
+
+        circle_marker_da41c3d609bdb99ca23d3f0b967ce01b.bindPopup(popup_cf7dd30f3f684e0187e813579c064f3e)
+        ;
+
+        
+    
+    
+            var circle_marker_dc64ce97dd6a2a68f0306fdeb1c3d2d3 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_97fd18f2afefff03fd919a95e6c96c24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92013cd3363862941a9831b2cadadd43 = $(`<div id="html_92013cd3363862941a9831b2cadadd43" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2023 ГОДА</b><br>                 <hr>                 Координаты: 0.0000, 0.0000<br>                 Тип велосипеда: classic_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_97fd18f2afefff03fd919a95e6c96c24.setContent(html_92013cd3363862941a9831b2cadadd43);
+            
+        
+
+        circle_marker_dc64ce97dd6a2a68f0306fdeb1c3d2d3.bindPopup(popup_97fd18f2afefff03fd919a95e6c96c24)
+        ;
+
+        
+    
+    
+            var circle_marker_97828549c4dfe6657bd901ab48b404e0 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_534c77179358c327f4858c4fd123a4a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c95306f8f9e46c2cc7c7fafefd1e4dd6 = $(`<div id="html_c95306f8f9e46c2cc7c7fafefd1e4dd6" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2023 ГОДА</b><br>                 <hr>                 Координаты: 0.0000, 0.0000<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_534c77179358c327f4858c4fd123a4a5.setContent(html_c95306f8f9e46c2cc7c7fafefd1e4dd6);
+            
+        
+
+        circle_marker_97828549c4dfe6657bd901ab48b404e0.bindPopup(popup_534c77179358c327f4858c4fd123a4a5)
+        ;
+
+        
+    
+    
+            var circle_marker_ce1389b3b4fec7fa94a32c1962fdc8aa = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_b4849fd30156772f92063c4afe46f95e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_018fbb6f581421b2820a01dca6960151 = $(`<div id="html_018fbb6f581421b2820a01dca6960151" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2023 ГОДА</b><br>                 <hr>                 Координаты: 0.0000, 0.0000<br>                 Тип велосипеда: classic_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_b4849fd30156772f92063c4afe46f95e.setContent(html_018fbb6f581421b2820a01dca6960151);
+            
+        
+
+        circle_marker_ce1389b3b4fec7fa94a32c1962fdc8aa.bindPopup(popup_b4849fd30156772f92063c4afe46f95e)
+        ;
+
+        
+    
+    
+            var circle_marker_499e8e86e1d9532f11807932b010215d = L.circleMarker(
+                [41.89, -88.12],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_90e8b1719488c7234883ec51baba320f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2fa3df2afed72b8f8f3d746bc623253d = $(`<div id="html_2fa3df2afed72b8f8f3d746bc623253d" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.8900, -88.1200<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_90e8b1719488c7234883ec51baba320f.setContent(html_2fa3df2afed72b8f8f3d746bc623253d);
+            
+        
+
+        circle_marker_499e8e86e1d9532f11807932b010215d.bindPopup(popup_90e8b1719488c7234883ec51baba320f)
+        ;
+
+        
+    
+    
+            var circle_marker_bbebb56318ff6f1e06e3262fad3d8f9b = L.circleMarker(
+                [41.48, -87.67],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_94ff6b62873721fef410f7b1a9353f1d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27416d407dc5409a2e94812b1778b564 = $(`<div id="html_27416d407dc5409a2e94812b1778b564" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.4800, -87.6700<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_94ff6b62873721fef410f7b1a9353f1d.setContent(html_27416d407dc5409a2e94812b1778b564);
+            
+        
+
+        circle_marker_bbebb56318ff6f1e06e3262fad3d8f9b.bindPopup(popup_94ff6b62873721fef410f7b1a9353f1d)
+        ;
+
+        
+    
+    
+            var circle_marker_40e501e4db75ccffb262c8727131b327 = L.circleMarker(
+                [87.96, -144.05],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_9bab97db88207030bdabad3d465fd832 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d6c3b177b96c382352cfc3256b24e419 = $(`<div id="html_d6c3b177b96c382352cfc3256b24e419" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 87.9600, -144.0500<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_9bab97db88207030bdabad3d465fd832.setContent(html_d6c3b177b96c382352cfc3256b24e419);
+            
+        
+
+        circle_marker_40e501e4db75ccffb262c8727131b327.bindPopup(popup_9bab97db88207030bdabad3d465fd832)
+        ;
+
+        
+    
+    
+            var circle_marker_e8918d2cda371b47cc95b76e62b41f53 = L.circleMarker(
+                [38.94, -89.03],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_85429c19938c52d6113a8f1a08874f3c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e436f8df25772ba1ea73440c6dea75d6 = $(`<div id="html_e436f8df25772ba1ea73440c6dea75d6" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 38.9400, -89.0300<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_85429c19938c52d6113a8f1a08874f3c.setContent(html_e436f8df25772ba1ea73440c6dea75d6);
+            
+        
+
+        circle_marker_e8918d2cda371b47cc95b76e62b41f53.bindPopup(popup_85429c19938c52d6113a8f1a08874f3c)
+        ;
+
+        
+    
+    
+            var circle_marker_561ac837451bd703d7367d2f9c194d64 = L.circleMarker(
+                [42.53, -87.8],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_a10b3b79b3c015048d3e8136f3be6db0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9de9d3bbb19c199ed97fb8d6abb78630 = $(`<div id="html_9de9d3bbb19c199ed97fb8d6abb78630" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.5300, -87.8000<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_a10b3b79b3c015048d3e8136f3be6db0.setContent(html_9de9d3bbb19c199ed97fb8d6abb78630);
+            
+        
+
+        circle_marker_561ac837451bd703d7367d2f9c194d64.bindPopup(popup_a10b3b79b3c015048d3e8136f3be6db0)
+        ;
+
+        
+    
+    
+            var circle_marker_b9428baf321153d120081a5ac92cb23f = L.circleMarker(
+                [42.9, -87.29],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_bb745ae024882d560cdc7e4d5142fc83 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04963ed9e1cf173b4ae727fa96ea58c4 = $(`<div id="html_04963ed9e1cf173b4ae727fa96ea58c4" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.9000, -87.2900<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_bb745ae024882d560cdc7e4d5142fc83.setContent(html_04963ed9e1cf173b4ae727fa96ea58c4);
+            
+        
+
+        circle_marker_b9428baf321153d120081a5ac92cb23f.bindPopup(popup_bb745ae024882d560cdc7e4d5142fc83)
+        ;
+
+        
+    
+    
+            var circle_marker_65c4721c6ace52e45de3aad1186e8cf6 = L.circleMarker(
+                [41.89, -88.05],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_45afe708ef7d662c6d9fa4f97d6230c4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4185714ff2798b7b4d42870431c0cace = $(`<div id="html_4185714ff2798b7b4d42870431c0cace" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.8900, -88.0500<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_45afe708ef7d662c6d9fa4f97d6230c4.setContent(html_4185714ff2798b7b4d42870431c0cace);
+            
+        
+
+        circle_marker_65c4721c6ace52e45de3aad1186e8cf6.bindPopup(popup_45afe708ef7d662c6d9fa4f97d6230c4)
+        ;
+
+        
+    
+    
+            var circle_marker_e9351590632a63cc90c6cf73d6edf20a = L.circleMarker(
+                [42.14, -85.52],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_438f8e50a706a4f0556fc8d499f5799e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d262f42aa2a52b93953b1bfa92965c26 = $(`<div id="html_d262f42aa2a52b93953b1bfa92965c26" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.1400, -85.5200<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_438f8e50a706a4f0556fc8d499f5799e.setContent(html_d262f42aa2a52b93953b1bfa92965c26);
+            
+        
+
+        circle_marker_e9351590632a63cc90c6cf73d6edf20a.bindPopup(popup_438f8e50a706a4f0556fc8d499f5799e)
+        ;
+
+        
+    
+    
+            var circle_marker_4809e4a1cf604dcdf2e4c3f334b0fca9 = L.circleMarker(
+                [36.0, -85.52],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_e8ba3dd7260defe76687d7f3aeb5067a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fb0d8debd674ced3b89237b889f79cdc = $(`<div id="html_fb0d8debd674ced3b89237b889f79cdc" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 36.0000, -85.5200<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_e8ba3dd7260defe76687d7f3aeb5067a.setContent(html_fb0d8debd674ced3b89237b889f79cdc);
+            
+        
+
+        circle_marker_4809e4a1cf604dcdf2e4c3f334b0fca9.bindPopup(popup_e8ba3dd7260defe76687d7f3aeb5067a)
+        ;
+
+        
+    
+    
+            var circle_marker_9de5c57598289a3bde381d91f68d441d = L.circleMarker(
+                [41.6, -88.14],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_acefdc6dc441b96f5fcfc1118ca9dece = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2eaf407aeff8bb1f850b576cf2cddff7 = $(`<div id="html_2eaf407aeff8bb1f850b576cf2cddff7" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.6000, -88.1400<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_acefdc6dc441b96f5fcfc1118ca9dece.setContent(html_2eaf407aeff8bb1f850b576cf2cddff7);
+            
+        
+
+        circle_marker_9de5c57598289a3bde381d91f68d441d.bindPopup(popup_acefdc6dc441b96f5fcfc1118ca9dece)
+        ;
+
+        
+    
+    
+            var circle_marker_49bed90fa98b3ad34e934e8061c1b8e3 = L.circleMarker(
+                [42.13, -85.52],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_1250ca97601643c56b7fba543d089702 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_758fa2de6455fa6ead6d9d17aabdc5cd = $(`<div id="html_758fa2de6455fa6ead6d9d17aabdc5cd" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.1300, -85.5200<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_1250ca97601643c56b7fba543d089702.setContent(html_758fa2de6455fa6ead6d9d17aabdc5cd);
+            
+        
+
+        circle_marker_49bed90fa98b3ad34e934e8061c1b8e3.bindPopup(popup_1250ca97601643c56b7fba543d089702)
+        ;
+
+        
+    
+    
+            var circle_marker_3951ef83592b258bd7e6394da7b086f2 = L.circleMarker(
+                [41.19, -87.65],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_e78b1eebd7e9a9d7efb733b72d33e51e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e58dd0af471c900746d6153261f69cc = $(`<div id="html_4e58dd0af471c900746d6153261f69cc" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.1900, -87.6500<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_e78b1eebd7e9a9d7efb733b72d33e51e.setContent(html_4e58dd0af471c900746d6153261f69cc);
+            
+        
+
+        circle_marker_3951ef83592b258bd7e6394da7b086f2.bindPopup(popup_e78b1eebd7e9a9d7efb733b72d33e51e)
+        ;
+
+        
+    
+    
+            var circle_marker_84c3b50f5a3237bf7491c4fedb50159e = L.circleMarker(
+                [41.88, -88.35],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_530bd99ea1c7781bd50a11c02e39b39f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_969056d6f3215cdf3c27748c03e81223 = $(`<div id="html_969056d6f3215cdf3c27748c03e81223" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.8800, -88.3500<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_530bd99ea1c7781bd50a11c02e39b39f.setContent(html_969056d6f3215cdf3c27748c03e81223);
+            
+        
+
+        circle_marker_84c3b50f5a3237bf7491c4fedb50159e.bindPopup(popup_530bd99ea1c7781bd50a11c02e39b39f)
+        ;
+
+        
+    
+    
+            var circle_marker_bdaae5aefccf262744b01118b1eeeb8e = L.circleMarker(
+                [16.06, -84.82],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_1f4f03b81220893885de4fe148cf6591 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fda68382b3653209ad83ad198a9cf797 = $(`<div id="html_fda68382b3653209ad83ad198a9cf797" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 16.0600, -84.8200<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_1f4f03b81220893885de4fe148cf6591.setContent(html_fda68382b3653209ad83ad198a9cf797);
+            
+        
+
+        circle_marker_bdaae5aefccf262744b01118b1eeeb8e.bindPopup(popup_1f4f03b81220893885de4fe148cf6591)
+        ;
+
+        
+    
+    
+            var circle_marker_666a398e3762de98da9d54424f685a38 = L.circleMarker(
+                [31.74, -81.51],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_81f87d7eec287433be14a38ed525b14e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_602674ac7f659b113a1bf20814ca230f = $(`<div id="html_602674ac7f659b113a1bf20814ca230f" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 31.7400, -81.5100<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_81f87d7eec287433be14a38ed525b14e.setContent(html_602674ac7f659b113a1bf20814ca230f);
+            
+        
+
+        circle_marker_666a398e3762de98da9d54424f685a38.bindPopup(popup_81f87d7eec287433be14a38ed525b14e)
+        ;
+
+        
+    
+    
+            var circle_marker_3d4776072cb015b1ead475016e51a9c0 = L.circleMarker(
+                [42.76, -97.47],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_2b306888bae24711e09c46d0ec027059 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb2f9db015153cd18620dfa0f17838ea = $(`<div id="html_cb2f9db015153cd18620dfa0f17838ea" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.7600, -97.4700<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_2b306888bae24711e09c46d0ec027059.setContent(html_cb2f9db015153cd18620dfa0f17838ea);
+            
+        
+
+        circle_marker_3d4776072cb015b1ead475016e51a9c0.bindPopup(popup_2b306888bae24711e09c46d0ec027059)
+        ;
+
+        
+    
+    
+            var circle_marker_7e8b143ae0fe837ecd3bf8e6e176bc65 = L.circleMarker(
+                [41.78, -89.27],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_968dfaf9a18616a7ea150ce5142a39eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_616b9deb8cad76bbc68c2b1738beea4e = $(`<div id="html_616b9deb8cad76bbc68c2b1738beea4e" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.7800, -89.2700<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_968dfaf9a18616a7ea150ce5142a39eb.setContent(html_616b9deb8cad76bbc68c2b1738beea4e);
+            
+        
+
+        circle_marker_7e8b143ae0fe837ecd3bf8e6e176bc65.bindPopup(popup_968dfaf9a18616a7ea150ce5142a39eb)
+        ;
+
+        
+    
+    
+            var circle_marker_1f82771cace091fbc89875db193432ed = L.circleMarker(
+                [36.56, -91.42],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_7e3cfb41737245ed54df7878b4e63743 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b7b16890e91585d60ef1202ad421a67e = $(`<div id="html_b7b16890e91585d60ef1202ad421a67e" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 36.5600, -91.4200<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_7e3cfb41737245ed54df7878b4e63743.setContent(html_b7b16890e91585d60ef1202ad421a67e);
+            
+        
+
+        circle_marker_1f82771cace091fbc89875db193432ed.bindPopup(popup_7e3cfb41737245ed54df7878b4e63743)
+        ;
+
+        
+    
+    
+            var circle_marker_e73e9c1774196e07dd3e41643f8e6faa = L.circleMarker(
+                [42.11, -81.69],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_da07bf6344c0fb55533440125ec0c075 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f2589cc16b3af5c591b07d065184b7d2 = $(`<div id="html_f2589cc16b3af5c591b07d065184b7d2" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.1100, -81.6900<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_da07bf6344c0fb55533440125ec0c075.setContent(html_f2589cc16b3af5c591b07d065184b7d2);
+            
+        
+
+        circle_marker_e73e9c1774196e07dd3e41643f8e6faa.bindPopup(popup_da07bf6344c0fb55533440125ec0c075)
+        ;
+
+        
+    
+    
+            var circle_marker_f1225fb0bffb37b7fb5babd713007b7f = L.circleMarker(
+                [42.76, -97.46],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_22246554444d1b7e702378f157a386b7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8ad942e78bc111a5c53c5de890c169ff = $(`<div id="html_8ad942e78bc111a5c53c5de890c169ff" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.7600, -97.4600<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_22246554444d1b7e702378f157a386b7.setContent(html_8ad942e78bc111a5c53c5de890c169ff);
+            
+        
+
+        circle_marker_f1225fb0bffb37b7fb5babd713007b7f.bindPopup(popup_22246554444d1b7e702378f157a386b7)
+        ;
+
+        
+    
+    
+            var circle_marker_d0ca186b02e220fba3b4d26d8fd0389d = L.circleMarker(
+                [40.85, -89.39],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_a52e58c463b3e2dc955717d18cc140fa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_81eaa2515dc8069106428f1fe489d83f = $(`<div id="html_81eaa2515dc8069106428f1fe489d83f" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 40.8500, -89.3900<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_a52e58c463b3e2dc955717d18cc140fa.setContent(html_81eaa2515dc8069106428f1fe489d83f);
+            
+        
+
+        circle_marker_d0ca186b02e220fba3b4d26d8fd0389d.bindPopup(popup_a52e58c463b3e2dc955717d18cc140fa)
+        ;
+
+        
+    
+    
+            var circle_marker_ca72c187505adc789e773a6638919840 = L.circleMarker(
+                [30.02, -85.47],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_dfc250abfdb819dcd8ca744ee319ae1b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f81666a823d2ecf2775a8483bd0cc8d8 = $(`<div id="html_f81666a823d2ecf2775a8483bd0cc8d8" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 30.0200, -85.4700<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_dfc250abfdb819dcd8ca744ee319ae1b.setContent(html_f81666a823d2ecf2775a8483bd0cc8d8);
+            
+        
+
+        circle_marker_ca72c187505adc789e773a6638919840.bindPopup(popup_dfc250abfdb819dcd8ca744ee319ae1b)
+        ;
+
+        
+    
+    
+            var circle_marker_b9d66552b93a7dc73a6d6b4c2dcf4ecf = L.circleMarker(
+                [43.31, -86.54],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_00fa736a7f6fc7cc4e9ce13cf5a110c8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5a0484abb85872829b832dbf9f3a8c6 = $(`<div id="html_b5a0484abb85872829b832dbf9f3a8c6" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 43.3100, -86.5400<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_00fa736a7f6fc7cc4e9ce13cf5a110c8.setContent(html_b5a0484abb85872829b832dbf9f3a8c6);
+            
+        
+
+        circle_marker_b9d66552b93a7dc73a6d6b4c2dcf4ecf.bindPopup(popup_00fa736a7f6fc7cc4e9ce13cf5a110c8)
+        ;
+
+        
+    
+    
+            var circle_marker_6e08c39aebce27af94fc48c248b9c772 = L.circleMarker(
+                [46.16, -86.6],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_52a84e16563aca12c5ec7e046631e265 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b50328a5a5e57fee0ce1c6437b699378 = $(`<div id="html_b50328a5a5e57fee0ce1c6437b699378" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 46.1600, -86.6000<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_52a84e16563aca12c5ec7e046631e265.setContent(html_b50328a5a5e57fee0ce1c6437b699378);
+            
+        
+
+        circle_marker_6e08c39aebce27af94fc48c248b9c772.bindPopup(popup_52a84e16563aca12c5ec7e046631e265)
+        ;
+
+        
+    
+    
+            var circle_marker_8c10de5c62bd4109692d30dc3bb8d70b = L.circleMarker(
+                [41.59, -88.45],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_2649759518c3d1d5b7523092867e7397 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3d06bcb2e84fbf295823eaa79c20358a = $(`<div id="html_3d06bcb2e84fbf295823eaa79c20358a" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.5900, -88.4500<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_2649759518c3d1d5b7523092867e7397.setContent(html_3d06bcb2e84fbf295823eaa79c20358a);
+            
+        
+
+        circle_marker_8c10de5c62bd4109692d30dc3bb8d70b.bindPopup(popup_2649759518c3d1d5b7523092867e7397)
+        ;
+
+        
+    
+    
+            var circle_marker_028a3b7d13bda1ddf7d6879548e25252 = L.circleMarker(
+                [39.86, -90.66],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_c508444a5ac0971a61ffc8d67ffe171a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7bcb3d8d0c5286cf82b6b569365b4a4e = $(`<div id="html_7bcb3d8d0c5286cf82b6b569365b4a4e" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 39.8600, -90.6600<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_c508444a5ac0971a61ffc8d67ffe171a.setContent(html_7bcb3d8d0c5286cf82b6b569365b4a4e);
+            
+        
+
+        circle_marker_028a3b7d13bda1ddf7d6879548e25252.bindPopup(popup_c508444a5ac0971a61ffc8d67ffe171a)
+        ;
+
+        
+    
+    
+            var circle_marker_76fa1fabea8e4c78528462306ea7168b = L.circleMarker(
+                [42.84, -90.88],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_f781a6b20c7939f278a2a4db8bf75b27 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_64ad9a3548f68dcb866332effc93e400 = $(`<div id="html_64ad9a3548f68dcb866332effc93e400" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.8400, -90.8800<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_f781a6b20c7939f278a2a4db8bf75b27.setContent(html_64ad9a3548f68dcb866332effc93e400);
+            
+        
+
+        circle_marker_76fa1fabea8e4c78528462306ea7168b.bindPopup(popup_f781a6b20c7939f278a2a4db8bf75b27)
+        ;
+
+        
+    
+    
+            var circle_marker_e728180fd3a99b82c97d18bf542e98de = L.circleMarker(
+                [42.51, -87.5],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_d9b88054449a4aee0db06722bd0dc979 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2707640f63b1496867f4b705b2ff2e2 = $(`<div id="html_e2707640f63b1496867f4b705b2ff2e2" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.5100, -87.5000<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_d9b88054449a4aee0db06722bd0dc979.setContent(html_e2707640f63b1496867f4b705b2ff2e2);
+            
+        
+
+        circle_marker_e728180fd3a99b82c97d18bf542e98de.bindPopup(popup_d9b88054449a4aee0db06722bd0dc979)
+        ;
+
+        
+    
+    
+            var circle_marker_2bc81491df1e27c8739108afdbc9932e = L.circleMarker(
+                [44.01, -83.01],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_26b9e4200e660dec7eccf57274f07a4f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8ca737eba1187e401efb35096fce365 = $(`<div id="html_e8ca737eba1187e401efb35096fce365" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 44.0100, -83.0100<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_26b9e4200e660dec7eccf57274f07a4f.setContent(html_e8ca737eba1187e401efb35096fce365);
+            
+        
+
+        circle_marker_2bc81491df1e27c8739108afdbc9932e.bindPopup(popup_26b9e4200e660dec7eccf57274f07a4f)
+        ;
+
+        
+    
+    
+            var circle_marker_68af601694053119a9d13a7418d112ea = L.circleMarker(
+                [21.79, -92.62],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_54f14e475b425811b516ae44fb3d1914 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c273ea3ef3c888e3c531f3601fbdc690 = $(`<div id="html_c273ea3ef3c888e3c531f3601fbdc690" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 21.7900, -92.6200<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_54f14e475b425811b516ae44fb3d1914.setContent(html_c273ea3ef3c888e3c531f3601fbdc690);
+            
+        
+
+        circle_marker_68af601694053119a9d13a7418d112ea.bindPopup(popup_54f14e475b425811b516ae44fb3d1914)
+        ;
+
+        
+    
+    
+            var circle_marker_a34de7f95f6331beaafffc6fad114ce3 = L.circleMarker(
+                [28.94, -79.02],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_64bed5f0c2e204927e5c5c5594a9c512 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c4d11ba79262ef7589e4424d8dcf9d0 = $(`<div id="html_8c4d11ba79262ef7589e4424d8dcf9d0" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 28.9400, -79.0200<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_64bed5f0c2e204927e5c5c5594a9c512.setContent(html_8c4d11ba79262ef7589e4424d8dcf9d0);
+            
+        
+
+        circle_marker_a34de7f95f6331beaafffc6fad114ce3.bindPopup(popup_64bed5f0c2e204927e5c5c5594a9c512)
+        ;
+
+        
+    
+    
+            var circle_marker_7267a3d340d22e227b1e4c1cba8d5209 = L.circleMarker(
+                [35.92, -82.94],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_69f4b4a2828262d9c6a780b42f53937e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bdf45403676315e4e1c37288edc2f48b = $(`<div id="html_bdf45403676315e4e1c37288edc2f48b" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 35.9200, -82.9400<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_69f4b4a2828262d9c6a780b42f53937e.setContent(html_bdf45403676315e4e1c37288edc2f48b);
+            
+        
+
+        circle_marker_7267a3d340d22e227b1e4c1cba8d5209.bindPopup(popup_69f4b4a2828262d9c6a780b42f53937e)
+        ;
+
+        
+    
+    
+            var circle_marker_e0b741a44ea41686b4b01aaaf81a35fb = L.circleMarker(
+                [41.42, -88.46],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_1fc53f4890421f183470a13209b67e4e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20df9366bbe96b41e7793e4d8787e810 = $(`<div id="html_20df9366bbe96b41e7793e4d8787e810" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.4200, -88.4600<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_1fc53f4890421f183470a13209b67e4e.setContent(html_20df9366bbe96b41e7793e4d8787e810);
+            
+        
+
+        circle_marker_e0b741a44ea41686b4b01aaaf81a35fb.bindPopup(popup_1fc53f4890421f183470a13209b67e4e)
+        ;
+
+        
+    
+    
+            var circle_marker_89817c5d4123e7cfd01fb71f39b6c9e1 = L.circleMarker(
+                [41.94, -88.59],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_fbad55ece343ea829a3f711fc2db8e69 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60da119509c29c26f0f0edd3e16608bf = $(`<div id="html_60da119509c29c26f0f0edd3e16608bf" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.9400, -88.5900<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_fbad55ece343ea829a3f711fc2db8e69.setContent(html_60da119509c29c26f0f0edd3e16608bf);
+            
+        
+
+        circle_marker_89817c5d4123e7cfd01fb71f39b6c9e1.bindPopup(popup_fbad55ece343ea829a3f711fc2db8e69)
+        ;
+
+        
+    
+    
+            var circle_marker_934da3329e6481e425c49dc106ab6c19 = L.circleMarker(
+                [42.14, -86.86],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_2b69ca77a99db51964ed92f52c182c26 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_475f38961281dc1da5dbc18481b0cab3 = $(`<div id="html_475f38961281dc1da5dbc18481b0cab3" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.1400, -86.8600<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_2b69ca77a99db51964ed92f52c182c26.setContent(html_475f38961281dc1da5dbc18481b0cab3);
+            
+        
+
+        circle_marker_934da3329e6481e425c49dc106ab6c19.bindPopup(popup_2b69ca77a99db51964ed92f52c182c26)
+        ;
+
+        
+    
+    
+            var circle_marker_48b4ddd67cef9bb80e15a23192c54b33 = L.circleMarker(
+                [41.71, -86.52],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_e0fa895c5927486b5ccc169c02481125 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d61caaec20909235c79b593cff0466c7 = $(`<div id="html_d61caaec20909235c79b593cff0466c7" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.7100, -86.5200<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_e0fa895c5927486b5ccc169c02481125.setContent(html_d61caaec20909235c79b593cff0466c7);
+            
+        
+
+        circle_marker_48b4ddd67cef9bb80e15a23192c54b33.bindPopup(popup_e0fa895c5927486b5ccc169c02481125)
+        ;
+
+        
+    
+    
+            var circle_marker_c96d2b58cb5827fd97e475ce59472989 = L.circleMarker(
+                [41.75, -86.19],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_b5a1eb730eb85a221574aeafcdbc52a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95498e246703f9850fbe16aa374dc6ac = $(`<div id="html_95498e246703f9850fbe16aa374dc6ac" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.7500, -86.1900<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_b5a1eb730eb85a221574aeafcdbc52a5.setContent(html_95498e246703f9850fbe16aa374dc6ac);
+            
+        
+
+        circle_marker_c96d2b58cb5827fd97e475ce59472989.bindPopup(popup_b5a1eb730eb85a221574aeafcdbc52a5)
+        ;
+
+        
+    
+    
+            var circle_marker_33d067402e78bd1701817f5f4b8622aa = L.circleMarker(
+                [40.36, -87.12],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_ca1690129ddbbe8415f4d356003974bb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_380044f00352da94d30a630769622bf1 = $(`<div id="html_380044f00352da94d30a630769622bf1" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 40.3600, -87.1200<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_ca1690129ddbbe8415f4d356003974bb.setContent(html_380044f00352da94d30a630769622bf1);
+            
+        
+
+        circle_marker_33d067402e78bd1701817f5f4b8622aa.bindPopup(popup_ca1690129ddbbe8415f4d356003974bb)
+        ;
+
+        
+    
+    
+            var circle_marker_89a891fc67b3a9a5790c7fd7ffee05e8 = L.circleMarker(
+                [41.9, -89.79],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_d4fb11070d197fa54f1553f01bddb5f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c811152d419d8043b8c674a6daa1953 = $(`<div id="html_8c811152d419d8043b8c674a6daa1953" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.9000, -89.7900<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_d4fb11070d197fa54f1553f01bddb5f7.setContent(html_8c811152d419d8043b8c674a6daa1953);
+            
+        
+
+        circle_marker_89a891fc67b3a9a5790c7fd7ffee05e8.bindPopup(popup_d4fb11070d197fa54f1553f01bddb5f7)
+        ;
+
+        
+    
+    
+            var circle_marker_e707d307641ef6992513bef1a7c3d197 = L.circleMarker(
+                [72.88, 1.72],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_ad77c669d9ccea0c17f2ca2b87495995 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2e11724d6ca012319a732dbab33aa310 = $(`<div id="html_2e11724d6ca012319a732dbab33aa310" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 72.8800, 1.7200<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_ad77c669d9ccea0c17f2ca2b87495995.setContent(html_2e11724d6ca012319a732dbab33aa310);
+            
+        
+
+        circle_marker_e707d307641ef6992513bef1a7c3d197.bindPopup(popup_ad77c669d9ccea0c17f2ca2b87495995)
+        ;
+
+        
+    
+    
+            var circle_marker_39b718448a84969be02b8e78143210d3 = L.circleMarker(
+                [41.23, -88.28],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_8278798f30a31fbb901524800412bf22 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_953f2f09b4513d87a7cb30ee5d9b64d1 = $(`<div id="html_953f2f09b4513d87a7cb30ee5d9b64d1" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.2300, -88.2800<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_8278798f30a31fbb901524800412bf22.setContent(html_953f2f09b4513d87a7cb30ee5d9b64d1);
+            
+        
+
+        circle_marker_39b718448a84969be02b8e78143210d3.bindPopup(popup_8278798f30a31fbb901524800412bf22)
+        ;
+
+        
+    
+    
+            var circle_marker_43eaa6c2f5c02b6ba908a9e69492067c = L.circleMarker(
+                [41.73, -88.03],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_ea59050447ac53a32d307e7db289776c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57683712f46ef31422d2ed1909222d54 = $(`<div id="html_57683712f46ef31422d2ed1909222d54" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.7300, -88.0300<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_ea59050447ac53a32d307e7db289776c.setContent(html_57683712f46ef31422d2ed1909222d54);
+            
+        
+
+        circle_marker_43eaa6c2f5c02b6ba908a9e69492067c.bindPopup(popup_ea59050447ac53a32d307e7db289776c)
+        ;
+
+        
+    
+    
+            var circle_marker_dafc2c51f11d7c754d96198677b292be = L.circleMarker(
+                [42.14, -88.94],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_63ebb2de4a0611ac89a050764955c2f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af6cc40cf15d66c613a95dbb3461ccfa = $(`<div id="html_af6cc40cf15d66c613a95dbb3461ccfa" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.1400, -88.9400<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_63ebb2de4a0611ac89a050764955c2f5.setContent(html_af6cc40cf15d66c613a95dbb3461ccfa);
+            
+        
+
+        circle_marker_dafc2c51f11d7c754d96198677b292be.bindPopup(popup_63ebb2de4a0611ac89a050764955c2f5)
+        ;
+
+        
+    
+    
+            var circle_marker_cf15a9c80016b4a44becb787b55a6c43 = L.circleMarker(
+                [42.64, -86.38],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_061678f18d01e69ce1eb725918d6a4f2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41efb797a49631faa59d6d54039ee991 = $(`<div id="html_41efb797a49631faa59d6d54039ee991" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.6400, -86.3800<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_061678f18d01e69ce1eb725918d6a4f2.setContent(html_41efb797a49631faa59d6d54039ee991);
+            
+        
+
+        circle_marker_cf15a9c80016b4a44becb787b55a6c43.bindPopup(popup_061678f18d01e69ce1eb725918d6a4f2)
+        ;
+
+        
+    
+    
+            var circle_marker_0451ae8242b378896177444cfc0ff429 = L.circleMarker(
+                [42.73, -85.89],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_b78d5ac675afb9d0b3dab2ba8a3c972e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a073431862970a8163fe7477f71dcb7 = $(`<div id="html_1a073431862970a8163fe7477f71dcb7" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.7300, -85.8900<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_b78d5ac675afb9d0b3dab2ba8a3c972e.setContent(html_1a073431862970a8163fe7477f71dcb7);
+            
+        
+
+        circle_marker_0451ae8242b378896177444cfc0ff429.bindPopup(popup_b78d5ac675afb9d0b3dab2ba8a3c972e)
+        ;
+
+        
+    
+    
+            var circle_marker_986bee166b4dc830a208429c80aa83a7 = L.circleMarker(
+                [32.53, -129.71],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_dc4e81575bf4ea5aefafc2cb276eb4cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7cff8b804ea22ffc61b15e4f8a11cffb = $(`<div id="html_7cff8b804ea22ffc61b15e4f8a11cffb" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 32.5300, -129.7100<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_dc4e81575bf4ea5aefafc2cb276eb4cd.setContent(html_7cff8b804ea22ffc61b15e4f8a11cffb);
+            
+        
+
+        circle_marker_986bee166b4dc830a208429c80aa83a7.bindPopup(popup_dc4e81575bf4ea5aefafc2cb276eb4cd)
+        ;
+
+        
+    
+    
+            var circle_marker_8177461c93ebe65f92a774b552022d92 = L.circleMarker(
+                [41.76, -88.41],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_27c0009c6c38fa80a386404f65d8c860 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4908aba83a1e0dafe64f40471a4dc8b8 = $(`<div id="html_4908aba83a1e0dafe64f40471a4dc8b8" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.7600, -88.4100<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_27c0009c6c38fa80a386404f65d8c860.setContent(html_4908aba83a1e0dafe64f40471a4dc8b8);
+            
+        
+
+        circle_marker_8177461c93ebe65f92a774b552022d92.bindPopup(popup_27c0009c6c38fa80a386404f65d8c860)
+        ;
+
+        
+    
+    
+            var circle_marker_dde66da61d48643b006dacc8675b568b = L.circleMarker(
+                [41.48, -87.54],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_196365b9a78a83c8510ae5a5274c7789 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f03f9ad3c6d0c44dc43c824c10afb56 = $(`<div id="html_4f03f9ad3c6d0c44dc43c824c10afb56" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.4800, -87.5400<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_196365b9a78a83c8510ae5a5274c7789.setContent(html_4f03f9ad3c6d0c44dc43c824c10afb56);
+            
+        
+
+        circle_marker_dde66da61d48643b006dacc8675b568b.bindPopup(popup_196365b9a78a83c8510ae5a5274c7789)
+        ;
+
+        
+    
+    
+            var circle_marker_a5c9117c6885a830265de0d443b9fd63 = L.circleMarker(
+                [42.06, -88.09],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_4cd3239f418732b98b95f61f95d45f9b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c934c75878869aea88197fcdb497927c = $(`<div id="html_c934c75878869aea88197fcdb497927c" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.0600, -88.0900<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_4cd3239f418732b98b95f61f95d45f9b.setContent(html_c934c75878869aea88197fcdb497927c);
+            
+        
+
+        circle_marker_a5c9117c6885a830265de0d443b9fd63.bindPopup(popup_4cd3239f418732b98b95f61f95d45f9b)
+        ;
+
+        
+    
+    
+            var circle_marker_db6569f807f2009f3b788577c988ba1e = L.circleMarker(
+                [42.12, -88.08],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_6872d8ce4b96a68b87870921f919e0cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_83bbc544e701a49194da6bddc71e69d1 = $(`<div id="html_83bbc544e701a49194da6bddc71e69d1" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.1200, -88.0800<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_6872d8ce4b96a68b87870921f919e0cb.setContent(html_83bbc544e701a49194da6bddc71e69d1);
+            
+        
+
+        circle_marker_db6569f807f2009f3b788577c988ba1e.bindPopup(popup_6872d8ce4b96a68b87870921f919e0cb)
+        ;
+
+        
+    
+    
+            var circle_marker_7b4d82eed7e9c8e4a2db4214632b6ddc = L.circleMarker(
+                [40.86, -89.25],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_0aa9c84fde31521ec70a93547350ccfb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5aa36d54a004f3f5d52f9d3c31376983 = $(`<div id="html_5aa36d54a004f3f5d52f9d3c31376983" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 40.8600, -89.2500<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_0aa9c84fde31521ec70a93547350ccfb.setContent(html_5aa36d54a004f3f5d52f9d3c31376983);
+            
+        
+
+        circle_marker_7b4d82eed7e9c8e4a2db4214632b6ddc.bindPopup(popup_0aa9c84fde31521ec70a93547350ccfb)
+        ;
+
+        
+    
+    
+            var circle_marker_4559ec62a0aa713f18e253c9452bc85d = L.circleMarker(
+                [41.62, -86.56],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_312abbf1e1c187a161221b4d7eb47284 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f6d3f078957d24bd75a05c6b6bdaebb = $(`<div id="html_0f6d3f078957d24bd75a05c6b6bdaebb" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.6200, -86.5600<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_312abbf1e1c187a161221b4d7eb47284.setContent(html_0f6d3f078957d24bd75a05c6b6bdaebb);
+            
+        
+
+        circle_marker_4559ec62a0aa713f18e253c9452bc85d.bindPopup(popup_312abbf1e1c187a161221b4d7eb47284)
+        ;
+
+        
+    
+    
+            var circle_marker_ec81ae87eb04216e10614bcfaa57c649 = L.circleMarker(
+                [35.5, -89.36],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_f5ab453e96f50fddb8f89000ec82ec94 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3bb6551475a5c103fa97ff3f2694b2d = $(`<div id="html_e3bb6551475a5c103fa97ff3f2694b2d" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 35.5000, -89.3600<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_f5ab453e96f50fddb8f89000ec82ec94.setContent(html_e3bb6551475a5c103fa97ff3f2694b2d);
+            
+        
+
+        circle_marker_ec81ae87eb04216e10614bcfaa57c649.bindPopup(popup_f5ab453e96f50fddb8f89000ec82ec94)
+        ;
+
+        
+    
+    
+            var circle_marker_6aec8dd6e035459bce2ea55b291285ea = L.circleMarker(
+                [43.93, -86.05],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_366eb5511f87849ce2b8d43b97e42163 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_adfb3fa41809ac71cb7c08d931421332 = $(`<div id="html_adfb3fa41809ac71cb7c08d931421332" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 43.9300, -86.0500<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_366eb5511f87849ce2b8d43b97e42163.setContent(html_adfb3fa41809ac71cb7c08d931421332);
+            
+        
+
+        circle_marker_6aec8dd6e035459bce2ea55b291285ea.bindPopup(popup_366eb5511f87849ce2b8d43b97e42163)
+        ;
+
+        
+    
+    
+            var circle_marker_7b19e96cb845fb3ead08a810b296ecf7 = L.circleMarker(
+                [41.67, -88.11],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_b25a04ba289898bc7e09737edfa7dbfc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_960f462aa11dd767a14808ff683d1263 = $(`<div id="html_960f462aa11dd767a14808ff683d1263" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.6700, -88.1100<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_b25a04ba289898bc7e09737edfa7dbfc.setContent(html_960f462aa11dd767a14808ff683d1263);
+            
+        
+
+        circle_marker_7b19e96cb845fb3ead08a810b296ecf7.bindPopup(popup_b25a04ba289898bc7e09737edfa7dbfc)
+        ;
+
+        
+    
+    
+            var circle_marker_b47f6be170205e93a6bb71b619682b21 = L.circleMarker(
+                [41.94, -88.07],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_4fc0572f1c74af16e1cc51da78c0a9ca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d087567d79a38b9bdcff3d1b67f7a155 = $(`<div id="html_d087567d79a38b9bdcff3d1b67f7a155" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.9400, -88.0700<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_4fc0572f1c74af16e1cc51da78c0a9ca.setContent(html_d087567d79a38b9bdcff3d1b67f7a155);
+            
+        
+
+        circle_marker_b47f6be170205e93a6bb71b619682b21.bindPopup(popup_4fc0572f1c74af16e1cc51da78c0a9ca)
+        ;
+
+        
+    
+    
+            var circle_marker_adf17281871027306dbc68ccd7cc0a7e = L.circleMarker(
+                [42.86, -89.12],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_4d25a5437e64131e3d182501836b1771 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a818b6838851d43be8210d6955b3d27 = $(`<div id="html_2a818b6838851d43be8210d6955b3d27" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.8600, -89.1200<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_4d25a5437e64131e3d182501836b1771.setContent(html_2a818b6838851d43be8210d6955b3d27);
+            
+        
+
+        circle_marker_adf17281871027306dbc68ccd7cc0a7e.bindPopup(popup_4d25a5437e64131e3d182501836b1771)
+        ;
+
+        
+    
+    
+            var circle_marker_b9311f6482a4f20d3bb5e7d4fbad8b54 = L.circleMarker(
+                [41.46, -87.2],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_fc87cad219baa0f14f34fdbee145da6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cfc64dc1b7a4734427c9bb3fd5cf21fc = $(`<div id="html_cfc64dc1b7a4734427c9bb3fd5cf21fc" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.4600, -87.2000<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_fc87cad219baa0f14f34fdbee145da6d.setContent(html_cfc64dc1b7a4734427c9bb3fd5cf21fc);
+            
+        
+
+        circle_marker_b9311f6482a4f20d3bb5e7d4fbad8b54.bindPopup(popup_fc87cad219baa0f14f34fdbee145da6d)
+        ;
+
+        
+    
+    
+            var circle_marker_6d9719e8650b80a361eeab34ae8fb86a = L.circleMarker(
+                [41.55, -86.92],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_c29715867aa6d16efc6d675b91d0e17f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20c2462fa0400df71ed22d9a65b3ea66 = $(`<div id="html_20c2462fa0400df71ed22d9a65b3ea66" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.5500, -86.9200<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_c29715867aa6d16efc6d675b91d0e17f.setContent(html_20c2462fa0400df71ed22d9a65b3ea66);
+            
+        
+
+        circle_marker_6d9719e8650b80a361eeab34ae8fb86a.bindPopup(popup_c29715867aa6d16efc6d675b91d0e17f)
+        ;
+
+        
+    
+    
+            var circle_marker_f3f8124b903e1280e75d1536871d3256 = L.circleMarker(
+                [42.36, -88.56],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_55d03caabb77c81ec81ba33a4f806f24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a64f96f62b781f7f4889922e7ba8203 = $(`<div id="html_3a64f96f62b781f7f4889922e7ba8203" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.3600, -88.5600<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_55d03caabb77c81ec81ba33a4f806f24.setContent(html_3a64f96f62b781f7f4889922e7ba8203);
+            
+        
+
+        circle_marker_f3f8124b903e1280e75d1536871d3256.bindPopup(popup_55d03caabb77c81ec81ba33a4f806f24)
+        ;
+
+        
+    
+    
+            var circle_marker_e7079d16dc74ed7c8fb43840920e757b = L.circleMarker(
+                [83.14, 152.53],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_e5148c4f953e28c445f3e59b2a02e6d8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f0371fee4bea48126104752ee2ce584 = $(`<div id="html_1f0371fee4bea48126104752ee2ce584" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 83.1400, 152.5300<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_e5148c4f953e28c445f3e59b2a02e6d8.setContent(html_1f0371fee4bea48126104752ee2ce584);
+            
+        
+
+        circle_marker_e7079d16dc74ed7c8fb43840920e757b.bindPopup(popup_e5148c4f953e28c445f3e59b2a02e6d8)
+        ;
+
+        
+    
+    
+            var circle_marker_9d6b81886cbf2d82b582020371c19550 = L.circleMarker(
+                [42.62, -94.27],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_928ed91cd5ab08f41fa967ec7e63805a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_28b9ac0e2008ff628189bd3e237366eb = $(`<div id="html_28b9ac0e2008ff628189bd3e237366eb" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 42.6200, -94.2700<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_928ed91cd5ab08f41fa967ec7e63805a.setContent(html_28b9ac0e2008ff628189bd3e237366eb);
+            
+        
+
+        circle_marker_9d6b81886cbf2d82b582020371c19550.bindPopup(popup_928ed91cd5ab08f41fa967ec7e63805a)
+        ;
+
+        
+    
+    
+            var circle_marker_546c30958a104d12f2ef0f9f20cfdcd9 = L.circleMarker(
+                [40.19, -88.04],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_cf05bd1956d42523b4bb0efe6a79b1b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9ff82f56255bc07050315f6b95037edb = $(`<div id="html_9ff82f56255bc07050315f6b95037edb" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 40.1900, -88.0400<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_cf05bd1956d42523b4bb0efe6a79b1b3.setContent(html_9ff82f56255bc07050315f6b95037edb);
+            
+        
+
+        circle_marker_546c30958a104d12f2ef0f9f20cfdcd9.bindPopup(popup_cf05bd1956d42523b4bb0efe6a79b1b3)
+        ;
+
+        
+    
+    
+            var circle_marker_ee714524e9ab5cbe69922a868f356a7a = L.circleMarker(
+                [41.8, -88.07],
+                {"bubblingMouseEvents": true, "color": "#ADFF2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ADFF2F", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_bf4156ba4dff2b6effec84573d9eb08d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_286760c8e208c156637c47cb3ca4073b = $(`<div id="html_286760c8e208c156637c47cb3ca4073b" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2024 ГОДА</b><br>                 <hr>                 Координаты: 41.8000, -88.0700<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: member             </div>         </div>`)[0];
+                popup_bf4156ba4dff2b6effec84573d9eb08d.setContent(html_286760c8e208c156637c47cb3ca4073b);
+            
+        
+
+        circle_marker_ee714524e9ab5cbe69922a868f356a7a.bindPopup(popup_bf4156ba4dff2b6effec84573d9eb08d)
+        ;
+
+        
+    
+    
+            var circle_marker_3bbe8952acbc567874baf552d13a552b = L.circleMarker(
+                [41.96, -88.06],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_2704501a18bc2c3f7e95fed6e0d33aa7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c44a4eae012eb881d711ac8feb73c132 = $(`<div id="html_c44a4eae012eb881d711ac8feb73c132" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2025 ГОДА</b><br>                 <hr>                 Координаты: 41.9600, -88.0600<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_2704501a18bc2c3f7e95fed6e0d33aa7.setContent(html_c44a4eae012eb881d711ac8feb73c132);
+            
+        
+
+        circle_marker_3bbe8952acbc567874baf552d13a552b.bindPopup(popup_2704501a18bc2c3f7e95fed6e0d33aa7)
+        ;
+
+        
+    
+    
+            var circle_marker_aa6ddba8d0d0438430d75f349e189c5b = L.circleMarker(
+                [41.49, -87.42],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_af6bcb1a168275f4aa56ce74480b7cc6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a565d3b6a35ec526232fd2068c4555d5 = $(`<div id="html_a565d3b6a35ec526232fd2068c4555d5" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2025 ГОДА</b><br>                 <hr>                 Координаты: 41.4900, -87.4200<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_af6bcb1a168275f4aa56ce74480b7cc6.setContent(html_a565d3b6a35ec526232fd2068c4555d5);
+            
+        
+
+        circle_marker_aa6ddba8d0d0438430d75f349e189c5b.bindPopup(popup_af6bcb1a168275f4aa56ce74480b7cc6)
+        ;
+
+        
+    
+    
+            var circle_marker_9225c0e9eaa1e4056f2bdff9bc95396e = L.circleMarker(
+                [41.67, -88.04],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_4063890151bb60aee639dbf0089e67be);
+        
+    
+        var popup_1a3e5a2ee7d6849b172b44bd26cb4ba6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89087fb97a950348cb4e57445a70abc2 = $(`<div id="html_89087fb97a950348cb4e57445a70abc2" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ВЫБРОС 2025 ГОДА</b><br>                 <hr>                 Координаты: 41.6700, -88.0400<br>                 Тип велосипеда: electric_bike<br>                 Тип точки: финиш<br>                 Пользователь: casual             </div>         </div>`)[0];
+                popup_1a3e5a2ee7d6849b172b44bd26cb4ba6.setContent(html_89087fb97a950348cb4e57445a70abc2);
+            
+        
+
+        circle_marker_9225c0e9eaa1e4056f2bdff9bc95396e.bindPopup(popup_1a3e5a2ee7d6849b172b44bd26cb4ba6)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cd7a6a0df4513867b22102ebc3633c1e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+     top: 10px; left: 50px; width: 500px; 
+     z-index: 1000; background-color: white; 
+     padding: 10px; border-radius: 5px; 
+     border: 2px solid red; font-weight: bold;">
+    <center>КЛАСТЕРИЗОВАННЫЕ ВЫБРОСЫ КООРДИНАТ ПО США</center>
+    <div style="font-size: 12px; margin-top: 5px;">
+    Кликните на кластер для приближения<br>
+    Всего 86 аномальных координат (2020-2025)
+    </div>
+</div>
+    
+            <div class="folium-map" id="map_cd7a6a0df4513867b22102ebc3633c1e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_cd7a6a0df4513867b22102ebc3633c1e = L.map(
+                "map_cd7a6a0df4513867b22102ebc3633c1e",
+                {
+                    center: [39.8283, -98.5795],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4115dfc2b8f2854f0214358c861a9379 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4115dfc2b8f2854f0214358c861a9379.addTo(map_cd7a6a0df4513867b22102ebc3633c1e);
+        
+    
+            var marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_9f1919ec1f4ae4fca84a06d136eec2fa = L.circleMarker(
+                [45.635034323, -73.79647696],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_2203bbd1a69051f91c8cf3e66df7b837 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab6b9616bdf597009c982fb704431aac = $(`<div id="html_ab6b9616bdf597009c982fb704431aac" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>СТАРТ</b><br>                 Координаты: 45.6350, -73.7965<br>                 Тип: electric_bike<br>                 Год: 2022             </div>         </div>`)[0];
+                popup_2203bbd1a69051f91c8cf3e66df7b837.setContent(html_ab6b9616bdf597009c982fb704431aac);
+            
+        
+
+        circle_marker_9f1919ec1f4ae4fca84a06d136eec2fa.bindPopup(popup_2203bbd1a69051f91c8cf3e66df7b837)
+        ;
+
+        
+    
+    
+            var circle_marker_74f619ad78d8bb2a1dddd6dcf8f37a03 = L.circleMarker(
+                [42.0, -88.07],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_997b594ac135e764eac54ceb5cea9809 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_48cc45890c90978cd28046f021eadd85 = $(`<div id="html_48cc45890c90978cd28046f021eadd85" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.0000, -88.0700<br>                 Тип: electric_bike<br>                 Год: 2021             </div>         </div>`)[0];
+                popup_997b594ac135e764eac54ceb5cea9809.setContent(html_48cc45890c90978cd28046f021eadd85);
+            
+        
+
+        circle_marker_74f619ad78d8bb2a1dddd6dcf8f37a03.bindPopup(popup_997b594ac135e764eac54ceb5cea9809)
+        ;
+
+        
+    
+    
+            var circle_marker_8fe84b439768a2c2bd04d7cc6f8851f2 = L.circleMarker(
+                [41.39, -88.97],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_e44dbde386ce69fca5d01bb5eb3dec6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_09b563d842b8073b608088f64794f225 = $(`<div id="html_09b563d842b8073b608088f64794f225" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.3900, -88.9700<br>                 Тип: electric_bike<br>                 Год: 2021             </div>         </div>`)[0];
+                popup_e44dbde386ce69fca5d01bb5eb3dec6e.setContent(html_09b563d842b8073b608088f64794f225);
+            
+        
+
+        circle_marker_8fe84b439768a2c2bd04d7cc6f8851f2.bindPopup(popup_e44dbde386ce69fca5d01bb5eb3dec6e)
+        ;
+
+        
+    
+    
+            var circle_marker_83834a1ea03a22cb914a15664e5b3746 = L.circleMarker(
+                [41.48, -87.65],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_bd49bc14b738c835c0e6c3c1cd8eaf16 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b3c8bb09ef65c878b63f50fe071609f = $(`<div id="html_7b3c8bb09ef65c878b63f50fe071609f" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.4800, -87.6500<br>                 Тип: electric_bike<br>                 Год: 2021             </div>         </div>`)[0];
+                popup_bd49bc14b738c835c0e6c3c1cd8eaf16.setContent(html_7b3c8bb09ef65c878b63f50fe071609f);
+            
+        
+
+        circle_marker_83834a1ea03a22cb914a15664e5b3746.bindPopup(popup_bd49bc14b738c835c0e6c3c1cd8eaf16)
+        ;
+
+        
+    
+    
+            var circle_marker_904c8a4baaea1620deb4c79b76bb8097 = L.circleMarker(
+                [41.87, -88.14],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_b82167811b8239991be602d4899d8a1f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31571739852d46bde2c5efd87979402c = $(`<div id="html_31571739852d46bde2c5efd87979402c" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.8700, -88.1400<br>                 Тип: electric_bike<br>                 Год: 2022             </div>         </div>`)[0];
+                popup_b82167811b8239991be602d4899d8a1f.setContent(html_31571739852d46bde2c5efd87979402c);
+            
+        
+
+        circle_marker_904c8a4baaea1620deb4c79b76bb8097.bindPopup(popup_b82167811b8239991be602d4899d8a1f)
+        ;
+
+        
+    
+    
+            var circle_marker_b1ef167daef9ddc295856b18d33ac2fb = L.circleMarker(
+                [41.9, -88.05],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_09968332a6323f127dbcf716aa338152 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_013d47c86127c1ae9fd1f722e394712f = $(`<div id="html_013d47c86127c1ae9fd1f722e394712f" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.9000, -88.0500<br>                 Тип: electric_bike<br>                 Год: 2022             </div>         </div>`)[0];
+                popup_09968332a6323f127dbcf716aa338152.setContent(html_013d47c86127c1ae9fd1f722e394712f);
+            
+        
+
+        circle_marker_b1ef167daef9ddc295856b18d33ac2fb.bindPopup(popup_09968332a6323f127dbcf716aa338152)
+        ;
+
+        
+    
+    
+            var circle_marker_6d64fb25e14964378d7517d13de8629f = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_147819b611214bf78d8cdd63c91babeb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_193ad7f7046cb7ab9caa7e1833ad9871 = $(`<div id="html_193ad7f7046cb7ab9caa7e1833ad9871" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 0.0000, 0.0000<br>                 Тип: classic_bike<br>                 Год: 2022             </div>         </div>`)[0];
+                popup_147819b611214bf78d8cdd63c91babeb.setContent(html_193ad7f7046cb7ab9caa7e1833ad9871);
+            
+        
+
+        circle_marker_6d64fb25e14964378d7517d13de8629f.bindPopup(popup_147819b611214bf78d8cdd63c91babeb)
+        ;
+
+        
+    
+    
+            var circle_marker_748145729138e381af44fbc9161d3356 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_1b225bf4829c95e93abfbfec926f58ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82a05ab84914a216c7efeb1259e35a93 = $(`<div id="html_82a05ab84914a216c7efeb1259e35a93" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 0.0000, 0.0000<br>                 Тип: classic_bike<br>                 Год: 2022             </div>         </div>`)[0];
+                popup_1b225bf4829c95e93abfbfec926f58ea.setContent(html_82a05ab84914a216c7efeb1259e35a93);
+            
+        
+
+        circle_marker_748145729138e381af44fbc9161d3356.bindPopup(popup_1b225bf4829c95e93abfbfec926f58ea)
+        ;
+
+        
+    
+    
+            var circle_marker_56a07888f1e0b26fcb9077d9bb32126f = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_83c3558b0ac8d9a44d608236f4a5fa26 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6ce96e44fd6c8c72a5e262996b69d3b0 = $(`<div id="html_6ce96e44fd6c8c72a5e262996b69d3b0" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 0.0000, 0.0000<br>                 Тип: classic_bike<br>                 Год: 2022             </div>         </div>`)[0];
+                popup_83c3558b0ac8d9a44d608236f4a5fa26.setContent(html_6ce96e44fd6c8c72a5e262996b69d3b0);
+            
+        
+
+        circle_marker_56a07888f1e0b26fcb9077d9bb32126f.bindPopup(popup_83c3558b0ac8d9a44d608236f4a5fa26)
+        ;
+
+        
+    
+    
+            var circle_marker_3370fc0864c5b67d4a6bda3b70ee8078 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_b4e4e407dc020201734eb0e4cddafc88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e892cc5c6fdc5f424967066f3bee705a = $(`<div id="html_e892cc5c6fdc5f424967066f3bee705a" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 0.0000, 0.0000<br>                 Тип: classic_bike<br>                 Год: 2022             </div>         </div>`)[0];
+                popup_b4e4e407dc020201734eb0e4cddafc88.setContent(html_e892cc5c6fdc5f424967066f3bee705a);
+            
+        
+
+        circle_marker_3370fc0864c5b67d4a6bda3b70ee8078.bindPopup(popup_b4e4e407dc020201734eb0e4cddafc88)
+        ;
+
+        
+    
+    
+            var circle_marker_31858cd9908e5976a0ddeb480e891779 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_0b1c7805855b2bebf2fac91d6316db7e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57e6b348baeeada395410ae194ed8c22 = $(`<div id="html_57e6b348baeeada395410ae194ed8c22" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 0.0000, 0.0000<br>                 Тип: classic_bike<br>                 Год: 2022             </div>         </div>`)[0];
+                popup_0b1c7805855b2bebf2fac91d6316db7e.setContent(html_57e6b348baeeada395410ae194ed8c22);
+            
+        
+
+        circle_marker_31858cd9908e5976a0ddeb480e891779.bindPopup(popup_0b1c7805855b2bebf2fac91d6316db7e)
+        ;
+
+        
+    
+    
+            var circle_marker_be21a0a6a3966cc7b01af3860ce9f43c = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_7aa9604f56f24e358422a547b2d795dc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e2e514becced4d1418b2ca408b2b262 = $(`<div id="html_4e2e514becced4d1418b2ca408b2b262" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 0.0000, 0.0000<br>                 Тип: classic_bike<br>                 Год: 2022             </div>         </div>`)[0];
+                popup_7aa9604f56f24e358422a547b2d795dc.setContent(html_4e2e514becced4d1418b2ca408b2b262);
+            
+        
+
+        circle_marker_be21a0a6a3966cc7b01af3860ce9f43c.bindPopup(popup_7aa9604f56f24e358422a547b2d795dc)
+        ;
+
+        
+    
+    
+            var circle_marker_a7562582fc962b0d06d1049f7ed2f8e0 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_87d71d6a0f89a65955eb29ea6f3ac5cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_90b1389357e7a33cc881a33a9d771745 = $(`<div id="html_90b1389357e7a33cc881a33a9d771745" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 0.0000, 0.0000<br>                 Тип: classic_bike<br>                 Год: 2022             </div>         </div>`)[0];
+                popup_87d71d6a0f89a65955eb29ea6f3ac5cb.setContent(html_90b1389357e7a33cc881a33a9d771745);
+            
+        
+
+        circle_marker_a7562582fc962b0d06d1049f7ed2f8e0.bindPopup(popup_87d71d6a0f89a65955eb29ea6f3ac5cb)
+        ;
+
+        
+    
+    
+            var circle_marker_dd3560e2c40cc341167816b16b62859f = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_ff289e068a1c92c50db310446a2268dc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87e0a9c6fc0177483473d96683e86ed4 = $(`<div id="html_87e0a9c6fc0177483473d96683e86ed4" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 0.0000, 0.0000<br>                 Тип: electric_bike<br>                 Год: 2022             </div>         </div>`)[0];
+                popup_ff289e068a1c92c50db310446a2268dc.setContent(html_87e0a9c6fc0177483473d96683e86ed4);
+            
+        
+
+        circle_marker_dd3560e2c40cc341167816b16b62859f.bindPopup(popup_ff289e068a1c92c50db310446a2268dc)
+        ;
+
+        
+    
+    
+            var circle_marker_dbc24cd103741f4cfe4b73adb0453758 = L.circleMarker(
+                [41.66, -88.11],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_23dcbe9854f59ce5e56779ad5c2ec0a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ad19e892e9a0f638a34d49043680acf = $(`<div id="html_0ad19e892e9a0f638a34d49043680acf" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.6600, -88.1100<br>                 Тип: electric_bike<br>                 Год: 2023             </div>         </div>`)[0];
+                popup_23dcbe9854f59ce5e56779ad5c2ec0a9.setContent(html_0ad19e892e9a0f638a34d49043680acf);
+            
+        
+
+        circle_marker_dbc24cd103741f4cfe4b73adb0453758.bindPopup(popup_23dcbe9854f59ce5e56779ad5c2ec0a9)
+        ;
+
+        
+    
+    
+            var circle_marker_1f461daa3ffa5c32cf50a57f8464b9d6 = L.circleMarker(
+                [42.07, -88.16],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_4773ce514d5a546db0f00753f9cc64f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_238f9a23ece6a3b99a89fdddd9024e23 = $(`<div id="html_238f9a23ece6a3b99a89fdddd9024e23" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.0700, -88.1600<br>                 Тип: electric_bike<br>                 Год: 2023             </div>         </div>`)[0];
+                popup_4773ce514d5a546db0f00753f9cc64f7.setContent(html_238f9a23ece6a3b99a89fdddd9024e23);
+            
+        
+
+        circle_marker_1f461daa3ffa5c32cf50a57f8464b9d6.bindPopup(popup_4773ce514d5a546db0f00753f9cc64f7)
+        ;
+
+        
+    
+    
+            var circle_marker_9ffde01f49f43c6b289cc4ff63ee39a4 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_dce8f99e21ec282ec19c1faf9bcdbd2a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ac80009ff694069baf225eb3fe0d9454 = $(`<div id="html_ac80009ff694069baf225eb3fe0d9454" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 0.0000, 0.0000<br>                 Тип: classic_bike<br>                 Год: 2023             </div>         </div>`)[0];
+                popup_dce8f99e21ec282ec19c1faf9bcdbd2a.setContent(html_ac80009ff694069baf225eb3fe0d9454);
+            
+        
+
+        circle_marker_9ffde01f49f43c6b289cc4ff63ee39a4.bindPopup(popup_dce8f99e21ec282ec19c1faf9bcdbd2a)
+        ;
+
+        
+    
+    
+            var circle_marker_9cd6bba7287d885121b6c2948e50fbcb = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_fd919ba028cba3a19e2d826cefa315fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7dd451c0c04e3909deb40de2d6840093 = $(`<div id="html_7dd451c0c04e3909deb40de2d6840093" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 0.0000, 0.0000<br>                 Тип: electric_bike<br>                 Год: 2023             </div>         </div>`)[0];
+                popup_fd919ba028cba3a19e2d826cefa315fc.setContent(html_7dd451c0c04e3909deb40de2d6840093);
+            
+        
+
+        circle_marker_9cd6bba7287d885121b6c2948e50fbcb.bindPopup(popup_fd919ba028cba3a19e2d826cefa315fc)
+        ;
+
+        
+    
+    
+            var circle_marker_677c383183de312541202d8938a1e6a9 = L.circleMarker(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "#FF4500", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4500", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_ebd5651e9d1b98301badc1ea7a7bdfce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3316f69fbc5ce2aa2486122115b8240 = $(`<div id="html_e3316f69fbc5ce2aa2486122115b8240" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 0.0000, 0.0000<br>                 Тип: classic_bike<br>                 Год: 2023             </div>         </div>`)[0];
+                popup_ebd5651e9d1b98301badc1ea7a7bdfce.setContent(html_e3316f69fbc5ce2aa2486122115b8240);
+            
+        
+
+        circle_marker_677c383183de312541202d8938a1e6a9.bindPopup(popup_ebd5651e9d1b98301badc1ea7a7bdfce)
+        ;
+
+        
+    
+    
+            var circle_marker_abb094b6d598a87cf76fa54472d54455 = L.circleMarker(
+                [41.89, -88.12],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_cdff17636f56739358d9105958a9d8df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c454331523165435cd28262783935df2 = $(`<div id="html_c454331523165435cd28262783935df2" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.8900, -88.1200<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_cdff17636f56739358d9105958a9d8df.setContent(html_c454331523165435cd28262783935df2);
+            
+        
+
+        circle_marker_abb094b6d598a87cf76fa54472d54455.bindPopup(popup_cdff17636f56739358d9105958a9d8df)
+        ;
+
+        
+    
+    
+            var circle_marker_237bfd6035ee04d51948d7e3b7e230e6 = L.circleMarker(
+                [41.48, -87.67],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_7113abc4770ab5f242bef41b02f59a95 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e8d94076465c3f9718df6c1d4af9588 = $(`<div id="html_0e8d94076465c3f9718df6c1d4af9588" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.4800, -87.6700<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_7113abc4770ab5f242bef41b02f59a95.setContent(html_0e8d94076465c3f9718df6c1d4af9588);
+            
+        
+
+        circle_marker_237bfd6035ee04d51948d7e3b7e230e6.bindPopup(popup_7113abc4770ab5f242bef41b02f59a95)
+        ;
+
+        
+    
+    
+            var circle_marker_170a1b1ca50326e445a45af36f36da13 = L.circleMarker(
+                [87.96, -144.05],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_cbed13cbe97cab804fd7b07900492559 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ffa391fb630db5c24bce5f27cb28ab10 = $(`<div id="html_ffa391fb630db5c24bce5f27cb28ab10" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 87.9600, -144.0500<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_cbed13cbe97cab804fd7b07900492559.setContent(html_ffa391fb630db5c24bce5f27cb28ab10);
+            
+        
+
+        circle_marker_170a1b1ca50326e445a45af36f36da13.bindPopup(popup_cbed13cbe97cab804fd7b07900492559)
+        ;
+
+        
+    
+    
+            var circle_marker_29711b3b9c22c7a49b3a1b58ea8a1191 = L.circleMarker(
+                [38.94, -89.03],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_2f9b9bceb2f027b1a3050ce08378e14e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4885b9dfed44c1cc555faa6681a0d15b = $(`<div id="html_4885b9dfed44c1cc555faa6681a0d15b" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 38.9400, -89.0300<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_2f9b9bceb2f027b1a3050ce08378e14e.setContent(html_4885b9dfed44c1cc555faa6681a0d15b);
+            
+        
+
+        circle_marker_29711b3b9c22c7a49b3a1b58ea8a1191.bindPopup(popup_2f9b9bceb2f027b1a3050ce08378e14e)
+        ;
+
+        
+    
+    
+            var circle_marker_47b0985e1e09a9c334210dbb3dd6f14e = L.circleMarker(
+                [42.53, -87.8],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_80d5a611d4eb4687811123c11c289abf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20ee1012e0c3d60e99211df073927276 = $(`<div id="html_20ee1012e0c3d60e99211df073927276" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.5300, -87.8000<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_80d5a611d4eb4687811123c11c289abf.setContent(html_20ee1012e0c3d60e99211df073927276);
+            
+        
+
+        circle_marker_47b0985e1e09a9c334210dbb3dd6f14e.bindPopup(popup_80d5a611d4eb4687811123c11c289abf)
+        ;
+
+        
+    
+    
+            var circle_marker_516176184065b76f9a030d89a2f51856 = L.circleMarker(
+                [42.9, -87.29],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_616bdeafb42af90a818acb5a2124962e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8fe0aad5913625b66ac3cb955919a9aa = $(`<div id="html_8fe0aad5913625b66ac3cb955919a9aa" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.9000, -87.2900<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_616bdeafb42af90a818acb5a2124962e.setContent(html_8fe0aad5913625b66ac3cb955919a9aa);
+            
+        
+
+        circle_marker_516176184065b76f9a030d89a2f51856.bindPopup(popup_616bdeafb42af90a818acb5a2124962e)
+        ;
+
+        
+    
+    
+            var circle_marker_d31692610f3e28a94b912ae935708d7e = L.circleMarker(
+                [41.89, -88.05],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_18f3f3d04005bf6500cdb41a204dae25 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c861039d6deba9f0ab9c68b5edfa9f9 = $(`<div id="html_9c861039d6deba9f0ab9c68b5edfa9f9" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.8900, -88.0500<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_18f3f3d04005bf6500cdb41a204dae25.setContent(html_9c861039d6deba9f0ab9c68b5edfa9f9);
+            
+        
+
+        circle_marker_d31692610f3e28a94b912ae935708d7e.bindPopup(popup_18f3f3d04005bf6500cdb41a204dae25)
+        ;
+
+        
+    
+    
+            var circle_marker_df160164106ea094929ec1eef7603d05 = L.circleMarker(
+                [42.14, -85.52],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_8705b2baf1ce7a8a336466edc5c324e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0163c0da8053ac99c250222e95c7aebe = $(`<div id="html_0163c0da8053ac99c250222e95c7aebe" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.1400, -85.5200<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_8705b2baf1ce7a8a336466edc5c324e1.setContent(html_0163c0da8053ac99c250222e95c7aebe);
+            
+        
+
+        circle_marker_df160164106ea094929ec1eef7603d05.bindPopup(popup_8705b2baf1ce7a8a336466edc5c324e1)
+        ;
+
+        
+    
+    
+            var circle_marker_637ab64465d4358a7c49039ee189bd9c = L.circleMarker(
+                [36.0, -85.52],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_c5a0444ed32c31dbd94a2a05517285e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f79f0de46d65a8af0626780c33a75b60 = $(`<div id="html_f79f0de46d65a8af0626780c33a75b60" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 36.0000, -85.5200<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_c5a0444ed32c31dbd94a2a05517285e8.setContent(html_f79f0de46d65a8af0626780c33a75b60);
+            
+        
+
+        circle_marker_637ab64465d4358a7c49039ee189bd9c.bindPopup(popup_c5a0444ed32c31dbd94a2a05517285e8)
+        ;
+
+        
+    
+    
+            var circle_marker_17929fe3f4b43cc70aa5218237166712 = L.circleMarker(
+                [41.6, -88.14],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_9bc3e0aaca5573fc054ce0eadfa7eede = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1cc7f47a362bb488190ae4ac43687ff0 = $(`<div id="html_1cc7f47a362bb488190ae4ac43687ff0" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.6000, -88.1400<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_9bc3e0aaca5573fc054ce0eadfa7eede.setContent(html_1cc7f47a362bb488190ae4ac43687ff0);
+            
+        
+
+        circle_marker_17929fe3f4b43cc70aa5218237166712.bindPopup(popup_9bc3e0aaca5573fc054ce0eadfa7eede)
+        ;
+
+        
+    
+    
+            var circle_marker_6d06a228df09eb7a1e203b76eb72a416 = L.circleMarker(
+                [42.13, -85.52],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_6d09f4b0d272bfc172f97e5b2a4b8143 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_488dcb11b1061ea190e6e4ca0aea03b4 = $(`<div id="html_488dcb11b1061ea190e6e4ca0aea03b4" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.1300, -85.5200<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_6d09f4b0d272bfc172f97e5b2a4b8143.setContent(html_488dcb11b1061ea190e6e4ca0aea03b4);
+            
+        
+
+        circle_marker_6d06a228df09eb7a1e203b76eb72a416.bindPopup(popup_6d09f4b0d272bfc172f97e5b2a4b8143)
+        ;
+
+        
+    
+    
+            var circle_marker_3e73ce6e6baf2826e62b1b4383643055 = L.circleMarker(
+                [41.19, -87.65],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_5fcd1556932cc5749ee8385b8ce3d905 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_37f518bd47664714f35c066af49744b0 = $(`<div id="html_37f518bd47664714f35c066af49744b0" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.1900, -87.6500<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_5fcd1556932cc5749ee8385b8ce3d905.setContent(html_37f518bd47664714f35c066af49744b0);
+            
+        
+
+        circle_marker_3e73ce6e6baf2826e62b1b4383643055.bindPopup(popup_5fcd1556932cc5749ee8385b8ce3d905)
+        ;
+
+        
+    
+    
+            var circle_marker_448887fb4c06d154f11aeede4df63340 = L.circleMarker(
+                [41.88, -88.35],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_faed8e3cd4b68807f6ed291d7eeaf2d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec3392e073136366b8f281a0fcf6822b = $(`<div id="html_ec3392e073136366b8f281a0fcf6822b" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.8800, -88.3500<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_faed8e3cd4b68807f6ed291d7eeaf2d5.setContent(html_ec3392e073136366b8f281a0fcf6822b);
+            
+        
+
+        circle_marker_448887fb4c06d154f11aeede4df63340.bindPopup(popup_faed8e3cd4b68807f6ed291d7eeaf2d5)
+        ;
+
+        
+    
+    
+            var circle_marker_2ce51e910802e6ef51dc7c642d6fa52e = L.circleMarker(
+                [16.06, -84.82],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_424d5367a9e62f686ce47c7e2a7f868b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e1b3a2bb57ba1720cb83150131e4108 = $(`<div id="html_4e1b3a2bb57ba1720cb83150131e4108" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 16.0600, -84.8200<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_424d5367a9e62f686ce47c7e2a7f868b.setContent(html_4e1b3a2bb57ba1720cb83150131e4108);
+            
+        
+
+        circle_marker_2ce51e910802e6ef51dc7c642d6fa52e.bindPopup(popup_424d5367a9e62f686ce47c7e2a7f868b)
+        ;
+
+        
+    
+    
+            var circle_marker_d11df23b123da54724ca33fa5f1abf7f = L.circleMarker(
+                [31.74, -81.51],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_a17023274fdb82a102e225141531c766 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20d9ef8e467d9729c0837d6bbc538632 = $(`<div id="html_20d9ef8e467d9729c0837d6bbc538632" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 31.7400, -81.5100<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_a17023274fdb82a102e225141531c766.setContent(html_20d9ef8e467d9729c0837d6bbc538632);
+            
+        
+
+        circle_marker_d11df23b123da54724ca33fa5f1abf7f.bindPopup(popup_a17023274fdb82a102e225141531c766)
+        ;
+
+        
+    
+    
+            var circle_marker_1748251b93ab4f59ca32c99712777fc2 = L.circleMarker(
+                [42.76, -97.47],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_3e99f26a7aab5c50ca2fdaca62bd52b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_284c6a492c96e59ac8d1b0926215799c = $(`<div id="html_284c6a492c96e59ac8d1b0926215799c" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.7600, -97.4700<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_3e99f26a7aab5c50ca2fdaca62bd52b4.setContent(html_284c6a492c96e59ac8d1b0926215799c);
+            
+        
+
+        circle_marker_1748251b93ab4f59ca32c99712777fc2.bindPopup(popup_3e99f26a7aab5c50ca2fdaca62bd52b4)
+        ;
+
+        
+    
+    
+            var circle_marker_2e8045ef0c62d16ec4b3acb55d739b4c = L.circleMarker(
+                [41.78, -89.27],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_a2f25b2eeaeb71256e815534d113eedc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41801195d69b5bca2613dc32d03adc54 = $(`<div id="html_41801195d69b5bca2613dc32d03adc54" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.7800, -89.2700<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_a2f25b2eeaeb71256e815534d113eedc.setContent(html_41801195d69b5bca2613dc32d03adc54);
+            
+        
+
+        circle_marker_2e8045ef0c62d16ec4b3acb55d739b4c.bindPopup(popup_a2f25b2eeaeb71256e815534d113eedc)
+        ;
+
+        
+    
+    
+            var circle_marker_7492e92c07a6c9e5ae139f078a623e48 = L.circleMarker(
+                [36.56, -91.42],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_80e63072dacb666fb9fc67e22b767acb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_23b0c18c06bd4f0127677458811754a0 = $(`<div id="html_23b0c18c06bd4f0127677458811754a0" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 36.5600, -91.4200<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_80e63072dacb666fb9fc67e22b767acb.setContent(html_23b0c18c06bd4f0127677458811754a0);
+            
+        
+
+        circle_marker_7492e92c07a6c9e5ae139f078a623e48.bindPopup(popup_80e63072dacb666fb9fc67e22b767acb)
+        ;
+
+        
+    
+    
+            var circle_marker_0bfa1235baea37cc173e3e109174a3b1 = L.circleMarker(
+                [42.11, -81.69],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_7dbc4d40e991b401dd5dd9ad79bf08c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a2b082bec6d82ffa5f3ccc6aa10c5639 = $(`<div id="html_a2b082bec6d82ffa5f3ccc6aa10c5639" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.1100, -81.6900<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_7dbc4d40e991b401dd5dd9ad79bf08c6.setContent(html_a2b082bec6d82ffa5f3ccc6aa10c5639);
+            
+        
+
+        circle_marker_0bfa1235baea37cc173e3e109174a3b1.bindPopup(popup_7dbc4d40e991b401dd5dd9ad79bf08c6)
+        ;
+
+        
+    
+    
+            var circle_marker_0656e172de6d3a197d00c969d5a5c3b2 = L.circleMarker(
+                [42.76, -97.46],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_4356ca7df0f9a23cd2aedf1869ca2ee5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1541ca10a0a90d8bca502aa4e9a5c487 = $(`<div id="html_1541ca10a0a90d8bca502aa4e9a5c487" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.7600, -97.4600<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_4356ca7df0f9a23cd2aedf1869ca2ee5.setContent(html_1541ca10a0a90d8bca502aa4e9a5c487);
+            
+        
+
+        circle_marker_0656e172de6d3a197d00c969d5a5c3b2.bindPopup(popup_4356ca7df0f9a23cd2aedf1869ca2ee5)
+        ;
+
+        
+    
+    
+            var circle_marker_e8ad4003ba359fdd1dc308ce65a7b05d = L.circleMarker(
+                [40.85, -89.39],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_1f36aa5c1bd8a605661ae8c732ac651f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b69bc55aa8527c164f6edd4a6ad4bc47 = $(`<div id="html_b69bc55aa8527c164f6edd4a6ad4bc47" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 40.8500, -89.3900<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_1f36aa5c1bd8a605661ae8c732ac651f.setContent(html_b69bc55aa8527c164f6edd4a6ad4bc47);
+            
+        
+
+        circle_marker_e8ad4003ba359fdd1dc308ce65a7b05d.bindPopup(popup_1f36aa5c1bd8a605661ae8c732ac651f)
+        ;
+
+        
+    
+    
+            var circle_marker_c52c667335ceacd888e8e65ce215ba22 = L.circleMarker(
+                [30.02, -85.47],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_ab358cf03917daf85d9cf5e01d9e1107 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53fc2cb404a1f09a923b754af1ff2557 = $(`<div id="html_53fc2cb404a1f09a923b754af1ff2557" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 30.0200, -85.4700<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_ab358cf03917daf85d9cf5e01d9e1107.setContent(html_53fc2cb404a1f09a923b754af1ff2557);
+            
+        
+
+        circle_marker_c52c667335ceacd888e8e65ce215ba22.bindPopup(popup_ab358cf03917daf85d9cf5e01d9e1107)
+        ;
+
+        
+    
+    
+            var circle_marker_91899ff748da7d5f97db2c776a70b9cc = L.circleMarker(
+                [43.31, -86.54],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_59a0a2927635075e4aa36c2ea2c37462 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fea9af076596e863d57e44829b2cc2c5 = $(`<div id="html_fea9af076596e863d57e44829b2cc2c5" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 43.3100, -86.5400<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_59a0a2927635075e4aa36c2ea2c37462.setContent(html_fea9af076596e863d57e44829b2cc2c5);
+            
+        
+
+        circle_marker_91899ff748da7d5f97db2c776a70b9cc.bindPopup(popup_59a0a2927635075e4aa36c2ea2c37462)
+        ;
+
+        
+    
+    
+            var circle_marker_3514381d86a3c68076fc04e7ffecc94e = L.circleMarker(
+                [46.16, -86.6],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_5840c77ab00ed56354cdba1a382c79b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_593325260925f6e0890c6fc5fc3e4585 = $(`<div id="html_593325260925f6e0890c6fc5fc3e4585" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 46.1600, -86.6000<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_5840c77ab00ed56354cdba1a382c79b2.setContent(html_593325260925f6e0890c6fc5fc3e4585);
+            
+        
+
+        circle_marker_3514381d86a3c68076fc04e7ffecc94e.bindPopup(popup_5840c77ab00ed56354cdba1a382c79b2)
+        ;
+
+        
+    
+    
+            var circle_marker_bdde44144f9f0503814304e9a4638ac1 = L.circleMarker(
+                [41.59, -88.45],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_d38695da769ea5ab73f5ab91d36c48a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_756bab04eb35604e76fcd0d80a382363 = $(`<div id="html_756bab04eb35604e76fcd0d80a382363" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.5900, -88.4500<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_d38695da769ea5ab73f5ab91d36c48a9.setContent(html_756bab04eb35604e76fcd0d80a382363);
+            
+        
+
+        circle_marker_bdde44144f9f0503814304e9a4638ac1.bindPopup(popup_d38695da769ea5ab73f5ab91d36c48a9)
+        ;
+
+        
+    
+    
+            var circle_marker_a8c1c50932dbeec636853b1c673f1994 = L.circleMarker(
+                [39.86, -90.66],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_f9d89931b201b94af101a8bc73fe9306 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2552877edd6d7d027a5f992a846f8c8a = $(`<div id="html_2552877edd6d7d027a5f992a846f8c8a" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 39.8600, -90.6600<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_f9d89931b201b94af101a8bc73fe9306.setContent(html_2552877edd6d7d027a5f992a846f8c8a);
+            
+        
+
+        circle_marker_a8c1c50932dbeec636853b1c673f1994.bindPopup(popup_f9d89931b201b94af101a8bc73fe9306)
+        ;
+
+        
+    
+    
+            var circle_marker_2bf7a7f6d9ca0a781890dbbeae61aacd = L.circleMarker(
+                [42.84, -90.88],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_4c1e7861a2016a26cfde387125ba26e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_68927f06b0c3cd57980fcc17e2d63f8f = $(`<div id="html_68927f06b0c3cd57980fcc17e2d63f8f" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.8400, -90.8800<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_4c1e7861a2016a26cfde387125ba26e3.setContent(html_68927f06b0c3cd57980fcc17e2d63f8f);
+            
+        
+
+        circle_marker_2bf7a7f6d9ca0a781890dbbeae61aacd.bindPopup(popup_4c1e7861a2016a26cfde387125ba26e3)
+        ;
+
+        
+    
+    
+            var circle_marker_d52ee8b95cf37f2e22446d3e4ea8bc36 = L.circleMarker(
+                [42.51, -87.5],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_c35ca4d3580f6f41751245595ee645fe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_93048c37d1b4d54d74721bbbf9e95bb8 = $(`<div id="html_93048c37d1b4d54d74721bbbf9e95bb8" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.5100, -87.5000<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_c35ca4d3580f6f41751245595ee645fe.setContent(html_93048c37d1b4d54d74721bbbf9e95bb8);
+            
+        
+
+        circle_marker_d52ee8b95cf37f2e22446d3e4ea8bc36.bindPopup(popup_c35ca4d3580f6f41751245595ee645fe)
+        ;
+
+        
+    
+    
+            var circle_marker_3b9422fab59053b95f8d70fa2f5a1cea = L.circleMarker(
+                [44.01, -83.01],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_b8b34d056aa4e90b4f4371d894f9395a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1b25f924e6bf8cd8bfa8a53b2a8230a = $(`<div id="html_e1b25f924e6bf8cd8bfa8a53b2a8230a" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 44.0100, -83.0100<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_b8b34d056aa4e90b4f4371d894f9395a.setContent(html_e1b25f924e6bf8cd8bfa8a53b2a8230a);
+            
+        
+
+        circle_marker_3b9422fab59053b95f8d70fa2f5a1cea.bindPopup(popup_b8b34d056aa4e90b4f4371d894f9395a)
+        ;
+
+        
+    
+    
+            var circle_marker_7ed4e56b2aa7e463d473c767b9262233 = L.circleMarker(
+                [21.79, -92.62],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_7d7c7f40b6e8a833a04293d9c799e83d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9914ba27425d877a974e3b3ef8e25a52 = $(`<div id="html_9914ba27425d877a974e3b3ef8e25a52" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 21.7900, -92.6200<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_7d7c7f40b6e8a833a04293d9c799e83d.setContent(html_9914ba27425d877a974e3b3ef8e25a52);
+            
+        
+
+        circle_marker_7ed4e56b2aa7e463d473c767b9262233.bindPopup(popup_7d7c7f40b6e8a833a04293d9c799e83d)
+        ;
+
+        
+    
+    
+            var circle_marker_0a7b9f7eab6783429bce9e1c6353a981 = L.circleMarker(
+                [28.94, -79.02],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_f90d6150c55b02272733635a42a0dbe3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bc05c210557c74c5bfa3e8219967de38 = $(`<div id="html_bc05c210557c74c5bfa3e8219967de38" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 28.9400, -79.0200<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_f90d6150c55b02272733635a42a0dbe3.setContent(html_bc05c210557c74c5bfa3e8219967de38);
+            
+        
+
+        circle_marker_0a7b9f7eab6783429bce9e1c6353a981.bindPopup(popup_f90d6150c55b02272733635a42a0dbe3)
+        ;
+
+        
+    
+    
+            var circle_marker_7466c91f335bcfc9058520ef2c014859 = L.circleMarker(
+                [35.92, -82.94],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_54f81aec91640fc2d8a3899bfa924ec0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4c83d1a44102d4ee9770b694625289f = $(`<div id="html_a4c83d1a44102d4ee9770b694625289f" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 35.9200, -82.9400<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_54f81aec91640fc2d8a3899bfa924ec0.setContent(html_a4c83d1a44102d4ee9770b694625289f);
+            
+        
+
+        circle_marker_7466c91f335bcfc9058520ef2c014859.bindPopup(popup_54f81aec91640fc2d8a3899bfa924ec0)
+        ;
+
+        
+    
+    
+            var circle_marker_a0fff33798f4fc4401b221bbb3823c4b = L.circleMarker(
+                [41.42, -88.46],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_0a251416e0730076ff657bfa5c6799e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cca0e303534a4df2b770fd2a46bc2ea7 = $(`<div id="html_cca0e303534a4df2b770fd2a46bc2ea7" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.4200, -88.4600<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_0a251416e0730076ff657bfa5c6799e3.setContent(html_cca0e303534a4df2b770fd2a46bc2ea7);
+            
+        
+
+        circle_marker_a0fff33798f4fc4401b221bbb3823c4b.bindPopup(popup_0a251416e0730076ff657bfa5c6799e3)
+        ;
+
+        
+    
+    
+            var circle_marker_07586d2853d9f8a183afd73270fb2ee9 = L.circleMarker(
+                [41.94, -88.59],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_d23c7c56df44665270447e192ad9d42a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5fff50dedcece72cc3b37aaf64f02c2a = $(`<div id="html_5fff50dedcece72cc3b37aaf64f02c2a" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.9400, -88.5900<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_d23c7c56df44665270447e192ad9d42a.setContent(html_5fff50dedcece72cc3b37aaf64f02c2a);
+            
+        
+
+        circle_marker_07586d2853d9f8a183afd73270fb2ee9.bindPopup(popup_d23c7c56df44665270447e192ad9d42a)
+        ;
+
+        
+    
+    
+            var circle_marker_c30cb7716b2220a6c7071a2ff9226c01 = L.circleMarker(
+                [42.14, -86.86],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_6c6fb700ce5397fce2647339d5e69c24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3364a10e20102c6b14bf1ceb75d2d828 = $(`<div id="html_3364a10e20102c6b14bf1ceb75d2d828" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.1400, -86.8600<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_6c6fb700ce5397fce2647339d5e69c24.setContent(html_3364a10e20102c6b14bf1ceb75d2d828);
+            
+        
+
+        circle_marker_c30cb7716b2220a6c7071a2ff9226c01.bindPopup(popup_6c6fb700ce5397fce2647339d5e69c24)
+        ;
+
+        
+    
+    
+            var circle_marker_2d88b768c091ef5e545da3ba1f549196 = L.circleMarker(
+                [41.71, -86.52],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_e69ca507530e4ec945672eebe706fecc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e77cc712e75d76faaf2f0a9324f0c5aa = $(`<div id="html_e77cc712e75d76faaf2f0a9324f0c5aa" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.7100, -86.5200<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_e69ca507530e4ec945672eebe706fecc.setContent(html_e77cc712e75d76faaf2f0a9324f0c5aa);
+            
+        
+
+        circle_marker_2d88b768c091ef5e545da3ba1f549196.bindPopup(popup_e69ca507530e4ec945672eebe706fecc)
+        ;
+
+        
+    
+    
+            var circle_marker_e96b7f7e0b25e669b9194bcdb599ec7f = L.circleMarker(
+                [41.75, -86.19],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_ff7b442ccf54376dc0c87734243f7d3a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7d900d67171b62fa364da8725796c26 = $(`<div id="html_c7d900d67171b62fa364da8725796c26" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.7500, -86.1900<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_ff7b442ccf54376dc0c87734243f7d3a.setContent(html_c7d900d67171b62fa364da8725796c26);
+            
+        
+
+        circle_marker_e96b7f7e0b25e669b9194bcdb599ec7f.bindPopup(popup_ff7b442ccf54376dc0c87734243f7d3a)
+        ;
+
+        
+    
+    
+            var circle_marker_b44fb25d3c150d013c63831dcc43e96c = L.circleMarker(
+                [40.36, -87.12],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_46933fc66fa3c583d853a88f71d935ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a25fe0d873b6f482f9f22c3d41656b2c = $(`<div id="html_a25fe0d873b6f482f9f22c3d41656b2c" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 40.3600, -87.1200<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_46933fc66fa3c583d853a88f71d935ee.setContent(html_a25fe0d873b6f482f9f22c3d41656b2c);
+            
+        
+
+        circle_marker_b44fb25d3c150d013c63831dcc43e96c.bindPopup(popup_46933fc66fa3c583d853a88f71d935ee)
+        ;
+
+        
+    
+    
+            var circle_marker_87a0a6912e732eb1b00e898128b70c75 = L.circleMarker(
+                [41.9, -89.79],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_9ac5b96f4d8d2cc6f1031143c118c357 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b1bbc6a140e58c0d4e04e7d75ff0803 = $(`<div id="html_7b1bbc6a140e58c0d4e04e7d75ff0803" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.9000, -89.7900<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_9ac5b96f4d8d2cc6f1031143c118c357.setContent(html_7b1bbc6a140e58c0d4e04e7d75ff0803);
+            
+        
+
+        circle_marker_87a0a6912e732eb1b00e898128b70c75.bindPopup(popup_9ac5b96f4d8d2cc6f1031143c118c357)
+        ;
+
+        
+    
+    
+            var circle_marker_e73f56d78e705dc5b636b5b795b5461a = L.circleMarker(
+                [72.88, 1.72],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_f2eb9cbb9a09e039b90bcd0146204735 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9fc876c58431fe3c071bb464d89f13ab = $(`<div id="html_9fc876c58431fe3c071bb464d89f13ab" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 72.8800, 1.7200<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_f2eb9cbb9a09e039b90bcd0146204735.setContent(html_9fc876c58431fe3c071bb464d89f13ab);
+            
+        
+
+        circle_marker_e73f56d78e705dc5b636b5b795b5461a.bindPopup(popup_f2eb9cbb9a09e039b90bcd0146204735)
+        ;
+
+        
+    
+    
+            var circle_marker_d51a1805653bdf6912eaaa12ed310bf2 = L.circleMarker(
+                [41.23, -88.28],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_acb07b13c4e19e7515d61411e2923d2b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0724559214e9a475733f8c7f57c1fa24 = $(`<div id="html_0724559214e9a475733f8c7f57c1fa24" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.2300, -88.2800<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_acb07b13c4e19e7515d61411e2923d2b.setContent(html_0724559214e9a475733f8c7f57c1fa24);
+            
+        
+
+        circle_marker_d51a1805653bdf6912eaaa12ed310bf2.bindPopup(popup_acb07b13c4e19e7515d61411e2923d2b)
+        ;
+
+        
+    
+    
+            var circle_marker_3295a32358f1da43f084d00b3faf8db6 = L.circleMarker(
+                [41.73, -88.03],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_dfb3cb479b785f862c793fc849bc87fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2e5f4e48d95198a95ed0c19ce34610fb = $(`<div id="html_2e5f4e48d95198a95ed0c19ce34610fb" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.7300, -88.0300<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_dfb3cb479b785f862c793fc849bc87fc.setContent(html_2e5f4e48d95198a95ed0c19ce34610fb);
+            
+        
+
+        circle_marker_3295a32358f1da43f084d00b3faf8db6.bindPopup(popup_dfb3cb479b785f862c793fc849bc87fc)
+        ;
+
+        
+    
+    
+            var circle_marker_a584cf6497e7b6bbeca5de83b9b107f7 = L.circleMarker(
+                [42.14, -88.94],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_73dfde8363bbdf214172cce59edcdf5e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12cbde327a19480ee8e9fc58c7f3de5c = $(`<div id="html_12cbde327a19480ee8e9fc58c7f3de5c" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.1400, -88.9400<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_73dfde8363bbdf214172cce59edcdf5e.setContent(html_12cbde327a19480ee8e9fc58c7f3de5c);
+            
+        
+
+        circle_marker_a584cf6497e7b6bbeca5de83b9b107f7.bindPopup(popup_73dfde8363bbdf214172cce59edcdf5e)
+        ;
+
+        
+    
+    
+            var circle_marker_2a0a36cb42e0a3b054f70bdfb21676f9 = L.circleMarker(
+                [42.64, -86.38],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_648b6b3285df4c56b634a312dc6f74a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a42ed6ea9a9a07f47a1259cf8825d09 = $(`<div id="html_0a42ed6ea9a9a07f47a1259cf8825d09" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.6400, -86.3800<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_648b6b3285df4c56b634a312dc6f74a3.setContent(html_0a42ed6ea9a9a07f47a1259cf8825d09);
+            
+        
+
+        circle_marker_2a0a36cb42e0a3b054f70bdfb21676f9.bindPopup(popup_648b6b3285df4c56b634a312dc6f74a3)
+        ;
+
+        
+    
+    
+            var circle_marker_55977960199fd4f296eb74af33a7beac = L.circleMarker(
+                [42.73, -85.89],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_949792c850feec5a39d781b6670209f2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_806c0e24892a22d2d02f74d27ea299bb = $(`<div id="html_806c0e24892a22d2d02f74d27ea299bb" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.7300, -85.8900<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_949792c850feec5a39d781b6670209f2.setContent(html_806c0e24892a22d2d02f74d27ea299bb);
+            
+        
+
+        circle_marker_55977960199fd4f296eb74af33a7beac.bindPopup(popup_949792c850feec5a39d781b6670209f2)
+        ;
+
+        
+    
+    
+            var circle_marker_91a769d523b7e66afe498ab963252001 = L.circleMarker(
+                [32.53, -129.71],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_963dcdfba9bf73afdd5544ae96787446 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_01c40da20f2bf3edde738c6984233ec3 = $(`<div id="html_01c40da20f2bf3edde738c6984233ec3" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 32.5300, -129.7100<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_963dcdfba9bf73afdd5544ae96787446.setContent(html_01c40da20f2bf3edde738c6984233ec3);
+            
+        
+
+        circle_marker_91a769d523b7e66afe498ab963252001.bindPopup(popup_963dcdfba9bf73afdd5544ae96787446)
+        ;
+
+        
+    
+    
+            var circle_marker_53a40ddb5c09baf23702e08107236c71 = L.circleMarker(
+                [41.76, -88.41],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_0a72d0e58863814f10c716becf1e826e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d2d9683a18baf756d36d9fe9d9718bf4 = $(`<div id="html_d2d9683a18baf756d36d9fe9d9718bf4" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.7600, -88.4100<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_0a72d0e58863814f10c716becf1e826e.setContent(html_d2d9683a18baf756d36d9fe9d9718bf4);
+            
+        
+
+        circle_marker_53a40ddb5c09baf23702e08107236c71.bindPopup(popup_0a72d0e58863814f10c716becf1e826e)
+        ;
+
+        
+    
+    
+            var circle_marker_e000e451aa16c0563042120ce4e013c2 = L.circleMarker(
+                [41.48, -87.54],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_a4c9d638a4978b75b649937b3dea09dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df7a4ccb7348a5c7981759f364d13574 = $(`<div id="html_df7a4ccb7348a5c7981759f364d13574" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.4800, -87.5400<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_a4c9d638a4978b75b649937b3dea09dd.setContent(html_df7a4ccb7348a5c7981759f364d13574);
+            
+        
+
+        circle_marker_e000e451aa16c0563042120ce4e013c2.bindPopup(popup_a4c9d638a4978b75b649937b3dea09dd)
+        ;
+
+        
+    
+    
+            var circle_marker_e7415c79c909d1454e09c21380cdac30 = L.circleMarker(
+                [42.06, -88.09],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_2d6732f9a59a36ed44e7e0bc8ddae7b0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89906abc34c699f6abd8cedf574b33c9 = $(`<div id="html_89906abc34c699f6abd8cedf574b33c9" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.0600, -88.0900<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_2d6732f9a59a36ed44e7e0bc8ddae7b0.setContent(html_89906abc34c699f6abd8cedf574b33c9);
+            
+        
+
+        circle_marker_e7415c79c909d1454e09c21380cdac30.bindPopup(popup_2d6732f9a59a36ed44e7e0bc8ddae7b0)
+        ;
+
+        
+    
+    
+            var circle_marker_286a25b96efeaf05933a90bb702a10c4 = L.circleMarker(
+                [42.12, -88.08],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_3857e581dd6175d0b81df1fd566dd5d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41ea078cf26998ec7b8893142a8cdbb9 = $(`<div id="html_41ea078cf26998ec7b8893142a8cdbb9" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.1200, -88.0800<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_3857e581dd6175d0b81df1fd566dd5d1.setContent(html_41ea078cf26998ec7b8893142a8cdbb9);
+            
+        
+
+        circle_marker_286a25b96efeaf05933a90bb702a10c4.bindPopup(popup_3857e581dd6175d0b81df1fd566dd5d1)
+        ;
+
+        
+    
+    
+            var circle_marker_3e23c49234d40ed2c4c61a50be7dcefc = L.circleMarker(
+                [40.86, -89.25],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_e8c46aaa41f8d51155d38bccb3d560b6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4025ade7cd3b9e29f9d40e863989f132 = $(`<div id="html_4025ade7cd3b9e29f9d40e863989f132" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 40.8600, -89.2500<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_e8c46aaa41f8d51155d38bccb3d560b6.setContent(html_4025ade7cd3b9e29f9d40e863989f132);
+            
+        
+
+        circle_marker_3e23c49234d40ed2c4c61a50be7dcefc.bindPopup(popup_e8c46aaa41f8d51155d38bccb3d560b6)
+        ;
+
+        
+    
+    
+            var circle_marker_da06deb73a1d8f5c56dc9ab00164e346 = L.circleMarker(
+                [41.62, -86.56],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_f2ee112ab146478ab40991a4491e1a9f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4b821b8ada966f75cddaad16150bd0c = $(`<div id="html_f4b821b8ada966f75cddaad16150bd0c" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.6200, -86.5600<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_f2ee112ab146478ab40991a4491e1a9f.setContent(html_f4b821b8ada966f75cddaad16150bd0c);
+            
+        
+
+        circle_marker_da06deb73a1d8f5c56dc9ab00164e346.bindPopup(popup_f2ee112ab146478ab40991a4491e1a9f)
+        ;
+
+        
+    
+    
+            var circle_marker_35f74687d4ad3f299c187db5ad0ce7d1 = L.circleMarker(
+                [35.5, -89.36],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_a2cc8c976a38e588da820de90b7ac224 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_843278cd79c45859e6cbf03c62e43cde = $(`<div id="html_843278cd79c45859e6cbf03c62e43cde" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 35.5000, -89.3600<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_a2cc8c976a38e588da820de90b7ac224.setContent(html_843278cd79c45859e6cbf03c62e43cde);
+            
+        
+
+        circle_marker_35f74687d4ad3f299c187db5ad0ce7d1.bindPopup(popup_a2cc8c976a38e588da820de90b7ac224)
+        ;
+
+        
+    
+    
+            var circle_marker_f5c826c2f23b26ff4bbff9793d00971c = L.circleMarker(
+                [43.93, -86.05],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_1a13f26d0e5da50b2e892cbbf9efdc34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_06faf17ca09b4ef61db0f848cba474a4 = $(`<div id="html_06faf17ca09b4ef61db0f848cba474a4" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 43.9300, -86.0500<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_1a13f26d0e5da50b2e892cbbf9efdc34.setContent(html_06faf17ca09b4ef61db0f848cba474a4);
+            
+        
+
+        circle_marker_f5c826c2f23b26ff4bbff9793d00971c.bindPopup(popup_1a13f26d0e5da50b2e892cbbf9efdc34)
+        ;
+
+        
+    
+    
+            var circle_marker_a15158a8233c19aa4f39b51ca55dceeb = L.circleMarker(
+                [41.67, -88.11],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_dcb84c4493262003a0c5de48b76c40db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78a952cf65fc8df60532ffe9a62b2604 = $(`<div id="html_78a952cf65fc8df60532ffe9a62b2604" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.6700, -88.1100<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_dcb84c4493262003a0c5de48b76c40db.setContent(html_78a952cf65fc8df60532ffe9a62b2604);
+            
+        
+
+        circle_marker_a15158a8233c19aa4f39b51ca55dceeb.bindPopup(popup_dcb84c4493262003a0c5de48b76c40db)
+        ;
+
+        
+    
+    
+            var circle_marker_5d657562b6bc1db532af6cd47fefda4f = L.circleMarker(
+                [41.94, -88.07],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_e8977bd706738b6ca83edfd045cc587a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1504dd611d621a4267378e777e902424 = $(`<div id="html_1504dd611d621a4267378e777e902424" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.9400, -88.0700<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_e8977bd706738b6ca83edfd045cc587a.setContent(html_1504dd611d621a4267378e777e902424);
+            
+        
+
+        circle_marker_5d657562b6bc1db532af6cd47fefda4f.bindPopup(popup_e8977bd706738b6ca83edfd045cc587a)
+        ;
+
+        
+    
+    
+            var circle_marker_f02223600cbae76948c342b74c5604f8 = L.circleMarker(
+                [42.86, -89.12],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_655bd82135cd48001231dbe71a29148b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a7af7ab814b4bff74a0191d25c21957 = $(`<div id="html_6a7af7ab814b4bff74a0191d25c21957" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.8600, -89.1200<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_655bd82135cd48001231dbe71a29148b.setContent(html_6a7af7ab814b4bff74a0191d25c21957);
+            
+        
+
+        circle_marker_f02223600cbae76948c342b74c5604f8.bindPopup(popup_655bd82135cd48001231dbe71a29148b)
+        ;
+
+        
+    
+    
+            var circle_marker_b4aec348bc7dbd3a569b1c329ff9212b = L.circleMarker(
+                [41.46, -87.2],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_1c79f4530411f1787c9477a51c9bafd5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a46b356b05f6e3188f44099065ad9f6 = $(`<div id="html_2a46b356b05f6e3188f44099065ad9f6" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.4600, -87.2000<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_1c79f4530411f1787c9477a51c9bafd5.setContent(html_2a46b356b05f6e3188f44099065ad9f6);
+            
+        
+
+        circle_marker_b4aec348bc7dbd3a569b1c329ff9212b.bindPopup(popup_1c79f4530411f1787c9477a51c9bafd5)
+        ;
+
+        
+    
+    
+            var circle_marker_539f509638ec910f90b69fce62df2db2 = L.circleMarker(
+                [41.55, -86.92],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_44a5be3bfcf0349c31449011a67e9d7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f4943c3e93a6d2805820c25167624c6 = $(`<div id="html_5f4943c3e93a6d2805820c25167624c6" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.5500, -86.9200<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_44a5be3bfcf0349c31449011a67e9d7f.setContent(html_5f4943c3e93a6d2805820c25167624c6);
+            
+        
+
+        circle_marker_539f509638ec910f90b69fce62df2db2.bindPopup(popup_44a5be3bfcf0349c31449011a67e9d7f)
+        ;
+
+        
+    
+    
+            var circle_marker_b1a65b9421283a49b6b24eff426467a5 = L.circleMarker(
+                [42.36, -88.56],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_99859d59f3ba994e26584d66f3d84079 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_64e40f4d6209ab31c5b3f9bc97c8bf40 = $(`<div id="html_64e40f4d6209ab31c5b3f9bc97c8bf40" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.3600, -88.5600<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_99859d59f3ba994e26584d66f3d84079.setContent(html_64e40f4d6209ab31c5b3f9bc97c8bf40);
+            
+        
+
+        circle_marker_b1a65b9421283a49b6b24eff426467a5.bindPopup(popup_99859d59f3ba994e26584d66f3d84079)
+        ;
+
+        
+    
+    
+            var circle_marker_72fd21a2184fea9b85e68cf2c76a3cc5 = L.circleMarker(
+                [83.14, 152.53],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_f0ddf8638d6905250323ba2c16c7e5cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5fd949b452cbe15b8fa1db1d1372761d = $(`<div id="html_5fd949b452cbe15b8fa1db1d1372761d" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 83.1400, 152.5300<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_f0ddf8638d6905250323ba2c16c7e5cb.setContent(html_5fd949b452cbe15b8fa1db1d1372761d);
+            
+        
+
+        circle_marker_72fd21a2184fea9b85e68cf2c76a3cc5.bindPopup(popup_f0ddf8638d6905250323ba2c16c7e5cb)
+        ;
+
+        
+    
+    
+            var circle_marker_008609b1714198a718391da8c44d335d = L.circleMarker(
+                [42.62, -94.27],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_210a84598ef0a6d4a43fd690e265a703 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e28fe4581660bddad6456031d4e8100 = $(`<div id="html_5e28fe4581660bddad6456031d4e8100" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 42.6200, -94.2700<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_210a84598ef0a6d4a43fd690e265a703.setContent(html_5e28fe4581660bddad6456031d4e8100);
+            
+        
+
+        circle_marker_008609b1714198a718391da8c44d335d.bindPopup(popup_210a84598ef0a6d4a43fd690e265a703)
+        ;
+
+        
+    
+    
+            var circle_marker_7a2990b36a7c959c1d3e303f47d57433 = L.circleMarker(
+                [40.19, -88.04],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_a82dc09347a4e35011f70b4456264af3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba32f9a8f6d1abc84427c61c90e6ca6b = $(`<div id="html_ba32f9a8f6d1abc84427c61c90e6ca6b" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 40.1900, -88.0400<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_a82dc09347a4e35011f70b4456264af3.setContent(html_ba32f9a8f6d1abc84427c61c90e6ca6b);
+            
+        
+
+        circle_marker_7a2990b36a7c959c1d3e303f47d57433.bindPopup(popup_a82dc09347a4e35011f70b4456264af3)
+        ;
+
+        
+    
+    
+            var circle_marker_0c1d165015b1f56f1863eb780a726ede = L.circleMarker(
+                [41.8, -88.07],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_5eccc65d455a994bf961b61a3b6d842c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d0ea6033fd611b74e2fc10df51fed05 = $(`<div id="html_9d0ea6033fd611b74e2fc10df51fed05" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.8000, -88.0700<br>                 Тип: electric_bike<br>                 Год: 2024             </div>         </div>`)[0];
+                popup_5eccc65d455a994bf961b61a3b6d842c.setContent(html_9d0ea6033fd611b74e2fc10df51fed05);
+            
+        
+
+        circle_marker_0c1d165015b1f56f1863eb780a726ede.bindPopup(popup_5eccc65d455a994bf961b61a3b6d842c)
+        ;
+
+        
+    
+    
+            var circle_marker_3582e2a9c27fcc393a0ded906b649490 = L.circleMarker(
+                [41.96, -88.06],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_8008da33217191141f16485c0a23d6fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61c43ed08c4a5f2c81e1fd47085e3190 = $(`<div id="html_61c43ed08c4a5f2c81e1fd47085e3190" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.9600, -88.0600<br>                 Тип: electric_bike<br>                 Год: 2025             </div>         </div>`)[0];
+                popup_8008da33217191141f16485c0a23d6fc.setContent(html_61c43ed08c4a5f2c81e1fd47085e3190);
+            
+        
+
+        circle_marker_3582e2a9c27fcc393a0ded906b649490.bindPopup(popup_8008da33217191141f16485c0a23d6fc)
+        ;
+
+        
+    
+    
+            var circle_marker_8ea5322562d07f85cedac5f4ee1e79b8 = L.circleMarker(
+                [41.49, -87.42],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_00bb565e0ebfd33f81fa2348d6cf6b82 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c8a39336184a124b3e3e759d157f53b9 = $(`<div id="html_c8a39336184a124b3e3e759d157f53b9" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.4900, -87.4200<br>                 Тип: electric_bike<br>                 Год: 2025             </div>         </div>`)[0];
+                popup_00bb565e0ebfd33f81fa2348d6cf6b82.setContent(html_c8a39336184a124b3e3e759d157f53b9);
+            
+        
+
+        circle_marker_8ea5322562d07f85cedac5f4ee1e79b8.bindPopup(popup_00bb565e0ebfd33f81fa2348d6cf6b82)
+        ;
+
+        
+    
+    
+            var circle_marker_3e311144ac481563a63ed126e44a3a1f = L.circleMarker(
+                [41.67, -88.04],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2);
+        
+    
+        var popup_220bc31b80949011b8e33304b5903b40 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1809b53a344c82283a4486e56250e9d2 = $(`<div id="html_1809b53a344c82283a4486e56250e9d2" style="width: 100.0%; height: 100.0%;">             <div style='width: 250px;'>                 <b>ФИНИШ</b><br>                 Координаты: 41.6700, -88.0400<br>                 Тип: electric_bike<br>                 Год: 2025             </div>         </div>`)[0];
+                popup_220bc31b80949011b8e33304b5903b40.setContent(html_1809b53a344c82283a4486e56250e9d2);
+            
+        
+
+        circle_marker_3e311144ac481563a63ed126e44a3a1f.bindPopup(popup_220bc31b80949011b8e33304b5903b40)
+        ;
+
+        
+    
+    
+            marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2.addTo(map_cd7a6a0df4513867b22102ebc3633c1e);
+        
+    
+            var rectangle_efd82b35fe3870f5cb791331e733e17a = L.rectangle(
+                [[41.5, -88.0], [42.5, -87.0]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_cd7a6a0df4513867b22102ebc3633c1e);
+        
+    
+        var popup_b11a17a1dc3b8199bed7c7f4e0283f75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f588c639a5cc38fb0bd8f2f3fcebed8b = $(`<div id="html_f588c639a5cc38fb0bd8f2f3fcebed8b" style="width: 100.0%; height: 100.0%;">Чикаго</div>`)[0];
+                popup_b11a17a1dc3b8199bed7c7f4e0283f75.setContent(html_f588c639a5cc38fb0bd8f2f3fcebed8b);
+            
+        
+
+        rectangle_efd82b35fe3870f5cb791331e733e17a.bindPopup(popup_b11a17a1dc3b8199bed7c7f4e0283f75)
+        ;
+
+        
+    
+    
+            var layer_control_d1802bdcc6ac3dc1eff76a693c68468d_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_4115dfc2b8f2854f0214358c861a9379,
+                },
+                overlays :  {
+                    "\u0412\u044b\u0431\u0440\u043e\u0441\u044b \u043a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0442" : marker_cluster_d1cc099c01b4fd498ce8e8aaf912bcf2,
+                },
+            };
+            let layer_control_d1802bdcc6ac3dc1eff76a693c68468d = L.control.layers(
+                layer_control_d1802bdcc6ac3dc1eff76a693c68468d_layers.base_layers,
+                layer_control_d1802bdcc6ac3dc1eff76a693c68468d_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_cd7a6a0df4513867b22102ebc3633c1e);
+
+        
+</script>
+</html>

@@ -1,9 +1,9 @@
 {
   "demand_forecast": {
-    "ensemble_mae": 7.434421488717381,
-    "ensemble_rmse": 18.073266631134306,
-    "ensemble_mape": 1.9367131731075622,
-    "ensemble_r2": 0.9992455847576984
+    "ensemble_mae": 7.726762416311307,
+    "ensemble_rmse": 18.67399339387985,
+    "ensemble_mape": 1.9334189246820475,
+    "ensemble_r2": 0.9991946001495399
   },
   "data_statistics": {
     "total_records": 29770159,
