@@ -1,0 +1,93 @@
+{
+    "metrics": {
+        "total_rides": 29770159,
+        "total_ride_revenue": 61855571.986214176,
+        "subscription_revenue": 738297414.21,
+        "yearly_ride_revenue": {
+            "2020": 8622834.61449992,
+            "2021": 14607804.722837145,
+            "2022": 10176743.917224083,
+            "2023": 9158250.276722714,
+            "2024": 9852538.06886997,
+            "2025": 9437400.386060353
+        },
+        "yearly_stats": {
+            "2020": {
+                "rides": 3468881,
+                "avg_cost": 2.485768354261769,
+                "revenue_per_ride": 2.485768354261769
+            },
+            "2021": {
+                "rides": 4800858,
+                "avg_cost": 3.042748759250356,
+                "revenue_per_ride": 3.042748759250356
+            },
+            "2022": {
+                "rides": 5437102,
+                "avg_cost": 1.8717220896764641,
+                "revenue_per_ride": 1.8717220896764641
+            },
+            "2023": {
+                "rides": 5563046,
+                "avg_cost": 1.6462654230654779,
+                "revenue_per_ride": 1.6462654230654779
+            },
+            "2024": {
+                "rides": 5583576,
+                "avg_cost": 1.7645569915892558,
+                "revenue_per_ride": 1.7645569915892558
+            },
+            "2025": {
+                "rides": 4916696,
+                "avg_cost": 1.9194598132689826,
+                "revenue_per_ride": 1.9194598132689826
+            }
+        },
+        "subscription_details": {
+            "monthly_classic": {
+                "users": 638089,
+                "revenue": 114779449.32,
+                "price": 14.99
+            },
+            "monthly_premium": {
+                "users": 510471,
+                "revenue": 153080043.48,
+                "price": 24.99
+            },
+            "annual_classic": {
+                "users": 765706,
+                "revenue": 107191182.94000001,
+                "price": 139.99
+            },
+            "annual_premium": {
+                "users": 382853,
+                "revenue": 88052361.47,
+                "price": 229.99
+            },
+            "daily": {
+                "users": 255235,
+                "revenue": 275194377.0,
+                "price": 5.99
+            }
+        }
+    },
+    "aggregates": {
+        "total_rides": 29770159,
+        "member_rides": "18142269",
+        "casual_rides": "11627890",
+        "classic_rides": "16239705",
+        "electric_rides": "13530454",
+        "estimated_users": 2552356
+    },
+    "tariff_model": {
+        "description": "\u041d\u043e\u0432\u0430\u044f \u0442\u0430\u0440\u0438\u0444\u043d\u0430\u044f \u0441\u0435\u0442\u043a\u0430 2020-2025",
+        "years": [
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+        ]
+    }
+}

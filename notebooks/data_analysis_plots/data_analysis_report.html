@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Анализ данных велопроката 2020-2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a1b9c;
+            text-align: center;
+            border-bottom: 3px solid #88e5ff;
+            padding-bottom: 10px;
+        }
+        .graph-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+        }
+        .gradient-box {
+            height: 50px;
+            background: linear-gradient(to right, #1a1b9c, #88e5ff);
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .stats {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>АНАЛИЗ ДАННЫХ ВЕЛОПРОКАТА 2020-2025</h1>
+
+        <div class="stats">
+            <h2>Основная статистика</h2>
+            <p><strong>Всего поездок:</strong> 31.4 млн</p>
+            <p><strong>Период:</strong> 2020-2025 гг.</p>
+            <p><strong>Пропусков в данных:</strong> 14-16% (станции)</p>
+            <p><strong>Типы велосипедов:</strong> 4 категории</p>
+        </div>
+
+        <div class="gradient-box"></div>
+        <p style="text-align: center;"><strong>Использованная градиентная палитра</strong></p>
+
+        <div class="graph-container">
+            <h2>1. Динамика поездок по годам</h2>
+            <img src="1_rides_dynamics.png" alt="Динамика поездок">
+            <p class="caption">Градиент отражает интенсивность использования (чем темнее, тем больше поездок)</p>
+        </div>
+
+        <div class="graph-container">
+            <h2>2. Распределение типов велосипедов</h2>
+            <img src="2_bike_types_distribution.png" alt="Распределение типов">
+            <p class="caption">Классические велосипеды (темнее) преобладают, электровелосипеды на втором месте</p>
+        </div>
+
+        <div class="graph-container">
+            <h2>3. Анализ пропущенных значений</h2>
+            <img src="3_missing_values_analysis.png" alt="Пропуски данных">
+            <p class="caption">Станции имеют 15% пропусков, координаты - менее 0.1%</p>
+        </div>
+
+        <div class="graph-container">
+            <h2>4. Тепловая карта интенсивности</h2>
+            <img src="4_heatmap_years.png" alt="Тепловая карта">
+            <p class="caption">Визуализация интенсивности использования по годам</p>
+        </div>
+
+        <div class="graph-container">
+            <h2>5. Радар-диаграмма относительной активности</h2>
+            <img src="5_radar_chart.png" alt="Радар-диаграмма">
+            <p class="caption">Сравнение относительной активности по годам</p>
+        </div>
+
+        <div class="stats">
+            <h2>Ключевые выводы</h2>
+            <ul>
+                <li>Пик использования в 2024 году (5.86 млн поездок)</li>
+                <li>Основная проблема данных - пропуски информации о станциях (15%)</li>
+                <li>Классические велосипеды - самый популярный тип (45%)</li>
+                <li>Стабильный рост до 2024 года, спад в 2025 (неполные данные)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
