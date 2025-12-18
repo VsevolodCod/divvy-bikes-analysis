@@ -1,8 +1,0 @@
-name: my_pg
-type: /hasura/postgres
-configuration:
-  version: 1
-  jdbc_url: jdbc:postgresql://localhost:5433/dev
-  user: user
-  password: password
-  ssl_mode: disable
