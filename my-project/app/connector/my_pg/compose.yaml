@@ -1,8 +1,0 @@
-services:
-  my_pg:
-    image: ghcr.io/hasura/ndc-postgres:v3.1.0
-    ports:
-      - "8100:8080"
-    environment:
-      CONNECTION_URI: postgresql://user:password@localhost:5433/dev
-      SSL_MODE: disable

@@ -1,0 +1,3943 @@
+[
+  {
+    "timestamp": "2025-12-18T20:47:32.105971",
+    "source": "all_seasons_comparison.gif",
+    "target": "reports\\figures\\animations\\all_seasons_comparison.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.105971",
+    "source": "combined_animation.gif",
+    "target": "reports\\figures\\animations\\combined_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.106971",
+    "source": "combined_chicago_animation.gif",
+    "target": "reports\\figures\\animations\\combined_chicago_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.106971",
+    "source": "combined_detailed_animation.gif",
+    "target": "reports\\figures\\animations\\combined_detailed_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.106971",
+    "source": "combined_hexbin_animation.gif",
+    "target": "reports\\figures\\animations\\combined_hexbin_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.106971",
+    "source": "end_chicago_animation.gif",
+    "target": "reports\\figures\\animations\\end_chicago_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.107970",
+    "source": "end_detailed_animation.gif",
+    "target": "reports\\figures\\animations\\end_detailed_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.107970",
+    "source": "end_heatmap_animation.gif",
+    "target": "reports\\figures\\animations\\end_heatmap_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.107970",
+    "source": "end_hexbin_animation.gif",
+    "target": "reports\\figures\\animations\\end_hexbin_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.107970",
+    "source": "end_hexbin_map_animation.gif",
+    "target": "reports\\figures\\animations\\end_hexbin_map_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.107970",
+    "source": "end_rides_animation.gif",
+    "target": "reports\\figures\\animations\\end_rides_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.108969",
+    "source": "end_simple_animation.gif",
+    "target": "reports\\figures\\animations\\end_simple_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.108969",
+    "source": "hourly_fall_end_animation.gif",
+    "target": "reports\\figures\\animations\\hourly_fall_end_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.108969",
+    "source": "hourly_fall_start_animation.gif",
+    "target": "reports\\figures\\animations\\hourly_fall_start_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.108969",
+    "source": "hourly_spring_end_animation.gif",
+    "target": "reports\\figures\\animations\\hourly_spring_end_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.108969",
+    "source": "hourly_spring_start_animation.gif",
+    "target": "reports\\figures\\animations\\hourly_spring_start_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.109970",
+    "source": "hourly_summer_end_animation.gif",
+    "target": "reports\\figures\\animations\\hourly_summer_end_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.109970",
+    "source": "hourly_summer_start_animation.gif",
+    "target": "reports\\figures\\animations\\hourly_summer_start_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.109970",
+    "source": "hourly_winter_end_animation.gif",
+    "target": "reports\\figures\\animations\\hourly_winter_end_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.109970",
+    "source": "hourly_winter_start_animation.gif",
+    "target": "reports\\figures\\animations\\hourly_winter_start_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.110970",
+    "source": "presentation_fall_animation.gif",
+    "target": "reports\\figures\\animations\\presentation_fall_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.110970",
+    "source": "presentation_spring_animation.gif",
+    "target": "reports\\figures\\animations\\presentation_spring_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.110970",
+    "source": "presentation_summer_animation.gif",
+    "target": "reports\\figures\\animations\\presentation_summer_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.110970",
+    "source": "presentation_winter_animation.gif",
+    "target": "reports\\figures\\animations\\presentation_winter_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.110970",
+    "source": "season_comparison_end.gif",
+    "target": "reports\\figures\\animations\\season_comparison_end.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.111969",
+    "source": "season_comparison_start.gif",
+    "target": "reports\\figures\\animations\\season_comparison_start.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.111969",
+    "source": "season_fall_animation.gif",
+    "target": "reports\\figures\\animations\\season_fall_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.111969",
+    "source": "season_spring_animation.gif",
+    "target": "reports\\figures\\animations\\season_spring_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.111969",
+    "source": "season_summer_animation.gif",
+    "target": "reports\\figures\\animations\\season_summer_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.111969",
+    "source": "season_winter_animation.gif",
+    "target": "reports\\figures\\animations\\season_winter_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.112973",
+    "source": "start_chicago_animation.gif",
+    "target": "reports\\figures\\animations\\start_chicago_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.112973",
+    "source": "start_detailed_animation.gif",
+    "target": "reports\\figures\\animations\\start_detailed_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.112973",
+    "source": "start_heatmap_animation.gif",
+    "target": "reports\\figures\\animations\\start_heatmap_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.113973",
+    "source": "start_hexbin_animation.gif",
+    "target": "reports\\figures\\animations\\start_hexbin_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.113973",
+    "source": "start_hexbin_map_animation.gif",
+    "target": "reports\\figures\\animations\\start_hexbin_map_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.113973",
+    "source": "start_rides_animation.gif",
+    "target": "reports\\figures\\animations\\start_rides_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.113973",
+    "source": "start_simple_animation.gif",
+    "target": "reports\\figures\\animations\\start_simple_animation.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.114969",
+    "source": "winter_vs_summer_comparison.gif",
+    "target": "reports\\figures\\animations\\winter_vs_summer_comparison.gif",
+    "status": "success",
+    "category": "animations"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.114969",
+    "source": "all_seasons_presentation.html",
+    "target": "reports\\all_seasons_presentation.html",
+    "status": "success",
+    "category": "reports"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.114969",
+    "source": "chicago_heatmaps_report.html",
+    "target": "reports\\chicago_heatmaps_report.html",
+    "status": "success",
+    "category": "reports"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.114969",
+    "source": "detailed_chicago_analysis.html",
+    "target": "reports\\detailed_chicago_analysis.html",
+    "status": "success",
+    "category": "reports"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.115969",
+    "source": "hexbin_analysis_report.html",
+    "target": "reports\\hexbin_analysis_report.html",
+    "status": "success",
+    "category": "reports"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.115969",
+    "source": "hourly_demand_analysis.html",
+    "target": "reports\\hourly_demand_analysis.html",
+    "status": "success",
+    "category": "reports"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.115969",
+    "source": "hourly_demand_presentation.html",
+    "target": "reports\\hourly_demand_presentation.html",
+    "status": "success",
+    "category": "reports"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.116968",
+    "source": "top_10_stations_clean.html",
+    "target": "reports\\top_10_stations_clean.html",
+    "status": "success",
+    "category": "reports"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.134967",
+    "source": "top_10_stations_map.html",
+    "target": "reports\\top_10_stations_map.html",
+    "status": "success",
+    "category": "reports"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.134967",
+    "source": "top_10_stations_presentation.html",
+    "target": "reports\\top_10_stations_presentation.html",
+    "status": "success",
+    "category": "reports"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.134967",
+    "source": "combined_2020.png",
+    "target": "reports\\figures\\combined\\combined_2020.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.135968",
+    "source": "combined_2021.png",
+    "target": "reports\\figures\\combined\\combined_2021.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.135968",
+    "source": "combined_2022.png",
+    "target": "reports\\figures\\combined\\combined_2022.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.135968",
+    "source": "combined_2023.png",
+    "target": "reports\\figures\\combined\\combined_2023.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.136970",
+    "source": "combined_2024.png",
+    "target": "reports\\figures\\combined\\combined_2024.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.136970",
+    "source": "combined_2025.png",
+    "target": "reports\\figures\\combined\\combined_2025.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.136970",
+    "source": "combined_chicago_2020.png",
+    "target": "reports\\figures\\combined\\combined_chicago_2020.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.136970",
+    "source": "combined_chicago_2021.png",
+    "target": "reports\\figures\\combined\\combined_chicago_2021.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.137969",
+    "source": "combined_chicago_2022.png",
+    "target": "reports\\figures\\combined\\combined_chicago_2022.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.137969",
+    "source": "combined_chicago_2023.png",
+    "target": "reports\\figures\\combined\\combined_chicago_2023.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.137969",
+    "source": "combined_chicago_2024.png",
+    "target": "reports\\figures\\combined\\combined_chicago_2024.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.137969",
+    "source": "combined_chicago_2025.png",
+    "target": "reports\\figures\\combined\\combined_chicago_2025.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.150150",
+    "source": "combined_detailed_2020.png",
+    "target": "reports\\figures\\combined\\combined_detailed_2020.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.150150",
+    "source": "combined_detailed_2021.png",
+    "target": "reports\\figures\\combined\\combined_detailed_2021.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.150150",
+    "source": "combined_detailed_2022.png",
+    "target": "reports\\figures\\combined\\combined_detailed_2022.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.151176",
+    "source": "combined_detailed_2023.png",
+    "target": "reports\\figures\\combined\\combined_detailed_2023.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.151176",
+    "source": "combined_detailed_2024.png",
+    "target": "reports\\figures\\combined\\combined_detailed_2024.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.152175",
+    "source": "combined_detailed_2025.png",
+    "target": "reports\\figures\\combined\\combined_detailed_2025.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.152175",
+    "source": "combined_hexbin_2020.png",
+    "target": "reports\\figures\\combined\\combined_hexbin_2020.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.153174",
+    "source": "combined_hexbin_2021.png",
+    "target": "reports\\figures\\combined\\combined_hexbin_2021.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.153174",
+    "source": "combined_hexbin_2022.png",
+    "target": "reports\\figures\\combined\\combined_hexbin_2022.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.153174",
+    "source": "combined_hexbin_2023.png",
+    "target": "reports\\figures\\combined\\combined_hexbin_2023.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.154182",
+    "source": "combined_hexbin_2024.png",
+    "target": "reports\\figures\\combined\\combined_hexbin_2024.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.155181",
+    "source": "combined_hexbin_2025.png",
+    "target": "reports\\figures\\combined\\combined_hexbin_2025.png",
+    "status": "success",
+    "category": "combined"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.155181",
+    "source": "comparison_end_hour_00.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_00.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.155181",
+    "source": "comparison_end_hour_01.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_01.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.156174",
+    "source": "comparison_end_hour_02.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_02.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.156174",
+    "source": "comparison_end_hour_03.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_03.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.156174",
+    "source": "comparison_end_hour_04.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_04.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.157179",
+    "source": "comparison_end_hour_05.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_05.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.158173",
+    "source": "comparison_end_hour_06.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_06.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.158173",
+    "source": "comparison_end_hour_07.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_07.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.158173",
+    "source": "comparison_end_hour_08.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_08.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.158173",
+    "source": "comparison_end_hour_09.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_09.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.158173",
+    "source": "comparison_end_hour_10.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_10.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.159173",
+    "source": "comparison_end_hour_11.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_11.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.159173",
+    "source": "comparison_end_hour_12.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_12.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.159173",
+    "source": "comparison_end_hour_13.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_13.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.159173",
+    "source": "comparison_end_hour_14.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_14.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.159173",
+    "source": "comparison_end_hour_15.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_15.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.160172",
+    "source": "comparison_end_hour_16.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_16.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.160172",
+    "source": "comparison_end_hour_17.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_17.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.160172",
+    "source": "comparison_end_hour_18.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_18.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.160172",
+    "source": "comparison_end_hour_19.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_19.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.160172",
+    "source": "comparison_end_hour_20.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_20.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.161172",
+    "source": "comparison_end_hour_21.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_21.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.161172",
+    "source": "comparison_end_hour_22.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_22.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.161172",
+    "source": "comparison_end_hour_23.png",
+    "target": "reports\\figures\\hourly\\comparison_end_hour_23.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.161172",
+    "source": "comparison_start_hour_00.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_00.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.162172",
+    "source": "comparison_start_hour_01.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_01.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.162172",
+    "source": "comparison_start_hour_02.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_02.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.162172",
+    "source": "comparison_start_hour_03.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_03.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.162172",
+    "source": "comparison_start_hour_04.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_04.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.163172",
+    "source": "comparison_start_hour_05.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_05.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.163172",
+    "source": "comparison_start_hour_06.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_06.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.163172",
+    "source": "comparison_start_hour_07.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_07.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.163172",
+    "source": "comparison_start_hour_08.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_08.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.163172",
+    "source": "comparison_start_hour_09.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_09.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.164172",
+    "source": "comparison_start_hour_10.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_10.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.164172",
+    "source": "comparison_start_hour_11.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_11.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.164172",
+    "source": "comparison_start_hour_12.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_12.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.164172",
+    "source": "comparison_start_hour_13.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_13.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.164172",
+    "source": "comparison_start_hour_14.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_14.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.165172",
+    "source": "comparison_start_hour_15.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_15.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.165172",
+    "source": "comparison_start_hour_16.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_16.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.165172",
+    "source": "comparison_start_hour_17.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_17.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.165172",
+    "source": "comparison_start_hour_18.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_18.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.165172",
+    "source": "comparison_start_hour_19.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_19.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.166172",
+    "source": "comparison_start_hour_20.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_20.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.166172",
+    "source": "comparison_start_hour_21.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_21.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.166172",
+    "source": "comparison_start_hour_22.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_22.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.166172",
+    "source": "comparison_start_hour_23.png",
+    "target": "reports\\figures\\hourly\\comparison_start_hour_23.png",
+    "status": "success",
+    "category": "hourly"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.167173",
+    "source": "end_2020.png",
+    "target": "reports\\figures\\spatial\\end_2020.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.167173",
+    "source": "end_2021.png",
+    "target": "reports\\figures\\spatial\\end_2021.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.167173",
+    "source": "end_2022.png",
+    "target": "reports\\figures\\spatial\\end_2022.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.167173",
+    "source": "end_2023.png",
+    "target": "reports\\figures\\spatial\\end_2023.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.167173",
+    "source": "end_2024.png",
+    "target": "reports\\figures\\spatial\\end_2024.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.168173",
+    "source": "end_2025.png",
+    "target": "reports\\figures\\spatial\\end_2025.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.168173",
+    "source": "end_chicago_2020.png",
+    "target": "reports\\figures\\spatial\\end_chicago_2020.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.168173",
+    "source": "end_chicago_2021.png",
+    "target": "reports\\figures\\spatial\\end_chicago_2021.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.168173",
+    "source": "end_chicago_2022.png",
+    "target": "reports\\figures\\spatial\\end_chicago_2022.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.168173",
+    "source": "end_chicago_2023.png",
+    "target": "reports\\figures\\spatial\\end_chicago_2023.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.169173",
+    "source": "end_chicago_2024.png",
+    "target": "reports\\figures\\spatial\\end_chicago_2024.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.169173",
+    "source": "end_chicago_2025.png",
+    "target": "reports\\figures\\spatial\\end_chicago_2025.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.182171",
+    "source": "end_detailed_2020.png",
+    "target": "reports\\figures\\spatial\\end_detailed_2020.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.182171",
+    "source": "end_detailed_2021.png",
+    "target": "reports\\figures\\spatial\\end_detailed_2021.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.182171",
+    "source": "end_detailed_2022.png",
+    "target": "reports\\figures\\spatial\\end_detailed_2022.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.183174",
+    "source": "end_detailed_2023.png",
+    "target": "reports\\figures\\spatial\\end_detailed_2023.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.183174",
+    "source": "end_detailed_2024.png",
+    "target": "reports\\figures\\spatial\\end_detailed_2024.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.183174",
+    "source": "end_detailed_2025.png",
+    "target": "reports\\figures\\spatial\\end_detailed_2025.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.183174",
+    "source": "end_hexbin_2020.png",
+    "target": "reports\\figures\\spatial\\end_hexbin_2020.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.184173",
+    "source": "end_hexbin_2021.png",
+    "target": "reports\\figures\\spatial\\end_hexbin_2021.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.184173",
+    "source": "end_hexbin_2022.png",
+    "target": "reports\\figures\\spatial\\end_hexbin_2022.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.184173",
+    "source": "end_hexbin_2023.png",
+    "target": "reports\\figures\\spatial\\end_hexbin_2023.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.184173",
+    "source": "end_hexbin_2024.png",
+    "target": "reports\\figures\\spatial\\end_hexbin_2024.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.185172",
+    "source": "end_hexbin_2025.png",
+    "target": "reports\\figures\\spatial\\end_hexbin_2025.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.185172",
+    "source": "end_hexbin_map_2020.png",
+    "target": "reports\\figures\\spatial\\end_hexbin_map_2020.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.185172",
+    "source": "end_hexbin_map_2021.png",
+    "target": "reports\\figures\\spatial\\end_hexbin_map_2021.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.185172",
+    "source": "end_hexbin_map_2022.png",
+    "target": "reports\\figures\\spatial\\end_hexbin_map_2022.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.185172",
+    "source": "end_hexbin_map_2023.png",
+    "target": "reports\\figures\\spatial\\end_hexbin_map_2023.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.186173",
+    "source": "end_hexbin_map_2024.png",
+    "target": "reports\\figures\\spatial\\end_hexbin_map_2024.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.186173",
+    "source": "end_hexbin_map_2025.png",
+    "target": "reports\\figures\\spatial\\end_hexbin_map_2025.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.186173",
+    "source": "end_simple_2020.png",
+    "target": "reports\\figures\\spatial\\end_simple_2020.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.187173",
+    "source": "end_simple_2021.png",
+    "target": "reports\\figures\\spatial\\end_simple_2021.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.187173",
+    "source": "end_simple_2022.png",
+    "target": "reports\\figures\\spatial\\end_simple_2022.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.187173",
+    "source": "end_simple_2023.png",
+    "target": "reports\\figures\\spatial\\end_simple_2023.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.188173",
+    "source": "end_simple_2024.png",
+    "target": "reports\\figures\\spatial\\end_simple_2024.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.188173",
+    "source": "end_simple_2025.png",
+    "target": "reports\\figures\\spatial\\end_simple_2025.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.188173",
+    "source": "start_2020.png",
+    "target": "reports\\figures\\spatial\\start_2020.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.189173",
+    "source": "start_2021.png",
+    "target": "reports\\figures\\spatial\\start_2021.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.189173",
+    "source": "start_2022.png",
+    "target": "reports\\figures\\spatial\\start_2022.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.189173",
+    "source": "start_2023.png",
+    "target": "reports\\figures\\spatial\\start_2023.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.189173",
+    "source": "start_2024.png",
+    "target": "reports\\figures\\spatial\\start_2024.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.190172",
+    "source": "start_2025.png",
+    "target": "reports\\figures\\spatial\\start_2025.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.190172",
+    "source": "start_chicago_2020.png",
+    "target": "reports\\figures\\spatial\\start_chicago_2020.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.190172",
+    "source": "start_chicago_2021.png",
+    "target": "reports\\figures\\spatial\\start_chicago_2021.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.190172",
+    "source": "start_chicago_2022.png",
+    "target": "reports\\figures\\spatial\\start_chicago_2022.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.190172",
+    "source": "start_chicago_2023.png",
+    "target": "reports\\figures\\spatial\\start_chicago_2023.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.190172",
+    "source": "start_chicago_2024.png",
+    "target": "reports\\figures\\spatial\\start_chicago_2024.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.191173",
+    "source": "start_chicago_2025.png",
+    "target": "reports\\figures\\spatial\\start_chicago_2025.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.191173",
+    "source": "start_detailed_2020.png",
+    "target": "reports\\figures\\spatial\\start_detailed_2020.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.191173",
+    "source": "start_detailed_2021.png",
+    "target": "reports\\figures\\spatial\\start_detailed_2021.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.191173",
+    "source": "start_detailed_2022.png",
+    "target": "reports\\figures\\spatial\\start_detailed_2022.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.191173",
+    "source": "start_detailed_2023.png",
+    "target": "reports\\figures\\spatial\\start_detailed_2023.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.192172",
+    "source": "start_detailed_2024.png",
+    "target": "reports\\figures\\spatial\\start_detailed_2024.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.192172",
+    "source": "start_detailed_2025.png",
+    "target": "reports\\figures\\spatial\\start_detailed_2025.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.192172",
+    "source": "start_hexbin_2020.png",
+    "target": "reports\\figures\\spatial\\start_hexbin_2020.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.193172",
+    "source": "start_hexbin_2021.png",
+    "target": "reports\\figures\\spatial\\start_hexbin_2021.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.193172",
+    "source": "start_hexbin_2022.png",
+    "target": "reports\\figures\\spatial\\start_hexbin_2022.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.193172",
+    "source": "start_hexbin_2023.png",
+    "target": "reports\\figures\\spatial\\start_hexbin_2023.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.193172",
+    "source": "start_hexbin_2024.png",
+    "target": "reports\\figures\\spatial\\start_hexbin_2024.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.194172",
+    "source": "start_hexbin_2025.png",
+    "target": "reports\\figures\\spatial\\start_hexbin_2025.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.194172",
+    "source": "start_hexbin_map_2020.png",
+    "target": "reports\\figures\\spatial\\start_hexbin_map_2020.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.194172",
+    "source": "start_hexbin_map_2021.png",
+    "target": "reports\\figures\\spatial\\start_hexbin_map_2021.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.194172",
+    "source": "start_hexbin_map_2022.png",
+    "target": "reports\\figures\\spatial\\start_hexbin_map_2022.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.194172",
+    "source": "start_hexbin_map_2023.png",
+    "target": "reports\\figures\\spatial\\start_hexbin_map_2023.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.195172",
+    "source": "start_hexbin_map_2024.png",
+    "target": "reports\\figures\\spatial\\start_hexbin_map_2024.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.195172",
+    "source": "start_hexbin_map_2025.png",
+    "target": "reports\\figures\\spatial\\start_hexbin_map_2025.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.195172",
+    "source": "start_simple_2020.png",
+    "target": "reports\\figures\\spatial\\start_simple_2020.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.195172",
+    "source": "start_simple_2021.png",
+    "target": "reports\\figures\\spatial\\start_simple_2021.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.195172",
+    "source": "start_simple_2022.png",
+    "target": "reports\\figures\\spatial\\start_simple_2022.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.196172",
+    "source": "start_simple_2023.png",
+    "target": "reports\\figures\\spatial\\start_simple_2023.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.196172",
+    "source": "start_simple_2024.png",
+    "target": "reports\\figures\\spatial\\start_simple_2024.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.196172",
+    "source": "start_simple_2025.png",
+    "target": "reports\\figures\\spatial\\start_simple_2025.png",
+    "status": "success",
+    "category": "spatial"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.196172",
+    "source": "end_heatmap_2020.png",
+    "target": "reports\\figures\\heatmaps\\end_heatmap_2020.png",
+    "status": "success",
+    "category": "heatmaps"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.196172",
+    "source": "end_heatmap_2021.png",
+    "target": "reports\\figures\\heatmaps\\end_heatmap_2021.png",
+    "status": "success",
+    "category": "heatmaps"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.197173",
+    "source": "end_heatmap_2022.png",
+    "target": "reports\\figures\\heatmaps\\end_heatmap_2022.png",
+    "status": "success",
+    "category": "heatmaps"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.197173",
+    "source": "end_heatmap_2023.png",
+    "target": "reports\\figures\\heatmaps\\end_heatmap_2023.png",
+    "status": "success",
+    "category": "heatmaps"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.197173",
+    "source": "end_heatmap_2024.png",
+    "target": "reports\\figures\\heatmaps\\end_heatmap_2024.png",
+    "status": "success",
+    "category": "heatmaps"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.197173",
+    "source": "end_heatmap_2025.png",
+    "target": "reports\\figures\\heatmaps\\end_heatmap_2025.png",
+    "status": "success",
+    "category": "heatmaps"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.198172",
+    "source": "start_heatmap_2020.png",
+    "target": "reports\\figures\\heatmaps\\start_heatmap_2020.png",
+    "status": "success",
+    "category": "heatmaps"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.198172",
+    "source": "start_heatmap_2021.png",
+    "target": "reports\\figures\\heatmaps\\start_heatmap_2021.png",
+    "status": "success",
+    "category": "heatmaps"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.198172",
+    "source": "start_heatmap_2022.png",
+    "target": "reports\\figures\\heatmaps\\start_heatmap_2022.png",
+    "status": "success",
+    "category": "heatmaps"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.198172",
+    "source": "start_heatmap_2023.png",
+    "target": "reports\\figures\\heatmaps\\start_heatmap_2023.png",
+    "status": "success",
+    "category": "heatmaps"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.198172",
+    "source": "start_heatmap_2024.png",
+    "target": "reports\\figures\\heatmaps\\start_heatmap_2024.png",
+    "status": "success",
+    "category": "heatmaps"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.199172",
+    "source": "start_heatmap_2025.png",
+    "target": "reports\\figures\\heatmaps\\start_heatmap_2025.png",
+    "status": "success",
+    "category": "heatmaps"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.199172",
+    "source": "fall_end_hour_00.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.199172",
+    "source": "fall_end_hour_01.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_01.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.199172",
+    "source": "fall_end_hour_02.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_02.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.199172",
+    "source": "fall_end_hour_03.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.200172",
+    "source": "fall_end_hour_04.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_04.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.200172",
+    "source": "fall_end_hour_05.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_05.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.200172",
+    "source": "fall_end_hour_06.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.200172",
+    "source": "fall_end_hour_07.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_07.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.200172",
+    "source": "fall_end_hour_08.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_08.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.201172",
+    "source": "fall_end_hour_09.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.201172",
+    "source": "fall_end_hour_10.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_10.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.201172",
+    "source": "fall_end_hour_11.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_11.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.201172",
+    "source": "fall_end_hour_12.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.201172",
+    "source": "fall_end_hour_13.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_13.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.201172",
+    "source": "fall_end_hour_14.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_14.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.202172",
+    "source": "fall_end_hour_15.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.202172",
+    "source": "fall_end_hour_16.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_16.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.202172",
+    "source": "fall_end_hour_17.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_17.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.202172",
+    "source": "fall_end_hour_18.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.203174",
+    "source": "fall_end_hour_19.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_19.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.203174",
+    "source": "fall_end_hour_20.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_20.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.204172",
+    "source": "fall_end_hour_21.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.204172",
+    "source": "fall_end_hour_22.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_22.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.204172",
+    "source": "fall_end_hour_23.png",
+    "target": "reports\\figures\\seasonal\\fall_end_hour_23.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.204172",
+    "source": "fall_start_hour_00.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.205173",
+    "source": "fall_start_hour_01.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_01.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.205173",
+    "source": "fall_start_hour_02.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_02.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.205173",
+    "source": "fall_start_hour_03.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.205173",
+    "source": "fall_start_hour_04.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_04.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.206173",
+    "source": "fall_start_hour_05.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_05.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.206173",
+    "source": "fall_start_hour_06.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.206173",
+    "source": "fall_start_hour_07.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_07.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.206173",
+    "source": "fall_start_hour_08.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_08.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.207172",
+    "source": "fall_start_hour_09.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.207172",
+    "source": "fall_start_hour_10.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_10.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.207172",
+    "source": "fall_start_hour_11.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_11.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.207172",
+    "source": "fall_start_hour_12.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.207172",
+    "source": "fall_start_hour_13.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_13.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.208173",
+    "source": "fall_start_hour_14.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_14.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.208173",
+    "source": "fall_start_hour_15.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.208173",
+    "source": "fall_start_hour_16.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_16.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.208173",
+    "source": "fall_start_hour_17.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_17.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.208173",
+    "source": "fall_start_hour_18.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.209173",
+    "source": "fall_start_hour_19.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_19.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.209173",
+    "source": "fall_start_hour_20.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_20.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.209173",
+    "source": "fall_start_hour_21.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.209173",
+    "source": "fall_start_hour_22.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_22.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.209173",
+    "source": "fall_start_hour_23.png",
+    "target": "reports\\figures\\seasonal\\fall_start_hour_23.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.210172",
+    "source": "presentation_fall_hour_00.png",
+    "target": "reports\\figures\\seasonal\\presentation_fall_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.210172",
+    "source": "presentation_fall_hour_03.png",
+    "target": "reports\\figures\\seasonal\\presentation_fall_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.210172",
+    "source": "presentation_fall_hour_06.png",
+    "target": "reports\\figures\\seasonal\\presentation_fall_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.210172",
+    "source": "presentation_fall_hour_09.png",
+    "target": "reports\\figures\\seasonal\\presentation_fall_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.210172",
+    "source": "presentation_fall_hour_12.png",
+    "target": "reports\\figures\\seasonal\\presentation_fall_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.211173",
+    "source": "presentation_fall_hour_15.png",
+    "target": "reports\\figures\\seasonal\\presentation_fall_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.211173",
+    "source": "presentation_fall_hour_18.png",
+    "target": "reports\\figures\\seasonal\\presentation_fall_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.211173",
+    "source": "presentation_fall_hour_21.png",
+    "target": "reports\\figures\\seasonal\\presentation_fall_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.211173",
+    "source": "presentation_spring_hour_00.png",
+    "target": "reports\\figures\\seasonal\\presentation_spring_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.211173",
+    "source": "presentation_spring_hour_03.png",
+    "target": "reports\\figures\\seasonal\\presentation_spring_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.212172",
+    "source": "presentation_spring_hour_06.png",
+    "target": "reports\\figures\\seasonal\\presentation_spring_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.212172",
+    "source": "presentation_spring_hour_09.png",
+    "target": "reports\\figures\\seasonal\\presentation_spring_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.212172",
+    "source": "presentation_spring_hour_12.png",
+    "target": "reports\\figures\\seasonal\\presentation_spring_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.212172",
+    "source": "presentation_spring_hour_15.png",
+    "target": "reports\\figures\\seasonal\\presentation_spring_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.213173",
+    "source": "presentation_spring_hour_18.png",
+    "target": "reports\\figures\\seasonal\\presentation_spring_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.213173",
+    "source": "presentation_spring_hour_21.png",
+    "target": "reports\\figures\\seasonal\\presentation_spring_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.213173",
+    "source": "presentation_summer_hour_00.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.213173",
+    "source": "presentation_summer_hour_01.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_01.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.213173",
+    "source": "presentation_summer_hour_02.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_02.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.214172",
+    "source": "presentation_summer_hour_03.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.214172",
+    "source": "presentation_summer_hour_04.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_04.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.214172",
+    "source": "presentation_summer_hour_05.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_05.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.214172",
+    "source": "presentation_summer_hour_06.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.214172",
+    "source": "presentation_summer_hour_07.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_07.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.215173",
+    "source": "presentation_summer_hour_08.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_08.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.215173",
+    "source": "presentation_summer_hour_09.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.215173",
+    "source": "presentation_summer_hour_10.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_10.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.215173",
+    "source": "presentation_summer_hour_11.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_11.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.216173",
+    "source": "presentation_summer_hour_12.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.216173",
+    "source": "presentation_summer_hour_13.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_13.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.216173",
+    "source": "presentation_summer_hour_14.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_14.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.216173",
+    "source": "presentation_summer_hour_15.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.216173",
+    "source": "presentation_summer_hour_16.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_16.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.217172",
+    "source": "presentation_summer_hour_17.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_17.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.217172",
+    "source": "presentation_summer_hour_18.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.217172",
+    "source": "presentation_summer_hour_19.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_19.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.217172",
+    "source": "presentation_summer_hour_20.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_20.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.218173",
+    "source": "presentation_summer_hour_21.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.218173",
+    "source": "presentation_summer_hour_22.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_22.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.218173",
+    "source": "presentation_summer_hour_23.png",
+    "target": "reports\\figures\\seasonal\\presentation_summer_hour_23.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.218173",
+    "source": "presentation_winter_hour_00.png",
+    "target": "reports\\figures\\seasonal\\presentation_winter_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.219172",
+    "source": "presentation_winter_hour_03.png",
+    "target": "reports\\figures\\seasonal\\presentation_winter_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.219172",
+    "source": "presentation_winter_hour_06.png",
+    "target": "reports\\figures\\seasonal\\presentation_winter_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.219172",
+    "source": "presentation_winter_hour_09.png",
+    "target": "reports\\figures\\seasonal\\presentation_winter_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.220174",
+    "source": "presentation_winter_hour_12.png",
+    "target": "reports\\figures\\seasonal\\presentation_winter_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.220174",
+    "source": "presentation_winter_hour_15.png",
+    "target": "reports\\figures\\seasonal\\presentation_winter_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.220174",
+    "source": "presentation_winter_hour_18.png",
+    "target": "reports\\figures\\seasonal\\presentation_winter_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.220174",
+    "source": "presentation_winter_hour_21.png",
+    "target": "reports\\figures\\seasonal\\presentation_winter_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.221175",
+    "source": "season_comparison_hour_00.png",
+    "target": "reports\\figures\\seasonal\\season_comparison_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.221175",
+    "source": "season_comparison_hour_02.png",
+    "target": "reports\\figures\\seasonal\\season_comparison_hour_02.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.221175",
+    "source": "season_comparison_hour_04.png",
+    "target": "reports\\figures\\seasonal\\season_comparison_hour_04.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.221175",
+    "source": "season_comparison_hour_06.png",
+    "target": "reports\\figures\\seasonal\\season_comparison_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.222173",
+    "source": "season_comparison_hour_08.png",
+    "target": "reports\\figures\\seasonal\\season_comparison_hour_08.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.222173",
+    "source": "season_comparison_hour_10.png",
+    "target": "reports\\figures\\seasonal\\season_comparison_hour_10.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.222173",
+    "source": "season_comparison_hour_12.png",
+    "target": "reports\\figures\\seasonal\\season_comparison_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.223173",
+    "source": "season_comparison_hour_14.png",
+    "target": "reports\\figures\\seasonal\\season_comparison_hour_14.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.223173",
+    "source": "season_comparison_hour_16.png",
+    "target": "reports\\figures\\seasonal\\season_comparison_hour_16.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.223173",
+    "source": "season_comparison_hour_18.png",
+    "target": "reports\\figures\\seasonal\\season_comparison_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.223173",
+    "source": "season_comparison_hour_20.png",
+    "target": "reports\\figures\\seasonal\\season_comparison_hour_20.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.224172",
+    "source": "season_comparison_hour_22.png",
+    "target": "reports\\figures\\seasonal\\season_comparison_hour_22.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.224172",
+    "source": "season_fall_hour_00.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.224172",
+    "source": "season_fall_hour_01.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_01.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.224172",
+    "source": "season_fall_hour_02.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_02.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.224172",
+    "source": "season_fall_hour_03.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.225172",
+    "source": "season_fall_hour_04.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_04.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.225172",
+    "source": "season_fall_hour_05.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_05.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.225172",
+    "source": "season_fall_hour_06.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.225172",
+    "source": "season_fall_hour_07.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_07.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.225172",
+    "source": "season_fall_hour_08.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_08.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.226173",
+    "source": "season_fall_hour_09.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.226173",
+    "source": "season_fall_hour_10.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_10.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.226173",
+    "source": "season_fall_hour_11.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_11.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.246171",
+    "source": "season_fall_hour_12.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.246171",
+    "source": "season_fall_hour_13.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_13.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.247173",
+    "source": "season_fall_hour_14.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_14.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.247173",
+    "source": "season_fall_hour_15.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.247173",
+    "source": "season_fall_hour_16.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_16.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.247173",
+    "source": "season_fall_hour_17.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_17.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.247173",
+    "source": "season_fall_hour_18.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.248173",
+    "source": "season_fall_hour_19.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_19.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.248173",
+    "source": "season_fall_hour_20.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_20.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.248173",
+    "source": "season_fall_hour_21.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.248173",
+    "source": "season_fall_hour_22.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_22.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.248173",
+    "source": "season_fall_hour_23.png",
+    "target": "reports\\figures\\seasonal\\season_fall_hour_23.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.249173",
+    "source": "season_spring_hour_00.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.249173",
+    "source": "season_spring_hour_01.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_01.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.249173",
+    "source": "season_spring_hour_02.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_02.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.249173",
+    "source": "season_spring_hour_03.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.249173",
+    "source": "season_spring_hour_04.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_04.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.249173",
+    "source": "season_spring_hour_05.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_05.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.250172",
+    "source": "season_spring_hour_06.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.250172",
+    "source": "season_spring_hour_07.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_07.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.250172",
+    "source": "season_spring_hour_08.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_08.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.250172",
+    "source": "season_spring_hour_09.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.250172",
+    "source": "season_spring_hour_10.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_10.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.251172",
+    "source": "season_spring_hour_11.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_11.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.251172",
+    "source": "season_spring_hour_12.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.251172",
+    "source": "season_spring_hour_13.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_13.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.251172",
+    "source": "season_spring_hour_14.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_14.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.251172",
+    "source": "season_spring_hour_15.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.252172",
+    "source": "season_spring_hour_16.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_16.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.252172",
+    "source": "season_spring_hour_17.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_17.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.252172",
+    "source": "season_spring_hour_18.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.253173",
+    "source": "season_spring_hour_19.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_19.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.253173",
+    "source": "season_spring_hour_20.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_20.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.254172",
+    "source": "season_spring_hour_21.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.254172",
+    "source": "season_spring_hour_22.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_22.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.254172",
+    "source": "season_spring_hour_23.png",
+    "target": "reports\\figures\\seasonal\\season_spring_hour_23.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.254172",
+    "source": "season_summer_hour_00.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.254172",
+    "source": "season_summer_hour_01.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_01.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.255173",
+    "source": "season_summer_hour_02.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_02.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.255173",
+    "source": "season_summer_hour_03.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.255173",
+    "source": "season_summer_hour_04.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_04.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.255173",
+    "source": "season_summer_hour_05.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_05.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.256172",
+    "source": "season_summer_hour_06.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.256172",
+    "source": "season_summer_hour_07.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_07.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.256172",
+    "source": "season_summer_hour_08.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_08.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.257172",
+    "source": "season_summer_hour_09.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.257172",
+    "source": "season_summer_hour_10.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_10.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.257172",
+    "source": "season_summer_hour_11.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_11.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.257172",
+    "source": "season_summer_hour_12.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.257172",
+    "source": "season_summer_hour_13.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_13.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.258172",
+    "source": "season_summer_hour_14.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_14.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.258172",
+    "source": "season_summer_hour_15.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.258172",
+    "source": "season_summer_hour_16.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_16.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.258172",
+    "source": "season_summer_hour_17.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_17.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.258172",
+    "source": "season_summer_hour_18.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.258172",
+    "source": "season_summer_hour_19.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_19.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.259172",
+    "source": "season_summer_hour_20.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_20.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.259172",
+    "source": "season_summer_hour_21.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.259172",
+    "source": "season_summer_hour_22.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_22.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.259172",
+    "source": "season_summer_hour_23.png",
+    "target": "reports\\figures\\seasonal\\season_summer_hour_23.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.259172",
+    "source": "season_winter_hour_00.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.260172",
+    "source": "season_winter_hour_01.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_01.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.260172",
+    "source": "season_winter_hour_02.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_02.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.260172",
+    "source": "season_winter_hour_03.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.260172",
+    "source": "season_winter_hour_04.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_04.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.260172",
+    "source": "season_winter_hour_05.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_05.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.261172",
+    "source": "season_winter_hour_06.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.261172",
+    "source": "season_winter_hour_07.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_07.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.261172",
+    "source": "season_winter_hour_08.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_08.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.261172",
+    "source": "season_winter_hour_09.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.262172",
+    "source": "season_winter_hour_10.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_10.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.262172",
+    "source": "season_winter_hour_11.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_11.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.262172",
+    "source": "season_winter_hour_12.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.262172",
+    "source": "season_winter_hour_13.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_13.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.263172",
+    "source": "season_winter_hour_14.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_14.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.263172",
+    "source": "season_winter_hour_15.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.263172",
+    "source": "season_winter_hour_16.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_16.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.263172",
+    "source": "season_winter_hour_17.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_17.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.264172",
+    "source": "season_winter_hour_18.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.264172",
+    "source": "season_winter_hour_19.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_19.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.264172",
+    "source": "season_winter_hour_20.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_20.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.264172",
+    "source": "season_winter_hour_21.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.264172",
+    "source": "season_winter_hour_22.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_22.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.265171",
+    "source": "season_winter_hour_23.png",
+    "target": "reports\\figures\\seasonal\\season_winter_hour_23.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.265171",
+    "source": "spring_end_hour_00.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.265171",
+    "source": "spring_end_hour_01.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_01.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.265171",
+    "source": "spring_end_hour_02.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_02.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.265171",
+    "source": "spring_end_hour_03.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.266171",
+    "source": "spring_end_hour_04.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_04.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.266171",
+    "source": "spring_end_hour_05.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_05.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.266171",
+    "source": "spring_end_hour_06.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.266171",
+    "source": "spring_end_hour_07.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_07.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.267173",
+    "source": "spring_end_hour_08.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_08.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.267173",
+    "source": "spring_end_hour_09.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.267173",
+    "source": "spring_end_hour_10.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_10.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.267173",
+    "source": "spring_end_hour_11.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_11.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.268172",
+    "source": "spring_end_hour_12.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.268172",
+    "source": "spring_end_hour_13.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_13.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.268172",
+    "source": "spring_end_hour_14.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_14.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.268172",
+    "source": "spring_end_hour_15.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.268172",
+    "source": "spring_end_hour_16.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_16.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.268172",
+    "source": "spring_end_hour_17.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_17.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.269171",
+    "source": "spring_end_hour_18.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.269171",
+    "source": "spring_end_hour_19.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_19.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.269171",
+    "source": "spring_end_hour_20.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_20.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.269171",
+    "source": "spring_end_hour_21.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.270173",
+    "source": "spring_end_hour_22.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_22.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.270173",
+    "source": "spring_end_hour_23.png",
+    "target": "reports\\figures\\seasonal\\spring_end_hour_23.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.271173",
+    "source": "spring_start_hour_00.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.271173",
+    "source": "spring_start_hour_01.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_01.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.271173",
+    "source": "spring_start_hour_02.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_02.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.271173",
+    "source": "spring_start_hour_03.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.272174",
+    "source": "spring_start_hour_04.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_04.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.272174",
+    "source": "spring_start_hour_05.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_05.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.272174",
+    "source": "spring_start_hour_06.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.294171",
+    "source": "spring_start_hour_07.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_07.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.295175",
+    "source": "spring_start_hour_08.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_08.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.296174",
+    "source": "spring_start_hour_09.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.296174",
+    "source": "spring_start_hour_10.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_10.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.296174",
+    "source": "spring_start_hour_11.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_11.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.296174",
+    "source": "spring_start_hour_12.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.297174",
+    "source": "spring_start_hour_13.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_13.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.297174",
+    "source": "spring_start_hour_14.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_14.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.297174",
+    "source": "spring_start_hour_15.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.298173",
+    "source": "spring_start_hour_16.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_16.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.298173",
+    "source": "spring_start_hour_17.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_17.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.298173",
+    "source": "spring_start_hour_18.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.298173",
+    "source": "spring_start_hour_19.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_19.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.299174",
+    "source": "spring_start_hour_20.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_20.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.299174",
+    "source": "spring_start_hour_21.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.299174",
+    "source": "spring_start_hour_22.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_22.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.299174",
+    "source": "spring_start_hour_23.png",
+    "target": "reports\\figures\\seasonal\\spring_start_hour_23.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.300174",
+    "source": "summer_end_hour_00.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.300174",
+    "source": "summer_end_hour_01.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_01.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.300174",
+    "source": "summer_end_hour_02.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_02.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.300174",
+    "source": "summer_end_hour_03.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.301172",
+    "source": "summer_end_hour_04.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_04.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.301172",
+    "source": "summer_end_hour_05.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_05.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.301172",
+    "source": "summer_end_hour_06.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.302172",
+    "source": "summer_end_hour_07.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_07.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.302172",
+    "source": "summer_end_hour_08.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_08.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.302172",
+    "source": "summer_end_hour_09.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.303174",
+    "source": "summer_end_hour_10.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_10.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.303174",
+    "source": "summer_end_hour_11.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_11.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.304175",
+    "source": "summer_end_hour_12.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.304175",
+    "source": "summer_end_hour_13.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_13.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.305174",
+    "source": "summer_end_hour_14.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_14.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.305174",
+    "source": "summer_end_hour_15.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.305174",
+    "source": "summer_end_hour_16.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_16.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.306175",
+    "source": "summer_end_hour_17.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_17.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.306175",
+    "source": "summer_end_hour_18.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.307173",
+    "source": "summer_end_hour_19.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_19.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.307173",
+    "source": "summer_end_hour_20.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_20.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.307173",
+    "source": "summer_end_hour_21.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.307173",
+    "source": "summer_end_hour_22.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_22.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.308174",
+    "source": "summer_end_hour_23.png",
+    "target": "reports\\figures\\seasonal\\summer_end_hour_23.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.308174",
+    "source": "summer_start_hour_00.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.308174",
+    "source": "summer_start_hour_01.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_01.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.309174",
+    "source": "summer_start_hour_02.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_02.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.309174",
+    "source": "summer_start_hour_03.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.325171",
+    "source": "summer_start_hour_04.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_04.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.325171",
+    "source": "summer_start_hour_05.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_05.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.326174",
+    "source": "summer_start_hour_06.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.326174",
+    "source": "summer_start_hour_07.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_07.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.326174",
+    "source": "summer_start_hour_08.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_08.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.326174",
+    "source": "summer_start_hour_09.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.327173",
+    "source": "summer_start_hour_10.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_10.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.327173",
+    "source": "summer_start_hour_11.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_11.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.327173",
+    "source": "summer_start_hour_12.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.328173",
+    "source": "summer_start_hour_13.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_13.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.328173",
+    "source": "summer_start_hour_14.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_14.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.328173",
+    "source": "summer_start_hour_15.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.328173",
+    "source": "summer_start_hour_16.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_16.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.329173",
+    "source": "summer_start_hour_17.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_17.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.329173",
+    "source": "summer_start_hour_18.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.329173",
+    "source": "summer_start_hour_19.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_19.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.329173",
+    "source": "summer_start_hour_20.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_20.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.330172",
+    "source": "summer_start_hour_21.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.330172",
+    "source": "summer_start_hour_22.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_22.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.330172",
+    "source": "summer_start_hour_23.png",
+    "target": "reports\\figures\\seasonal\\summer_start_hour_23.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.331173",
+    "source": "trend_summer_Clark St & Elm St_end.png",
+    "target": "reports\\figures\\seasonal\\trend_summer_Clark St & Elm St_end.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.356174",
+    "source": "trend_summer_Clark St & Elm St_start.png",
+    "target": "reports\\figures\\seasonal\\trend_summer_Clark St & Elm St_start.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.356174",
+    "source": "trend_summer_Michigan Ave & Oak S_end.png",
+    "target": "reports\\figures\\seasonal\\trend_summer_Michigan Ave & Oak S_end.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.357173",
+    "source": "trend_summer_Michigan Ave & Oak S_start.png",
+    "target": "reports\\figures\\seasonal\\trend_summer_Michigan Ave & Oak S_start.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.357173",
+    "source": "trend_summer_Streeter Dr & Grand _end.png",
+    "target": "reports\\figures\\seasonal\\trend_summer_Streeter Dr & Grand _end.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.357173",
+    "source": "trend_summer_Streeter Dr & Grand _start.png",
+    "target": "reports\\figures\\seasonal\\trend_summer_Streeter Dr & Grand _start.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.358174",
+    "source": "trend_winter_Clark St & Elm St_end.png",
+    "target": "reports\\figures\\seasonal\\trend_winter_Clark St & Elm St_end.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.358174",
+    "source": "trend_winter_Clark St & Elm St_start.png",
+    "target": "reports\\figures\\seasonal\\trend_winter_Clark St & Elm St_start.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.358174",
+    "source": "trend_winter_Michigan Ave & Oak S_end.png",
+    "target": "reports\\figures\\seasonal\\trend_winter_Michigan Ave & Oak S_end.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.358174",
+    "source": "trend_winter_Michigan Ave & Oak S_start.png",
+    "target": "reports\\figures\\seasonal\\trend_winter_Michigan Ave & Oak S_start.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.359174",
+    "source": "trend_winter_Streeter Dr & Grand _end.png",
+    "target": "reports\\figures\\seasonal\\trend_winter_Streeter Dr & Grand _end.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.359174",
+    "source": "trend_winter_Streeter Dr & Grand _start.png",
+    "target": "reports\\figures\\seasonal\\trend_winter_Streeter Dr & Grand _start.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.360174",
+    "source": "winter_end_hour_00.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.360174",
+    "source": "winter_end_hour_01.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_01.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.360174",
+    "source": "winter_end_hour_02.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_02.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.361174",
+    "source": "winter_end_hour_03.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.361174",
+    "source": "winter_end_hour_04.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_04.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.361174",
+    "source": "winter_end_hour_05.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_05.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.361174",
+    "source": "winter_end_hour_06.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.362172",
+    "source": "winter_end_hour_07.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_07.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.362172",
+    "source": "winter_end_hour_08.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_08.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.362172",
+    "source": "winter_end_hour_09.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.362172",
+    "source": "winter_end_hour_10.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_10.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.363174",
+    "source": "winter_end_hour_11.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_11.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.363174",
+    "source": "winter_end_hour_12.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.363174",
+    "source": "winter_end_hour_13.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_13.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.363174",
+    "source": "winter_end_hour_14.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_14.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.364173",
+    "source": "winter_end_hour_15.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.364173",
+    "source": "winter_end_hour_16.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_16.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.364173",
+    "source": "winter_end_hour_17.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_17.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.364173",
+    "source": "winter_end_hour_18.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.364173",
+    "source": "winter_end_hour_19.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_19.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.365173",
+    "source": "winter_end_hour_20.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_20.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.365173",
+    "source": "winter_end_hour_21.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.365173",
+    "source": "winter_end_hour_22.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_22.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.365173",
+    "source": "winter_end_hour_23.png",
+    "target": "reports\\figures\\seasonal\\winter_end_hour_23.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.366173",
+    "source": "winter_start_hour_00.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_00.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.366173",
+    "source": "winter_start_hour_01.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_01.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.366173",
+    "source": "winter_start_hour_02.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_02.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.366173",
+    "source": "winter_start_hour_03.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_03.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.367173",
+    "source": "winter_start_hour_04.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_04.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.367173",
+    "source": "winter_start_hour_05.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_05.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.367173",
+    "source": "winter_start_hour_06.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_06.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.367173",
+    "source": "winter_start_hour_07.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_07.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.368173",
+    "source": "winter_start_hour_08.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_08.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.368173",
+    "source": "winter_start_hour_09.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_09.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.368173",
+    "source": "winter_start_hour_10.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_10.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.368173",
+    "source": "winter_start_hour_11.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_11.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.369173",
+    "source": "winter_start_hour_12.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_12.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.369173",
+    "source": "winter_start_hour_13.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_13.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.369173",
+    "source": "winter_start_hour_14.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_14.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.370173",
+    "source": "winter_start_hour_15.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_15.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.370173",
+    "source": "winter_start_hour_16.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_16.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.370173",
+    "source": "winter_start_hour_17.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_17.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.371176",
+    "source": "winter_start_hour_18.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_18.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.371176",
+    "source": "winter_start_hour_19.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_19.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.371176",
+    "source": "winter_start_hour_20.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_20.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.372173",
+    "source": "winter_start_hour_21.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_21.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.372173",
+    "source": "winter_start_hour_22.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_22.png",
+    "status": "success",
+    "category": "seasonal"
+  },
+  {
+    "timestamp": "2025-12-18T20:47:32.372173",
+    "source": "winter_start_hour_23.png",
+    "target": "reports\\figures\\seasonal\\winter_start_hour_23.png",
+    "status": "success",
+    "category": "seasonal"
+  }
+]

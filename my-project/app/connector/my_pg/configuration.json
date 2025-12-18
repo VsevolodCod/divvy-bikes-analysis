@@ -1,6 +1,0 @@
-{
-  "version": "3",
-  "configuration": {
-    "connection_uri": "postgresql://user:password@localhost:5433/dev"
-  }
-}
