@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_716a207d4e6529ba6db97fdf43b780f5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 700.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+<div style="
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    width: 300px;
+    background-color: white; 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    border-left: 5px solid #1a1b9c;
+">
+    <h4 style="margin: 0 0 10px 0; color: #1a1b9c;">
+        Топ-10 станций Divvy
+    </h4>
+    <p style="margin: 0 0 15px 0; color: #495057; font-size: 12px;">
+        Размер и цвет кругов соответствуют<br>количеству поездок (2020-2025)
+    </p>
+
+    <div style="display: flex; align-items: center; margin-bottom: 8px;">
+        <div style="width: 20px; height: 20px; background-color: #1a1b9c; 
+                    border-radius: 50%; margin-right: 10px;"></div>
+        <span style="font-size: 12px;">1-е место (самое популярное)</span>
+    </div>
+
+    <div style="display: flex; align-items: center; margin-bottom: 8px;">
+        <div style="width: 15px; height: 15px; background-color: #83dcfa; 
+                    border-radius: 50%; margin-right: 10px; margin-left: 2.5px;"></div>
+        <span style="font-size: 12px;">Средняя популярность</span>
+    </div>
+
+    <div style="display: flex; align-items: center; margin-bottom: 8px;">
+        <div style="width: 10px; height: 10px; background-color: #88e5ff; 
+                    border-radius: 50%; margin-right: 10px; margin-left: 5px;"></div>
+        <span style="font-size: 12px;">10-е место</span>
+    </div>
+
+    <div style="margin-top: 15px; padding-top: 10px; border-top: 1px solid #dee2e6;">
+        <p style="margin: 0; font-size: 11px; color: #6c757d;">
+            <strong>Инструкция:</strong> Кликните на круг для детальной информации
+        </p>
+    </div>
+</div>
+    
+<div style="
+    position: fixed; 
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.95); 
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    border-bottom: 4px solid #1a1b9c;
+    max-width: 600px;
+">
+    <h2 style="margin: 0; color: #1a1b9c; font-size: 22px;">
+        Топ-10 самых популярных станций проката велосипедов Divvy в Чикаго
+    </h2>
+    <p style="margin: 5px 0 0 0; color: #495057; font-size: 14px;">
+        2020-2025 годы | Данные основаны на общем количестве поездок
+    </p>
+</div>
+    
+            <div class="folium-map" id="map_716a207d4e6529ba6db97fdf43b780f5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_716a207d4e6529ba6db97fdf43b780f5 = L.map(
+                "map_716a207d4e6529ba6db97fdf43b780f5",
+                {
+                    center: [41.8781, -87.6298],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+
+            
+
+        
+    
+            var tile_layer_7f86a8ca7825e603f6f09a01271a4b21 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7f86a8ca7825e603f6f09a01271a4b21.addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+    var color_map_ba4f66e9db8da433f25ab26f504a46cd = {};
+
+    
+    color_map_ba4f66e9db8da433f25ab26f504a46cd.color = d3.scale.threshold()
+              .domain([178756.0, 179082.50100200402, 179409.002004008, 179735.50300601203, 180062.00400801603, 180388.50501002005, 180715.00601202404, 181041.50701402806, 181368.00801603205, 181694.50901803607, 182021.0100200401, 182347.51102204408, 182674.0120240481, 183000.5130260521, 183327.01402805612, 183653.5150300601, 183980.01603206413, 184306.51703406812, 184633.01803607214, 184959.51903807616, 185286.02004008016, 185612.52104208418, 185939.02204408817, 186265.5230460922, 186592.02404809618, 186918.5250501002, 187245.02605210422, 187571.5270541082, 187898.02805611223, 188224.52905811623, 188551.03006012025, 188877.53106212424, 189204.03206412826, 189530.53306613225, 189857.03406813627, 190183.5350701403, 190510.03607214428, 190836.5370741483, 191163.0380761523, 191489.53907815632, 191816.0400801603, 192142.54108216433, 192469.04208416835, 192795.54308617234, 193122.04408817636, 193448.54509018036, 193775.04609218438, 194101.54709418837, 194428.0480961924, 194754.54909819638, 195081.0501002004, 195407.55110220442, 195734.05210420841, 196060.55310621244, 196387.05410821643, 196713.55511022045, 197040.05611222444, 197366.55711422846, 197693.05811623245, 198019.55911823647, 198346.0601202405, 198672.5611222445, 198999.0621242485, 199325.5631262525, 199652.06412825652, 199978.5651302605, 200305.06613226453, 200631.56713426852, 200958.06813627254, 201284.56913827657, 201611.07014028056, 201937.57114228458, 202264.07214428857, 202590.5731462926, 202917.07414829658, 203243.5751503006, 203570.0761523046, 203896.57715430862, 204223.07815631264, 204549.57915831663, 204876.08016032065, 205202.58116232464, 205529.08216432866, 205855.58316633265, 206182.08416833667, 206508.58517034067, 206835.0861723447, 207161.5871743487, 207488.0881763527, 207814.58917835672, 208141.0901803607, 208467.59118236473, 208794.09218436875, 209120.59318637275, 209447.09418837674, 209773.59519038076, 210100.09619238478, 210426.59719438877, 210753.0981963928, 211079.59919839678, 211406.1002004008, 211732.60120240483, 212059.10220440882, 212385.6032064128, 212712.10420841683, 213038.60521042085, 213365.10621242484, 213691.60721442886, 214018.10821643285, 214344.60921843688, 214671.1102204409, 214997.6112224449, 215324.11222444888, 215650.6132264529, 215977.11422845692, 216303.6152304609, 216630.11623246493, 216956.61723446893, 217283.11823647295, 217609.61923847697, 217936.12024048096, 218262.62124248498, 218589.12224448897, 218915.623246493, 219242.12424849698, 219568.625250501, 219895.126252505, 220221.62725450902, 220548.12825651304, 220874.62925851703, 221201.13026052105, 221527.63126252504, 221854.13226452906, 222180.63326653306, 222507.13426853708, 222833.63527054107, 223160.1362725451, 223486.6372745491, 223813.1382765531, 224139.63927855712, 224466.1402805611, 224792.64128256514, 225119.14228456916, 225445.64328657315, 225772.14428857714, 226098.64529058116, 226425.14629258518, 226751.64729458917, 227078.1482965932, 227404.64929859719, 227731.1503006012, 228057.65130260523, 228384.15230460922, 228710.6533066132, 229037.15430861723, 229363.65531062125, 229690.15631262524, 230016.65731462926, 230343.15831663326, 230669.65931863728, 230996.1603206413, 231322.6613226453, 231649.16232464928, 231975.6633266533, 232302.16432865732, 232628.66533066132, 232955.16633266534, 233281.66733466933, 233608.16833667335, 233934.66933867737, 234261.17034068136, 234587.67134268535, 234914.17234468937, 235240.6733466934, 235567.1743486974, 235893.6753507014, 236220.1763527054, 236546.67735470942, 236873.17835671344, 237199.67935871743, 237526.18036072145, 237852.68136272545, 238179.18236472947, 238505.68336673346, 238832.18436873748, 239158.68537074147, 239485.1863727455, 239811.6873747495, 240138.1883767535, 240464.68937875752, 240791.19038076152, 241117.69138276554, 241444.19238476953, 241770.69338677355, 242097.19438877754, 242423.69539078156, 242750.19639278558, 243076.69739478957, 243403.1983967936, 243729.6993987976, 244056.2004008016, 244382.70140280563, 244709.20240480962, 245035.7034068136, 245362.20440881763, 245688.70541082165, 246015.20641282565, 246341.70741482964, 246668.20841683366, 246994.70941883768, 247321.2104208417, 247647.7114228457, 247974.21242484968, 248300.7134268537, 248627.21442885773, 248953.71543086172, 249280.21643286574, 249606.71743486973, 249933.21843687375, 250259.71943887777, 250586.22044088176, 250912.72144288576, 251239.22244488978, 251565.7234468938, 251892.2244488978, 252218.7254509018, 252545.2264529058, 252871.72745490982, 253198.22845691384, 253524.72945891783, 253851.23046092183, 254177.73146292585, 254504.23246492987, 254830.7334669339, 255157.23446893788, 255483.73547094187, 255810.2364729459, 256136.7374749499, 256463.2384769539, 256789.7394789579, 257116.24048096192, 257442.74148296594, 257769.24248496996, 258095.74348697395, 258422.24448897794, 258748.74549098196, 259075.24649298599, 259401.74749498998, 259728.24849699397, 260054.749498998, 260381.250501002, 260707.75150300603, 261034.25250501002, 261360.75350701401, 261687.25450901804, 262013.75551102206, 262340.2565130261, 262666.75751503004, 262993.25851703406, 263319.7595190381, 263646.2605210421, 263972.76152304607, 264299.2625250501, 264625.7635270541, 264952.2645290581, 265278.76553106215, 265605.2665330661, 265931.76753507013, 266258.26853707415, 266584.7695390782, 266911.27054108214, 267237.77154308616, 267564.2725450902, 267890.7735470942, 268217.2745490982, 268543.77555110224, 268870.2765531062, 269196.7775551102, 269523.27855711424, 269849.7795591182, 270176.2805611222, 270502.78156312625, 270829.28256513027, 271155.7835671343, 271482.2845691383, 271808.7855711423, 272135.2865731463, 272461.7875751503, 272788.2885771543, 273114.7895791583, 273441.2905811623, 273767.79158316634, 274094.29258517036, 274420.7935871744, 274747.29458917835, 275073.79559118237, 275400.2965931864, 275726.79759519035, 276053.29859719437, 276379.7995991984, 276706.3006012024, 277032.80160320643, 277359.30260521045, 277685.8036072144, 278012.30460921844, 278338.80561122246, 278665.3066132264, 278991.80761523044, 279318.30861723446, 279644.8096192385, 279971.3106212425, 280297.8116232465, 280624.3126252505, 280950.8136272545, 281277.31462925853, 281603.8156312625, 281930.3166332665, 282256.81763527053, 282583.31863727455, 282909.8196392786, 283236.3206412826, 283562.82164328656, 283889.3226452906, 284215.8236472946, 284542.32464929856, 284868.8256513026, 285195.3266533066, 285521.8276553106, 285848.32865731465, 286174.82965931867, 286501.33066132263, 286827.83166332665, 287154.3326653307, 287480.83366733463, 287807.33466933866, 288133.8356713427, 288460.3366733467, 288786.8376753507, 289113.33867735474, 289439.8396793587, 289766.3406813627, 290092.84168336674, 290419.3426853707, 290745.8436873747, 291072.34468937875, 291398.84569138277, 291725.3466933868, 292051.8476953908, 292378.3486973948, 292704.8496993988, 293031.3507014028, 293357.85170340684, 293684.3527054108, 294010.8537074148, 294337.35470941884, 294663.85571142286, 294990.3567134269, 295316.85771543084, 295643.35871743486, 295969.8597194389, 296296.3607214429, 296622.86172344687, 296949.3627254509, 297275.8637274549, 297602.36472945893, 297928.86573146295, 298255.3667334669, 298581.86773547094, 298908.36873747496, 299234.869739479, 299561.37074148294, 299887.87174348696, 300214.372745491, 300540.873747495, 300867.374749499, 301193.875751503, 301520.376753507, 301846.877755511, 302173.37875751505, 302499.879759519, 302826.38076152303, 303152.88176352705, 303479.3827655311, 303805.8837675351, 304132.38476953906, 304458.8857715431, 304785.3867735471, 305111.8877755511, 305438.3887775551, 305764.8897795591, 306091.3907815631, 306417.89178356715, 306744.39278557117, 307070.8937875751, 307397.39478957915, 307723.89579158317, 308050.3967935872, 308376.89779559115, 308703.3987975952, 309029.8997995992, 309356.4008016032, 309682.90180360724, 310009.40280561126, 310335.9038076152, 310662.40480961924, 310988.9058116232, 311315.4068136272, 311641.90781563125, 311968.40881763527, 312294.9098196393, 312621.4108216433, 312947.91182364733, 313274.4128256513, 313600.9138276553, 313927.4148296593, 314253.9158316633, 314580.4168336673, 314906.91783567134, 315233.41883767536, 315559.9198396794, 315886.4208416834, 316212.92184368736, 316539.4228456914, 316865.9238476954, 317192.42484969937, 317518.9258517034, 317845.4268537074, 318171.92785571143, 318498.42885771545, 318824.9298597195, 319151.43086172343, 319477.93186372746, 319804.4328657315, 320130.93386773544, 320457.43486973946, 320783.9358717435, 321110.4368737475, 321436.9378757515, 321763.43887775554, 322089.9398797595, 322416.4408817635, 322742.94188376755, 323069.4428857715, 323395.94388777553, 323722.44488977955, 324048.9458917836, 324375.4468937876, 324701.9478957916, 325028.4488977956, 325354.9498997996, 325681.4509018036, 326007.9519038076, 326334.4529058116, 326660.9539078156, 326987.45490981964, 327313.95591182366, 327640.4569138277, 327966.9579158317, 328293.45891783567, 328619.9599198397, 328946.46092184365, 329272.9619238477, 329599.4629258517, 329925.9639278557, 330252.46492985974, 330578.96593186376, 330905.4669338678, 331231.96793587174, 331558.46893787576, 331884.9699398797, 332211.47094188374, 332537.97194388777, 332864.4729458918, 333190.9739478958, 333517.4749498998, 333843.97595190385, 334170.4769539078, 334496.97795591183, 334823.4789579158, 335149.9799599198, 335476.48096192384, 335802.98196392786, 336129.4829659319, 336455.9839679359, 336782.4849699399, 337108.9859719439, 337435.4869739479, 337761.98797595187, 338088.4889779559, 338414.9899799599, 338741.4909819639, 339067.99198396795, 339394.49298597197, 339720.993987976, 340047.49498997995, 340373.995991984, 340700.49699398794, 341026.99799599196, 341353.498997996, 341680.0])
+              .range(['#88e5ffff', '#88e5ffff', '#88e5ffff', '#87e4ffff', '#87e4ffff', '#87e3ffff', '#87e3feff', '#86e3feff', '#86e2feff', '#86e2feff', '#86e1feff', '#86e1fdff', '#85e1fdff', '#85e0fdff', '#85e0fdff', '#85dffdff', '#84dffcff', '#84defcff', '#84defcff', '#84defcff', '#84ddfcff', '#83ddfbff', '#83dcfbff', '#83dcfbff', '#83dcfbff', '#83dbfbff', '#82dbfaff', '#82dafaff', '#82dafaff', '#82dafaff', '#81d9faff', '#81d9f9ff', '#81d8f9ff', '#81d8f9ff', '#81d8f9ff', '#80d7f9ff', '#80d7f8ff', '#80d6f8ff', '#80d6f8ff', '#7fd6f8ff', '#7fd5f8ff', '#7fd5f7ff', '#7fd4f7ff', '#7fd4f7ff', '#7ed4f7ff', '#7ed3f7ff', '#7ed3f6ff', '#7ed2f6ff', '#7dd2f6ff', '#7dd1f6ff', '#7dd1f6ff', '#7dd1f5ff', '#7dd0f5ff', '#7cd0f5ff', '#7ccff5ff', '#7ccff5ff', '#7ccff4ff', '#7bcef4ff', '#7bcef4ff', '#7bcdf4ff', '#7bcdf4ff', '#7bcdf3ff', '#7accf3ff', '#7accf3ff', '#7acbf3ff', '#7acbf3ff', '#79cbf2ff', '#79caf2ff', '#79caf2ff', '#79c9f2ff', '#79c9f2ff', '#78c9f1ff', '#78c8f1ff', '#78c8f1ff', '#78c7f1ff', '#77c7f1ff', '#77c7f0ff', '#77c6f0ff', '#77c6f0ff', '#77c5f0ff', '#76c5f0ff', '#76c4efff', '#76c4efff', '#76c4efff', '#75c3efff', '#75c3efff', '#75c2eeff', '#75c2eeff', '#75c2eeff', '#74c1eeff', '#74c1eeff', '#74c0edff', '#74c0edff', '#73c0edff', '#73bfedff', '#73bfedff', '#73beecff', '#73beecff', '#72beecff', '#72bdecff', '#72bdecff', '#72bcebff', '#71bcebff', '#71bcebff', '#71bbebff', '#71bbebff', '#71baeaff', '#70baeaff', '#70baeaff', '#70b9eaff', '#70b9eaff', '#6fb8e9ff', '#6fb8e9ff', '#6fb7e9ff', '#6fb7e9ff', '#6fb7e9ff', '#6eb6e8ff', '#6eb6e8ff', '#6eb5e8ff', '#6eb5e8ff', '#6db5e8ff', '#6db4e7ff', '#6db4e7ff', '#6db3e7ff', '#6db3e7ff', '#6cb3e7ff', '#6cb2e6ff', '#6cb2e6ff', '#6cb1e6ff', '#6bb1e6ff', '#6bb1e6ff', '#6bb0e5ff', '#6bb0e5ff', '#6bafe5ff', '#6aafe5ff', '#6aafe5ff', '#6aaee4ff', '#6aaee4ff', '#69ade4ff', '#69ade4ff', '#69ade4ff', '#69ace3ff', '#69ace3ff', '#68abe3ff', '#68abe3ff', '#68aae3ff', '#68aae2ff', '#68aae2ff', '#67a9e2ff', '#67a9e2ff', '#67a8e2ff', '#67a8e1ff', '#66a8e1ff', '#66a7e1ff', '#66a7e1ff', '#66a6e1ff', '#66a6e0ff', '#65a6e0ff', '#65a5e0ff', '#65a5e0ff', '#65a4e0ff', '#64a4dfff', '#64a4dfff', '#64a3dfff', '#64a3dfff', '#64a2dfff', '#63a2deff', '#63a2deff', '#63a1deff', '#63a1deff', '#62a0deff', '#62a0ddff', '#629fddff', '#629fddff', '#629fddff', '#619eddff', '#619edcff', '#619ddcff', '#619ddcff', '#609ddcff', '#609cdcff', '#609cdbff', '#609bdbff', '#609bdbff', '#5f9bdbff', '#5f9adbff', '#5f9adaff', '#5f99daff', '#5e99daff', '#5e99daff', '#5e98daff', '#5e98d9ff', '#5e97d9ff', '#5d97d9ff', '#5d97d9ff', '#5d96d9ff', '#5d96d8ff', '#5c95d8ff', '#5c95d8ff', '#5c95d8ff', '#5c94d8ff', '#5c94d7ff', '#5b93d7ff', '#5b93d7ff', '#5b92d7ff', '#5b92d7ff', '#5a92d6ff', '#5a91d6ff', '#5a91d6ff', '#5a90d6ff', '#5a90d6ff', '#5990d5ff', '#598fd5ff', '#598fd5ff', '#598ed5ff', '#588ed5ff', '#588ed4ff', '#588dd4ff', '#588dd4ff', '#588cd4ff', '#578cd4ff', '#578cd3ff', '#578bd3ff', '#578bd3ff', '#568ad3ff', '#568ad3ff', '#568ad2ff', '#5689d2ff', '#5689d2ff', '#5588d2ff', '#5588d2ff', '#5588d1ff', '#5587d1ff', '#5487d1ff', '#5486d1ff', '#5486d1ff', '#5485d0ff', '#5485d0ff', '#5385d0ff', '#5384d0ff', '#5384d0ff', '#5383cfff', '#5283cfff', '#5283cfff', '#5282cfff', '#5282cfff', '#5281cfff', '#5181ceff', '#5181ceff', '#5180ceff', '#5180ceff', '#507fceff', '#507fcdff', '#507fcdff', '#507ecdff', '#507ecdff', '#4f7dcdff', '#4f7dccff', '#4f7dccff', '#4f7cccff', '#4e7cccff', '#4e7bccff', '#4e7bcbff', '#4e7bcbff', '#4e7acbff', '#4d7acbff', '#4d79cbff', '#4d79caff', '#4d78caff', '#4d78caff', '#4c78caff', '#4c77caff', '#4c77c9ff', '#4c76c9ff', '#4b76c9ff', '#4b76c9ff', '#4b75c9ff', '#4b75c8ff', '#4b74c8ff', '#4a74c8ff', '#4a74c8ff', '#4a73c8ff', '#4a73c7ff', '#4972c7ff', '#4972c7ff', '#4972c7ff', '#4971c7ff', '#4971c6ff', '#4870c6ff', '#4870c6ff', '#4870c6ff', '#486fc6ff', '#476fc5ff', '#476ec5ff', '#476ec5ff', '#476ec5ff', '#476dc5ff', '#466dc4ff', '#466cc4ff', '#466cc4ff', '#466bc4ff', '#456bc4ff', '#456bc3ff', '#456ac3ff', '#456ac3ff', '#4569c3ff', '#4469c3ff', '#4469c2ff', '#4468c2ff', '#4468c2ff', '#4367c2ff', '#4367c2ff', '#4367c1ff', '#4366c1ff', '#4366c1ff', '#4265c1ff', '#4265c1ff', '#4265c0ff', '#4264c0ff', '#4164c0ff', '#4163c0ff', '#4163c0ff', '#4163bfff', '#4162bfff', '#4062bfff', '#4061bfff', '#4061bfff', '#4061beff', '#3f60beff', '#3f60beff', '#3f5fbeff', '#3f5fbeff', '#3f5ebdff', '#3e5ebdff', '#3e5ebdff', '#3e5dbdff', '#3e5dbdff', '#3d5cbcff', '#3d5cbcff', '#3d5cbcff', '#3d5bbcff', '#3d5bbcff', '#3c5abbff', '#3c5abbff', '#3c5abbff', '#3c59bbff', '#3b59bbff', '#3b58baff', '#3b58baff', '#3b58baff', '#3b57baff', '#3a57baff', '#3a56b9ff', '#3a56b9ff', '#3a56b9ff', '#3955b9ff', '#3955b9ff', '#3954b8ff', '#3954b8ff', '#3954b8ff', '#3853b8ff', '#3853b8ff', '#3852b7ff', '#3852b7ff', '#3751b7ff', '#3751b7ff', '#3751b7ff', '#3750b6ff', '#3750b6ff', '#364fb6ff', '#364fb6ff', '#364fb6ff', '#364eb5ff', '#354eb5ff', '#354db5ff', '#354db5ff', '#354db5ff', '#354cb4ff', '#344cb4ff', '#344bb4ff', '#344bb4ff', '#344bb4ff', '#334ab3ff', '#334ab3ff', '#3349b3ff', '#3349b3ff', '#3349b3ff', '#3248b2ff', '#3248b2ff', '#3247b2ff', '#3247b2ff', '#3246b2ff', '#3146b1ff', '#3146b1ff', '#3145b1ff', '#3145b1ff', '#3044b1ff', '#3044b0ff', '#3044b0ff', '#3043b0ff', '#3043b0ff', '#2f42b0ff', '#2f42afff', '#2f42afff', '#2f41afff', '#2e41afff', '#2e40afff', '#2e40aeff', '#2e40aeff', '#2e3faeff', '#2d3faeff', '#2d3eaeff', '#2d3eadff', '#2d3eadff', '#2c3dadff', '#2c3dadff', '#2c3cadff', '#2c3cacff', '#2c3cacff', '#2b3bacff', '#2b3bacff', '#2b3aacff', '#2b3aabff', '#2a39abff', '#2a39abff', '#2a39abff', '#2a38abff', '#2a38aaff', '#2937aaff', '#2937aaff', '#2937aaff', '#2936aaff', '#2836a9ff', '#2835a9ff', '#2835a9ff', '#2835a9ff', '#2834a9ff', '#2734a8ff', '#2733a8ff', '#2733a8ff', '#2733a8ff', '#2632a8ff', '#2632a7ff', '#2631a7ff', '#2631a7ff', '#2631a7ff', '#2530a7ff', '#2530a6ff', '#252fa6ff', '#252fa6ff', '#242fa6ff', '#242ea6ff', '#242ea5ff', '#242da5ff', '#242da5ff', '#232ca5ff', '#232ca5ff', '#232ca4ff', '#232ba4ff', '#222ba4ff', '#222aa4ff', '#222aa4ff', '#222aa3ff', '#2229a3ff', '#2129a3ff', '#2128a3ff', '#2128a3ff', '#2128a2ff', '#2027a2ff', '#2027a2ff', '#2026a2ff', '#2026a2ff', '#2026a1ff', '#1f25a1ff', '#1f25a1ff', '#1f24a1ff', '#1f24a1ff', '#1e24a0ff', '#1e23a0ff', '#1e23a0ff', '#1e22a0ff', '#1e22a0ff', '#1d229fff', '#1d219fff', '#1d219fff', '#1d209fff', '#1c209fff', '#1c1f9fff', '#1c1f9eff', '#1c1f9eff', '#1c1e9eff', '#1b1e9eff', '#1b1d9eff', '#1b1d9dff', '#1b1d9dff', '#1a1c9dff', '#1a1c9dff', '#1a1b9dff', '#1a1b9cff', '#1a1b9cff']);
+    
+
+    color_map_ba4f66e9db8da433f25ab26f504a46cd.x = d3.scale.linear()
+              .domain([178756.0, 341680.0])
+              .range([0, 450 - 50]);
+
+    color_map_ba4f66e9db8da433f25ab26f504a46cd.legend = L.control({position: 'topright'});
+    color_map_ba4f66e9db8da433f25ab26f504a46cd.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_ba4f66e9db8da433f25ab26f504a46cd.legend.addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+
+    color_map_ba4f66e9db8da433f25ab26f504a46cd.xAxis = d3.svg.axis()
+        .scale(color_map_ba4f66e9db8da433f25ab26f504a46cd.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([178756.0, 341680.0]);
+
+    color_map_ba4f66e9db8da433f25ab26f504a46cd.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_ba4f66e9db8da433f25ab26f504a46cd.g = color_map_ba4f66e9db8da433f25ab26f504a46cd.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_ba4f66e9db8da433f25ab26f504a46cd.g.selectAll("rect")
+        .data(color_map_ba4f66e9db8da433f25ab26f504a46cd.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_ba4f66e9db8da433f25ab26f504a46cd.x(color_map_ba4f66e9db8da433f25ab26f504a46cd.color.domain()[i - 1]) : color_map_ba4f66e9db8da433f25ab26f504a46cd.x.range()[0],
+            x1: i < color_map_ba4f66e9db8da433f25ab26f504a46cd.color.domain().length ? color_map_ba4f66e9db8da433f25ab26f504a46cd.x(color_map_ba4f66e9db8da433f25ab26f504a46cd.color.domain()[i]) : color_map_ba4f66e9db8da433f25ab26f504a46cd.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_ba4f66e9db8da433f25ab26f504a46cd.g.call(color_map_ba4f66e9db8da433f25ab26f504a46cd.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043f\u043e\u0435\u0437\u0434\u043e\u043a");
+    
+            var circle_marker_54f00fe645df3ac3819661f09b044f78 = L.circleMarker(
+                [41.89227582401471, -87.61206046442936],
+                {"bubblingMouseEvents": true, "color": "#1a1b9c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a1b9c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 20.0, "stroke": true, "weight": 3}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+        var popup_5adbb42a9649ce1cf24f81c84ad685f7 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6f0cbfc385a1a73bfec059e22b74e07d = $(`<div id="html_6f0cbfc385a1a73bfec059e22b74e07d" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; padding: 10px; max-width: 300px;'>         <div style='display: flex; align-items: center; margin-bottom: 10px;'>             <div style='width: 20px; height: 20px; background-color: #1a1b9c;                          border-radius: 50%; margin-right: 10px;'></div>             <h3 style='margin: 0; color: #1a1b9c; font-size: 16px;'>                 #1 - Streeter Dr & Grand Ave             </h3>         </div>          <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Всего поездок:</span>                 <span style='color: #1a1b9c; font-size: 18px; margin-left: 10px;'>                     341,680                 </span>             </p>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Рейтинг:</span>                 <span style='color: #dc3545; margin-left: 10px;'>                     Топ-1                 </span>             </p>             <p style='margin: 5px 0; font-size: 12px; color: #6c757d;'>                 Координаты: 41.8923, -87.6121             </p>         </div>          <div style='margin-top: 10px; padding-top: 10px; border-top: 1px solid #dee2e6;'>             <div style='display: flex; justify-content: space-between; font-size: 12px;'>                 <span>Минимум: 178,756</span>                 <span>Максимум: 341,680</span>             </div>             <div style='height: 5px; background: linear-gradient(to right,                  #88e5ff, #1a1b9c);                  margin-top: 5px; border-radius: 3px;'></div>         </div>     </div>     </div>`)[0];
+                popup_5adbb42a9649ce1cf24f81c84ad685f7.setContent(html_6f0cbfc385a1a73bfec059e22b74e07d);
+            
+        
+
+        circle_marker_54f00fe645df3ac3819661f09b044f78.bindPopup(popup_5adbb42a9649ce1cf24f81c84ad685f7)
+        ;
+
+        
+    
+    
+            circle_marker_54f00fe645df3ac3819661f09b044f78.bindTooltip(
+                `<div>
+                     #1: Streeter Dr & Grand Ave (341,680 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_07e9b3cd91915df7341cb53d40abfe04 = L.marker(
+                [41.89227582401471, -87.61206046442936],
+                {
+}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+            var div_icon_f881eee8836e82eccab6e599f08be498 = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 3px solid #1a1b9c;\n                border-radius: 50%;\n                width: 35px;\n                height: 35px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #1a1b9c;\n                font-size: 16px;\n                box-shadow: 0 2px 5px rgba(0,0,0,0.3);\n                font-family: Arial, sans-serif;\n            \u0027\u003e1\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_07e9b3cd91915df7341cb53d40abfe04.setIcon(div_icon_f881eee8836e82eccab6e599f08be498);
+            
+    
+            var circle_marker_066820e6e2c2b18c13c229c1acbc904e = L.circleMarker(
+                [41.90096897409428, -87.62377163225338],
+                {"bubblingMouseEvents": true, "color": "#74c0ed", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#74c0ed", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 14.802778428158902, "stroke": true, "weight": 3}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+        var popup_c721397285f7ab380a4ca61b6c9fbe3e = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_3ebb00f19d8026d802e42964a7561169 = $(`<div id="html_3ebb00f19d8026d802e42964a7561169" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; padding: 10px; max-width: 300px;'>         <div style='display: flex; align-items: center; margin-bottom: 10px;'>             <div style='width: 20px; height: 20px; background-color: #74c0ed;                          border-radius: 50%; margin-right: 10px;'></div>             <h3 style='margin: 0; color: #1a1b9c; font-size: 16px;'>                 #2 - Michigan Ave & Oak St             </h3>         </div>          <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Всего поездок:</span>                 <span style='color: #1a1b9c; font-size: 18px; margin-left: 10px;'>                     208,496                 </span>             </p>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Рейтинг:</span>                 <span style='color: #dc3545; margin-left: 10px;'>                     Топ-2                 </span>             </p>             <p style='margin: 5px 0; font-size: 12px; color: #6c757d;'>                 Координаты: 41.9010, -87.6238             </p>         </div>          <div style='margin-top: 10px; padding-top: 10px; border-top: 1px solid #dee2e6;'>             <div style='display: flex; justify-content: space-between; font-size: 12px;'>                 <span>Минимум: 178,756</span>                 <span>Максимум: 341,680</span>             </div>             <div style='height: 5px; background: linear-gradient(to right,                  #88e5ff, #1a1b9c);                  margin-top: 5px; border-radius: 3px;'></div>         </div>     </div>     </div>`)[0];
+                popup_c721397285f7ab380a4ca61b6c9fbe3e.setContent(html_3ebb00f19d8026d802e42964a7561169);
+            
+        
+
+        circle_marker_066820e6e2c2b18c13c229c1acbc904e.bindPopup(popup_c721397285f7ab380a4ca61b6c9fbe3e)
+        ;
+
+        
+    
+    
+            circle_marker_066820e6e2c2b18c13c229c1acbc904e.bindTooltip(
+                `<div>
+                     #2: Michigan Ave & Oak St (208,496 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b08ce11d9fd50f7fd75c333f9a46827b = L.marker(
+                [41.90096897409428, -87.62377163225338],
+                {
+}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+            var div_icon_02fb5501ab2abcb5a9bcb8b7d1e74459 = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 3px solid #74c0ed;\n                border-radius: 50%;\n                width: 35px;\n                height: 35px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #74c0ed;\n                font-size: 16px;\n                box-shadow: 0 2px 5px rgba(0,0,0,0.3);\n                font-family: Arial, sans-serif;\n            \u0027\u003e2\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_b08ce11d9fd50f7fd75c333f9a46827b.setIcon(div_icon_02fb5501ab2abcb5a9bcb8b7d1e74459);
+            
+    
+            var circle_marker_7370b5d9fd0c8be1e247065acd9eb4fc = L.circleMarker(
+                [41.902944515730404, -87.63139938253035],
+                {"bubblingMouseEvents": true, "color": "#7accf2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7accf2", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 14.414110668851947, "stroke": true, "weight": 3}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+        var popup_e9678a162f4237ff1ae829a7ad81ea64 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_c29e214094af017f5200fb9ef4e8d605 = $(`<div id="html_c29e214094af017f5200fb9ef4e8d605" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; padding: 10px; max-width: 300px;'>         <div style='display: flex; align-items: center; margin-bottom: 10px;'>             <div style='width: 20px; height: 20px; background-color: #7accf2;                          border-radius: 50%; margin-right: 10px;'></div>             <h3 style='margin: 0; color: #1a1b9c; font-size: 16px;'>                 #3 - Clark St & Elm St             </h3>         </div>          <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Всего поездок:</span>                 <span style='color: #1a1b9c; font-size: 18px; margin-left: 10px;'>                     198,536                 </span>             </p>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Рейтинг:</span>                 <span style='color: #dc3545; margin-left: 10px;'>                     Топ-3                 </span>             </p>             <p style='margin: 5px 0; font-size: 12px; color: #6c757d;'>                 Координаты: 41.9029, -87.6314             </p>         </div>          <div style='margin-top: 10px; padding-top: 10px; border-top: 1px solid #dee2e6;'>             <div style='display: flex; justify-content: space-between; font-size: 12px;'>                 <span>Минимум: 178,756</span>                 <span>Максимум: 341,680</span>             </div>             <div style='height: 5px; background: linear-gradient(to right,                  #88e5ff, #1a1b9c);                  margin-top: 5px; border-radius: 3px;'></div>         </div>     </div>     </div>`)[0];
+                popup_e9678a162f4237ff1ae829a7ad81ea64.setContent(html_c29e214094af017f5200fb9ef4e8d605);
+            
+        
+
+        circle_marker_7370b5d9fd0c8be1e247065acd9eb4fc.bindPopup(popup_e9678a162f4237ff1ae829a7ad81ea64)
+        ;
+
+        
+    
+    
+            circle_marker_7370b5d9fd0c8be1e247065acd9eb4fc.bindTooltip(
+                `<div>
+                     #3: Clark St & Elm St (198,536 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c5c8a97a2783b187f85d84b435b38fa6 = L.marker(
+                [41.902944515730404, -87.63139938253035],
+                {
+}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+            var div_icon_8f3b6057e92b3904e6b2b36771a2495f = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 3px solid #7accf2;\n                border-radius: 50%;\n                width: 35px;\n                height: 35px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #7accf2;\n                font-size: 16px;\n                box-shadow: 0 2px 5px rgba(0,0,0,0.3);\n                font-family: Arial, sans-serif;\n            \u0027\u003e3\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_c5c8a97a2783b187f85d84b435b38fa6.setIcon(div_icon_8f3b6057e92b3904e6b2b36771a2495f);
+            
+    
+            var circle_marker_bac96de36f5ded896df4598651e068b5 = L.circleMarker(
+                [41.889179998237466, -87.63850840064018],
+                {"bubblingMouseEvents": true, "color": "#7dd1f5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7dd1f5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 14.243112463903847, "stroke": true, "weight": 3}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+        var popup_134ad094012a15c6af982b6cdbefad59 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_487384020d0cde5a07d872463de76a85 = $(`<div id="html_487384020d0cde5a07d872463de76a85" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; padding: 10px; max-width: 300px;'>         <div style='display: flex; align-items: center; margin-bottom: 10px;'>             <div style='width: 20px; height: 20px; background-color: #7dd1f5;                          border-radius: 50%; margin-right: 10px;'></div>             <h3 style='margin: 0; color: #1a1b9c; font-size: 16px;'>                 #4 - Kingsbury St & Kinzie St             </h3>         </div>          <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Всего поездок:</span>                 <span style='color: #1a1b9c; font-size: 18px; margin-left: 10px;'>                     194,154                 </span>             </p>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Рейтинг:</span>                 <span style='color: #dc3545; margin-left: 10px;'>                     Топ-4                 </span>             </p>             <p style='margin: 5px 0; font-size: 12px; color: #6c757d;'>                 Координаты: 41.8892, -87.6385             </p>         </div>          <div style='margin-top: 10px; padding-top: 10px; border-top: 1px solid #dee2e6;'>             <div style='display: flex; justify-content: space-between; font-size: 12px;'>                 <span>Минимум: 178,756</span>                 <span>Максимум: 341,680</span>             </div>             <div style='height: 5px; background: linear-gradient(to right,                  #88e5ff, #1a1b9c);                  margin-top: 5px; border-radius: 3px;'></div>         </div>     </div>     </div>`)[0];
+                popup_134ad094012a15c6af982b6cdbefad59.setContent(html_487384020d0cde5a07d872463de76a85);
+            
+        
+
+        circle_marker_bac96de36f5ded896df4598651e068b5.bindPopup(popup_134ad094012a15c6af982b6cdbefad59)
+        ;
+
+        
+    
+    
+            circle_marker_bac96de36f5ded896df4598651e068b5.bindTooltip(
+                `<div>
+                     #4: Kingsbury St & Kinzie St (194,154 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c3ad8734c555f004334a454304539ab5 = L.marker(
+                [41.889179998237466, -87.63850840064018],
+                {
+}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+            var div_icon_dc925f45e4b65be72b5769086fabda57 = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 3px solid #7dd1f5;\n                border-radius: 50%;\n                width: 35px;\n                height: 35px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #7dd1f5;\n                font-size: 16px;\n                box-shadow: 0 2px 5px rgba(0,0,0,0.3);\n                font-family: Arial, sans-serif;\n            \u0027\u003e4\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_c3ad8734c555f004334a454304539ab5.setIcon(div_icon_dc925f45e4b65be72b5769086fabda57);
+            
+    
+            var circle_marker_f3dc98b18766d07936b3695a525d4bfa = L.circleMarker(
+                [41.9121063882796, -87.63470435506527],
+                {"bubblingMouseEvents": true, "color": "#83dcfa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#83dcfa", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 13.92250058534301, "stroke": true, "weight": 3}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+        var popup_92c0c6b3f7e38e1458f14bc4f3f16f94 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_8466d6882355acfe6c41d51f15c7ab4b = $(`<div id="html_8466d6882355acfe6c41d51f15c7ab4b" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; padding: 10px; max-width: 300px;'>         <div style='display: flex; align-items: center; margin-bottom: 10px;'>             <div style='width: 20px; height: 20px; background-color: #83dcfa;                          border-radius: 50%; margin-right: 10px;'></div>             <h3 style='margin: 0; color: #1a1b9c; font-size: 16px;'>                 #5 - Wells St & Concord Ln             </h3>         </div>          <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Всего поездок:</span>                 <span style='color: #1a1b9c; font-size: 18px; margin-left: 10px;'>                     185,938                 </span>             </p>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Рейтинг:</span>                 <span style='color: #dc3545; margin-left: 10px;'>                     Топ-5                 </span>             </p>             <p style='margin: 5px 0; font-size: 12px; color: #6c757d;'>                 Координаты: 41.9121, -87.6347             </p>         </div>          <div style='margin-top: 10px; padding-top: 10px; border-top: 1px solid #dee2e6;'>             <div style='display: flex; justify-content: space-between; font-size: 12px;'>                 <span>Минимум: 178,756</span>                 <span>Максимум: 341,680</span>             </div>             <div style='height: 5px; background: linear-gradient(to right,                  #88e5ff, #1a1b9c);                  margin-top: 5px; border-radius: 3px;'></div>         </div>     </div>     </div>`)[0];
+                popup_92c0c6b3f7e38e1458f14bc4f3f16f94.setContent(html_8466d6882355acfe6c41d51f15c7ab4b);
+            
+        
+
+        circle_marker_f3dc98b18766d07936b3695a525d4bfa.bindPopup(popup_92c0c6b3f7e38e1458f14bc4f3f16f94)
+        ;
+
+        
+    
+    
+            circle_marker_f3dc98b18766d07936b3695a525d4bfa.bindTooltip(
+                `<div>
+                     #5: Wells St & Concord Ln (185,938 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a6588a681ae0071b3bc31638f24d9bd7 = L.marker(
+                [41.9121063882796, -87.63470435506527],
+                {
+}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+            var div_icon_c4ebc50c50c0988b5944055b52c4605b = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 3px solid #83dcfa;\n                border-radius: 50%;\n                width: 35px;\n                height: 35px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #83dcfa;\n                font-size: 16px;\n                box-shadow: 0 2px 5px rgba(0,0,0,0.3);\n                font-family: Arial, sans-serif;\n            \u0027\u003e5\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_a6588a681ae0071b3bc31638f24d9bd7.setIcon(div_icon_c4ebc50c50c0988b5944055b52c4605b);
+            
+    
+            var circle_marker_a5b6caa5e563c6a4a1c887fa68b25a3e = L.circleMarker(
+                [41.87956555205409, -87.63996175811131],
+                {"bubblingMouseEvents": true, "color": "#83ddfb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#83ddfb", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 13.90248185436666, "stroke": true, "weight": 3}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+        var popup_2dad93b8b760a1a576edf98513aaed22 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_0a6e8fcd632ae69fef585e6eac28ace1 = $(`<div id="html_0a6e8fcd632ae69fef585e6eac28ace1" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; padding: 10px; max-width: 300px;'>         <div style='display: flex; align-items: center; margin-bottom: 10px;'>             <div style='width: 20px; height: 20px; background-color: #83ddfb;                          border-radius: 50%; margin-right: 10px;'></div>             <h3 style='margin: 0; color: #1a1b9c; font-size: 16px;'>                 #6 - Canal St & Adams St             </h3>         </div>          <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Всего поездок:</span>                 <span style='color: #1a1b9c; font-size: 18px; margin-left: 10px;'>                     185,425                 </span>             </p>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Рейтинг:</span>                 <span style='color: #dc3545; margin-left: 10px;'>                     Топ-6                 </span>             </p>             <p style='margin: 5px 0; font-size: 12px; color: #6c757d;'>                 Координаты: 41.8796, -87.6400             </p>         </div>          <div style='margin-top: 10px; padding-top: 10px; border-top: 1px solid #dee2e6;'>             <div style='display: flex; justify-content: space-between; font-size: 12px;'>                 <span>Минимум: 178,756</span>                 <span>Максимум: 341,680</span>             </div>             <div style='height: 5px; background: linear-gradient(to right,                  #88e5ff, #1a1b9c);                  margin-top: 5px; border-radius: 3px;'></div>         </div>     </div>     </div>`)[0];
+                popup_2dad93b8b760a1a576edf98513aaed22.setContent(html_0a6e8fcd632ae69fef585e6eac28ace1);
+            
+        
+
+        circle_marker_a5b6caa5e563c6a4a1c887fa68b25a3e.bindPopup(popup_2dad93b8b760a1a576edf98513aaed22)
+        ;
+
+        
+    
+    
+            circle_marker_a5b6caa5e563c6a4a1c887fa68b25a3e.bindTooltip(
+                `<div>
+                     #6: Canal St & Adams St (185,425 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bc2d9c850f19aafa0e8a9a54ed74aa8e = L.marker(
+                [41.87956555205409, -87.63996175811131],
+                {
+}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+            var div_icon_e16bbcd5d0839810625edcef9977ddc2 = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 3px solid #83ddfb;\n                border-radius: 50%;\n                width: 35px;\n                height: 35px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #83ddfb;\n                font-size: 16px;\n                box-shadow: 0 2px 5px rgba(0,0,0,0.3);\n                font-family: Arial, sans-serif;\n            \u0027\u003e6\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_bc2d9c850f19aafa0e8a9a54ed74aa8e.setIcon(div_icon_e16bbcd5d0839810625edcef9977ddc2);
+            
+    
+            var circle_marker_3c5869cc82667746154b438e36d309e3 = L.circleMarker(
+                [41.88105695593118, -87.62409352249176],
+                {"bubblingMouseEvents": true, "color": "#84ddfb", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#84ddfb", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 13.867556388043392, "stroke": true, "weight": 3}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+        var popup_f1b2370823bac27dc3fc2980ac8f6b00 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_51e447bb9d401053e91976738fe4ca0c = $(`<div id="html_51e447bb9d401053e91976738fe4ca0c" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; padding: 10px; max-width: 300px;'>         <div style='display: flex; align-items: center; margin-bottom: 10px;'>             <div style='width: 20px; height: 20px; background-color: #84ddfb;                          border-radius: 50%; margin-right: 10px;'></div>             <h3 style='margin: 0; color: #1a1b9c; font-size: 16px;'>                 #7 - Millennium Park             </h3>         </div>          <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Всего поездок:</span>                 <span style='color: #1a1b9c; font-size: 18px; margin-left: 10px;'>                     184,530                 </span>             </p>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Рейтинг:</span>                 <span style='color: #dc3545; margin-left: 10px;'>                     Топ-7                 </span>             </p>             <p style='margin: 5px 0; font-size: 12px; color: #6c757d;'>                 Координаты: 41.8811, -87.6241             </p>         </div>          <div style='margin-top: 10px; padding-top: 10px; border-top: 1px solid #dee2e6;'>             <div style='display: flex; justify-content: space-between; font-size: 12px;'>                 <span>Минимум: 178,756</span>                 <span>Максимум: 341,680</span>             </div>             <div style='height: 5px; background: linear-gradient(to right,                  #88e5ff, #1a1b9c);                  margin-top: 5px; border-radius: 3px;'></div>         </div>     </div>     </div>`)[0];
+                popup_f1b2370823bac27dc3fc2980ac8f6b00.setContent(html_51e447bb9d401053e91976738fe4ca0c);
+            
+        
+
+        circle_marker_3c5869cc82667746154b438e36d309e3.bindPopup(popup_f1b2370823bac27dc3fc2980ac8f6b00)
+        ;
+
+        
+    
+    
+            circle_marker_3c5869cc82667746154b438e36d309e3.bindTooltip(
+                `<div>
+                     #7: Millennium Park (184,530 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e99bcd733a3a2ff17c3dbd7854e94e54 = L.marker(
+                [41.88105695593118, -87.62409352249176],
+                {
+}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+            var div_icon_eb5f41ebddb7d5f1a18c2e21bf0d6531 = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 3px solid #84ddfb;\n                border-radius: 50%;\n                width: 35px;\n                height: 35px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #84ddfb;\n                font-size: 16px;\n                box-shadow: 0 2px 5px rgba(0,0,0,0.3);\n                font-family: Arial, sans-serif;\n            \u0027\u003e7\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_e99bcd733a3a2ff17c3dbd7854e94e54.setIcon(div_icon_eb5f41ebddb7d5f1a18c2e21bf0d6531);
+            
+    
+            var circle_marker_bb742019a4ae8df79aa5d39d57117498 = L.circleMarker(
+                [41.7909592513868, -87.59992117308327],
+                {"bubblingMouseEvents": true, "color": "#87e3fe", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#87e3fe", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 13.6970264575041, "stroke": true, "weight": 3}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+        var popup_a17ec53aa834c7545e6dde81cd15b8d2 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_05e5668819eadc9fe20f33dd0ca514b1 = $(`<div id="html_05e5668819eadc9fe20f33dd0ca514b1" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; padding: 10px; max-width: 300px;'>         <div style='display: flex; align-items: center; margin-bottom: 10px;'>             <div style='width: 20px; height: 20px; background-color: #87e3fe;                          border-radius: 50%; margin-right: 10px;'></div>             <h3 style='margin: 0; color: #1a1b9c; font-size: 16px;'>                 #8 - University Ave & 57th St             </h3>         </div>          <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Всего поездок:</span>                 <span style='color: #1a1b9c; font-size: 18px; margin-left: 10px;'>                     180,160                 </span>             </p>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Рейтинг:</span>                 <span style='color: #dc3545; margin-left: 10px;'>                     Топ-8                 </span>             </p>             <p style='margin: 5px 0; font-size: 12px; color: #6c757d;'>                 Координаты: 41.7910, -87.5999             </p>         </div>          <div style='margin-top: 10px; padding-top: 10px; border-top: 1px solid #dee2e6;'>             <div style='display: flex; justify-content: space-between; font-size: 12px;'>                 <span>Минимум: 178,756</span>                 <span>Максимум: 341,680</span>             </div>             <div style='height: 5px; background: linear-gradient(to right,                  #88e5ff, #1a1b9c);                  margin-top: 5px; border-radius: 3px;'></div>         </div>     </div>     </div>`)[0];
+                popup_a17ec53aa834c7545e6dde81cd15b8d2.setContent(html_05e5668819eadc9fe20f33dd0ca514b1);
+            
+        
+
+        circle_marker_bb742019a4ae8df79aa5d39d57117498.bindPopup(popup_a17ec53aa834c7545e6dde81cd15b8d2)
+        ;
+
+        
+    
+    
+            circle_marker_bb742019a4ae8df79aa5d39d57117498.bindTooltip(
+                `<div>
+                     #8: University Ave & 57th St (180,160 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f9f5c4226eb131233153cc59fb1c5e21 = L.marker(
+                [41.7909592513868, -87.59992117308327],
+                {
+}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+            var div_icon_23426d4cb9e04af0b355b6e21f175545 = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 3px solid #87e3fe;\n                border-radius: 50%;\n                width: 35px;\n                height: 35px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #87e3fe;\n                font-size: 16px;\n                box-shadow: 0 2px 5px rgba(0,0,0,0.3);\n                font-family: Arial, sans-serif;\n            \u0027\u003e8\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_f9f5c4226eb131233153cc59fb1c5e21.setIcon(div_icon_23426d4cb9e04af0b355b6e21f175545);
+            
+    
+            var circle_marker_7df7df24f44db9027f4a504b0d2db367 = L.circleMarker(
+                [41.92626983469665, -87.63086207875709],
+                {"bubblingMouseEvents": true, "color": "#87e4fe", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#87e4fe", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 13.676110200577538, "stroke": true, "weight": 3}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+        var popup_74846574d3c7ff078c7dc911a5977cb6 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_00db12cd71222e5034da79e8df6e4598 = $(`<div id="html_00db12cd71222e5034da79e8df6e4598" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; padding: 10px; max-width: 300px;'>         <div style='display: flex; align-items: center; margin-bottom: 10px;'>             <div style='width: 20px; height: 20px; background-color: #87e4fe;                          border-radius: 50%; margin-right: 10px;'></div>             <h3 style='margin: 0; color: #1a1b9c; font-size: 16px;'>                 #9 - Theater on the Lake             </h3>         </div>          <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Всего поездок:</span>                 <span style='color: #1a1b9c; font-size: 18px; margin-left: 10px;'>                     179,624                 </span>             </p>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Рейтинг:</span>                 <span style='color: #dc3545; margin-left: 10px;'>                     Топ-9                 </span>             </p>             <p style='margin: 5px 0; font-size: 12px; color: #6c757d;'>                 Координаты: 41.9263, -87.6309             </p>         </div>          <div style='margin-top: 10px; padding-top: 10px; border-top: 1px solid #dee2e6;'>             <div style='display: flex; justify-content: space-between; font-size: 12px;'>                 <span>Минимум: 178,756</span>                 <span>Максимум: 341,680</span>             </div>             <div style='height: 5px; background: linear-gradient(to right,                  #88e5ff, #1a1b9c);                  margin-top: 5px; border-radius: 3px;'></div>         </div>     </div>     </div>`)[0];
+                popup_74846574d3c7ff078c7dc911a5977cb6.setContent(html_00db12cd71222e5034da79e8df6e4598);
+            
+        
+
+        circle_marker_7df7df24f44db9027f4a504b0d2db367.bindPopup(popup_74846574d3c7ff078c7dc911a5977cb6)
+        ;
+
+        
+    
+    
+            circle_marker_7df7df24f44db9027f4a504b0d2db367.bindTooltip(
+                `<div>
+                     #9: Theater on the Lake (179,624 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_496511b94ab193d4c33c6f452fdda432 = L.marker(
+                [41.92626983469665, -87.63086207875709],
+                {
+}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+            var div_icon_bf13d2bf5392f680d7b10dbec604020a = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 3px solid #87e4fe;\n                border-radius: 50%;\n                width: 35px;\n                height: 35px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #87e4fe;\n                font-size: 16px;\n                box-shadow: 0 2px 5px rgba(0,0,0,0.3);\n                font-family: Arial, sans-serif;\n            \u0027\u003e9\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_496511b94ab193d4c33c6f452fdda432.setIcon(div_icon_bf13d2bf5392f680d7b10dbec604020a);
+            
+    
+            var circle_marker_c488e1adba280344eb9094f30a6575dd = L.circleMarker(
+                [41.88097973561739, -87.61675652133827],
+                {"bubblingMouseEvents": true, "color": "#88e5ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#88e5ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 13.64223835167408, "stroke": true, "weight": 3}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+        var popup_c9bb955d05856890344309d1362c0b7a = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_c603aadbf55e63d5d9bb2b9979d4fcca = $(`<div id="html_c603aadbf55e63d5d9bb2b9979d4fcca" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial, sans-serif; padding: 10px; max-width: 300px;'>         <div style='display: flex; align-items: center; margin-bottom: 10px;'>             <div style='width: 20px; height: 20px; background-color: #88e5ff;                          border-radius: 50%; margin-right: 10px;'></div>             <h3 style='margin: 0; color: #1a1b9c; font-size: 16px;'>                 #10 - DuSable Lake Shore Dr & Monroe St             </h3>         </div>          <div style='background-color: #f8f9fa; padding: 10px; border-radius: 5px;'>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Всего поездок:</span>                 <span style='color: #1a1b9c; font-size: 18px; margin-left: 10px;'>                     178,756                 </span>             </p>             <p style='margin: 5px 0;'>                 <span style='font-weight: bold; color: #495057;'>Рейтинг:</span>                 <span style='color: #dc3545; margin-left: 10px;'>                     Топ-10                 </span>             </p>             <p style='margin: 5px 0; font-size: 12px; color: #6c757d;'>                 Координаты: 41.8810, -87.6168             </p>         </div>          <div style='margin-top: 10px; padding-top: 10px; border-top: 1px solid #dee2e6;'>             <div style='display: flex; justify-content: space-between; font-size: 12px;'>                 <span>Минимум: 178,756</span>                 <span>Максимум: 341,680</span>             </div>             <div style='height: 5px; background: linear-gradient(to right,                  #88e5ff, #1a1b9c);                  margin-top: 5px; border-radius: 3px;'></div>         </div>     </div>     </div>`)[0];
+                popup_c9bb955d05856890344309d1362c0b7a.setContent(html_c603aadbf55e63d5d9bb2b9979d4fcca);
+            
+        
+
+        circle_marker_c488e1adba280344eb9094f30a6575dd.bindPopup(popup_c9bb955d05856890344309d1362c0b7a)
+        ;
+
+        
+    
+    
+            circle_marker_c488e1adba280344eb9094f30a6575dd.bindTooltip(
+                `<div>
+                     #10: DuSable Lake Shore Dr & Monroe St (178,756 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eed196e7cbd3c3ee23a319e0e5e9f8bd = L.marker(
+                [41.88097973561739, -87.61675652133827],
+                {
+}
+            ).addTo(map_716a207d4e6529ba6db97fdf43b780f5);
+        
+    
+            var div_icon_17f66aa9c8f78a8325a7deb06c56f127 = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 3px solid #88e5ff;\n                border-radius: 50%;\n                width: 35px;\n                height: 35px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #88e5ff;\n                font-size: 16px;\n                box-shadow: 0 2px 5px rgba(0,0,0,0.3);\n                font-family: Arial, sans-serif;\n            \u0027\u003e10\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_eed196e7cbd3c3ee23a319e0e5e9f8bd.setIcon(div_icon_17f66aa9c8f78a8325a7deb06c56f127);
+            
+</script>
+</html>

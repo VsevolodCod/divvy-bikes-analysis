@@ -1,0 +1,3136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_de4f5983d5d27aa7b6b53e165d1222b9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 600.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                top: 10px; left: 50px; width: 500px;
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 10px;
+                border-radius: 5px; 
+                box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+                z-index: 9999; 
+                font-family: Arial, sans-serif;">
+        <h3 style="margin: 0; color: #1a1b9c;">
+            🚲 Топ-10 станций Divvy в Чикаго (2020-2025)
+        </h3>
+        <p style="margin: 5px 0 0 0; color: #666; font-size: 12px;">
+            Размер и цвет маркеров соответствуют количеству поездок<br>
+            Кликните на маркер для подробной информации
+        </p>
+    </div>
+    
+            <div class="folium-map" id="map_de4f5983d5d27aa7b6b53e165d1222b9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_de4f5983d5d27aa7b6b53e165d1222b9 = L.map(
+                "map_de4f5983d5d27aa7b6b53e165d1222b9",
+                {
+                    center: [41.8781, -87.6298],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+
+            
+
+        
+    
+            var tile_layer_c988da8bcf4e5a8f91660624cdd797c2 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c988da8bcf4e5a8f91660624cdd797c2.addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var tile_layer_ad76818f0fa534438dcd75cadbf1a5e5 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ad76818f0fa534438dcd75cadbf1a5e5.addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var tile_layer_ff8569ef22817dab68b3fbe27f717f3b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ff8569ef22817dab68b3fbe27f717f3b.addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var tile_layer_017905e9c2ddaac20dbabab2caad9b29 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_017905e9c2ddaac20dbabab2caad9b29.addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+    var color_map_8bb37d30822fd05619fcee679e016817 = {};
+
+    
+    color_map_8bb37d30822fd05619fcee679e016817.color = d3.scale.threshold()
+              .domain([149805.0, 150189.51903807616, 150574.0380761523, 150958.55711422846, 151343.0761523046, 151727.59519038076, 152112.11422845692, 152496.63326653306, 152881.15230460922, 153265.67134268538, 153650.19038076152, 154034.70941883768, 154419.2284569138, 154803.74749498998, 155188.26653306614, 155572.78557114227, 155957.30460921844, 156341.8236472946, 156726.34268537074, 157110.8617234469, 157495.38076152303, 157879.8997995992, 158264.41883767536, 158648.9378757515, 159033.45691382766, 159417.97595190382, 159802.49498997995, 160187.01402805612, 160571.53306613225, 160956.05210420841, 161340.57114228458, 161725.0901803607, 162109.60921843688, 162494.12825651304, 162878.64729458917, 163263.16633266534, 163647.68537074147, 164032.20440881763, 164416.7234468938, 164801.24248496993, 165185.7615230461, 165570.28056112226, 165954.7995991984, 166339.31863727455, 166723.8376753507, 167108.35671342685, 167492.87575150302, 167877.39478957915, 168261.9138276553, 168646.43286573148, 169030.9519038076, 169415.47094188377, 169799.9899799599, 170184.50901803607, 170569.02805611223, 170953.54709418837, 171338.06613226453, 171722.58517034067, 172107.10420841683, 172491.623246493, 172876.14228456913, 173260.6613226453, 173645.18036072145, 174029.6993987976, 174414.21843687375, 174798.7374749499, 175183.25651302605, 175567.7755511022, 175952.29458917835, 176336.8136272545, 176721.33266533067, 177105.8517034068, 177490.37074148297, 177874.8897795591, 178259.40881763527, 178643.92785571143, 179028.44689378756, 179412.96593186373, 179797.4849699399, 180182.00400801603, 180566.5230460922, 180951.04208416835, 181335.5611222445, 181720.08016032065, 182104.59919839678, 182489.11823647295, 182873.6372745491, 183258.15631262524, 183642.6753507014, 184027.19438877754, 184411.7134268537, 184796.23246492987, 185180.751503006, 185565.27054108217, 185949.7895791583, 186334.30861723446, 186718.82765531063, 187103.3466933868, 187487.86573146292, 187872.3847695391, 188256.90380761522, 188641.42284569138, 189025.94188376755, 189410.46092184368, 189794.97995991984, 190179.49899799598, 190564.01803607214, 190948.5370741483, 191333.05611222444, 191717.5751503006, 192102.09418837674, 192486.6132264529, 192871.13226452906, 193255.65130260523, 193640.17034068136, 194024.68937875752, 194409.20841683366, 194793.72745490982, 195178.24649298599, 195562.76553106212, 195947.28456913828, 196331.80360721442, 196716.32264529058, 197100.84168336674, 197485.36072144288, 197869.87975951904, 198254.39879759517, 198638.91783567134, 199023.4368737475, 199407.95591182366, 199792.4749498998, 200176.99398797596, 200561.5130260521, 200946.03206412826, 201330.55110220442, 201715.07014028056, 202099.58917835672, 202484.10821643285, 202868.62725450902, 203253.14629258518, 203637.66533066132, 204022.18436873748, 204406.7034068136, 204791.22244488978, 205175.74148296594, 205560.26052104207, 205944.77955911824, 206329.29859719437, 206713.81763527053, 207098.3366733467, 207482.85571142286, 207867.374749499, 208251.89378757516, 208636.4128256513, 209020.93186372746, 209405.45090180362, 209789.96993987975, 210174.48897795592, 210559.00801603205, 210943.5270541082, 211328.04609218438, 211712.5651302605, 212097.08416833667, 212481.6032064128, 212866.12224448897, 213250.64128256514, 213635.1603206413, 214019.67935871743, 214404.1983967936, 214788.71743486973, 215173.2364729459, 215557.75551102206, 215942.2745490982, 216326.79358717435, 216711.3126252505, 217095.83166332665, 217480.35070140281, 217864.86973947898, 218249.3887775551, 218633.90781563125, 219018.4268537074, 219402.94589178357, 219787.46492985974, 220171.98396793587, 220556.503006012, 220941.02204408817, 221325.54108216433, 221710.0601202405, 222094.57915831663, 222479.0981963928, 222863.61723446893, 223248.1362725451, 223632.65531062125, 224017.17434869742, 224401.69338677355, 224786.21242484968, 225170.73146292585, 225555.250501002, 225939.76953907817, 226324.2885771543, 226708.80761523044, 227093.3266533066, 227477.84569138277, 227862.36472945893, 228246.88376753507, 228631.40280561123, 229015.92184368736, 229400.44088176353, 229784.9599198397, 230169.47895791585, 230553.997995992, 230938.51703406812, 231323.03607214428, 231707.55511022045, 232092.0741482966, 232476.59318637275, 232861.11222444888, 233245.63126252504, 233630.1503006012, 234014.66933867737, 234399.1883767535, 234783.70741482964, 235168.2264529058, 235552.74549098196, 235937.26452905813, 236321.78356713426, 236706.30260521043, 237090.82164328656, 237475.34068136272, 237859.8597194389, 238244.37875751505, 238628.89779559118, 239013.41683366732, 239397.93587174348, 239782.45490981964, 240166.9739478958, 240551.49298597194, 240936.01202404808, 241320.53106212424, 241705.0501002004, 242089.56913827657, 242474.0881763527, 242858.60721442886, 243243.126252505, 243627.64529058116, 244012.16432865732, 244396.6833667335, 244781.20240480962, 245165.72144288576, 245550.24048096192, 245934.75951903808, 246319.27855711424, 246703.79759519038, 247088.3166332665, 247472.83567134268, 247857.35470941884, 248241.873747495, 248626.39278557114, 249010.9118236473, 249395.43086172343, 249779.9498997996, 250164.46893787576, 250548.98797595192, 250933.50701402806, 251318.0260521042, 251702.54509018036, 252087.06412825652, 252471.58316633268, 252856.10220440882, 253240.62124248495, 253625.1402805611, 254009.65931863728, 254394.17835671344, 254778.69739478957, 255163.21643286574, 255547.73547094187, 255932.25450901804, 256316.7735470942, 256701.29258517036, 257085.8116232465, 257470.33066132263, 257854.8496993988, 258239.36873747496, 258623.88777555112, 259008.40681362725, 259392.9258517034, 259777.44488977955, 260161.96392785572, 260546.48296593188, 260931.002004008, 261315.52104208415, 261700.0400801603, 262084.55911823647, 262469.07815631264, 262853.59719438874, 263238.1162324649, 263622.63527054107, 264007.15430861723, 264391.6733466934, 264776.19238476956, 265160.7114228457, 265545.2304609218, 265929.749498998, 266314.26853707415, 266698.7875751503, 267083.3066132264, 267467.8256513026, 267852.34468937875, 268236.8637274549, 268621.3827655311, 269005.90180360724, 269390.4208416834, 269774.9398797595, 270159.45891783567, 270543.97795591183, 270928.496993988, 271313.0160320641, 271697.53507014026, 272082.0541082164, 272466.5731462926, 272851.09218436875, 273235.6112224449, 273620.130260521, 274004.6492985972, 274389.16833667335, 274773.6873747495, 275158.2064128256, 275542.7254509018, 275927.24448897794, 276311.7635270541, 276696.28256513027, 277080.80160320643, 277465.3206412826, 277849.8396793587, 278234.35871743486, 278618.877755511, 279003.3967935872, 279387.9158316633, 279772.43486973946, 280156.9539078156, 280541.4729458918, 280925.99198396795, 281310.5110220441, 281695.0300601203, 282079.5490981964, 282464.06813627254, 282848.5871743487, 283233.1062124248, 283617.625250501, 284002.14428857714, 284386.6633266533, 284771.18236472947, 285155.70140280563, 285540.2204408818, 285924.73947895796, 286309.25851703406, 286693.7775551102, 287078.29659318633, 287462.8156312625, 287847.33466933866, 288231.8537074148, 288616.372745491, 289000.89178356715, 289385.4108216433, 289769.9298597195, 290154.4488977956, 290538.96793587174, 290923.4869739479, 291308.006012024, 291692.5250501002, 292077.04408817634, 292461.5631262525, 292846.08216432866, 293230.6012024048, 293615.120240481, 293999.63927855715, 294384.15831663326, 294768.6773547094, 295153.1963927856, 295537.7154308617, 295922.23446893785, 296306.753507014, 296691.2725450902, 297075.79158316634, 297460.3106212425, 297844.82965931867, 298229.34869739483, 298613.86773547094, 298998.3867735471, 299382.9058116232, 299767.42484969937, 300151.94388777553, 300536.4629258517, 300920.98196392786, 301305.501002004, 301690.0200400802, 302074.53907815635, 302459.05811623245, 302843.5771543086, 303228.0961923848, 303612.6152304609, 303997.13426853705, 304381.6533066132, 304766.1723446894, 305150.69138276554, 305535.2104208417, 305919.72945891786, 306304.248496994, 306688.76753507013, 307073.2865731463, 307457.80561122246, 307842.32464929856, 308226.8436873747, 308611.3627254509, 308995.88176352705, 309380.4008016032, 309764.9198396794, 310149.43887775554, 310533.9579158317, 310918.4769539078, 311302.995991984, 311687.5150300601, 312072.03406813624, 312456.5531062124, 312841.07214428857, 313225.59118236473, 313610.1102204409, 313994.62925851706, 314379.1482965932, 314763.6673346693, 315148.1863727455, 315532.70541082165, 315917.22444889776, 316301.7434869739, 316686.2625250501, 317070.78156312625, 317455.3006012024, 317839.8196392786, 318224.33867735474, 318608.8577154309, 318993.376753507, 319377.89579158317, 319762.4148296593, 320146.93386773544, 320531.4529058116, 320915.97194388777, 321300.4909819639, 321685.0100200401, 322069.52905811626, 322454.0480961924, 322838.5671342685, 323223.0861723447, 323607.60521042085, 323992.12424849696, 324376.6432865731, 324761.1623246493, 325145.68136272545, 325530.2004008016, 325914.7194388778, 326299.23847695393, 326683.7575150301, 327068.2765531062, 327452.79559118237, 327837.31462925853, 328221.83366733463, 328606.3527054108, 328990.87174348696, 329375.3907815631, 329759.9098196393, 330144.42885771545, 330528.9478957916, 330913.4669338678, 331297.9859719439, 331682.50501002005, 332067.02404809615, 332451.5430861723, 332836.0621242485, 333220.58116232464, 333605.1002004008, 333989.61923847697, 334374.13827655313, 334758.6573146293, 335143.1763527054, 335527.69539078156, 335912.2144288577, 336296.73346693383, 336681.25250501, 337065.77154308616, 337450.2905811623, 337834.8096192385, 338219.32865731465, 338603.8476953908, 338988.366733467, 339372.8857715431, 339757.40480961924, 340141.9238476954, 340526.4428857715, 340910.9619238477, 341295.48096192384, 341680.0])
+              .range(['#88e5ffff', '#88e5ffff', '#88e5ffff', '#87e4ffff', '#87e4ffff', '#87e3ffff', '#87e3feff', '#86e3feff', '#86e2feff', '#86e2feff', '#86e1feff', '#86e1fdff', '#85e1fdff', '#85e0fdff', '#85e0fdff', '#85dffdff', '#84dffcff', '#84defcff', '#84defcff', '#84defcff', '#84ddfcff', '#83ddfbff', '#83dcfbff', '#83dcfbff', '#83dcfbff', '#83dbfbff', '#82dbfaff', '#82dafaff', '#82dafaff', '#82dafaff', '#81d9faff', '#81d9f9ff', '#81d8f9ff', '#81d8f9ff', '#81d8f9ff', '#80d7f9ff', '#80d7f8ff', '#80d6f8ff', '#80d6f8ff', '#7fd6f8ff', '#7fd5f8ff', '#7fd5f7ff', '#7fd4f7ff', '#7fd4f7ff', '#7ed4f7ff', '#7ed3f7ff', '#7ed3f6ff', '#7ed2f6ff', '#7dd2f6ff', '#7dd1f6ff', '#7dd1f6ff', '#7dd1f5ff', '#7dd0f5ff', '#7cd0f5ff', '#7ccff5ff', '#7ccff5ff', '#7ccff4ff', '#7bcef4ff', '#7bcef4ff', '#7bcdf4ff', '#7bcdf4ff', '#7bcdf3ff', '#7accf3ff', '#7accf3ff', '#7acbf3ff', '#7acbf3ff', '#79cbf2ff', '#79caf2ff', '#79caf2ff', '#79c9f2ff', '#79c9f2ff', '#78c9f1ff', '#78c8f1ff', '#78c8f1ff', '#78c7f1ff', '#77c7f1ff', '#77c7f0ff', '#77c6f0ff', '#77c6f0ff', '#77c5f0ff', '#76c5f0ff', '#76c4efff', '#76c4efff', '#76c4efff', '#75c3efff', '#75c3efff', '#75c2eeff', '#75c2eeff', '#75c2eeff', '#74c1eeff', '#74c1eeff', '#74c0edff', '#74c0edff', '#73c0edff', '#73bfedff', '#73bfedff', '#73beecff', '#73beecff', '#72beecff', '#72bdecff', '#72bdecff', '#72bcebff', '#71bcebff', '#71bcebff', '#71bbebff', '#71bbebff', '#71baeaff', '#70baeaff', '#70baeaff', '#70b9eaff', '#70b9eaff', '#6fb8e9ff', '#6fb8e9ff', '#6fb7e9ff', '#6fb7e9ff', '#6fb7e9ff', '#6eb6e8ff', '#6eb6e8ff', '#6eb5e8ff', '#6eb5e8ff', '#6db5e8ff', '#6db4e7ff', '#6db4e7ff', '#6db3e7ff', '#6db3e7ff', '#6cb3e7ff', '#6cb2e6ff', '#6cb2e6ff', '#6cb1e6ff', '#6bb1e6ff', '#6bb1e6ff', '#6bb0e5ff', '#6bb0e5ff', '#6bafe5ff', '#6aafe5ff', '#6aafe5ff', '#6aaee4ff', '#6aaee4ff', '#69ade4ff', '#69ade4ff', '#69ade4ff', '#69ace3ff', '#69ace3ff', '#68abe3ff', '#68abe3ff', '#68aae3ff', '#68aae2ff', '#68aae2ff', '#67a9e2ff', '#67a9e2ff', '#67a8e2ff', '#67a8e1ff', '#66a8e1ff', '#66a7e1ff', '#66a7e1ff', '#66a6e1ff', '#66a6e0ff', '#65a6e0ff', '#65a5e0ff', '#65a5e0ff', '#65a4e0ff', '#64a4dfff', '#64a4dfff', '#64a3dfff', '#64a3dfff', '#64a2dfff', '#63a2deff', '#63a2deff', '#63a1deff', '#63a1deff', '#62a0deff', '#62a0ddff', '#629fddff', '#629fddff', '#629fddff', '#619eddff', '#619edcff', '#619ddcff', '#619ddcff', '#609ddcff', '#609cdcff', '#609cdbff', '#609bdbff', '#609bdbff', '#5f9bdbff', '#5f9adbff', '#5f9adaff', '#5f99daff', '#5e99daff', '#5e99daff', '#5e98daff', '#5e98d9ff', '#5e97d9ff', '#5d97d9ff', '#5d97d9ff', '#5d96d9ff', '#5d96d8ff', '#5c95d8ff', '#5c95d8ff', '#5c95d8ff', '#5c94d8ff', '#5c94d7ff', '#5b93d7ff', '#5b93d7ff', '#5b92d7ff', '#5b92d7ff', '#5a92d6ff', '#5a91d6ff', '#5a91d6ff', '#5a90d6ff', '#5a90d6ff', '#5990d5ff', '#598fd5ff', '#598fd5ff', '#598ed5ff', '#588ed5ff', '#588ed4ff', '#588dd4ff', '#588dd4ff', '#588cd4ff', '#578cd4ff', '#578cd3ff', '#578bd3ff', '#578bd3ff', '#568ad3ff', '#568ad3ff', '#568ad2ff', '#5689d2ff', '#5689d2ff', '#5588d2ff', '#5588d2ff', '#5588d1ff', '#5587d1ff', '#5487d1ff', '#5486d1ff', '#5486d1ff', '#5485d0ff', '#5485d0ff', '#5385d0ff', '#5384d0ff', '#5384d0ff', '#5383cfff', '#5283cfff', '#5283cfff', '#5282cfff', '#5282cfff', '#5281cfff', '#5181ceff', '#5181ceff', '#5180ceff', '#5180ceff', '#507fceff', '#507fcdff', '#507fcdff', '#507ecdff', '#507ecdff', '#4f7dcdff', '#4f7dccff', '#4f7dccff', '#4f7cccff', '#4e7cccff', '#4e7bccff', '#4e7bcbff', '#4e7bcbff', '#4e7acbff', '#4d7acbff', '#4d79cbff', '#4d79caff', '#4d78caff', '#4d78caff', '#4c78caff', '#4c77caff', '#4c77c9ff', '#4c76c9ff', '#4b76c9ff', '#4b76c9ff', '#4b75c9ff', '#4b75c8ff', '#4b74c8ff', '#4a74c8ff', '#4a74c8ff', '#4a73c8ff', '#4a73c7ff', '#4972c7ff', '#4972c7ff', '#4972c7ff', '#4971c7ff', '#4971c6ff', '#4870c6ff', '#4870c6ff', '#4870c6ff', '#486fc6ff', '#476fc5ff', '#476ec5ff', '#476ec5ff', '#476ec5ff', '#476dc5ff', '#466dc4ff', '#466cc4ff', '#466cc4ff', '#466bc4ff', '#456bc4ff', '#456bc3ff', '#456ac3ff', '#456ac3ff', '#4569c3ff', '#4469c3ff', '#4469c2ff', '#4468c2ff', '#4468c2ff', '#4367c2ff', '#4367c2ff', '#4367c1ff', '#4366c1ff', '#4366c1ff', '#4265c1ff', '#4265c1ff', '#4265c0ff', '#4264c0ff', '#4164c0ff', '#4163c0ff', '#4163c0ff', '#4163bfff', '#4162bfff', '#4062bfff', '#4061bfff', '#4061bfff', '#4061beff', '#3f60beff', '#3f60beff', '#3f5fbeff', '#3f5fbeff', '#3f5ebdff', '#3e5ebdff', '#3e5ebdff', '#3e5dbdff', '#3e5dbdff', '#3d5cbcff', '#3d5cbcff', '#3d5cbcff', '#3d5bbcff', '#3d5bbcff', '#3c5abbff', '#3c5abbff', '#3c5abbff', '#3c59bbff', '#3b59bbff', '#3b58baff', '#3b58baff', '#3b58baff', '#3b57baff', '#3a57baff', '#3a56b9ff', '#3a56b9ff', '#3a56b9ff', '#3955b9ff', '#3955b9ff', '#3954b8ff', '#3954b8ff', '#3954b8ff', '#3853b8ff', '#3853b8ff', '#3852b7ff', '#3852b7ff', '#3751b7ff', '#3751b7ff', '#3751b7ff', '#3750b6ff', '#3750b6ff', '#364fb6ff', '#364fb6ff', '#364fb6ff', '#364eb5ff', '#354eb5ff', '#354db5ff', '#354db5ff', '#354db5ff', '#354cb4ff', '#344cb4ff', '#344bb4ff', '#344bb4ff', '#344bb4ff', '#334ab3ff', '#334ab3ff', '#3349b3ff', '#3349b3ff', '#3349b3ff', '#3248b2ff', '#3248b2ff', '#3247b2ff', '#3247b2ff', '#3246b2ff', '#3146b1ff', '#3146b1ff', '#3145b1ff', '#3145b1ff', '#3044b1ff', '#3044b0ff', '#3044b0ff', '#3043b0ff', '#3043b0ff', '#2f42b0ff', '#2f42afff', '#2f42afff', '#2f41afff', '#2e41afff', '#2e40afff', '#2e40aeff', '#2e40aeff', '#2e3faeff', '#2d3faeff', '#2d3eaeff', '#2d3eadff', '#2d3eadff', '#2c3dadff', '#2c3dadff', '#2c3cadff', '#2c3cacff', '#2c3cacff', '#2b3bacff', '#2b3bacff', '#2b3aacff', '#2b3aabff', '#2a39abff', '#2a39abff', '#2a39abff', '#2a38abff', '#2a38aaff', '#2937aaff', '#2937aaff', '#2937aaff', '#2936aaff', '#2836a9ff', '#2835a9ff', '#2835a9ff', '#2835a9ff', '#2834a9ff', '#2734a8ff', '#2733a8ff', '#2733a8ff', '#2733a8ff', '#2632a8ff', '#2632a7ff', '#2631a7ff', '#2631a7ff', '#2631a7ff', '#2530a7ff', '#2530a6ff', '#252fa6ff', '#252fa6ff', '#242fa6ff', '#242ea6ff', '#242ea5ff', '#242da5ff', '#242da5ff', '#232ca5ff', '#232ca5ff', '#232ca4ff', '#232ba4ff', '#222ba4ff', '#222aa4ff', '#222aa4ff', '#222aa3ff', '#2229a3ff', '#2129a3ff', '#2128a3ff', '#2128a3ff', '#2128a2ff', '#2027a2ff', '#2027a2ff', '#2026a2ff', '#2026a2ff', '#2026a1ff', '#1f25a1ff', '#1f25a1ff', '#1f24a1ff', '#1f24a1ff', '#1e24a0ff', '#1e23a0ff', '#1e23a0ff', '#1e22a0ff', '#1e22a0ff', '#1d229fff', '#1d219fff', '#1d219fff', '#1d209fff', '#1c209fff', '#1c1f9fff', '#1c1f9eff', '#1c1f9eff', '#1c1e9eff', '#1b1e9eff', '#1b1d9eff', '#1b1d9dff', '#1b1d9dff', '#1a1c9dff', '#1a1c9dff', '#1a1b9dff', '#1a1b9cff', '#1a1b9cff']);
+    
+
+    color_map_8bb37d30822fd05619fcee679e016817.x = d3.scale.linear()
+              .domain([149805.0, 341680.0])
+              .range([0, 450 - 50]);
+
+    color_map_8bb37d30822fd05619fcee679e016817.legend = L.control({position: 'topright'});
+    color_map_8bb37d30822fd05619fcee679e016817.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_8bb37d30822fd05619fcee679e016817.legend.addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+
+    color_map_8bb37d30822fd05619fcee679e016817.xAxis = d3.svg.axis()
+        .scale(color_map_8bb37d30822fd05619fcee679e016817.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([149805.0, 341680.0]);
+
+    color_map_8bb37d30822fd05619fcee679e016817.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_8bb37d30822fd05619fcee679e016817.g = color_map_8bb37d30822fd05619fcee679e016817.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_8bb37d30822fd05619fcee679e016817.g.selectAll("rect")
+        .data(color_map_8bb37d30822fd05619fcee679e016817.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_8bb37d30822fd05619fcee679e016817.x(color_map_8bb37d30822fd05619fcee679e016817.color.domain()[i - 1]) : color_map_8bb37d30822fd05619fcee679e016817.x.range()[0],
+            x1: i < color_map_8bb37d30822fd05619fcee679e016817.color.domain().length ? color_map_8bb37d30822fd05619fcee679e016817.x(color_map_8bb37d30822fd05619fcee679e016817.color.domain()[i]) : color_map_8bb37d30822fd05619fcee679e016817.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_8bb37d30822fd05619fcee679e016817.g.call(color_map_8bb37d30822fd05619fcee679e016817.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043f\u043e\u0435\u0437\u0434\u043e\u043a (2020-2025)");
+    
+            var circle_marker_363caac0b32fd718fabfc562c7d59a18 = L.circleMarker(
+                [41.89227582401471, -87.61206046442936],
+                {"bubblingMouseEvents": true, "color": "#1a1b9c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a1b9c", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 20.0, "stroke": true, "weight": 2}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+        var popup_b95b8601620d42bebc24a5af22b99439 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2cc2efcb8530721b0161c64344b197f1 = $(`<div id="html_2cc2efcb8530721b0161c64344b197f1" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial; font-size: 14px;'>                 <h4 style='color: #1a1b9c; margin-bottom: 5px;'>Streeter Dr & Grand Ave</h4>                 <p><strong>Всего поездок:</strong> 341,680</p>                 <p><strong>Место в топе:</strong> #1</p>                 <p><strong>Координаты:</strong> 41.8923, -87.6121</p>             </div>         </div>`)[0];
+                popup_b95b8601620d42bebc24a5af22b99439.setContent(html_2cc2efcb8530721b0161c64344b197f1);
+            
+        
+
+        circle_marker_363caac0b32fd718fabfc562c7d59a18.bindPopup(popup_b95b8601620d42bebc24a5af22b99439)
+        ;
+
+        
+    
+    
+            circle_marker_363caac0b32fd718fabfc562c7d59a18.bindTooltip(
+                `<div>
+                     Streeter Dr & Grand Ave (341,680 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e66263808e391750db94435b4b55f9db = L.marker(
+                [41.89277582401471, -87.61256046442936],
+                {
+}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var div_icon_4c0d6d2c1a2fc278594feedee4fdfdb5 = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 2px solid #1a1b9c;\n                border-radius: 50%;\n                width: 30px;\n                height: 30px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #1a1b9c;\n                font-size: 14px;\n            \u0027\u003e1\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_e66263808e391750db94435b4b55f9db.setIcon(div_icon_4c0d6d2c1a2fc278594feedee4fdfdb5);
+            
+    
+            var circle_marker_db6433fe69960bd29a26a847ca6add47 = L.circleMarker(
+                [41.90096897409428, -87.62377163225338],
+                {"bubblingMouseEvents": true, "color": "#66a7e0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#66a7e0", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 15.127604776398972, "stroke": true, "weight": 2}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+        var popup_f8a588fdd86894de49a5177482203f6b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7ac8b7eb0ad7e012fa375cd4d1232730 = $(`<div id="html_7ac8b7eb0ad7e012fa375cd4d1232730" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial; font-size: 14px;'>                 <h4 style='color: #66a7e0; margin-bottom: 5px;'>Michigan Ave & Oak St</h4>                 <p><strong>Всего поездок:</strong> 208,496</p>                 <p><strong>Место в топе:</strong> #2</p>                 <p><strong>Координаты:</strong> 41.9010, -87.6238</p>             </div>         </div>`)[0];
+                popup_f8a588fdd86894de49a5177482203f6b.setContent(html_7ac8b7eb0ad7e012fa375cd4d1232730);
+            
+        
+
+        circle_marker_db6433fe69960bd29a26a847ca6add47.bindPopup(popup_f8a588fdd86894de49a5177482203f6b)
+        ;
+
+        
+    
+    
+            circle_marker_db6433fe69960bd29a26a847ca6add47.bindTooltip(
+                `<div>
+                     Michigan Ave & Oak St (208,496 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7e34cef5e3efa2370d66257de34392ba = L.marker(
+                [41.901468974094286, -87.62427163225338],
+                {
+}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var div_icon_55ddbe2dc650bce6abf9b0726f7603ae = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 2px solid #66a7e0;\n                border-radius: 50%;\n                width: 30px;\n                height: 30px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #66a7e0;\n                font-size: 14px;\n            \u0027\u003e2\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_7e34cef5e3efa2370d66257de34392ba.setIcon(div_icon_55ddbe2dc650bce6abf9b0726f7603ae);
+            
+    
+            var circle_marker_59cd27b2e704c281f1dd2c6db85307c6 = L.circleMarker(
+                [41.902944515730404, -87.63139938253035],
+                {"bubblingMouseEvents": true, "color": "#6bb1e5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6bb1e5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 14.7632287520487, "stroke": true, "weight": 2}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+        var popup_d37cb086129434e5edb718ffda864601 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7ba5b28b8ee6f26c4dea10075ef672d8 = $(`<div id="html_7ba5b28b8ee6f26c4dea10075ef672d8" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial; font-size: 14px;'>                 <h4 style='color: #6bb1e5; margin-bottom: 5px;'>Clark St & Elm St</h4>                 <p><strong>Всего поездок:</strong> 198,536</p>                 <p><strong>Место в топе:</strong> #3</p>                 <p><strong>Координаты:</strong> 41.9029, -87.6314</p>             </div>         </div>`)[0];
+                popup_d37cb086129434e5edb718ffda864601.setContent(html_7ba5b28b8ee6f26c4dea10075ef672d8);
+            
+        
+
+        circle_marker_59cd27b2e704c281f1dd2c6db85307c6.bindPopup(popup_d37cb086129434e5edb718ffda864601)
+        ;
+
+        
+    
+    
+            circle_marker_59cd27b2e704c281f1dd2c6db85307c6.bindTooltip(
+                `<div>
+                     Clark St & Elm St (198,536 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_34346581995bcaa3fef5f5cfc4c1b043 = L.marker(
+                [41.903444515730406, -87.63189938253035],
+                {
+}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var div_icon_b3f69279d88f0e4d3c9ece756385b12d = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 2px solid #6bb1e5;\n                border-radius: 50%;\n                width: 30px;\n                height: 30px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #6bb1e5;\n                font-size: 14px;\n            \u0027\u003e3\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_34346581995bcaa3fef5f5cfc4c1b043.setIcon(div_icon_b3f69279d88f0e4d3c9ece756385b12d);
+            
+    
+            var circle_marker_cffaa15bb66a6162f63cc7f9eab8b976 = L.circleMarker(
+                [41.889179998237466, -87.63850840064018],
+                {"bubblingMouseEvents": true, "color": "#6eb6e8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6eb6e8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 14.602917934909858, "stroke": true, "weight": 2}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+        var popup_6756ce242f5c0c13554a65a5bfd78e81 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_348f46ecace056bfb0a3ecbb86703554 = $(`<div id="html_348f46ecace056bfb0a3ecbb86703554" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial; font-size: 14px;'>                 <h4 style='color: #6eb6e8; margin-bottom: 5px;'>Kingsbury St & Kinzie St</h4>                 <p><strong>Всего поездок:</strong> 194,154</p>                 <p><strong>Место в топе:</strong> #4</p>                 <p><strong>Координаты:</strong> 41.8892, -87.6385</p>             </div>         </div>`)[0];
+                popup_6756ce242f5c0c13554a65a5bfd78e81.setContent(html_348f46ecace056bfb0a3ecbb86703554);
+            
+        
+
+        circle_marker_cffaa15bb66a6162f63cc7f9eab8b976.bindPopup(popup_6756ce242f5c0c13554a65a5bfd78e81)
+        ;
+
+        
+    
+    
+            circle_marker_cffaa15bb66a6162f63cc7f9eab8b976.bindTooltip(
+                `<div>
+                     Kingsbury St & Kinzie St (194,154 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_90e5971b75e170ac973f95cdd4be674f = L.marker(
+                [41.88967999823747, -87.63900840064018],
+                {
+}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var div_icon_0ff6733d4fa68548dbe1a32aac50e958 = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 2px solid #6eb6e8;\n                border-radius: 50%;\n                width: 30px;\n                height: 30px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #6eb6e8;\n                font-size: 14px;\n            \u0027\u003e4\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_90e5971b75e170ac973f95cdd4be674f.setIcon(div_icon_0ff6733d4fa68548dbe1a32aac50e958);
+            
+    
+            var circle_marker_b404dd76b961f0b20fd6965a38f32b10 = L.circleMarker(
+                [41.9121063882796, -87.63470435506527],
+                {"bubblingMouseEvents": true, "color": "#73beec", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#73beec", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 14.302344298759074, "stroke": true, "weight": 2}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+        var popup_8ff921b130a8f5f7b148aac75c1760e3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_66292b1b8984bc46273819b6b0325e26 = $(`<div id="html_66292b1b8984bc46273819b6b0325e26" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial; font-size: 14px;'>                 <h4 style='color: #73beec; margin-bottom: 5px;'>Wells St & Concord Ln</h4>                 <p><strong>Всего поездок:</strong> 185,938</p>                 <p><strong>Место в топе:</strong> #5</p>                 <p><strong>Координаты:</strong> 41.9121, -87.6347</p>             </div>         </div>`)[0];
+                popup_8ff921b130a8f5f7b148aac75c1760e3.setContent(html_66292b1b8984bc46273819b6b0325e26);
+            
+        
+
+        circle_marker_b404dd76b961f0b20fd6965a38f32b10.bindPopup(popup_8ff921b130a8f5f7b148aac75c1760e3)
+        ;
+
+        
+    
+    
+            circle_marker_b404dd76b961f0b20fd6965a38f32b10.bindTooltip(
+                `<div>
+                     Wells St & Concord Ln (185,938 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_376b589e23573ee2a2a55d09a3e0edac = L.marker(
+                [41.9126063882796, -87.63520435506527],
+                {
+}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var div_icon_49a9ce5929c7f0b9216c397f8f0d1fab = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 2px solid #73beec;\n                border-radius: 50%;\n                width: 30px;\n                height: 30px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #73beec;\n                font-size: 14px;\n            \u0027\u003e5\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_376b589e23573ee2a2a55d09a3e0edac.setIcon(div_icon_49a9ce5929c7f0b9216c397f8f0d1fab);
+            
+    
+            var circle_marker_6662d7f828993bead44d5d5a131396d4 = L.circleMarker(
+                [41.87956555205409, -87.63996175811131],
+                {"bubblingMouseEvents": true, "color": "#73bfec", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#73bfec", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 14.283576738468742, "stroke": true, "weight": 2}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+        var popup_491a6bafe47c0817e4cb1f5e978c04b2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_22ad232c3769a2a6b8236130f8d3b314 = $(`<div id="html_22ad232c3769a2a6b8236130f8d3b314" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial; font-size: 14px;'>                 <h4 style='color: #73bfec; margin-bottom: 5px;'>Canal St & Adams St</h4>                 <p><strong>Всего поездок:</strong> 185,425</p>                 <p><strong>Место в топе:</strong> #6</p>                 <p><strong>Координаты:</strong> 41.8796, -87.6400</p>             </div>         </div>`)[0];
+                popup_491a6bafe47c0817e4cb1f5e978c04b2.setContent(html_22ad232c3769a2a6b8236130f8d3b314);
+            
+        
+
+        circle_marker_6662d7f828993bead44d5d5a131396d4.bindPopup(popup_491a6bafe47c0817e4cb1f5e978c04b2)
+        ;
+
+        
+    
+    
+            circle_marker_6662d7f828993bead44d5d5a131396d4.bindTooltip(
+                `<div>
+                     Canal St & Adams St (185,425 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_460448589ef40e31b0cac27134db800f = L.marker(
+                [41.88006555205409, -87.64046175811131],
+                {
+}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var div_icon_4f6ff05bfc3404c43954e6ba8bccc36e = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 2px solid #73bfec;\n                border-radius: 50%;\n                width: 30px;\n                height: 30px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #73bfec;\n                font-size: 14px;\n            \u0027\u003e6\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_460448589ef40e31b0cac27134db800f.setIcon(div_icon_4f6ff05bfc3404c43954e6ba8bccc36e);
+            
+    
+            var circle_marker_50b12de1516b889d097a754998f75d79 = L.circleMarker(
+                [41.88105695593118, -87.62409352249176],
+                {"bubblingMouseEvents": true, "color": "#74c0ed", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#74c0ed", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 14.250834113790681, "stroke": true, "weight": 2}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+        var popup_f389c412a2e7174970bab9d55bd98253 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dec26609b0bcecd12bd8355c43710e65 = $(`<div id="html_dec26609b0bcecd12bd8355c43710e65" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial; font-size: 14px;'>                 <h4 style='color: #74c0ed; margin-bottom: 5px;'>Millennium Park</h4>                 <p><strong>Всего поездок:</strong> 184,530</p>                 <p><strong>Место в топе:</strong> #7</p>                 <p><strong>Координаты:</strong> 41.8811, -87.6241</p>             </div>         </div>`)[0];
+                popup_f389c412a2e7174970bab9d55bd98253.setContent(html_dec26609b0bcecd12bd8355c43710e65);
+            
+        
+
+        circle_marker_50b12de1516b889d097a754998f75d79.bindPopup(popup_f389c412a2e7174970bab9d55bd98253)
+        ;
+
+        
+    
+    
+            circle_marker_50b12de1516b889d097a754998f75d79.bindTooltip(
+                `<div>
+                     Millennium Park (184,530 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_337dec40bcb151a32752c9dd0958d87d = L.marker(
+                [41.88155695593118, -87.62459352249176],
+                {
+}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var div_icon_566acb5007a6132b52ea306d63bd0e00 = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 2px solid #74c0ed;\n                border-radius: 50%;\n                width: 30px;\n                height: 30px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #74c0ed;\n                font-size: 14px;\n            \u0027\u003e7\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_337dec40bcb151a32752c9dd0958d87d.setIcon(div_icon_566acb5007a6132b52ea306d63bd0e00);
+            
+    
+            var circle_marker_dcbe7e03112cacc1b847dfd565867ad1 = L.circleMarker(
+                [41.7909592513868, -87.59992117308327],
+                {"bubblingMouseEvents": true, "color": "#76c5ef", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#76c5ef", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 14.090962303910093, "stroke": true, "weight": 2}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+        var popup_9354b4c767f584910decc2654a236645 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8a5683c5407056279ec16842a963ffb0 = $(`<div id="html_8a5683c5407056279ec16842a963ffb0" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial; font-size: 14px;'>                 <h4 style='color: #76c5ef; margin-bottom: 5px;'>University Ave & 57th St</h4>                 <p><strong>Всего поездок:</strong> 180,160</p>                 <p><strong>Место в топе:</strong> #8</p>                 <p><strong>Координаты:</strong> 41.7910, -87.5999</p>             </div>         </div>`)[0];
+                popup_9354b4c767f584910decc2654a236645.setContent(html_8a5683c5407056279ec16842a963ffb0);
+            
+        
+
+        circle_marker_dcbe7e03112cacc1b847dfd565867ad1.bindPopup(popup_9354b4c767f584910decc2654a236645)
+        ;
+
+        
+    
+    
+            circle_marker_dcbe7e03112cacc1b847dfd565867ad1.bindTooltip(
+                `<div>
+                     University Ave & 57th St (180,160 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d53e7f66b01ae9ad27763b535e5c0d4d = L.marker(
+                [41.791459251386804, -87.60042117308328],
+                {
+}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var div_icon_15de7a3f0087aa4ed56049dd6b0edc46 = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 2px solid #76c5ef;\n                border-radius: 50%;\n                width: 30px;\n                height: 30px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #76c5ef;\n                font-size: 14px;\n            \u0027\u003e8\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_d53e7f66b01ae9ad27763b535e5c0d4d.setIcon(div_icon_15de7a3f0087aa4ed56049dd6b0edc46);
+            
+    
+            var circle_marker_ff8203779acceea06a0753fe95d3606d = L.circleMarker(
+                [41.92626983469665, -87.63086207875709],
+                {"bubblingMouseEvents": true, "color": "#77c6ef", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#77c6ef", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 14.071353313041442, "stroke": true, "weight": 2}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+        var popup_73e814c9105325a673d17372ab779b13 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bed474a0087b3cb625135515174a1cc4 = $(`<div id="html_bed474a0087b3cb625135515174a1cc4" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial; font-size: 14px;'>                 <h4 style='color: #77c6ef; margin-bottom: 5px;'>Theater on the Lake</h4>                 <p><strong>Всего поездок:</strong> 179,624</p>                 <p><strong>Место в топе:</strong> #9</p>                 <p><strong>Координаты:</strong> 41.9263, -87.6309</p>             </div>         </div>`)[0];
+                popup_73e814c9105325a673d17372ab779b13.setContent(html_bed474a0087b3cb625135515174a1cc4);
+            
+        
+
+        circle_marker_ff8203779acceea06a0753fe95d3606d.bindPopup(popup_73e814c9105325a673d17372ab779b13)
+        ;
+
+        
+    
+    
+            circle_marker_ff8203779acceea06a0753fe95d3606d.bindTooltip(
+                `<div>
+                     Theater on the Lake (179,624 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_58a1e26d0e4126a4e4e0b2cbaa03139b = L.marker(
+                [41.92676983469665, -87.63136207875709],
+                {
+}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var div_icon_dee95f8894eae5492f5dcc8475122303 = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 2px solid #77c6ef;\n                border-radius: 50%;\n                width: 30px;\n                height: 30px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #77c6ef;\n                font-size: 14px;\n            \u0027\u003e9\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_58a1e26d0e4126a4e4e0b2cbaa03139b.setIcon(div_icon_dee95f8894eae5492f5dcc8475122303);
+            
+    
+            var circle_marker_5650962cdc1aee8a86ff25adfe8d8149 = L.circleMarker(
+                [41.88097973561739, -87.61675652133827],
+                {"bubblingMouseEvents": true, "color": "#77c6f0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#77c6f0", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 14.03959845469445, "stroke": true, "weight": 2}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+        var popup_e52e51436e7082de557cf231f33c3dbf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4f98099af2a6aadef33ebc43f411594a = $(`<div id="html_4f98099af2a6aadef33ebc43f411594a" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Arial; font-size: 14px;'>                 <h4 style='color: #77c6f0; margin-bottom: 5px;'>DuSable Lake Shore Dr & Monroe St</h4>                 <p><strong>Всего поездок:</strong> 178,756</p>                 <p><strong>Место в топе:</strong> #10</p>                 <p><strong>Координаты:</strong> 41.8810, -87.6168</p>             </div>         </div>`)[0];
+                popup_e52e51436e7082de557cf231f33c3dbf.setContent(html_4f98099af2a6aadef33ebc43f411594a);
+            
+        
+
+        circle_marker_5650962cdc1aee8a86ff25adfe8d8149.bindPopup(popup_e52e51436e7082de557cf231f33c3dbf)
+        ;
+
+        
+    
+    
+            circle_marker_5650962cdc1aee8a86ff25adfe8d8149.bindTooltip(
+                `<div>
+                     DuSable Lake Shore Dr & Monroe St (178,756 поездок)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c347c357ee3a373f9def611301f375c1 = L.marker(
+                [41.88147973561739, -87.61725652133828],
+                {
+}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var div_icon_ddac0695d5a634340fceef8abc93118a = L.divIcon({
+  "html": "\n            \u003cdiv style=\u0027\n                background-color: white;\n                border: 2px solid #77c6f0;\n                border-radius: 50%;\n                width: 30px;\n                height: 30px;\n                display: flex;\n                align-items: center;\n                justify-content: center;\n                font-weight: bold;\n                color: #77c6f0;\n                font-size: 14px;\n            \u0027\u003e10\u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_c347c357ee3a373f9def611301f375c1.setIcon(div_icon_ddac0695d5a634340fceef8abc93118a);
+            
+    
+            var feature_group_1a9ad85e6bd7cf3b4d209c09ac717c13 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_5c50953cfd37f2dd4635bec9a9012614 = L.marker(
+                [41.900968974094276, -87.62377163225344],
+                {
+}
+            ).addTo(feature_group_1a9ad85e6bd7cf3b4d209c09ac717c13);
+        
+    
+            var icon_03e72766f285afc01417782ad56062af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#1a1b9c",
+  "icon": "tint",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_65a1b8ce9a1cbe1b59239b6e2f95e6ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_55e7dcf247567691d07e6f488792d143 = $(`<div id="html_55e7dcf247567691d07e6f488792d143" style="width: 100.0%; height: 100.0%;">                     <div style='font-family: Arial; font-size: 14px;'>                         <h4 style='color: #1a1b9c'>Michigan Ave & Oak St</h4>                         <p><strong>Категория:</strong> Водная линия (озеро Michigan)</p>                         <p><strong>Всего поездок:</strong> 208,496.0</p>                         <p><strong>Координаты:</strong> 41.9010, -87.6238</p>                     </div>                 </div>`)[0];
+                popup_65a1b8ce9a1cbe1b59239b6e2f95e6ea.setContent(html_55e7dcf247567691d07e6f488792d143);
+            
+        
+
+        marker_5c50953cfd37f2dd4635bec9a9012614.bindPopup(popup_65a1b8ce9a1cbe1b59239b6e2f95e6ea)
+        ;
+
+        
+    
+    
+            marker_5c50953cfd37f2dd4635bec9a9012614.bindTooltip(
+                `<div>
+                     Michigan Ave & Oak St (Водная линия (озеро Michigan))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5c50953cfd37f2dd4635bec9a9012614.setIcon(icon_03e72766f285afc01417782ad56062af);
+            
+    
+            var marker_0824d0e594f21bc091e6b63ea4286085 = L.marker(
+                [41.88097973561739, -87.61675652133829],
+                {
+}
+            ).addTo(feature_group_1a9ad85e6bd7cf3b4d209c09ac717c13);
+        
+    
+            var icon_f1f2cdb494e3859160d78fd51686b075 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#1a1b9c",
+  "icon": "tint",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_138139ee5f1d5c8ace102260c6e4a289 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e9eefb24eb10e9b174e311d031b396dc = $(`<div id="html_e9eefb24eb10e9b174e311d031b396dc" style="width: 100.0%; height: 100.0%;">                     <div style='font-family: Arial; font-size: 14px;'>                         <h4 style='color: #1a1b9c'>DuSable Lake Shore Dr & Monroe St</h4>                         <p><strong>Категория:</strong> Водная линия (озеро Michigan)</p>                         <p><strong>Всего поездок:</strong> 178,756.0</p>                         <p><strong>Координаты:</strong> 41.8810, -87.6168</p>                     </div>                 </div>`)[0];
+                popup_138139ee5f1d5c8ace102260c6e4a289.setContent(html_e9eefb24eb10e9b174e311d031b396dc);
+            
+        
+
+        marker_0824d0e594f21bc091e6b63ea4286085.bindPopup(popup_138139ee5f1d5c8ace102260c6e4a289)
+        ;
+
+        
+    
+    
+            marker_0824d0e594f21bc091e6b63ea4286085.bindTooltip(
+                `<div>
+                     DuSable Lake Shore Dr & Monroe St (Водная линия (озеро Michigan))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0824d0e594f21bc091e6b63ea4286085.setIcon(icon_f1f2cdb494e3859160d78fd51686b075);
+            
+    
+            var marker_67a0bfcd2b020c68f01447470495f574 = L.marker(
+                [41.89227582401474, -87.61206046442936],
+                {
+}
+            ).addTo(feature_group_1a9ad85e6bd7cf3b4d209c09ac717c13);
+        
+    
+            var icon_17b13976a7f2a5668127f884004ce1aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#1a1b9c",
+  "icon": "tint",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e635f8619e64af2fbf8d05d02292352d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_752e0d00789af397e7fb1b1b2d94310f = $(`<div id="html_752e0d00789af397e7fb1b1b2d94310f" style="width: 100.0%; height: 100.0%;">                     <div style='font-family: Arial; font-size: 14px;'>                         <h4 style='color: #1a1b9c'>Streeter Dr & Grand Ave</h4>                         <p><strong>Категория:</strong> Водная линия (озеро Michigan)</p>                         <p><strong>Всего поездок:</strong> 341,680.0</p>                         <p><strong>Координаты:</strong> 41.8923, -87.6121</p>                     </div>                 </div>`)[0];
+                popup_e635f8619e64af2fbf8d05d02292352d.setContent(html_752e0d00789af397e7fb1b1b2d94310f);
+            
+        
+
+        marker_67a0bfcd2b020c68f01447470495f574.bindPopup(popup_e635f8619e64af2fbf8d05d02292352d)
+        ;
+
+        
+    
+    
+            marker_67a0bfcd2b020c68f01447470495f574.bindTooltip(
+                `<div>
+                     Streeter Dr & Grand Ave (Водная линия (озеро Michigan))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_67a0bfcd2b020c68f01447470495f574.setIcon(icon_17b13976a7f2a5668127f884004ce1aa);
+            
+    
+            var marker_ffba4cce5ba7c357ca8cef12d8865876 = L.marker(
+                [41.92626983469666, -87.63086207875716],
+                {
+}
+            ).addTo(feature_group_1a9ad85e6bd7cf3b4d209c09ac717c13);
+        
+    
+            var icon_2316e50ceb1dd7bff8af6c521da62ed8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#1a1b9c",
+  "icon": "tint",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_409900adbf135c3371ca4337dbbf704b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_def3a31e5c0deb8e783b4b808e75a526 = $(`<div id="html_def3a31e5c0deb8e783b4b808e75a526" style="width: 100.0%; height: 100.0%;">                     <div style='font-family: Arial; font-size: 14px;'>                         <h4 style='color: #1a1b9c'>Theater on the Lake</h4>                         <p><strong>Категория:</strong> Водная линия (озеро Michigan)</p>                         <p><strong>Всего поездок:</strong> 179,624.0</p>                         <p><strong>Координаты:</strong> 41.9263, -87.6309</p>                     </div>                 </div>`)[0];
+                popup_409900adbf135c3371ca4337dbbf704b.setContent(html_def3a31e5c0deb8e783b4b808e75a526);
+            
+        
+
+        marker_ffba4cce5ba7c357ca8cef12d8865876.bindPopup(popup_409900adbf135c3371ca4337dbbf704b)
+        ;
+
+        
+    
+    
+            marker_ffba4cce5ba7c357ca8cef12d8865876.bindTooltip(
+                `<div>
+                     Theater on the Lake (Водная линия (озеро Michigan))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ffba4cce5ba7c357ca8cef12d8865876.setIcon(icon_2316e50ceb1dd7bff8af6c521da62ed8);
+            
+    
+            var marker_24d1c238a818d364b3ffcc7bcfb6c49d = L.marker(
+                [41.91210638827961, -87.63470435506531],
+                {
+}
+            ).addTo(feature_group_1a9ad85e6bd7cf3b4d209c09ac717c13);
+        
+    
+            var icon_214e9c09a6c3ca1b9b2d3b77ed0a9025 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#ff6b6b",
+  "icon": "briefcase",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0d56fdc7b47af674cb64b04ee08249a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_72d45c4c825c86f34bf13237c146e83f = $(`<div id="html_72d45c4c825c86f34bf13237c146e83f" style="width: 100.0%; height: 100.0%;">                     <div style='font-family: Arial; font-size: 14px;'>                         <h4 style='color: #ff6b6b'>Wells St & Concord Ln</h4>                         <p><strong>Категория:</strong> Деловой центр (The Loop)</p>                         <p><strong>Всего поездок:</strong> 185,938.0</p>                         <p><strong>Координаты:</strong> 41.9121, -87.6347</p>                     </div>                 </div>`)[0];
+                popup_0d56fdc7b47af674cb64b04ee08249a5.setContent(html_72d45c4c825c86f34bf13237c146e83f);
+            
+        
+
+        marker_24d1c238a818d364b3ffcc7bcfb6c49d.bindPopup(popup_0d56fdc7b47af674cb64b04ee08249a5)
+        ;
+
+        
+    
+    
+            marker_24d1c238a818d364b3ffcc7bcfb6c49d.bindTooltip(
+                `<div>
+                     Wells St & Concord Ln (Деловой центр (The Loop))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_24d1c238a818d364b3ffcc7bcfb6c49d.setIcon(icon_214e9c09a6c3ca1b9b2d3b77ed0a9025);
+            
+    
+            var marker_5be01462d0b695d1f90fd184d3559154 = L.marker(
+                [41.87956555205409, -87.63996175811123],
+                {
+}
+            ).addTo(feature_group_1a9ad85e6bd7cf3b4d209c09ac717c13);
+        
+    
+            var icon_89b323aef62bab6dbe6c3d194a06723d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#ff6b6b",
+  "icon": "briefcase",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ffc9a9bbf63c02de7e5885c4dda3b962 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12caf2ad0c698aec9cae8f83682bdaa3 = $(`<div id="html_12caf2ad0c698aec9cae8f83682bdaa3" style="width: 100.0%; height: 100.0%;">                     <div style='font-family: Arial; font-size: 14px;'>                         <h4 style='color: #ff6b6b'>Canal St & Adams St</h4>                         <p><strong>Категория:</strong> Деловой центр (The Loop)</p>                         <p><strong>Всего поездок:</strong> 185,425.0</p>                         <p><strong>Координаты:</strong> 41.8796, -87.6400</p>                     </div>                 </div>`)[0];
+                popup_ffc9a9bbf63c02de7e5885c4dda3b962.setContent(html_12caf2ad0c698aec9cae8f83682bdaa3);
+            
+        
+
+        marker_5be01462d0b695d1f90fd184d3559154.bindPopup(popup_ffc9a9bbf63c02de7e5885c4dda3b962)
+        ;
+
+        
+    
+    
+            marker_5be01462d0b695d1f90fd184d3559154.bindTooltip(
+                `<div>
+                     Canal St & Adams St (Деловой центр (The Loop))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5be01462d0b695d1f90fd184d3559154.setIcon(icon_89b323aef62bab6dbe6c3d194a06723d);
+            
+    
+            var marker_674e7c5f7003aee4c63cc88607677e46 = L.marker(
+                [41.9029445157304, -87.63139938253036],
+                {
+}
+            ).addTo(feature_group_1a9ad85e6bd7cf3b4d209c09ac717c13);
+        
+    
+            var icon_b20e31b2373c6a53a704c158e0714827 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#51cf66",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a54a0c105098c11d0622e2128156d68 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1223eb07bd47ba4449008731cd8c2bed = $(`<div id="html_1223eb07bd47ba4449008731cd8c2bed" style="width: 100.0%; height: 100.0%;">                     <div style='font-family: Arial; font-size: 14px;'>                         <h4 style='color: #51cf66'>Clark St & Elm St</h4>                         <p><strong>Категория:</strong> Северные районы</p>                         <p><strong>Всего поездок:</strong> 198,536.0</p>                         <p><strong>Координаты:</strong> 41.9029, -87.6314</p>                     </div>                 </div>`)[0];
+                popup_4a54a0c105098c11d0622e2128156d68.setContent(html_1223eb07bd47ba4449008731cd8c2bed);
+            
+        
+
+        marker_674e7c5f7003aee4c63cc88607677e46.bindPopup(popup_4a54a0c105098c11d0622e2128156d68)
+        ;
+
+        
+    
+    
+            marker_674e7c5f7003aee4c63cc88607677e46.bindTooltip(
+                `<div>
+                     Clark St & Elm St (Северные районы)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_674e7c5f7003aee4c63cc88607677e46.setIcon(icon_b20e31b2373c6a53a704c158e0714827);
+            
+    
+            var marker_8d069e1eb86b6d57047c23c4db1d0946 = L.marker(
+                [41.88917999823745, -87.63850840064016],
+                {
+}
+            ).addTo(feature_group_1a9ad85e6bd7cf3b4d209c09ac717c13);
+        
+    
+            var icon_351e7950c4aa6cbd5b6e27df93333ace = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#51cf66",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0dda148b5f02322f6df0fa7768d9b862 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fb2deb8f6b4d0fd4122d5bfa9f268ce8 = $(`<div id="html_fb2deb8f6b4d0fd4122d5bfa9f268ce8" style="width: 100.0%; height: 100.0%;">                     <div style='font-family: Arial; font-size: 14px;'>                         <h4 style='color: #51cf66'>Kingsbury St & Kinzie St</h4>                         <p><strong>Категория:</strong> Северные районы</p>                         <p><strong>Всего поездок:</strong> 194,154.0</p>                         <p><strong>Координаты:</strong> 41.8892, -87.6385</p>                     </div>                 </div>`)[0];
+                popup_0dda148b5f02322f6df0fa7768d9b862.setContent(html_fb2deb8f6b4d0fd4122d5bfa9f268ce8);
+            
+        
+
+        marker_8d069e1eb86b6d57047c23c4db1d0946.bindPopup(popup_0dda148b5f02322f6df0fa7768d9b862)
+        ;
+
+        
+    
+    
+            marker_8d069e1eb86b6d57047c23c4db1d0946.bindTooltip(
+                `<div>
+                     Kingsbury St & Kinzie St (Северные районы)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8d069e1eb86b6d57047c23c4db1d0946.setIcon(icon_351e7950c4aa6cbd5b6e27df93333ace);
+            
+    
+            var marker_a06b9e78d6753504199b293e7a177f5c = L.marker(
+                [41.790959251386795, -87.59992117308329],
+                {
+}
+            ).addTo(feature_group_1a9ad85e6bd7cf3b4d209c09ac717c13);
+        
+    
+            var icon_8363ce31e27acd71ebff9d46b90235ae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "white",
+  "iconColor": "#ffd43b",
+  "icon": "education",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_91c27b6361ecda2001be8def45ff3307 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_03f24bc54dace135957e4a68baa8ae53 = $(`<div id="html_03f24bc54dace135957e4a68baa8ae53" style="width: 100.0%; height: 100.0%;">                     <div style='font-family: Arial; font-size: 14px;'>                         <h4 style='color: #ffd43b'>University Ave & 57th St</h4>                         <p><strong>Категория:</strong> Кампусы и образование</p>                         <p><strong>Всего поездок:</strong> 180,160.0</p>                         <p><strong>Координаты:</strong> 41.7910, -87.5999</p>                     </div>                 </div>`)[0];
+                popup_91c27b6361ecda2001be8def45ff3307.setContent(html_03f24bc54dace135957e4a68baa8ae53);
+            
+        
+
+        marker_a06b9e78d6753504199b293e7a177f5c.bindPopup(popup_91c27b6361ecda2001be8def45ff3307)
+        ;
+
+        
+    
+    
+            marker_a06b9e78d6753504199b293e7a177f5c.bindTooltip(
+                `<div>
+                     University Ave & 57th St (Кампусы и образование)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a06b9e78d6753504199b293e7a177f5c.setIcon(icon_8363ce31e27acd71ebff9d46b90235ae);
+            
+    
+            feature_group_1a9ad85e6bd7cf3b4d209c09ac717c13.addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var marker_cluster_18a662a86d43d1dbef9675639c267937 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_15f55370b02d66e0248c11af7711a0b9 = L.marker(
+                [41.89227582401471, -87.61206046442936],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_9ad6e00f3fe7107ff7bfff6e11c57af2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c080bebfe9ac4841806fe0df0efcd63e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_058572c6610be78acfc9de98b83ae53b = $(`<div id="html_058572c6610be78acfc9de98b83ae53b" style="width: 100.0%; height: 100.0%;">Streeter Dr & Grand Ave<br>341,680 поездок</div>`)[0];
+                popup_c080bebfe9ac4841806fe0df0efcd63e.setContent(html_058572c6610be78acfc9de98b83ae53b);
+            
+        
+
+        marker_15f55370b02d66e0248c11af7711a0b9.bindPopup(popup_c080bebfe9ac4841806fe0df0efcd63e)
+        ;
+
+        
+    
+    
+                marker_15f55370b02d66e0248c11af7711a0b9.setIcon(icon_9ad6e00f3fe7107ff7bfff6e11c57af2);
+            
+    
+            var marker_be47460ce67c1a654e078bb04457ccc8 = L.marker(
+                [41.90096897409428, -87.62377163225338],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_4b6f9effe61032c65e2a02c2608044ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fc8ca72c5d5c3484e24c6d6ba38e5b8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b3231de88b79563498dc04aec9e58a4 = $(`<div id="html_7b3231de88b79563498dc04aec9e58a4" style="width: 100.0%; height: 100.0%;">Michigan Ave & Oak St<br>208,496 поездок</div>`)[0];
+                popup_fc8ca72c5d5c3484e24c6d6ba38e5b8e.setContent(html_7b3231de88b79563498dc04aec9e58a4);
+            
+        
+
+        marker_be47460ce67c1a654e078bb04457ccc8.bindPopup(popup_fc8ca72c5d5c3484e24c6d6ba38e5b8e)
+        ;
+
+        
+    
+    
+                marker_be47460ce67c1a654e078bb04457ccc8.setIcon(icon_4b6f9effe61032c65e2a02c2608044ee);
+            
+    
+            var marker_59d7ffc0e125bf356c32cbdbfba50754 = L.marker(
+                [41.902944515730404, -87.63139938253035],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_1928a8ca999d2067aedce8330d0f2183 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e8b4216f2f204f8fe9ebf1bd31588303 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92b457bdbebfd3d4b96962bcc76ec554 = $(`<div id="html_92b457bdbebfd3d4b96962bcc76ec554" style="width: 100.0%; height: 100.0%;">Clark St & Elm St<br>198,536 поездок</div>`)[0];
+                popup_e8b4216f2f204f8fe9ebf1bd31588303.setContent(html_92b457bdbebfd3d4b96962bcc76ec554);
+            
+        
+
+        marker_59d7ffc0e125bf356c32cbdbfba50754.bindPopup(popup_e8b4216f2f204f8fe9ebf1bd31588303)
+        ;
+
+        
+    
+    
+                marker_59d7ffc0e125bf356c32cbdbfba50754.setIcon(icon_1928a8ca999d2067aedce8330d0f2183);
+            
+    
+            var marker_c8c6e7b01d7604704eaf74fa3c476c17 = L.marker(
+                [41.889179998237466, -87.63850840064018],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_64091648f04094af26afa4a2a4765660 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4f1c5b9f1ce13c47d8a6ec3953f40a48 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_afe184cd46637844ec840a84f8da3c53 = $(`<div id="html_afe184cd46637844ec840a84f8da3c53" style="width: 100.0%; height: 100.0%;">Kingsbury St & Kinzie St<br>194,154 поездок</div>`)[0];
+                popup_4f1c5b9f1ce13c47d8a6ec3953f40a48.setContent(html_afe184cd46637844ec840a84f8da3c53);
+            
+        
+
+        marker_c8c6e7b01d7604704eaf74fa3c476c17.bindPopup(popup_4f1c5b9f1ce13c47d8a6ec3953f40a48)
+        ;
+
+        
+    
+    
+                marker_c8c6e7b01d7604704eaf74fa3c476c17.setIcon(icon_64091648f04094af26afa4a2a4765660);
+            
+    
+            var marker_3c8e2e7e27f26aae0da49e5ea4089086 = L.marker(
+                [41.9121063882796, -87.63470435506527],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_6c8b59fd4c3cc2568db61987f2d4c9ca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a04fc9f076764ca981bfc0ef13ff4aa7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73ee8e97371af8f188c3c4d11eee9af0 = $(`<div id="html_73ee8e97371af8f188c3c4d11eee9af0" style="width: 100.0%; height: 100.0%;">Wells St & Concord Ln<br>185,938 поездок</div>`)[0];
+                popup_a04fc9f076764ca981bfc0ef13ff4aa7.setContent(html_73ee8e97371af8f188c3c4d11eee9af0);
+            
+        
+
+        marker_3c8e2e7e27f26aae0da49e5ea4089086.bindPopup(popup_a04fc9f076764ca981bfc0ef13ff4aa7)
+        ;
+
+        
+    
+    
+                marker_3c8e2e7e27f26aae0da49e5ea4089086.setIcon(icon_6c8b59fd4c3cc2568db61987f2d4c9ca);
+            
+    
+            var marker_bef745295c8ece37a2db7c12f85e64f9 = L.marker(
+                [41.87956555205409, -87.63996175811131],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_98efc7f1296da195a934dd80d826d34c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04d8b9a29369dc1695e49b65ffd3fd01 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ce68636548eb4d966359a4f780ee4a0 = $(`<div id="html_0ce68636548eb4d966359a4f780ee4a0" style="width: 100.0%; height: 100.0%;">Canal St & Adams St<br>185,425 поездок</div>`)[0];
+                popup_04d8b9a29369dc1695e49b65ffd3fd01.setContent(html_0ce68636548eb4d966359a4f780ee4a0);
+            
+        
+
+        marker_bef745295c8ece37a2db7c12f85e64f9.bindPopup(popup_04d8b9a29369dc1695e49b65ffd3fd01)
+        ;
+
+        
+    
+    
+                marker_bef745295c8ece37a2db7c12f85e64f9.setIcon(icon_98efc7f1296da195a934dd80d826d34c);
+            
+    
+            var marker_a8b3083bb0e0b22af27833544d09165c = L.marker(
+                [41.88105695593118, -87.62409352249176],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_f74092c3a743e144fe4a9195446d8e02 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c49d398a42b76b2c9bef85b70bee4428 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_03a4be2719917bdfbc00b79eed2264f7 = $(`<div id="html_03a4be2719917bdfbc00b79eed2264f7" style="width: 100.0%; height: 100.0%;">Millennium Park<br>184,530 поездок</div>`)[0];
+                popup_c49d398a42b76b2c9bef85b70bee4428.setContent(html_03a4be2719917bdfbc00b79eed2264f7);
+            
+        
+
+        marker_a8b3083bb0e0b22af27833544d09165c.bindPopup(popup_c49d398a42b76b2c9bef85b70bee4428)
+        ;
+
+        
+    
+    
+                marker_a8b3083bb0e0b22af27833544d09165c.setIcon(icon_f74092c3a743e144fe4a9195446d8e02);
+            
+    
+            var marker_fc14242934ee85708b231121d4243078 = L.marker(
+                [41.7909592513868, -87.59992117308327],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_594732990e4aeaf3601a0f1da602cfc6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ad7d45e3c4d637986246f603ad8eaced = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc18d53939da97225419116baf595b6a = $(`<div id="html_dc18d53939da97225419116baf595b6a" style="width: 100.0%; height: 100.0%;">University Ave & 57th St<br>180,160 поездок</div>`)[0];
+                popup_ad7d45e3c4d637986246f603ad8eaced.setContent(html_dc18d53939da97225419116baf595b6a);
+            
+        
+
+        marker_fc14242934ee85708b231121d4243078.bindPopup(popup_ad7d45e3c4d637986246f603ad8eaced)
+        ;
+
+        
+    
+    
+                marker_fc14242934ee85708b231121d4243078.setIcon(icon_594732990e4aeaf3601a0f1da602cfc6);
+            
+    
+            var marker_d9fae2591bd5301e7b774b5f198b7db2 = L.marker(
+                [41.92626983469665, -87.63086207875709],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_7b829894f24407597ab1a7a43fd1f003 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_daeec5708ff0cb5ac2e7cc2d30d013f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4be2a594078cc2dc49ecce452d97bb8d = $(`<div id="html_4be2a594078cc2dc49ecce452d97bb8d" style="width: 100.0%; height: 100.0%;">Theater on the Lake<br>179,624 поездок</div>`)[0];
+                popup_daeec5708ff0cb5ac2e7cc2d30d013f6.setContent(html_4be2a594078cc2dc49ecce452d97bb8d);
+            
+        
+
+        marker_d9fae2591bd5301e7b774b5f198b7db2.bindPopup(popup_daeec5708ff0cb5ac2e7cc2d30d013f6)
+        ;
+
+        
+    
+    
+                marker_d9fae2591bd5301e7b774b5f198b7db2.setIcon(icon_7b829894f24407597ab1a7a43fd1f003);
+            
+    
+            var marker_1eae6685c619054823139246bcc9ee62 = L.marker(
+                [41.88097973561739, -87.61675652133827],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_b17e0ada34eef8b32c3caf2253bd33f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f1f10a8973921fc48feaa1e18620a787 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d28e7685901ac27194a8450b911843ba = $(`<div id="html_d28e7685901ac27194a8450b911843ba" style="width: 100.0%; height: 100.0%;">DuSable Lake Shore Dr & Monroe St<br>178,756 поездок</div>`)[0];
+                popup_f1f10a8973921fc48feaa1e18620a787.setContent(html_d28e7685901ac27194a8450b911843ba);
+            
+        
+
+        marker_1eae6685c619054823139246bcc9ee62.bindPopup(popup_f1f10a8973921fc48feaa1e18620a787)
+        ;
+
+        
+    
+    
+                marker_1eae6685c619054823139246bcc9ee62.setIcon(icon_b17e0ada34eef8b32c3caf2253bd33f2);
+            
+    
+            var marker_89ebdc97c0709708299cb0b4982a8fcb = L.marker(
+                [41.90319103218964, -87.63439837286985],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_22ca8f038895ef2d18951228f4ed1856 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6326509fd328d1dbb5272df4af463b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74f907ad0b1364853d4cf183b488706f = $(`<div id="html_74f907ad0b1364853d4cf183b488706f" style="width: 100.0%; height: 100.0%;">Wells St & Elm St<br>168,148 поездок</div>`)[0];
+                popup_b6326509fd328d1dbb5272df4af463b2.setContent(html_74f907ad0b1364853d4cf183b488706f);
+            
+        
+
+        marker_89ebdc97c0709708299cb0b4982a8fcb.bindPopup(popup_b6326509fd328d1dbb5272df4af463b2)
+        ;
+
+        
+    
+    
+                marker_89ebdc97c0709708299cb0b4982a8fcb.setIcon(icon_22ca8f038895ef2d18951228f4ed1856);
+            
+    
+            var marker_ed7da9fad17d70bbdab7b41057f3e08d = L.marker(
+                [41.91171573087375, -87.6268173102343],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_3a14f242397859dc33062b4ef7a2851a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd1d91c2dca51d592bcf6e717da4bf75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1bece5bdb9d52a026ad6e8d1f7a42eea = $(`<div id="html_1bece5bdb9d52a026ad6e8d1f7a42eea" style="width: 100.0%; height: 100.0%;">DuSable Lake Shore Dr & North Blvd<br>166,753 поездок</div>`)[0];
+                popup_dd1d91c2dca51d592bcf6e717da4bf75.setContent(html_1bece5bdb9d52a026ad6e8d1f7a42eea);
+            
+        
+
+        marker_ed7da9fad17d70bbdab7b41057f3e08d.bindPopup(popup_dd1d91c2dca51d592bcf6e717da4bf75)
+        ;
+
+        
+    
+    
+                marker_ed7da9fad17d70bbdab7b41057f3e08d.setIcon(icon_3a14f242397859dc33062b4ef7a2851a);
+            
+    
+            var marker_c493f97ea551ff85f283f3991adbcd2e = L.marker(
+                [41.92949618392033, -87.64947149272454],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_163b17b6d7a54aaa3b5bdb5d6d7bef20 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e28ec8ae3c519c31b63c17434b61fe6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19e6f154c0f45b758d4588b7b3242741 = $(`<div id="html_19e6f154c0f45b758d4588b7b3242741" style="width: 100.0%; height: 100.0%;">Halsted St & Wrightwood Ave<br>165,150 поездок</div>`)[0];
+                popup_1e28ec8ae3c519c31b63c17434b61fe6.setContent(html_19e6f154c0f45b758d4588b7b3242741);
+            
+        
+
+        marker_c493f97ea551ff85f283f3991adbcd2e.bindPopup(popup_1e28ec8ae3c519c31b63c17434b61fe6)
+        ;
+
+        
+    
+    
+                marker_c493f97ea551ff85f283f3991adbcd2e.setIcon(icon_163b17b6d7a54aaa3b5bdb5d6d7bef20);
+            
+    
+            var marker_d3a2792f527702a54b660e31d64bc252 = L.marker(
+                [41.91830185064105, -87.63629705147817],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_3de0cd43338cf30d127fcbc6c17edfc7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9e8958901b738b4558922bde51638669 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7142949463e0f56ec9d4b3e9b1f11499 = $(`<div id="html_7142949463e0f56ec9d4b3e9b1f11499" style="width: 100.0%; height: 100.0%;">Clark St & Armitage Ave<br>151,768 поездок</div>`)[0];
+                popup_9e8958901b738b4558922bde51638669.setContent(html_7142949463e0f56ec9d4b3e9b1f11499);
+            
+        
+
+        marker_d3a2792f527702a54b660e31d64bc252.bindPopup(popup_9e8958901b738b4558922bde51638669)
+        ;
+
+        
+    
+    
+                marker_d3a2792f527702a54b660e31d64bc252.setIcon(icon_3de0cd43338cf30d127fcbc6c17edfc7);
+            
+    
+            var marker_191027c1f7f356e702f9dd23f20d429d = L.marker(
+                [41.882451635673746, -87.64115984233521],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_4ab1b0c33cac1ea4a0613fb0045fa4bc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a35fc7030238b7607ffefbd147a7b294 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_93c7e63cb4b871235fb34a67f0ff18a9 = $(`<div id="html_93c7e63cb4b871235fb34a67f0ff18a9" style="width: 100.0%; height: 100.0%;">Clinton St & Madison St<br>149,805 поездок</div>`)[0];
+                popup_a35fc7030238b7607ffefbd147a7b294.setContent(html_93c7e63cb4b871235fb34a67f0ff18a9);
+            
+        
+
+        marker_191027c1f7f356e702f9dd23f20d429d.bindPopup(popup_a35fc7030238b7607ffefbd147a7b294)
+        ;
+
+        
+    
+    
+                marker_191027c1f7f356e702f9dd23f20d429d.setIcon(icon_4ab1b0c33cac1ea4a0613fb0045fa4bc);
+            
+    
+            var marker_affac3a971ddd4894634bf3ee31bb923 = L.marker(
+                [41.89145131510931, -87.62676267706229],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_8599a37a5a526526868ba3ee5e00413f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_74db2f4ed5c38010eb054dcb4e2c0c74 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_022d1d6af5f7711e31e1c87a7281c185 = $(`<div id="html_022d1d6af5f7711e31e1c87a7281c185" style="width: 100.0%; height: 100.0%;">Wabash Ave & Grand Ave<br>149,579 поездок</div>`)[0];
+                popup_74db2f4ed5c38010eb054dcb4e2c0c74.setContent(html_022d1d6af5f7711e31e1c87a7281c185);
+            
+        
+
+        marker_affac3a971ddd4894634bf3ee31bb923.bindPopup(popup_74db2f4ed5c38010eb054dcb4e2c0c74)
+        ;
+
+        
+    
+    
+                marker_affac3a971ddd4894634bf3ee31bb923.setIcon(icon_8599a37a5a526526868ba3ee5e00413f);
+            
+    
+            var marker_82e13acac1792b8353cf789182aaea79 = L.marker(
+                [41.867902553113375, -87.6230424775955],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_6e4a92e1c6c30ef313113bbdd3953831 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_13d49a56bf448ad1b5ea086ad1c203ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dea7aaa508cff8326c68a95be605556b = $(`<div id="html_dea7aaa508cff8326c68a95be605556b" style="width: 100.0%; height: 100.0%;">Indiana Ave & Roosevelt Rd<br>148,957 поездок</div>`)[0];
+                popup_13d49a56bf448ad1b5ea086ad1c203ce.setContent(html_dea7aaa508cff8326c68a95be605556b);
+            
+        
+
+        marker_82e13acac1792b8353cf789182aaea79.bindPopup(popup_13d49a56bf448ad1b5ea086ad1c203ce)
+        ;
+
+        
+    
+    
+                marker_82e13acac1792b8353cf789182aaea79.setIcon(icon_6e4a92e1c6c30ef313113bbdd3953831);
+            
+    
+            var marker_1e9f7846f074a97e09077c4f1621287d = L.marker(
+                [41.89402684667312, -87.62932045275434],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_8f2e93bac959ef40c7207ca87aac636c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7e0647f886eb187b0228f693be0e7db2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5507e5309be3d0b0d79012d04af2aea5 = $(`<div id="html_5507e5309be3d0b0d79012d04af2aea5" style="width: 100.0%; height: 100.0%;">Dearborn St & Erie St<br>148,841 поездок</div>`)[0];
+                popup_7e0647f886eb187b0228f693be0e7db2.setContent(html_5507e5309be3d0b0d79012d04af2aea5);
+            
+        
+
+        marker_1e9f7846f074a97e09077c4f1621287d.bindPopup(popup_7e0647f886eb187b0228f693be0e7db2)
+        ;
+
+        
+    
+    
+                marker_1e9f7846f074a97e09077c4f1621287d.setIcon(icon_8f2e93bac959ef40c7207ca87aac636c);
+            
+    
+            var marker_583d3a3624e1dbd73faad29c1507731b = L.marker(
+                [41.88338682277511, -87.64121692164973],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_14dda49368a9e88cf0e5f45dbdda647f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e93cf13a9c950917ab44342c1cef90ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb26e998719f5e4ee2d18c20536112aa = $(`<div id="html_eb26e998719f5e4ee2d18c20536112aa" style="width: 100.0%; height: 100.0%;">Clinton St & Washington Blvd<br>148,502 поездок</div>`)[0];
+                popup_e93cf13a9c950917ab44342c1cef90ee.setContent(html_eb26e998719f5e4ee2d18c20536112aa);
+            
+        
+
+        marker_583d3a3624e1dbd73faad29c1507731b.bindPopup(popup_e93cf13a9c950917ab44342c1cef90ee)
+        ;
+
+        
+    
+    
+                marker_583d3a3624e1dbd73faad29c1507731b.setIcon(icon_14dda49368a9e88cf0e5f45dbdda647f);
+            
+    
+            var marker_f088ee12de25de7f1cebc38b42fa55d5 = L.marker(
+                [41.93760602038322, -87.64410092244268],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_69e1a49bc4d23995efa8096198530483 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd7f974da449999bce460c54b478885a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_23b18fe010eaf4274f2e98b330d49f84 = $(`<div id="html_23b18fe010eaf4274f2e98b330d49f84" style="width: 100.0%; height: 100.0%;">Broadway & Barry Ave<br>147,340 поездок</div>`)[0];
+                popup_dd7f974da449999bce460c54b478885a.setContent(html_23b18fe010eaf4274f2e98b330d49f84);
+            
+        
+
+        marker_f088ee12de25de7f1cebc38b42fa55d5.bindPopup(popup_dd7f974da449999bce460c54b478885a)
+        ;
+
+        
+    
+    
+                marker_f088ee12de25de7f1cebc38b42fa55d5.setIcon(icon_69e1a49bc4d23995efa8096198530483);
+            
+    
+            var marker_9475823f9b5371592748323fae8d4287 = L.marker(
+                [41.91569923270163, -87.63460780424393],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_21b6913287df890d66c22ac3076ff7f3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46ed0e42e1a205cce1c840dd62cadeb9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bd9319f7b080f635c8b28a49f80e74b0 = $(`<div id="html_bd9319f7b080f635c8b28a49f80e74b0" style="width: 100.0%; height: 100.0%;">Clark St & Lincoln Ave<br>146,222 поездок</div>`)[0];
+                popup_46ed0e42e1a205cce1c840dd62cadeb9.setContent(html_bd9319f7b080f635c8b28a49f80e74b0);
+            
+        
+
+        marker_9475823f9b5371592748323fae8d4287.bindPopup(popup_46ed0e42e1a205cce1c840dd62cadeb9)
+        ;
+
+        
+    
+    
+                marker_9475823f9b5371592748323fae8d4287.setIcon(icon_21b6913287df890d66c22ac3076ff7f3);
+            
+    
+            var marker_6f2aa181db1a23c103617b53915375c8 = L.marker(
+                [41.894746371743665, -87.63438983156593],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_503eb468d79c0a76ddf1e0323f1a068d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b7c2721d563d2b2dd074e1c55623a92f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0d892f18d95b2dd987081a99b841fef = $(`<div id="html_b0d892f18d95b2dd987081a99b841fef" style="width: 100.0%; height: 100.0%;">Wells St & Huron St<br>145,979 поездок</div>`)[0];
+                popup_b7c2721d563d2b2dd074e1c55623a92f.setContent(html_b0d892f18d95b2dd987081a99b841fef);
+            
+        
+
+        marker_6f2aa181db1a23c103617b53915375c8.bindPopup(popup_b7c2721d563d2b2dd074e1c55623a92f)
+        ;
+
+        
+    
+    
+                marker_6f2aa181db1a23c103617b53915375c8.setIcon(icon_503eb468d79c0a76ddf1e0323f1a068d);
+            
+    
+            var marker_ff59d19fe53e96c1de2c0af99bc91e84 = L.marker(
+                [41.940180543467264, -87.65298507586645],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_76ff854ca61c5d6bc9e3f35f369766b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c6aee41e901ba7cd0cdfd2f97a208908 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d6001944de5391b362d0317c25e13956 = $(`<div id="html_d6001944de5391b362d0317c25e13956" style="width: 100.0%; height: 100.0%;">Wilton Ave & Belmont Ave<br>138,893 поездок</div>`)[0];
+                popup_c6aee41e901ba7cd0cdfd2f97a208908.setContent(html_d6001944de5391b362d0317c25e13956);
+            
+        
+
+        marker_ff59d19fe53e96c1de2c0af99bc91e84.bindPopup(popup_c6aee41e901ba7cd0cdfd2f97a208908)
+        ;
+
+        
+    
+    
+                marker_ff59d19fe53e96c1de2c0af99bc91e84.setIcon(icon_76ff854ca61c5d6bc9e3f35f369766b4);
+            
+    
+            var marker_1a5ab06e190e7efcdd0ce63593fd66ed = L.marker(
+                [41.88397580782957, -87.62462167670348],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_4f4feb608cc40bd347e4de348418d2fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f037e79f5a5de8d7c18bf0351aa07ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d31fc40b489cb7b08f821ca03d379d21 = $(`<div id="html_d31fc40b489cb7b08f821ca03d379d21" style="width: 100.0%; height: 100.0%;">Michigan Ave & Washington St<br>131,510 поездок</div>`)[0];
+                popup_6f037e79f5a5de8d7c18bf0351aa07ba.setContent(html_d31fc40b489cb7b08f821ca03d379d21);
+            
+        
+
+        marker_1a5ab06e190e7efcdd0ce63593fd66ed.bindPopup(popup_6f037e79f5a5de8d7c18bf0351aa07ba)
+        ;
+
+        
+    
+    
+                marker_1a5ab06e190e7efcdd0ce63593fd66ed.setIcon(icon_4f4feb608cc40bd347e4de348418d2fe);
+            
+    
+            var marker_b8a8246b0ca381c1b45a8c63b18ab714 = L.marker(
+                [41.867237675049154, -87.61538793033093],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_55e2009e7086ae88fdea522b87368d02 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f224a1319159f440c550b6655a11e6cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8902c94cacff0cb78cad6acc3050712f = $(`<div id="html_8902c94cacff0cb78cad6acc3050712f" style="width: 100.0%; height: 100.0%;">Shedd Aquarium<br>131,465 поездок</div>`)[0];
+                popup_f224a1319159f440c550b6655a11e6cf.setContent(html_8902c94cacff0cb78cad6acc3050712f);
+            
+        
+
+        marker_b8a8246b0ca381c1b45a8c63b18ab714.bindPopup(popup_f224a1319159f440c550b6655a11e6cf)
+        ;
+
+        
+    
+    
+                marker_b8a8246b0ca381c1b45a8c63b18ab714.setIcon(icon_55e2009e7086ae88fdea522b87368d02);
+            
+    
+            var marker_e0a982c535fce0793df2f55ceaa83c8c = L.marker(
+                [41.888682442263374, -87.64443901404815],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_d57581480a86768d952c0dc490f94afb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bbc8fa50bea5366d173708bc85373e5f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5028d75553cbda962dcaaf18d3a582e3 = $(`<div id="html_5028d75553cbda962dcaaf18d3a582e3" style="width: 100.0%; height: 100.0%;">Desplaines St & Kinzie St<br>128,450 поездок</div>`)[0];
+                popup_bbc8fa50bea5366d173708bc85373e5f.setContent(html_5028d75553cbda962dcaaf18d3a582e3);
+            
+        
+
+        marker_e0a982c535fce0793df2f55ceaa83c8c.bindPopup(popup_bbc8fa50bea5366d173708bc85373e5f)
+        ;
+
+        
+    
+    
+                marker_e0a982c535fce0793df2f55ceaa83c8c.setIcon(icon_d57581480a86768d952c0dc490f94afb);
+            
+    
+            var marker_124008ff70fc21a68925bbf8b13632bb = L.marker(
+                [41.88993490568263, -87.63428372386176],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_c3d2b525e2e2d14ad43b77a7cdaff801 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5be4a767455abfa06872f0df5c25dd24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ba383d3608a6f5c4eac2a860a45337c = $(`<div id="html_3ba383d3608a6f5c4eac2a860a45337c" style="width: 100.0%; height: 100.0%;">Wells St & Hubbard St<br>128,402 поездок</div>`)[0];
+                popup_5be4a767455abfa06872f0df5c25dd24.setContent(html_3ba383d3608a6f5c4eac2a860a45337c);
+            
+        
+
+        marker_124008ff70fc21a68925bbf8b13632bb.bindPopup(popup_5be4a767455abfa06872f0df5c25dd24)
+        ;
+
+        
+    
+    
+                marker_124008ff70fc21a68925bbf8b13632bb.setIcon(icon_c3d2b525e2e2d14ad43b77a7cdaff801);
+            
+    
+            var marker_88998a5dd62085c58d34d1b26b04ebc8 = L.marker(
+                [41.89434443200261, -87.62277338952136],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_0836747de4ef6f7169e2b47da73edfce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a38370d7547fd3b878c9a7aa87f063a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6301ffec7ab00021a67e53b0cd7306b = $(`<div id="html_b6301ffec7ab00021a67e53b0cd7306b" style="width: 100.0%; height: 100.0%;">St. Clair St & Erie St<br>126,750 поездок</div>`)[0];
+                popup_4a38370d7547fd3b878c9a7aa87f063a.setContent(html_b6301ffec7ab00021a67e53b0cd7306b);
+            
+        
+
+        marker_88998a5dd62085c58d34d1b26b04ebc8.bindPopup(popup_4a38370d7547fd3b878c9a7aa87f063a)
+        ;
+
+        
+    
+    
+                marker_88998a5dd62085c58d34d1b26b04ebc8.setIcon(icon_0836747de4ef6f7169e2b47da73edfce);
+            
+    
+            var marker_a17b943f0f1ed7db0881a484bf90de53 = L.marker(
+                [41.886000172017006, -87.62430728098762],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_ac126688f7d2e0b3dab12039cdbf1b26 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cfa9227ba2a60c9cfc5f20dc558a7619 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3129af1bd7482e24c3a7fe0533bc99f6 = $(`<div id="html_3129af1bd7482e24c3a7fe0533bc99f6" style="width: 100.0%; height: 100.0%;">Michigan Ave & Lake St<br>126,118 поездок</div>`)[0];
+                popup_cfa9227ba2a60c9cfc5f20dc558a7619.setContent(html_3129af1bd7482e24c3a7fe0533bc99f6);
+            
+        
+
+        marker_a17b943f0f1ed7db0881a484bf90de53.bindPopup(popup_cfa9227ba2a60c9cfc5f20dc558a7619)
+        ;
+
+        
+    
+    
+                marker_a17b943f0f1ed7db0881a484bf90de53.setIcon(icon_ac126688f7d2e0b3dab12039cdbf1b26);
+            
+    
+            var marker_5d8b997dee2e04b15b3e9104ddd7a9c6 = L.marker(
+                [41.88468142897747, -87.61953542935944],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_67c0ac9a968469adc3c2f8b6d9e2bd0a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b1b910e69c34b9b575074e397d5fd797 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04e2a485244ca844cd6ba2248c35b296 = $(`<div id="html_04e2a485244ca844cd6ba2248c35b296" style="width: 100.0%; height: 100.0%;">Columbus Dr & Randolph St<br>125,326 поездок</div>`)[0];
+                popup_b1b910e69c34b9b575074e397d5fd797.setContent(html_04e2a485244ca844cd6ba2248c35b296);
+            
+        
+
+        marker_5d8b997dee2e04b15b3e9104ddd7a9c6.bindPopup(popup_b1b910e69c34b9b575074e397d5fd797)
+        ;
+
+        
+    
+    
+                marker_5d8b997dee2e04b15b3e9104ddd7a9c6.setIcon(icon_67c0ac9a968469adc3c2f8b6d9e2bd0a);
+            
+    
+            var marker_125cb26172194cfd255ccc339778df7c = L.marker(
+                [41.890776144281475, -87.6316956801272],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_bc834cd12e7969eb004390933d1971dd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0d64d038a5931980ffee24c34090315c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_05d18060a94801596a44ef0836d21e44 = $(`<div id="html_05d18060a94801596a44ef0836d21e44" style="width: 100.0%; height: 100.0%;">LaSalle St & Illinois St<br>124,283 поездок</div>`)[0];
+                popup_0d64d038a5931980ffee24c34090315c.setContent(html_05d18060a94801596a44ef0836d21e44);
+            
+        
+
+        marker_125cb26172194cfd255ccc339778df7c.bindPopup(popup_0d64d038a5931980ffee24c34090315c)
+        ;
+
+        
+    
+    
+                marker_125cb26172194cfd255ccc339778df7c.setIcon(icon_bc834cd12e7969eb004390933d1971dd);
+            
+    
+            var marker_a00a4495964c6e070728bd2b0df7282d = L.marker(
+                [41.898959373336915, -87.62991545344768],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_cddba9d5fd0340dc3383ed208d3b8619 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dbf1eef42d6e123dcd8a1521455dddaf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aea53147ce5d3c54390390df1182bbdd = $(`<div id="html_aea53147ce5d3c54390390df1182bbdd" style="width: 100.0%; height: 100.0%;">Dearborn Pkwy & Delaware Pl<br>123,924 поездок</div>`)[0];
+                popup_dbf1eef42d6e123dcd8a1521455dddaf.setContent(html_aea53147ce5d3c54390390df1182bbdd);
+            
+        
+
+        marker_a00a4495964c6e070728bd2b0df7282d.bindPopup(popup_dbf1eef42d6e123dcd8a1521455dddaf)
+        ;
+
+        
+    
+    
+                marker_a00a4495964c6e070728bd2b0df7282d.setIcon(icon_cddba9d5fd0340dc3383ed208d3b8619);
+            
+    
+            var marker_d743318fec85c8b5b051e1adcf6d6a6c = L.marker(
+                [41.92955190978432, -87.64313147015623],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_876ed98bb32aebc5d8312161293f96cf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fe311bf18141d26ddb8a7c3032a048a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_785b3488a96712925b3dbcc5b0124219 = $(`<div id="html_785b3488a96712925b3dbcc5b0124219" style="width: 100.0%; height: 100.0%;">Clark St & Wrightwood Ave<br>122,210 поездок</div>`)[0];
+                popup_fe311bf18141d26ddb8a7c3032a048a9.setContent(html_785b3488a96712925b3dbcc5b0124219);
+            
+        
+
+        marker_d743318fec85c8b5b051e1adcf6d6a6c.bindPopup(popup_fe311bf18141d26ddb8a7c3032a048a9)
+        ;
+
+        
+    
+    
+                marker_d743318fec85c8b5b051e1adcf6d6a6c.setIcon(icon_876ed98bb32aebc5d8312161293f96cf);
+            
+    
+            var marker_585aac03c231aa7e0c8ec752f1e84ef4 = L.marker(
+                [41.86720476156222, -87.6259738761957],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_ec741bc7c5d73c1011375bf397122609 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8119cf96e2d36a779c447955f9b0f254 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_026fd1b66e59461109831a3ca89546d1 = $(`<div id="html_026fd1b66e59461109831a3ca89546d1" style="width: 100.0%; height: 100.0%;">Wabash Ave & Roosevelt Rd<br>120,409 поездок</div>`)[0];
+                popup_8119cf96e2d36a779c447955f9b0f254.setContent(html_026fd1b66e59461109831a3ca89546d1);
+            
+        
+
+        marker_585aac03c231aa7e0c8ec752f1e84ef4.bindPopup(popup_8119cf96e2d36a779c447955f9b0f254)
+        ;
+
+        
+    
+    
+                marker_585aac03c231aa7e0c8ec752f1e84ef4.setIcon(icon_ec741bc7c5d73c1011375bf397122609);
+            
+    
+            var marker_2425af768ce0b595f7129353014194ed = L.marker(
+                [41.92181779808326, -87.64411658921848],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_714a378f553461d5b457343c5c704057 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_50d7be0993e03c075df5219902ec9eb2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e51e92281ec50e92e7c5fa67221590d2 = $(`<div id="html_e51e92281ec50e92e7c5fa67221590d2" style="width: 100.0%; height: 100.0%;">Larrabee St & Webster Ave<br>117,605 поездок</div>`)[0];
+                popup_50d7be0993e03c075df5219902ec9eb2.setContent(html_e51e92281ec50e92e7c5fa67221590d2);
+            
+        
+
+        marker_2425af768ce0b595f7129353014194ed.bindPopup(popup_50d7be0993e03c075df5219902ec9eb2)
+        ;
+
+        
+    
+    
+                marker_2425af768ce0b595f7129353014194ed.setIcon(icon_714a378f553461d5b457343c5c704057);
+            
+    
+            var marker_347adb43e1918750c95d56717061a6e9 = L.marker(
+                [41.881874636049474, -87.64901353387137],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_136848c3d67cf38a112a5bb7f9ff6f3b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2fcc6125dfa1ceaa1c6a8c68b0504215 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e5dcf29a460584da303049f6e6ab3b9 = $(`<div id="html_7e5dcf29a460584da303049f6e6ab3b9" style="width: 100.0%; height: 100.0%;">Green St & Madison St<br>116,642 поездок</div>`)[0];
+                popup_2fcc6125dfa1ceaa1c6a8c68b0504215.setContent(html_7e5dcf29a460584da303049f6e6ab3b9);
+            
+        
+
+        marker_347adb43e1918750c95d56717061a6e9.bindPopup(popup_2fcc6125dfa1ceaa1c6a8c68b0504215)
+        ;
+
+        
+    
+    
+                marker_347adb43e1918750c95d56717061a6e9.setIcon(icon_136848c3d67cf38a112a5bb7f9ff6f3b);
+            
+    
+            var marker_838fd67dcaec5e34ab2de344c06a1e1c = L.marker(
+                [41.94552155729844, -87.64644944255448],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_c9afdf13b0f296ae85bcab700864309f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bfef348391d37130fe522928df4e3987 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c09336c5045349eedcb0aae60867f95 = $(`<div id="html_9c09336c5045349eedcb0aae60867f95" style="width: 100.0%; height: 100.0%;">Broadway & Cornelia Ave<br>115,775 поездок</div>`)[0];
+                popup_bfef348391d37130fe522928df4e3987.setContent(html_9c09336c5045349eedcb0aae60867f95);
+            
+        
+
+        marker_838fd67dcaec5e34ab2de344c06a1e1c.bindPopup(popup_bfef348391d37130fe522928df4e3987)
+        ;
+
+        
+    
+    
+                marker_838fd67dcaec5e34ab2de344c06a1e1c.setIcon(icon_c9afdf13b0f296ae85bcab700864309f);
+            
+    
+            var marker_b4451f9691c1f96fa8f374a76627dc53 = L.marker(
+                [41.90338702788006, -87.66792460899413],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_a77bdeb49b7c4a6da8e1b282a32de8d9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e4097694e9c4d457f44ae366867c6a24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a7e58e47a403b7eec52dd69f6c5e3aa = $(`<div id="html_0a7e58e47a403b7eec52dd69f6c5e3aa" style="width: 100.0%; height: 100.0%;">Ashland Ave & Division St<br>115,630 поездок</div>`)[0];
+                popup_e4097694e9c4d457f44ae366867c6a24.setContent(html_0a7e58e47a403b7eec52dd69f6c5e3aa);
+            
+        
+
+        marker_b4451f9691c1f96fa8f374a76627dc53.bindPopup(popup_e4097694e9c4d457f44ae366867c6a24)
+        ;
+
+        
+    
+    
+                marker_b4451f9691c1f96fa8f374a76627dc53.setIcon(icon_a77bdeb49b7c4a6da8e1b282a32de8d9);
+            
+    
+            var marker_3dcf654533024775b55b26c89c06681f = L.marker(
+                [41.8869721168599, -87.61282308175777],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_06d61f4e5195a343596deab5d51b7c42 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ad114c07d26819d1b3c99423774ae01 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00e09fe66e28610acdaf170d0daee3bd = $(`<div id="html_00e09fe66e28610acdaf170d0daee3bd" style="width: 100.0%; height: 100.0%;">Dusable Harbor<br>115,334 поездок</div>`)[0];
+                popup_3ad114c07d26819d1b3c99423774ae01.setContent(html_00e09fe66e28610acdaf170d0daee3bd);
+            
+        
+
+        marker_3dcf654533024775b55b26c89c06681f.bindPopup(popup_3ad114c07d26819d1b3c99423774ae01)
+        ;
+
+        
+    
+    
+                marker_3dcf654533024775b55b26c89c06681f.setIcon(icon_06d61f4e5195a343596deab5d51b7c42);
+            
+    
+            var marker_7f5ee0c84330c1180148f9d2b2772127 = L.marker(
+                [41.925869872228716, -87.63897250647273],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_6855582adb4ad52670daa0510476d80b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_edd7f0ad4c6692428bec9d4cdcd4c38f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f2a6ad969686ec4a6ca257a4efd1ce4 = $(`<div id="html_0f2a6ad969686ec4a6ca257a4efd1ce4" style="width: 100.0%; height: 100.0%;">Lakeview Ave & Fullerton Pkwy<br>113,899 поездок</div>`)[0];
+                popup_edd7f0ad4c6692428bec9d4cdcd4c38f.setContent(html_0f2a6ad969686ec4a6ca257a4efd1ce4);
+            
+        
+
+        marker_7f5ee0c84330c1180148f9d2b2772127.bindPopup(popup_edd7f0ad4c6692428bec9d4cdcd4c38f)
+        ;
+
+        
+    
+    
+                marker_7f5ee0c84330c1180148f9d2b2772127.setIcon(icon_6855582adb4ad52670daa0510476d80b);
+            
+    
+            var marker_37405913b354a4477121c54de3c0b0de = L.marker(
+                [41.92470547067367, -87.64727612097694],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_22ad75bd0402d738efaf33d4c9f5fd26 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b06adb78a69f18d5d3a07d83d74275b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa9632db705622462f4abf1ffcc8cad1 = $(`<div id="html_aa9632db705622462f4abf1ffcc8cad1" style="width: 100.0%; height: 100.0%;">Lincoln Ave & Fullerton Ave<br>112,715 поездок</div>`)[0];
+                popup_2b06adb78a69f18d5d3a07d83d74275b.setContent(html_aa9632db705622462f4abf1ffcc8cad1);
+            
+        
+
+        marker_37405913b354a4477121c54de3c0b0de.bindPopup(popup_2b06adb78a69f18d5d3a07d83d74275b)
+        ;
+
+        
+    
+    
+                marker_37405913b354a4477121c54de3c0b0de.setIcon(icon_22ad75bd0402d738efaf33d4c9f5fd26);
+            
+    
+            var marker_a034aae3aedfeffe4450ead10a6afac5 = L.marker(
+                [41.9490681359299, -87.64862701307638],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_8c69c4b42df3e4b554d69064a0ae4034 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b7ca861f56ccaedb493543e36d66b04 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_698b1ca64efad30fc8ffc60082c09c05 = $(`<div id="html_698b1ca64efad30fc8ffc60082c09c05" style="width: 100.0%; height: 100.0%;">Broadway & Waveland Ave<br>112,693 поездок</div>`)[0];
+                popup_8b7ca861f56ccaedb493543e36d66b04.setContent(html_698b1ca64efad30fc8ffc60082c09c05);
+            
+        
+
+        marker_a034aae3aedfeffe4450ead10a6afac5.bindPopup(popup_8b7ca861f56ccaedb493543e36d66b04)
+        ;
+
+        
+    
+    
+                marker_a034aae3aedfeffe4450ead10a6afac5.setIcon(icon_8c69c4b42df3e4b554d69064a0ae4034);
+            
+    
+            var marker_95e08c0c0d4f3fbac184efa4a8ddf285 = L.marker(
+                [41.89186398871257, -87.62060588519986],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_56500cfdd80b74c89a0ab5f9ff76f932 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4abcd29fc375ff979211c2a6792af558 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_43b8d593dcf1200193e8c4d0a8932b21 = $(`<div id="html_43b8d593dcf1200193e8c4d0a8932b21" style="width: 100.0%; height: 100.0%;">Fairbanks Ct & Grand Ave<br>111,488 поездок</div>`)[0];
+                popup_4abcd29fc375ff979211c2a6792af558.setContent(html_43b8d593dcf1200193e8c4d0a8932b21);
+            
+        
+
+        marker_95e08c0c0d4f3fbac184efa4a8ddf285.bindPopup(popup_4abcd29fc375ff979211c2a6792af558)
+        ;
+
+        
+    
+    
+                marker_95e08c0c0d4f3fbac184efa4a8ddf285.setIcon(icon_56500cfdd80b74c89a0ab5f9ff76f932);
+            
+    
+            var marker_f59f3600e12425ad5bb09d18e7b1d926 = L.marker(
+                [41.90671639600776, -87.63490634227237],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_f9ca53e95e6916731bf1506d191e591c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_38feb52c8f4a50e4682490129c45350d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa6db774f0425bcfc812e8fb2cc0c54d = $(`<div id="html_fa6db774f0425bcfc812e8fb2cc0c54d" style="width: 100.0%; height: 100.0%;">Wells St & Evergreen Ave<br>111,457 поездок</div>`)[0];
+                popup_38feb52c8f4a50e4682490129c45350d.setContent(html_fa6db774f0425bcfc812e8fb2cc0c54d);
+            
+        
+
+        marker_f59f3600e12425ad5bb09d18e7b1d926.bindPopup(popup_38feb52c8f4a50e4682490129c45350d)
+        ;
+
+        
+    
+    
+                marker_f59f3600e12425ad5bb09d18e7b1d926.setIcon(icon_f9ca53e95e6916731bf1506d191e591c);
+            
+    
+            var marker_c4da2934b01b3d302c2d0691de421c1a = L.marker(
+                [41.931244101255785, -87.6443164532132],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_f73596c6854088addf338eb61c564cd7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_51c7fcd04163b6c3cae0545866ec4d2f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bd37395d52a96ebf503fa904feeb1607 = $(`<div id="html_bd37395d52a96ebf503fa904feeb1607" style="width: 100.0%; height: 100.0%;">Clark St & Drummond Pl<br>110,778 поездок</div>`)[0];
+                popup_51c7fcd04163b6c3cae0545866ec4d2f.setContent(html_bd37395d52a96ebf503fa904feeb1607);
+            
+        
+
+        marker_c4da2934b01b3d302c2d0691de421c1a.bindPopup(popup_51c7fcd04163b6c3cae0545866ec4d2f)
+        ;
+
+        
+    
+    
+                marker_c4da2934b01b3d302c2d0691de421c1a.setIcon(icon_f73596c6854088addf338eb61c564cd7);
+            
+    
+            var marker_bcbfd0bb31b67482666f381571d95370 = L.marker(
+                [41.89082104803688, -87.61855588119823],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_d67bb36e4a542e3227edb9a67c348468 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_304655e3eb24439b73b8d1163909b535 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_319495828f33bad358642f2e1503d720 = $(`<div id="html_319495828f33bad358642f2e1503d720" style="width: 100.0%; height: 100.0%;">New St & Illinois St<br>109,108 поездок</div>`)[0];
+                popup_304655e3eb24439b73b8d1163909b535.setContent(html_319495828f33bad358642f2e1503d720);
+            
+        
+
+        marker_bcbfd0bb31b67482666f381571d95370.bindPopup(popup_304655e3eb24439b73b8d1163909b535)
+        ;
+
+        
+    
+    
+                marker_bcbfd0bb31b67482666f381571d95370.setIcon(icon_d67bb36e4a542e3227edb9a67c348468);
+            
+    
+            var marker_59c5f1a8413389c9f155bc7a4bc91934 = L.marker(
+                [41.92558705057697, -87.65370048511129],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_9841e37a1b7308280fb1693b963eb1f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_734e557db14a04e9fc17fff73db180de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_249c9d7eccd51d0ac1407653fa4fbad7 = $(`<div id="html_249c9d7eccd51d0ac1407653fa4fbad7" style="width: 100.0%; height: 100.0%;">Sheffield Ave & Fullerton Ave<br>109,051 поездок</div>`)[0];
+                popup_734e557db14a04e9fc17fff73db180de.setContent(html_249c9d7eccd51d0ac1407653fa4fbad7);
+            
+        
+
+        marker_59c5f1a8413389c9f155bc7a4bc91934.bindPopup(popup_734e557db14a04e9fc17fff73db180de)
+        ;
+
+        
+    
+    
+                marker_59c5f1a8413389c9f155bc7a4bc91934.setIcon(icon_9841e37a1b7308280fb1693b963eb1f0);
+            
+    
+            var marker_baf9e44fc12493cb4d361adffc601a44 = L.marker(
+                [41.8938971781868, -87.64173178317843],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_cffbd183259cf3f69c5363470b2d064c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_90750a4f5cb79732ad00e617a2b599b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3aefa1dad829555d3852247f1d169e96 = $(`<div id="html_3aefa1dad829555d3852247f1d169e96" style="width: 100.0%; height: 100.0%;">Kingsbury St & Erie St<br>108,523 поездок</div>`)[0];
+                popup_90750a4f5cb79732ad00e617a2b599b9.setContent(html_3aefa1dad829555d3852247f1d169e96);
+            
+        
+
+        marker_baf9e44fc12493cb4d361adffc601a44.bindPopup(popup_90750a4f5cb79732ad00e617a2b599b9)
+        ;
+
+        
+    
+    
+                marker_baf9e44fc12493cb4d361adffc601a44.setIcon(icon_cffbd183259cf3f69c5363470b2d064c);
+            
+    
+            var marker_8b2c1aa28dc2ec5e79d63b3551a3c4f3 = L.marker(
+                [41.94944692807634, -87.6464395935959],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_3ad0cacf5680110f18aa55beb0c21837 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7cef0e47a5ad1b227dd45da05678d066 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a6878c88b64955f5d9f821584e1a4a8e = $(`<div id="html_a6878c88b64955f5d9f821584e1a4a8e" style="width: 100.0%; height: 100.0%;">Pine Grove Ave & Waveland Ave<br>108,029 поездок</div>`)[0];
+                popup_7cef0e47a5ad1b227dd45da05678d066.setContent(html_a6878c88b64955f5d9f821584e1a4a8e);
+            
+        
+
+        marker_8b2c1aa28dc2ec5e79d63b3551a3c4f3.bindPopup(popup_7cef0e47a5ad1b227dd45da05678d066)
+        ;
+
+        
+    
+    
+                marker_8b2c1aa28dc2ec5e79d63b3551a3c4f3.setIcon(icon_3ad0cacf5680110f18aa55beb0c21837);
+            
+    
+            var marker_8aeda504137afd106f3727058dd06fa4 = L.marker(
+                [41.96397074186117, -87.63818850109263],
+                {
+}
+            ).addTo(marker_cluster_18a662a86d43d1dbef9675639c267937);
+        
+    
+            var icon_70e355271573ac6dadd34b567f7ab928 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "bicycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec2958e6dc521f21403763be10818875 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1eedd0864a049e421dc11b3ad8e27291 = $(`<div id="html_1eedd0864a049e421dc11b3ad8e27291" style="width: 100.0%; height: 100.0%;">Montrose Harbor<br>107,831 поездок</div>`)[0];
+                popup_ec2958e6dc521f21403763be10818875.setContent(html_1eedd0864a049e421dc11b3ad8e27291);
+            
+        
+
+        marker_8aeda504137afd106f3727058dd06fa4.bindPopup(popup_ec2958e6dc521f21403763be10818875)
+        ;
+
+        
+    
+    
+                marker_8aeda504137afd106f3727058dd06fa4.setIcon(icon_70e355271573ac6dadd34b567f7ab928);
+            
+    
+            marker_cluster_18a662a86d43d1dbef9675639c267937.addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+    
+            var layer_control_7fe1301f4a05a7dbf0790970c88f7142_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_c988da8bcf4e5a8f91660624cdd797c2,
+                    "\u0421\u0432\u0435\u0442\u043b\u0430\u044f \u043a\u0430\u0440\u0442\u0430" : tile_layer_ad76818f0fa534438dcd75cadbf1a5e5,
+                    "\u0422\u0435\u043c\u043d\u0430\u044f \u043a\u0430\u0440\u0442\u0430" : tile_layer_ff8569ef22817dab68b3fbe27f717f3b,
+                    "OpenStreetMap" : tile_layer_017905e9c2ddaac20dbabab2caad9b29,
+                },
+                overlays :  {
+                    "\u0421\u0442\u0430\u043d\u0446\u0438\u0438 \u043f\u043e \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f\u043c" : feature_group_1a9ad85e6bd7cf3b4d209c09ac717c13,
+                    "\u0412\u0441\u0435 \u043f\u043e\u043f\u0443\u043b\u044f\u0440\u043d\u044b\u0435 \u0441\u0442\u0430\u043d\u0446\u0438\u0438" : marker_cluster_18a662a86d43d1dbef9675639c267937,
+                },
+            };
+            let layer_control_7fe1301f4a05a7dbf0790970c88f7142 = L.control.layers(
+                layer_control_7fe1301f4a05a7dbf0790970c88f7142_layers.base_layers,
+                layer_control_7fe1301f4a05a7dbf0790970c88f7142_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+
+        
+    
+            var tile_layer_16a3be95d62e994ca94cb7f5b12a91e7 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_b4496bcd2e16e4810d87c146ae04cace = new L.Control.MiniMap(
+                tile_layer_16a3be95d62e994ca94cb7f5b12a91e7,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_de4f5983d5d27aa7b6b53e165d1222b9.addControl(mini_map_b4496bcd2e16e4810d87c146ae04cace);
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_de4f5983d5d27aa7b6b53e165d1222b9);
+        
+</script>
+</html>

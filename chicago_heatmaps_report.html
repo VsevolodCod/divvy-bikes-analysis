@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divvy Bikes Chicago - Анализ плотности поездок</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a1b9c;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #1a1b9c;
+            padding-bottom: 10px;
+        }
+        .description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .gif-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .gif-item {
+            text-align: center;
+            flex: 1;
+            min-width: 300px;
+        }
+        .gif-item h3 {
+            margin-top: 0;
+            color: #1a1b9c;
+        }
+        .gif-item img {
+            max-width: 100%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .controls {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .parameter {
+            margin-bottom: 15px;
+        }
+        .parameter label {
+            display: inline-block;
+            width: 200px;
+            font-weight: bold;
+        }
+        .stats {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #1a1b9c;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚲 Divvy Bikes Chicago - Анализ плотности поездок (2020-2025)</h1>
+
+        <div class="description">
+            <p>Интерактивная визуализация распределения поездок велосипедов Divvy в Чикаго.</p>
+            <p>Тепловые карты наложены на реальную карту Чикаго для лучшей ориентации.</p>
+        </div>
+
+        <div class="controls">
+            <h2>📊 Параметры визуализации</h2>
+            <p>Для создания новых анимаций с другими параметрами измените значения в коде Python:</p>
+            <div class="parameter">
+                <label>Прозрачность тепловой карты (alpha):</label>
+                <span>0.7 (от 0.1 до 1.0)</span>
+            </div>
+            <div class="parameter">
+                <label>Степень размытия (blur_sigma):</label>
+                <span>2.0 (от 0.5 до 5.0)</span>
+            </div>
+            <div class="parameter">
+                <label>Стиль карты:</label>
+                <span>CartoDB.Positron (светлый)</span>
+            </div>
+        </div>
+
+        <h2>🎬 Анимации плотности поездок</h2>
+        <div class="gif-container">
+            <div class="gif-item">
+                <h3>Начало поездок</h3>
+                <img src="start_chicago_animation.gif" alt="Анимация начала поездок">
+                <p>Эволюция популярных мест для начала поездок</p>
+            </div>
+            <div class="gif-item">
+                <h3>Окончание поездок</h3>
+                <img src="end_chicago_animation.gif" alt="Анимация окончания поездок">
+                <p>Изменение популярных мест назначения</p>
+            </div>
+            <div class="gif-item">
+                <h3>Сравнение</h3>
+                <img src="combined_chicago_animation.gif" alt="Комбинированная анимация">
+                <p>Сравнение начала и окончания поездок</p>
+            </div>
+        </div>
+
+        <div class="stats">
+            <h2>📈 Статистика по годам</h2>
+            <table>
+                <tr>
+                    <th>Год</th>
+                    <th>Начало поездок</th>
+                    <th>Окончание поездок</th>
+                    <th>Рост (%)</th>
+                </tr>
+
+                <tr>
+                    <td><strong>2020</strong></td>
+                    <td>3,468,881</td>
+                    <td>3,468,881</td>
+                    <td>+0.0%</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2021</strong></td>
+                    <td>4,800,858</td>
+                    <td>4,800,858</td>
+                    <td>+38.4%</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2022</strong></td>
+                    <td>5,437,102</td>
+                    <td>5,437,102</td>
+                    <td>+56.7%</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2023</strong></td>
+                    <td>5,563,046</td>
+                    <td>5,563,046</td>
+                    <td>+60.4%</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2024</strong></td>
+                    <td>5,583,629</td>
+                    <td>5,583,629</td>
+                    <td>+61.0%</td>
+                </tr>
+
+                <tr>
+                    <td><strong>2025</strong></td>
+                    <td>4,916,643</td>
+                    <td>4,916,643</td>
+                    <td>+41.7%</td>
+                </tr>
+
+            </table>
+
+            <h2>🎯 Ключевые выводы</h2>
+            <ul>
+                <li><strong>Рост популярности:</strong> С 2020 по 2024 год количество поездок выросло на 61%</li>
+                <li><strong>Водная линия:</strong> Самые популярные маршруты вдоль озера Мичиган</li>
+                <li><strong>Деловой центр:</strong> Высокая плотность в районе The Loop</li>
+                <li><strong>Сезонность:</strong> Заметный рост активности в летние месяцы</li>
+            </ul>
+        </div>
+
+        <h2>⚙️ Как изменить параметры визуализации</h2>
+        <p>В коде Python вы можете изменить следующие параметры:</p>
+        <ol>
+            <li><code>alpha=0.7</code> - Прозрачность тепловой карты (от 0.1 до 1.0)</li>
+            <li><code>blur_sigma=2.0</code> - Степень размытия (от 0.5 до 5.0)</li>
+            <li><code>source=ctx.providers.CartoDB.Positron</code> - Стиль карты</li>
+            <li><code>bins=150</code> - Детализация тепловой карты</li>
+        </ol>
+        <p>Чтобы изменить стиль карты, замените <code>CartoDB.Positron</code> на один из вариантов:</p>
+        <ul>
+            <li><code>ctx.providers.OpenStreetMap.Mapnik</code> - Стандартный OSM</li>
+            <li><code>ctx.providers.Stamen.TonerLite</code> - Светлый минималистичный</li>
+            <li><code>ctx.providers.Stamen.Toner</code> - Темный контрастный</li>
+            <li><code>ctx.providers.CartoDB.DarkMatter</code> - Темный стиль</li>
+        </ul>
+    </div>
+</body>
+</html>

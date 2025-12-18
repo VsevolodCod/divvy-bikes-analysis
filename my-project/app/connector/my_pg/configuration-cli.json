@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "configuration": {
+    "jdbc_url": "jdbc:postgresql://localhost:5433/dev",
+    "user": "user",
+    "password": "password",
+    "ssl_mode": "disable"
+  }
+}
