@@ -1,6 +1,9 @@
 # Data
 /data/
 
+# Kiro IDE files
+.kiro/
+
 # Mac OS-specific storage files
 .DS_Store
 
