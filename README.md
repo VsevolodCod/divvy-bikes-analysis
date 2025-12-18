@@ -188,6 +188,7 @@ Note: Папка data/ будет создана отдельно при заг�
 
 #### Обработка данных
 - **Polars**: Высокопроизводительная обработка 31M+ записей
+- **Pandas**: Дополнительная обработка и анализ данных
 - **NumPy**: Численные вычисления и статистика
 - **SciPy**: Статистические тесты и анализ
 
@@ -218,11 +219,40 @@ conda activate divvy-analysis
 pip install -r requirements.txt
 ```
 
+### Использование кода
+```python
+# Загрузка и анализ данных
+from src.data.load_data import load_raw_data
+from src.data.data_profiler import check_data
+from src.data.clean_data import clean_trip_data
+
+# Загружаем данные за 2024 год
+trips = load_raw_data(year=2024)
+check_data(trips)  # Быстрый анализ качества
+
+# Очищаем данные
+clean_trips = clean_trip_data(trips)
+
+# Создаем временные признаки
+from src.features.temporal_features import create_all_temporal_features
+trips_with_features = create_all_temporal_features(clean_trips)
+
+# Рассчитываем юнит-экономику
+from src.models.unit_economics import UnitEconomicsModel
+economics = UnitEconomicsModel()
+kpis = economics.calculate_kpis(trips_with_features)
+
+# Визуализируем результаты
+from src.visualization.economic_metrics import plot_kpi_dashboard
+plot_kpi_dashboard(kpis)
+```
+
 ### Структура работы
-1. **Исследование**: Начните с `notebooks/exploratory/start.ipynb`
-2. **Анализ данных**: Изучите `notebooks/analysis/` для детального анализа по годам
-3. **Модели**: Посмотрите `notebooks/modeling/` для ML подходов
-4. **Результаты**: Все визуализации в `reports/figures/`
+1. **Производственный код**: Используйте модули из `src/` для анализа
+2. **Исследование**: Начните с `notebooks/exploratory/start.ipynb`
+3. **Анализ данных**: Изучите `notebooks/analysis/` для детального анализа по годам
+4. **Модели**: Посмотрите `notebooks/modeling/` для ML подходов
+5. **Результаты**: Все визуализации в `reports/figures/`
 
 ## Основные файлы
 
